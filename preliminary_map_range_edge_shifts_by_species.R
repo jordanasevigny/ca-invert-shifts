@@ -8,8 +8,7 @@
 
 
 # libraries
-#install.packages(c("cowplot", "googleway", "ggplot2", "ggrepel", 
-                   "ggspatial", "libwgeom", "rnaturalearth", "rnaturalearthdata"))
+
 library("ggplot2")
 theme_set(theme_bw())
 library("sf")
@@ -57,7 +56,7 @@ ggplot(data = world) +
   geom_sf() +
   geom_point(data = df, aes(x = Longitude, y = Latitude, shape = Species, color = Old_or_New), size = 2.5) +
   xlab("Longitude") + ylab("Latitude") +
-  labs(color="Rande Edge") +
+  labs(color="Range Edge") +
   coord_sf(xlim = c(-110, -150), ylim = c(30, 63), expand = FALSE)
 
 
