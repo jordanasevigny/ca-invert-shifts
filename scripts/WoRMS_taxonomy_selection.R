@@ -24,7 +24,9 @@ classes_ID <- data %>%
   select(AphiaID) %>%
   unique()
 
-# screen phylums
+
+
+# screen phylums & their associated scientific names (sub phylums / super classes)
 # first just look at the phylums with associated classes to screen phylums that majoratively are not applicable
 # identify unwanted phyla (> 50% classes excluded)
 phylums_class_to_excl <- data %>%
@@ -35,26 +37,25 @@ phylums_class_to_excl <- data %>%
     total_count = n(),
     excl_count = sum(`JKS Notes for Exclusion` != "" & !is.na(`JKS Notes for Exclusion`)),
     frac = excl_count/total_count) %>%
-  filter(frac > 0.5) %>%
+  filter(frac > 0.5 ) %>%
   select(Phylum)
 
 # filter out unwanted phyla
 phylums <- data %>%
+  filter(is.na(`JKS Notes for Exclusion`)) %>%
   select(Phylum) %>%
   unique() %>%
   anti_join(phylums_class_to_excl) %>%
   rename(taxa = Phylum)
 
-# join phylums and classes to keep
-class_phylums <- rbind(classes, phylums) %>%
-  unique()
+inter_taxa = data %>% 
+  filter(is.na(`JKS Notes for Exclusion`)) %>%
+  select(ScientificName) %>%
+  rename(taxa = ScientificName)
 
-# transform to be WOS format
-final_string <- class_phylums %>%
-  mutate(words = str_c('"', taxa, '*"')) %>% 
-  pull(words) %>%
-  str_c(collapse = " OR ")
-cat(final_string)
+# join phylums and classes to keep
+class_phylums <- rbind(classes, inter_taxa, phylums) %>%
+  unique()
 
 
 
@@ -97,6 +98,7 @@ orders <- combined_df %>%
 
 # join phylums and classes to keep
 ocp <- rbind(class_phylums, orders) %>%
+  mutate(taxa = str_extract(taxa, "[A-Z][a-z]+")) %>%
   unique()
 # make sure there are no NAs
 
