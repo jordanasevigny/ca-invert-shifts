@@ -1,0 +1,21 @@
+Report_Volume,Observation_Date,ENSO,Species,Observation_Location,Latitude,Longitude,Old_or_New,Notes
+7,Oct-57,El Nino,Doliolum denticulatum,Point Conception,34.448242,-120.472067,Observation,
+7,Apr-58,El Nino,Doliolum denticulatum,Monterey,36.605906,-121.891714,Observation,
+7,Apr-41,El Nino,Pleuroncodes planipes,San Pedro,33.704116,-118.294099,Observation,selected arbitrary lat/long for Baja CA
+7,Dec-57,El Nino,Pleuroncodes planipes,San Pedro,33.704116,-118.294099,Observation,selected arbitrary lat/long for Baja CA
+7,Dec-57,El Nino,Valella sp.,Alaska,60.75238,-147.037862,Observation,Month not indicated in text; selected arbitrary lat/long for new location; arbitrarily selected PC for warm water end
+9,Apr-58,El Nino,Nyctiphanes simplex,Shelter Cove,40,-124,Observation,arbitrarily selected PC for warm water end (old lat/long); seleced beach based on 40 deg N
+9,Dec-58,El Nino,Pleuroncodes planipes,Monterey,36.605906,-121.891714,Observation,selected arbitrary lat/long for Baja CA
+11,Dec-59,Neutral,Pleuroncodes planipes,Monterey,36.605906,-121.891714,Observation,
+22,Jan-78,El Nino,Euphausia eximia,Point Conception,34.448242,-120.472067,Observation,
+20,Jan-69,Neutral,Doliolum denticulatum,San Fransisco,37.801865,-122.565354,Observation,
+7,Oct-57,El Nino,Doliolum denticulatum,San Diego,32.713002,-117.257652,Historical,
+7,Apr-58,El Nino,Doliolum denticulatum,San Diego,32.713002,-117.257652,Historical,
+7,Apr-41,El Nino,Pleuroncodes planipes,Punta Eugenia,28,-114.27384,Historical,selected arbitrary lat/long for Baja CA
+7,Dec-57,El Nino,Pleuroncodes planipes,Punta Eugenia,28,-114.27384,Historical,selected arbitrary lat/long for Baja CA
+7,Dec-57,El Nino,Valella sp.,Point Conception,34.448242,-120.472067,Historical,"Month not indicated in text; selected arbitrary lat/long for new location; arbitrarily selected PC for ""warm water"" end"
+9,Apr-58,El Nino,Nyctiphanes simplex,Point Conception,34.448242,-120.472067,Historical,arbitrarily selected PC for warm water end (old lat/long)
+9,Dec-58,El Nino,Pleuroncodes planipes,Punta Eugenia,28,-114.27384,Historical,selected arbitrary lat/long for Baja CA
+11,Dec-59,Neutral,Pleuroncodes planipes,Monterey,28,-114.27384,Historical,
+22,Jan-78,El Nino,Euphausia eximia,Baja California,30.963701,-116.334789,Historical,
+20,Jan-69,Neutral,Doliolum denticulatum,San Diego,32.713002,-117.257652,Historical,
