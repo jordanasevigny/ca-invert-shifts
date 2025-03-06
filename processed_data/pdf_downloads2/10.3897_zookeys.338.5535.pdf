@@ -1,0 +1,1204 @@
+
+		<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tp="http://www.plazi.org/taxpub" xmlns:php="http://php.net/xsl" xml:lang="bg" lang="bg"><head xmlns=""><title>Two new species in the family Axinellidae (Porifera, Demospongiae) from British Columbia and adjacent waters</title>
+			<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+			<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+			<meta name="description" content="Two new species of Demospongiae are described for British Columbia and adjacent waters in the family Axinellidae, Auletta krautteri sp. n. and Dragmacidon kishinensis sp. n. They represent range extensions for both of these genera. Both are fairly commonly encountered, A. krautteri below diving depths (87 to at least 300 m) and D. kishinensis in shallow water (intertidal to 30 m). We propose an amended genus diagnosis for Auletta to account for the variability among species in principal spicules that form the ascending tracts to be either oxeas, styles or strongyles rather than just oxeas.">
+			<meta name="keywords" content="Porifera; Demospongiae; Halichondrida; Axinellidae; northeast Pacific; Auletta krautteri; Dragmacidon kishinensis">
+			<meta name="author" content="William Austin, Bruce Ott, Henry Reiswig, Paula Romagosa, Neil McDaniel">
+			<meta name="distribution" content="global">
+			<meta name="robots" content="index, follow, all">
+		
+			<meta property="og:image" content="http://zookeys.pensoft.net/showimg.php?filename=c106x106y_0.jpg">
+			<meta property="og:title" content="Two new species in the family Axinellidae (Porifera, Demospongiae) from British Columbia and adjacent waters">
+			<meta property="og:url" content="http://zookeys.pensoft.net/articles.php?id=3277">
+			<meta property="og:site_name" content="ZooKeys">
+			<meta property="og:type" content="article">
+			<link rel="alternate" hreflang="en" type="application/pdf" title="PDF" href="/lib/ajax_srv/article_elements_srv.php?action=download_pdf&amp;item_id=3277">
+			<link rel="alternate" hreflang="en" type="application/xml" title="XML" href="/lib/ajax_srv/article_elements_srv.php?action=download_xml&amp;item_id=3277">
+		
+		   <meta name="dc.title" content="Two new species in the family Axinellidae (Porifera, Demospongiae) from British Columbia and adjacent waters">
+		   
+				<meta name="dc.creator" content="William Austin">
+				<meta name="dc.contributor" content="William Austin">
+			
+				<meta name="dc.creator" content=" Bruce Ott">
+				<meta name="dc.contributor" content=" Bruce Ott">
+			
+				<meta name="dc.creator" content=" Henry Reiswig">
+				<meta name="dc.contributor" content=" Henry Reiswig">
+			
+				<meta name="dc.creator" content=" Paula Romagosa">
+				<meta name="dc.contributor" content=" Paula Romagosa">
+			
+				<meta name="dc.creator" content=" Neil McDaniel">
+				<meta name="dc.contributor" content=" Neil McDaniel">
+			
+		   <meta name="dc.type" content="Research Article">
+		   <meta name="dc.source" content="ZooKeys 338: 11-28">
+		   <meta name="dc.date" content="02/10/2013 00:00:00">
+		   <meta name="dc.identifier" content="10.3897/zookeys.338.5535">
+		   <meta name="dc.publisher" content="Pensoft Publishers">
+		   <meta name="dc.rights" content="http://creativecommons.org/licenses/by/3.0/">
+		   <meta name="dc.format" content="text/html">
+		   <meta name="dc.language" content="en">
+	
+		   <meta name="prism.publicationName" content="ZooKeys">
+		   <meta name="prism.issn" content="1313-2970">
+		   <meta name="prism.publicationDate" content="02/10/2013 00:00:00">
+		   <meta name="prism.volume" content="338">
+	
+		   <meta name="prism.doi" content="10.3897/zookeys.338.5535">
+		   <meta name="prism.section" content="Research Article">
+		   <meta name="prism.startingPage" content="11">
+		   <meta name="prism.copyright" content="2015 William Austin, Bruce Ott, Henry Reiswig, Paula Romagosa, Neil McDaniel">
+		   <meta name="prism.rightsAgent" content="zookeys@pensoft.net">
+	
+		   <meta name="eprints.title" content="Two new species in the family Axinellidae (Porifera, Demospongiae) from British Columbia and adjacent waters">
+		   
+				<meta name="eprints.creators_name" content="William Austin">
+			
+				<meta name="eprints.creators_name" content=" Bruce Ott">
+			
+				<meta name="eprints.creators_name" content=" Henry Reiswig">
+			
+				<meta name="eprints.creators_name" content=" Paula Romagosa">
+			
+				<meta name="eprints.creators_name" content=" Neil McDaniel">
+			
+		   <meta name="eprints.type" content="Research Article">
+		   <meta name="eprints.datestamp" content="02/10/2013 00:00:00">
+		   <meta name="eprints.ispublished" content="pub">
+		   <meta name="eprints.date" content="2015">
+		   <meta name="eprints.date_type" content="published">
+		   <meta name="eprints.publication" content="Pensoft Publishers">
+		   <meta name="eprints.volume" content="338">
+		   <meta name="eprints.pagerange" content="11-28">
+	
+		   <meta name="citation_journal_title" content="ZooKeys">
+		   <meta name="citation_publisher" content="Pensoft Publishers">
+		   
+				<meta name="citation_author" content="William Austin">
+			
+				<meta name="citation_author" content=" Bruce Ott">
+			
+				<meta name="citation_author" content=" Henry Reiswig">
+			
+				<meta name="citation_author" content=" Paula Romagosa">
+			
+				<meta name="citation_author" content=" Neil McDaniel">
+			
+		   <meta name="citation_title" content="Two new species in the family Axinellidae (Porifera, Demospongiae) from British Columbia and adjacent waters">
+		   <meta itemprop="name" content="Two new species in the family Axinellidae (Porifera, Demospongiae) from British Columbia and adjacent waters">
+		     
+		   <meta name="citation_volume" content="338">
+		   <meta name="citation_pdf_url" content="http://zookeys.pensoft.net/lib/ajax_srv/article_elements_srv.php?action=download_pdf&amp;item_id=3277">
+	
+		   <meta name="citation_firstpage" content="11">
+		   <meta name="citation_doi" content="10.3897/zookeys.338.5535">
+		   <meta name="citation_issn" content="1313-2970">
+		   <meta name="citation_date" content="02/10/2013 00:00:00">
+		   <meta name="citation_volume" content="338">
+		   <meta name="citation_issue" content="">
+		   
+		
+		   <meta name="twitter:card" content="summary">
+		   <meta name="twitter:site" content="@ZooKeys_Journal">
+		   <meta name="twitter:title" content="Two new species in the family Axinellidae (Porifera, Demospongiae) from British Columbia and adjacent waters">
+		   <meta name="twitter:description" content="Two new species of Demospongiae are described for British Columbia and adjacent waters in the family Axinellidae, Auletta krautteri sp. n. and Dragmacidon kishinensis sp. n. They represent range extensions for both of these genera. Both are fairly commonly encountered, A. krautteri below diving depths (87 to at least 300 m) and D. kishinensis in shallow water (intertidal to 30 m). We propose an amended genus diagnosis for Auletta to account for the variability among species in principal spicules that form the ascending tracts to be either oxeas, styles or strongyles rather than just oxeas.">
+		   <meta name="twitter:image" content="http://zookeys.pensoft.net/showimg.php?filename=c106x106y_.jpg">
+		   <meta name="twitter:url" content="http://zookeys.pensoft.net/articles.php?id=3277">
+		   <meta name="twitter:url" content="https://doi.org/10.3897/zookeys.338.5535">		   
+		 <script type="text/javascript">
+function swapDivClassname(pLink, pId, pClassName){
+	var lDiv = document.getElementById(pId);
+	if( lDiv ){
+		if( lDiv.className == pClassName ){
+			lDiv.className = '';
+			pLink.className = 'inactive'
+		}else{
+			lDiv.className = pClassName;
+			pLink.className = ''
+		}
+	}
+}
+function openw(url, title, options) {
+	var newwin = window.open(url, title, options);
+	newwin.focus();
+}
+function showBaloon(pBaloonType, pId, pEvent) {
+	if( !pId )
+		return;
+	if( !gBaloon || !gBaloonWrapper)
+		return;
+	pEvent = pEvent || window.event;
+	clearTimeout(gTimeout);
+	if( gActiveBaloonId && gActiveBaloonType == pBaloonType && gActiveBaloonId != pId ){
+		gFlagToHideBaloon = true;
+		hideBaloon(gActiveBaloonId);
+	}else if(gActiveBaloonType == pBaloonType && gActiveBaloonId == pId ){
+		return;
+	}
+	gActiveBaloonId = pId;
+	gActiveBaloonType = pBaloonType;
+	gFlagToHideBaloon = false;
+	var lEventTarget = pEvent.target || pEvent.srcElement;
+	if( pBaloonType == 1 ){//xref
+		var lReference = document.getElementById('reference_' + pId);
+		var lText = 'Reference not found!';
+		if( lReference ){
+			lText = lReference.innerHTML;// || lReference.innerText;
+		}
+		gBaloon.innerHTML = lText;
+		gBaloonInnerWrapper.className = 'largeBaloon';
+	}else if( pBaloonType == 2 ){//Taxoni
+		var lReferenceName = 'taxon_' + pId + '_baloon_div';
+		var lReference = document.getElementById(lReferenceName);
+		gBaloonInnerWrapper.className = 'smallBaloon';
+		if( lReference ){
+			lText = lReference.innerHTML;// || lReference.innerText;
+		}else{
+			lText = 'Error during loading taxa data';
+		}
+		gBaloon.innerHTML = lText;
+	}else if( pBaloonType == 3 ){//Figuri
+		var lFigure = document.getElementById('fig_' + pId);
+		var lText = 'Figure not found!';
+		if( lFigure ){
+			lText = lFigure.innerHTML;// || lFigure.innerText;
+		}
+		gBaloon.innerHTML = lText;
+		gBaloonInnerWrapper.className = 'largeBaloon';
+	}else if( pBaloonType == 4 ){//Tablici
+		var lTable = document.getElementById('table_' + pId);
+		var lText = 'Table not found!';
+		if( lTable ){
+			lText = lTable.innerHTML;// || lTable.innerText;
+		}
+		gBaloon.innerHTML = lText;
+		gBaloonInnerWrapper.className = 'largeBaloon';
+	}
+	gActiveBaloonId = pId;
+	displayBaloon(lEventTarget, pEvent);
+}
+function displayBaloon(pEventTarget, pEvent){//Pozicionira i pokazva balona
+	if( !gBaloon || !gBaloonWrapper)
+		return;
+	var lUseWindowMaxY = parseInt('0');
+	gBaloonWrapper.style.display="block";
+	positionBaloon(pEventTarget, pEvent, lUseWindowMaxY);
+}
+function hideBaloonEvent(pId, pEvent){
+	if( !gBaloon || !gBaloonWrapper)
+		return;
+	gFlagToHideBaloon = true;
+	gTimeout = setTimeout("hideBaloon('" + pId + "')", 10);
+}
+function hideBaloon(pId){
+	clearTimeout(gTimeout);
+	if( !gFlagToHideBaloon )
+		return;
+	gBaloonIsShown = false;
+	gActiveBaloonId = 0;
+	gActiveBaloonType = false;
+	gBaloonWrapper.style.display="none";
+}
+function initBalloons(){
+	gBaloon = document.getElementById('baloonContent');
+	gBaloonIsShown = false;
+	gActiveBaloonId = 0;
+	gTimeout = false;
+	gActiveBaloonType = false;
+	gBaloonWrapper = document.getElementById('baloonWrapper');
+	gBaloonInnerWrapper = document.getElementById('baloonInnerWrapper');
+	gBaloonArrowImg = document.getElementById('baloonArrowImg');
+}
+function positionBaloon(pEventTarget, pEvent, pUseWindowMaxY){
+	var lMousePos = getMousePosition(pEvent);
+	var lContentWrapper = document.getElementById('contentWrapper');
+	//var lY = pEventTarget.offsetTop + pEventTarget.offsetHeight;
+	var lY = pEventTarget.offsetHeight;
+	//var lX = pEventTarget.offsetLeft;
+	var lX = 0;
+	var lParent = pEventTarget;
+	do {
+		lY += lParent.offsetTop;
+		lX += lParent.offsetLeft;
+		//alert(lParent.tagName + '-' + lY);
+	}
+	while((lParent = lParent.offsetParent) && lParent.id != 'contentWrapper')
+	/*var lXMax = lMousePos['xMax'];*/
+	var lXMax = lContentWrapper.offsetWidth - 20;//-20 zaradi scrolla
+	var lYMax;
+	if( pUseWindowMaxY ){
+		lYMax = lMousePos['yMax'];
+	}else{
+		lYMax = lContentWrapper.scrollHeight;
+	}
+	lYMax = lYMax - 40;
+	var lClassName = 'baloonWrapper';
+	var lLeft = 0;
+	var lTop = 0;
+	var lImageName = 'http://www.pensoft.net/J_FILES/img/baloon_arrow';
+	if( lY + gBaloonWrapper.offsetHeight <= lYMax ){
+		lTop = lY;
+		lClassName = lClassName + 'Bottom';
+		lImageName = lImageName + '_bottom';
+	}else{
+		lTop = lY - gBaloonWrapper.offsetHeight - pEventTarget.offsetHeight;
+		if( lTop < 0 )
+			lTop = 0;
+		lClassName = lClassName + 'Top';
+		lImageName = lImageName + '_top';
+	}
+	if( lX + gBaloonWrapper.offsetWidth <= lXMax ){
+		lLeft = lX;
+		lClassName = lClassName + 'Right';
+		lImageName = lImageName + '_right';
+	}else{
+		lLeft = lX -gBaloonWrapper.offsetWidth + 50;
+		if( lLeft < 0 )
+			lLeft = 0;
+		lClassName = lClassName + 'Left';
+		lImageName = lImageName + '_left';
+	}
+	lImageName = lImageName + '.gif';
+	gBaloonWrapper.style.left = lLeft + 'px';
+	gBaloonWrapper.style.top = lTop + 'px';
+	gBaloonWrapper.className =  lClassName;
+	gBaloonArrowImg.setAttribute('src', lImageName);
+}
+function submitForm( pFormName ){
+	eval('document.' + pFormName + '.submit()');
+}
+function showLocalitiesMenu(){
+	var lMenu = document.getElementById('localitiesMenuDiv');
+	if( lMenu )
+		lMenu.style.display='block';
+ 		}
+function hideLocalitiesMenu(){
+	var lMenu = document.getElementById('localitiesMenuDiv');
+	if( lMenu )
+		lMenu.style.display='none';
+}
+function getMousePosition(pEvent){
+	if (document.layers) {
+	// When the page scrolls in Netscape, the event's mouse position
+	// reflects the absolute position on the screen. innerHight/Width
+	// is the position from the top/left of the screen that the user is
+	// looking at. pageX/YOffset is the amount that the user has
+	// scrolled into the page. So the values will be in relation to
+	// each other as the total offsets into the page, no matter if
+	// the user has scrolled or not.
+	xMousePos = pEvent.clientX;
+	yMousePos = pEvent.clientY;
+	xMousePosMax = window.innerWidth + window.pageXOffset;
+	yMousePosMax = window.innerHeight + window.pageYOffset;
+	} else if (document.all) {
+	// When the page scrolls in IE, the event's mouse position
+	// reflects the position from the top/left of the screen the
+	// user is looking at. scrollLeft/Top is the amount the user
+	// has scrolled into the page. clientWidth/Height is the height/
+	// width of the current page the user is looking at. So, to be
+	// consistent with Netscape (above), add the scroll offsets to
+	// both so we end up with an absolute value on the page, no
+	// matter if the user has scrolled or not.	;
+	xMousePos = window.event.x + document.body.scrollLeft;
+	yMousePos = window.event.y + document.body.scrollTop;
+	xMousePosMax = document.body.clientWidth + document.body.scrollLeft;
+	yMousePosMax = document.body.clientHeight + document.body.scrollTop;
+	} else if (document.getElementById) {
+	// Netscape 6 behaves the same as Netscape 4 in this regard
+	xMousePos = pEvent.clientX;
+	yMousePos = pEvent.clientY;
+	xMousePosMax = window.innerWidth + window.pageXOffset;
+	yMousePosMax = window.innerHeight + window.pageYOffset;
+	}
+	return {
+	'x' : xMousePos,
+	'y' : yMousePos,
+	'xMax' : xMousePosMax,
+	'yMax' : yMousePosMax
+	};
+}
+var gHolderDiv;
+var gScrolDiv;
+var gRightBtn;
+var gLeftBtn;
+var gLinksTable;
+var gMinLeft;
+function initScrollConstants(){
+	gHolderDiv = document.getElementById('scrollHolderDiv');
+	gScrolDiv = document.getElementById('scrollDiv');
+	gRightBtn = document.getElementById('scrollRightBtn');
+	gLeftBtn = document.getElementById('scrollLeftBtn');
+	gLinksTable = document.getElementById('linksButtonHolder');
+	gScrolDiv.style.width = gLinksTable.offsetWidth + 'px';
+	gHolderDiv.style.width = '';
+	var gHolderWidth = gHolderDiv.offsetWidth;
+	var gScrolWidth = gScrolDiv.offsetWidth;
+	gMinLeft = gHolderWidth - gScrolWidth;
+	if(gMinLeft > 0)
+		gMinLeft = 0;
+	gCurrentLeftPos = 0;
+	gInterval = null;
+	changeDivPosition(gCurrentLeftPos);
+}
+function scrollDivRight(){
+	if( gMinLeft >= 0 ){
+		stopScroll()
+		return;
+	}
+	if( gCurrentLeftPos - 1 > gMinLeft )
+		gCurrentLeftPos = gCurrentLeftPos - 1;
+	else{
+		stopScroll()
+		gCurrentLeftPos = gMinLeft;
+	}
+	changeDivPosition(gCurrentLeftPos);
+}
+function scrollDivLeft(){
+	if( gMinLeft >= 0 ){
+		stopScroll()
+		return;
+	}
+	if( gCurrentLeftPos + 1 < 0 )
+		gCurrentLeftPos = gCurrentLeftPos + 1;
+	else{
+		gCurrentLeftPos = 0;
+		stopScroll()
+	}
+	changeDivPosition(gCurrentLeftPos);
+}
+function checkBtnClasses(){
+	if( gLeftBtn ){
+		if( gCurrentLeftPos == 0 || gMinLeft >= 0 ){
+			gLeftBtn.className = 'LeftScrollBtnLinkInactive';
+		}else{
+			gLeftBtn.className = 'LeftScrollBtnLinkActive';
+		}
+	}
+	if( gRightBtn ){
+		if( gCurrentLeftPos == gMinLeft || gMinLeft >= 0 ){
+			gRightBtn.className = 'RightScrollBtnLinkInactive';
+		}else{
+			gRightBtn.className = 'RightScrollBtnLinkActive';
+		}
+	}
+}
+function changeDivPosition(pLeft){
+	gScrolDiv.style.left  = pLeft + 'px';
+	checkBtnClasses()
+}
+function stopScroll(){
+	if(gInterval)
+		clearInterval(gInterval)
+}
+function startScroll(pDir){
+	if( gMinLeft >= 0 ){
+		return;
+	}
+	if( pDir == 0){//Right
+		gInterval = setInterval("scrollDivRight('right')", 20);
+	}else{
+		gInterval = setInterval("scrollDivLeft('left')", 20);
+	}
+}
+function getfnlink(pFn, pEl) {
+	lDiv = document.getElementById(pFn);
+	lEl = lDiv.firstChild;
+	while (lEl.nodeType != 1) {
+		lEl = lEl.nextSibling;
+	}
+	for (var i = 0; i < lEl.childNodes.length; i++) {
+		if (lEl.childNodes[i].tagName && lEl.childNodes[i].tagName.toLowerCase() == 'a') {
+			lHref = lEl.childNodes[i].href;
+			break;
+		}
+	}
+	if (lHref)
+		pEl.href = lHref;
+}
+</script><link rel="stylesheet" href="//pensoft.net/J_FILES/img/xsl-large2.css" media="all" title="default"><link rel="stylesheet" href="/lib/css/legacy.css?v=252fefc12457613f73d046ddecaeb72ff041118c%0A" media="all" title="default"><link rel="stylesheet" href="/lib/highlight.css?v=252fefc12457613f73d046ddecaeb72ff041118c%0A" media="all" title="default"><script type="text/javascript" src="/lib/js/jquery.js"></script><script type="text/javascript" src="/lib/js/aof.js"></script><script>$(document).ready(function(){
+					var lLazyImages = $('img[data-src]');
+					var lRemainingImages = lLazyImages.length;
+					lLazyImages.each(function(pIdx, pElem){
+						$(pElem).attr('src', $(pElem).attr('data-src'));
+						$(pElem).removeAttr('data-src');
+					});
+				});
+			</script></head><body><div xmlns="" id="highlightWrapper" class=""><div id="highlightTaxonNameWrapper" class="highlightTaxonNameWrapper"><div id="highlightTaxonTreatmentWrapper" class="highlightTaxonTreatmentWrapper"><div id="highlightCountryWrapper" class="highlightCountryWrapper"><div id="highlightCitationWrapper" class="highlightCitationWrapper"><div id="highlightTypeescWrapper" class="highlightTypeescWrapper"><div id="highlightCollectionWrapper" class="highlightCollectionWrapper"><div id="highlightLocalityWrapper" class="highlightLocalityWrapper"><div class="wrapper">
+<div class="headWrapper">
+<table class="highlightButtonHolder" width="100%" cellspacing="1" cellpadding="0"><tr><td class="taxon-treatmentsButton"><a href="#" onclick="swapDivClassname(this, 'highlightTaxonTreatmentWrapper', 'highlightTaxonTreatmentWrapper'); return false;">Taxon treatments</a></td>
+<td class="taxon-namesButton"><a href="#" onclick="swapDivClassname(this, 'highlightTaxonNameWrapper', 'highlightTaxonNameWrapper'); return false;">Taxon names</a></td>
+<td class="citationsButton"><a href="#" onclick="swapDivClassname(this, 'highlightCitationWrapper', 'highlightCitationWrapper'); return false;">Citations</a></td>
+<td class="localitiesButton" onmouseover="showLocalitiesMenu()" onmouseout="hideLocalitiesMenu()" id="mapLocalityButton"><div class="localitiesMenu" id="localitiesMenuDiv">
+<div class="localitiesMenuRow"><a onclick="submitForm('all_localities_form');return false;">All</a></div>
+<form name="all_localities_form" class="localitiesForm" method="post" target="_blank" action="http://ptp.pensoft.eu/redirect_to_googlemap.php">
+<input type="hidden" name="coordinates[]" value="52°26.4'N, 129°40.0'W"><input type="hidden" name="labels[]" value="52°26.4'N, 129°40.0'W"><input type="hidden" name="coordinates[]" value="54°370'N, 133°55.0'W"><input type="hidden" name="labels[]" value="54°370'N, 133°55.0'W"><input type="hidden" name="coordinates[]" value="54°37 0'N, 133°55.0'W"><input type="hidden" name="labels[]" value="54°37 0'N, 133°55.0'W"><input type="hidden" name="coordinates[]" value="51°22.5'N, 129°13.5'W"><input type="hidden" name="labels[]" value="51°22.5'N, 129°13.5'W"><input type="hidden" name="coordinates[]" value="52°09.8'N, 131°23.8'W"><input type="hidden" name="labels[]" value="52°09.8'N, 131°23.8'W"><input type="hidden" name="coordinates[]" value="54°30.2'N, 135°53.3'W"><input type="hidden" name="labels[]" value="54°30.2'N, 135°53.3'W"><input type="hidden" name="coordinates[]" value="51°21.5'N, 129°13.5'W"><input type="hidden" name="labels[]" value="51°21.5'N, 129°13.5'W"><input type="hidden" name="coordinates[]" value="59°2.0'N, 141°3.6'W"><input type="hidden" name="labels[]" value="59°2.0'N, 141°3.6'W"><input type="hidden" name="coordinates[]" value="54°N, 132°W"><input type="hidden" name="labels[]" value="54°N, 132°W"><input type="hidden" name="coordinates[]" value="54°48'N, 133°36'W"><input type="hidden" name="labels[]" value="54°48'N, 133°36'W"><input type="hidden" name="coordinates[]" value="52°45'N, 132°06'W"><input type="hidden" name="labels[]" value="52°45'N, 132°06'W"><input type="hidden" name="coordinates[]" value="54°48'N, 133°36'W"><input type="hidden" name="labels[]" value="54°48'N, 133°36'W"><input type="hidden" name="coordinates[]" value="53°N, 132°W"><input type="hidden" name="labels[]" value="53°N, 132°W"><input type="hidden" name="coordinates[]" value="54°48'N, 133°36'W"><input type="hidden" name="labels[]" value="54°48'N, 133°36'W"><input type="hidden" name="coordinates[]" value="52°45'N, 132°06'W"><input type="hidden" name="labels[]" value="52°45'N, 132°06'W"><input type="hidden" name="coordinates[]" value="57°02.3'N, 135°20.3'W"><input type="hidden" name="labels[]" value="57°02.3'N, 135°20.3'W"><input type="hidden" name="coordinates[]" value="52°26.4'N, 129°40.0'W"><input type="hidden" name="labels[]" value="52°26.4'N, 129°40.0'W"><input type="hidden" name="coordinates[]" value="54°37.0'N, 133°55.0'W"><input type="hidden" name="labels[]" value="54°37.0'N, 133°55.0'W"><input type="hidden" name="coordinates[]" value="51°30.0'N, 128°0.0'W"><input type="hidden" name="labels[]" value="51°30.0'N, 128°0.0'W"><input type="hidden" name="coordinates[]" value="54°30.2'N, 133°53.3'W"><input type="hidden" name="labels[]" value="54°30.2'N, 133°53.3'W"><input type="hidden" name="coordinates[]" value="52°89.8'N, 131°23.8'W"><input type="hidden" name="labels[]" value="52°89.8'N, 131°23.8'W"><input type="hidden" name="coordinates[]" value="50°4.94'N, 125°15.35'W"><input type="hidden" name="labels[]" value="50°4.94'N, 125°15.35'W"><input type="hidden" name="coordinates[]" value="52°55'N, 131°36'W"><input type="hidden" name="labels[]" value="52°55'N, 131°36'W"><input type="hidden" name="coordinates[]" value="50°6.40'N, 125°15.35'W"><input type="hidden" name="labels[]" value="50°6.40'N, 125°15.35'W"><input type="hidden" name="coordinates[]" value="49°48.03'N, 124°35.79'W"><input type="hidden" name="labels[]" value="49°48.03'N, 124°35.79'W"><input type="hidden" name="coordinates[]" value="49°50.28'N, 124°41.96'W"><input type="hidden" name="labels[]" value="49°50.28'N, 124°41.96'W"><input type="hidden" name="coordinates[]" value="53°24'N, 132°44'W"><input type="hidden" name="labels[]" value="53°24'N, 132°44'W"><input type="hidden" name="coordinates[]" value="48°48.9'N, 125°10.6'W"><input type="hidden" name="labels[]" value="48°48.9'N, 125°10.6'W"><input type="hidden" name="coordinates[]" value="52°46.04'N, 132°03.55'W"><input type="hidden" name="labels[]" value="52°46.04'N, 132°03.55'W"><input type="hidden" name="coordinates[]" value="54°37'N, 130°50'W"><input type="hidden" name="labels[]" value="54°37'N, 130°50'W"></form>
+<div class="localitiesMenuRow"><a onclick="submitForm('Auletta_krautteri_localities_form');return false;">Auletta krautteri</a></div>
+<form class="localitiesForm" method="post" target="_blank" action="http://ptp.pensoft.eu/redirect_to_googlemap.php" name="Auletta_krautteri_localities_form">
+<input type="hidden" name="coordinates[]" value="52°26.4'N, 129°40.0'W"><input type="hidden" name="labels[]" value="52°26.4'N, 129°40.0'W"><input type="hidden" name="coordinates[]" value="54°370'N, 133°55.0'W"><input type="hidden" name="labels[]" value="54°370'N, 133°55.0'W"><input type="hidden" name="coordinates[]" value="54°37 0'N, 133°55.0'W"><input type="hidden" name="labels[]" value="54°37 0'N, 133°55.0'W"><input type="hidden" name="coordinates[]" value="51°22.5'N, 129°13.5'W"><input type="hidden" name="labels[]" value="51°22.5'N, 129°13.5'W"><input type="hidden" name="coordinates[]" value="52°09.8'N, 131°23.8'W"><input type="hidden" name="labels[]" value="52°09.8'N, 131°23.8'W"><input type="hidden" name="coordinates[]" value="54°30.2'N, 135°53.3'W"><input type="hidden" name="labels[]" value="54°30.2'N, 135°53.3'W"><input type="hidden" name="coordinates[]" value="51°21.5'N, 129°13.5'W"><input type="hidden" name="labels[]" value="51°21.5'N, 129°13.5'W"><input type="hidden" name="coordinates[]" value="59°2.0'N, 141°3.6'W"><input type="hidden" name="labels[]" value="59°2.0'N, 141°3.6'W"><input type="hidden" name="coordinates[]" value="54°N, 132°W"><input type="hidden" name="labels[]" value="54°N, 132°W"><input type="hidden" name="coordinates[]" value="54°48'N, 133°36'W"><input type="hidden" name="labels[]" value="54°48'N, 133°36'W"><input type="hidden" name="coordinates[]" value="52°45'N, 132°06'W"><input type="hidden" name="labels[]" value="52°45'N, 132°06'W"><input type="hidden" name="coordinates[]" value="54°48'N, 133°36'W"><input type="hidden" name="labels[]" value="54°48'N, 133°36'W"><input type="hidden" name="coordinates[]" value="53°N, 132°W"><input type="hidden" name="labels[]" value="53°N, 132°W"><input type="hidden" name="coordinates[]" value="54°48'N, 133°36'W"><input type="hidden" name="labels[]" value="54°48'N, 133°36'W"><input type="hidden" name="coordinates[]" value="52°45'N, 132°06'W"><input type="hidden" name="labels[]" value="52°45'N, 132°06'W"><input type="hidden" name="coordinates[]" value="57°02.3'N, 135°20.3'W"><input type="hidden" name="labels[]" value="57°02.3'N, 135°20.3'W"><input type="hidden" name="coordinates[]" value="52°26.4'N, 129°40.0'W"><input type="hidden" name="labels[]" value="52°26.4'N, 129°40.0'W"><input type="hidden" name="coordinates[]" value="54°37.0'N, 133°55.0'W"><input type="hidden" name="labels[]" value="54°37.0'N, 133°55.0'W"><input type="hidden" name="coordinates[]" value="51°30.0'N, 128°0.0'W"><input type="hidden" name="labels[]" value="51°30.0'N, 128°0.0'W"><input type="hidden" name="coordinates[]" value="54°30.2'N, 133°53.3'W"><input type="hidden" name="labels[]" value="54°30.2'N, 133°53.3'W"><input type="hidden" name="coordinates[]" value="52°89.8'N, 131°23.8'W"><input type="hidden" name="labels[]" value="52°89.8'N, 131°23.8'W"></form>
+<div class="localitiesMenuRow"><a onclick="submitForm('Dragmacidon_kishinensis_localities_form');return false;">Dragmacidon kishinensis</a></div>
+<form class="localitiesForm" method="post" target="_blank" action="http://ptp.pensoft.eu/redirect_to_googlemap.php" name="Dragmacidon_kishinensis_localities_form">
+<input type="hidden" name="coordinates[]" value="50°4.94'N, 125°15.35'W"><input type="hidden" name="labels[]" value="50°4.94'N, 125°15.35'W"><input type="hidden" name="coordinates[]" value="52°55'N, 131°36'W"><input type="hidden" name="labels[]" value="52°55'N, 131°36'W"><input type="hidden" name="coordinates[]" value="50°6.40'N, 125°15.35'W"><input type="hidden" name="labels[]" value="50°6.40'N, 125°15.35'W"><input type="hidden" name="coordinates[]" value="49°48.03'N, 124°35.79'W"><input type="hidden" name="labels[]" value="49°48.03'N, 124°35.79'W"><input type="hidden" name="coordinates[]" value="49°50.28'N, 124°41.96'W"><input type="hidden" name="labels[]" value="49°50.28'N, 124°41.96'W"><input type="hidden" name="coordinates[]" value="53°24'N, 132°44'W"><input type="hidden" name="labels[]" value="53°24'N, 132°44'W"><input type="hidden" name="coordinates[]" value="48°48.9'N, 125°10.6'W"><input type="hidden" name="labels[]" value="48°48.9'N, 125°10.6'W"><input type="hidden" name="coordinates[]" value="52°46.04'N, 132°03.55'W"><input type="hidden" name="labels[]" value="52°46.04'N, 132°03.55'W"><input type="hidden" name="coordinates[]" value="54°37'N, 130°50'W"><input type="hidden" name="labels[]" value="54°37'N, 130°50'W"></form>
+</div>
+<a href="#" onclick="swapDivClassname(this, 'highlightLocalityWrapper', 'highlightLocalityWrapper'); return false;">Map localities</a></td>
+<td class="offButton"><a href="#" class="inactive" onclick="swapDivClassname(this, 'highlightWrapper', 'highlightWrapper'); return false;">Turn highlighting On/Off</a></td>
+</tr></table><div class="linksButtonWrapper">
+<div class="pathTopLeftScrollBtn"><a onmouseover="startScroll(1)" onmouseout="stopScroll()" class="LeftScrollBtnLinkActive" id="scrollLeftBtn"></a></div>
+<div class="pathScrollHolder" id="scrollHolderDiv"><div id="scrollDiv" class="pathScrollDiv">
+<table class="linksButtonHolder" cellspacing="0" cellpadding="3" id="linksButtonHolder"><tr><td class="linksButtonHolder"><a href="#top">Top</a></td>
+<td class="linksButtonHolder"><a href="#abstract" onclick="; return false;">Abstract</a></td>
+<td class="linksButtonHolder"><a href="#introduction" onclick="; return false;">Introduction</a></td>
+<td class="linksButtonHolder"><a href="#materialsandmethods" onclick="; return false;">Materials and methods</a></td>
+<td class="linksButtonHolder"><a href="#descriptions" onclick="; return false;">Descriptions</a></td>
+<td class="linksButtonHolder"><a href="#acknowledgements" onclick="; return false;">Acknowledgements</a></td>
+<td class="linksButtonHolder"><a href="#references" onclick="; return false;">References</a></td>
+</tr></table></div></div>
+<div class="pathTopRightScrollBtn"><a onmouseover="startScroll(0)" onmouseout="stopScroll()" class="RightScrollBtnLinkActive" id="scrollRightBtn"></a></div>
+<div class="unfloat"></div>
+</div>
+</div>
+<div class="contentWrapper" id="contentWrapper">
+<div class="baloonWrapper" id="baloonWrapper" onmouseover="showBaloon(gActiveBaloonType, gActiveBaloonId)" onmouseout="hideBaloonEvent(gActiveBaloonId, event)"><div id="baloonInnerWrapper">
+<div class="baloonTop">
+<div class="baloonTopLeftCorner"><img src="http://www.pensoft.net/J_FILES/img/baloon_top_left.gif"></div>
+<div class="baloonTopMiddle"><img src="http://www.pensoft.net/J_FILES/img/baloon_top_middle.jpg"></div>
+<div class="baloonTopRightCorner"><img src="http://www.pensoft.net/J_FILES/img/baloon_top_right.gif"></div>
+<div class="unfloat"></div>
+</div>
+<div class="baloonContent" id="baloonContent"><div class="unfloat"></div></div>
+<div class="baloonBottomLeftCorner"><img src="http://www.pensoft.net/J_FILES/img/baloon_bottom_left.gif"></div>
+<div class="baloonBottomMiddle"><img src="http://www.pensoft.net/J_FILES/img/baloon_bottom_middle.jpg"></div>
+<div class="baloonBottomRightCorner"><img src="http://www.pensoft.net/J_FILES/img/baloon_bottom_right.gif"></div>
+<div class="unfloat"></div>
+<div class="arrowDiv"><img id="baloonArrowImg" src="http://www.pensoft.net/J_FILES/img/baloon_arrow_top_left.gif"></div>
+</div></div>
+<a name="top"></a><div class="doiNumber">ZooKeys 338: 11–28, doi: 10.3897/zookeys.338.5535</div>
+<div class="mainTitle">Two new species in the family Axinellidae (Porifera,  Demospongiae) from British  Columbia and adjacent waters</div>
+<div class="authors">William C. Austin <span class="specialSymbols">1,†</span>, Bruce S. Ott <span class="specialSymbols">1,‡</span>, Henry M. Reiswig <span class="specialSymbols">2,§</span>, Paula Romagosa <span class="specialSymbols">1,|</span>, Neil G. McDaniel <span class="specialSymbols">1,¶</span>
+</div>
+<div class="affilations">
+<div class="affiliationRow">
+		<span id="1" class="uriSym">1 </span>Khoyatan Marine Laboratory,  9245 Hartfell Road,  North Saanich,  British Columbia,  Canada V8L 5G5
+	</div>
+<div class="affiliationRow">
+		<span id="1" class="uriSym">2 </span> Biology Department,  University of Victoria and Royal British Columbia Museum,  P.O. Box 3020 Stn CSC,  Victoria,  British Columbia,  Canada V8W 3N5
+	</div>
+</div>
+<div class="uris">
+<div class="uriRow">
+<span class="uriSym">† </span><a target="_blank" href="http://zoobank.org/673D82A0-858D-43A7-B7A4-C467C3FE3239">http://zoobank.org/673D82A0-858D-43A7-B7A4-C467C3FE3239</a>
+</div>
+<div class="uriRow">
+<span class="uriSym">‡ </span><a target="_blank" href="http://zoobank.org/91AC2C28-F5A4-4BE2-A498-674615B8C59B">http://zoobank.org/91AC2C28-F5A4-4BE2-A498-674615B8C59B</a>
+</div>
+<div class="uriRow">
+<span class="uriSym">§ </span><a target="_blank" href="http://zoobank.org/3843DD51-C34B-42E0-B092-8312FA08E980">http://zoobank.org/3843DD51-C34B-42E0-B092-8312FA08E980</a>
+</div>
+<div class="uriRow">
+<span class="uriSym">| </span><a target="_blank" href="http://zoobank.org/A0C5F100-6AFC-4B67-A838-8BA9DA4AAF76">http://zoobank.org/A0C5F100-6AFC-4B67-A838-8BA9DA4AAF76</a>
+</div>
+<div class="uriRow">
+<span class="uriSym">¶ </span><a target="_blank" href="http://zoobank.org/7FF830F1-156E-4D87-8DF7-89A6D85043D3">http://zoobank.org/7FF830F1-156E-4D87-8DF7-89A6D85043D3</a>
+</div>
+</div>
+<div class="authorNotes"><div class="authorNotesRow">
+			<p>Corresponding author: Author (<a href="mailto:baustin@mareco.org">baustin@mareco.org</a>)</p>
+			<p>Academic editor: Roberto Pronzato</p>
+	</div></div>
+<div class="lMetaDates">
+<span class="metaDate"><span class="dateLabel">received </span>17 May 2013</span><span class="dateSeparator"> | </span><span class="metaDate"><span class="dateLabel">accepted </span>21 August 2013</span><span class="dateSeparator"> | </span><span class="metaDate"><span class="dateLabel">Published </span>2 October 2013</span><p></p>
+<br><div class="rifgtsrow">
+<p>(C) 2013 William C. Austin. This is an open access article distributed under the terms of the <a target="_blank" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License 3.0 (CC-BY)</a>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</p>
+<br><p>For reference, use of the paginated PDF or printed version of this article is recommended.</p>
+</div>
+</div>
+<div class="article-citation">
+<p><b>Citation:</b> Austin WC, Ott BS, Reiswig HM, Romagosa P, McDaniel NG (2013) Two new species in the family Axinellidae (Porifera, Demospongiae) from British Columbia and adjacent waters. ZooKeys 338: 11–28. doi: <a target="_blank" href="https://doi.org/10.3897/zookeys.338.5535">10.3897/zookeys.338.5535</a></p>
+</div>
+<a name="abstract"></a>
+<div class="abstractHolder"><div class="abstractText">
+		<span id="1" class="node_label">Abstract</span>
+		<p>Two new species of Demospongiae are described for British Columbia and adjacent waters in the family <span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Axinellidae"><span full-name="Axinellidae" class="fake-taxon-name-part">Axinellidae</span></span></span></span>,  <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta krautteri"><span full-name="Auletta krautteri" class="fake-taxon-name-part">krautteri</span></span></span></span></i> <b>sp. n.</b> and <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon kishinensis"><span full-name="Dragmacidon kishinensis" class="fake-taxon-name-part">kishinensis</span></span></span></span></i> <b>sp. n.</b> They represent range extensions for both of these genera. Both are fairly commonly encountered,  <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta krautteri"><span full-name="Auletta krautteri" class="fake-taxon-name-part">krautteri</span></span></span></span></i> below diving depths (87 to at least 300 m) and <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon kishinensis"><span full-name="Dragmacidon kishinensis" class="fake-taxon-name-part">kishinensis</span></span></span></span></i> in shallow water (intertidal to 30 m). We propose an amended genus diagnosis for <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span></span></span></i> to account for the variability among species in principal spicules that form the ascending tracts to be either oxeas,  styles or strongyles rather than just oxeas.</p>
+	</div></div>
+<div class="keywordsHolder"><div class="keywordsText">
+<span class="node_label">Keywords</span><p>Porifera, Demospongiae, Halichondrida, Axinellidae, northeast Pacific, <i>Auletta krautteri</i>, <i>Dragmacidon kishinensis</i></p>
+</div></div>
+<div class="secHolder">
+<div class="section">
+	<a name="introduction"></a>
+	<span id="1" class="node_title">Introduction</span>
+	<p>A brief history of surveys and publications from 1878 to 1966 including sponges in British Columbia is presented in <xref class="xrefLink node_citation bibr" rid="46">Austin et al. (in prep.)</xref>. Of the approximately 200 demosponge species recorded for this region (<xref class="xrefLink node_citation bibr" rid="43">Austin 1985</xref>,  <xref class="xrefLink node_citation bibr" rid="45">Austin et al. 2012</xref>),  six species were regarded as members of the family <span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Axinellidae"><span full-name="Axinellidae" class="fake-taxon-name-part">Axinellidae</span></span></span></span> (<xref class="xrefLink node_citation bibr" rid="43">Austin 1985</xref>,  <xref class="xrefLink node_citation bibr" rid="44">Austin and Ott 1987</xref>). Three of these have now been removed from this family. <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Syringella"><span full-name="Syringella" class="fake-taxon-name-part">Syringella</span></span> <span class="tn" data-taxon-parsed-name="Syringella amphispicula"><span full-name="Syringella amphispicula" class="fake-taxon-name-part">amphispicula</span></span></span></span></i> de Laubenfels,  1961 was recently shown to belong to the genus <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Homaxinella"><span full-name="Homaxinella" class="fake-taxon-name-part">Homaxinella</span></span></span></span></i> and hence to the family <span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Suberitidae"><span full-name="Suberitidae" class="fake-taxon-name-part">Suberitidae</span></span></span></span> (<xref class="xrefLink node_citation bibr" rid="46">Austin et al. in prep.</xref>). <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Stylissa"><span full-name="Stylissa" class="fake-taxon-name-part">Stylissa</span></span> <span class="tn" data-taxon-parsed-name="Stylissa stipitata"><span full-name="Stylissa stipitata" class="fake-taxon-name-part">stipitata</span></span></span></span></i> de Laubenfels,  1961 is not a <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Stylissa"><span full-name="Stylissa" class="fake-taxon-name-part">Stylissa</span></span></span></span></i> and not an axinellid; It is considered to be a synonym of <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Semisuberites"><span full-name="Semisuberites" class="fake-taxon-name-part">Semisuberites</span></span> <span class="tn" data-taxon-parsed-name="Semisuberites cribrosa"><span full-name="Semisuberites cribrosa" class="fake-taxon-name-part">cribrosa</span></span></span></span></i> (Micklucho-Maclay,  1870) by <xref class="xrefLink node_citation bibr" rid="436">van Soest et al. (2012)</xref>. Specimens identified by us as <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Phakettia"><span full-name="Phakettia" class="fake-taxon-name-part">Phakettia</span></span></span></span></i> sp. aff. <i>beringensis</i> we now consider to be <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Semisuberites"><span full-name="Semisuberites" class="fake-taxon-name-part">Semisuberites</span></span> <span class="tn" data-taxon-parsed-name="Semisuberites cribrosa"><span full-name="Semisuberites cribrosa" class="fake-taxon-name-part">cribrosa</span></span></span></span></i>. Finally,  a specimen identified as <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Axinella"><span full-name="Axinella" class="fake-taxon-name-part">Axinella</span></span></span></span></i> sp. has been lost. We defer any formal description until we have more material. It has been seen twice from a submersible at 100 m. The remaining two species,  both new,  are described in this paper: <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta krautteri"><span full-name="Auletta krautteri" class="fake-taxon-name-part">krautteri</span></span></span></span></i> sp. n. and <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon kishinensis"><span full-name="Dragmacidon kishinensis" class="fake-taxon-name-part">kishinensis</span></span></span></span></i> sp. n.</p>
+	<p><xref class="xrefLink node_citation bibr" rid="41">Alvarez and Hooper (2002)</xref> provided a discussion of the history,  definition and scope of the <span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Axinellidae"><span full-name="Axinellidae" class="fake-taxon-name-part">Axinellidae</span></span></span></span>. They reviewed the literature and concluded that among 92 nominal genera,  only 10 were valid (<i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span></span></span></i>,  <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Axinella"><span full-name="Axinella" class="fake-taxon-name-part">Axinella</span></span></span></span></i>,  <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Cymbastela"><span full-name="Cymbastela" class="fake-taxon-name-part">Cymbastela</span></span></span></span></i>,  <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span></span></span></i>,  <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmaxia"><span full-name="Dragmaxia" class="fake-taxon-name-part">Dragmaxia</span></span></span></span></i>,  <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Pararhaphoxya"><span full-name="Pararhaphoxya" class="fake-taxon-name-part">Pararhaphoxya</span></span></span></span></i>,  <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Phakellia"><span full-name="Phakellia" class="fake-taxon-name-part">Phakellia</span></span></span></span></i>,  <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Phycopsis"><span full-name="Phycopsis" class="fake-taxon-name-part">Phycopsis</span></span></span></span></i>,  <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Ptilocaulis"><span full-name="Ptilocaulis" class="fake-taxon-name-part">Ptilocaulis</span></span></span></span></i>,  and <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Reniochalina"><span full-name="Reniochalina" class="fake-taxon-name-part">Reniochalina</span></span></span></span></i>).</p>
+</div>
+<div class="section">
+	<a name="materialsandmethods"></a>
+	<span id="1" class="node_title">Materials and methods</span>
+	<p>Specimens housed in the Khoyatan Marine Laboratory museum (KML) were largely preserved and maintained in 70% isopropyl alcohol; some are dried. KML specimens were collected either by hand in the intertidal,  by SCUBA in the shallow subtidal,  or by dredge,  submersible (<i>PISCES IV,  DELTA</i>) or ROV (<i>ROPOS</i>) in deeper water.</p>
+	<p>Collections were examined for axinellids from the NE Pacific at Royal BC Museum,  California Academy of Sciences,  and the Canadian Museum of Nature. In some cases material was brought back to KML for more detailed study.</p>
+	<p>Under material examined,  for each lot we report: institution accession number,  station number,  location,  latitude and longitude,  depth,  date of collection,  collector,  and number of specimens. Where geographic location but not latitude and longitude was recorded,  we include them following the abbreviation for approximate: ca.. We endeavoured to track down missing data but were not always successful. Sources for obtaining geographic coordinates include: Google Earth,  Sailing directions BC Coast (North &amp; South Portion),  United States Coast Pilots: Pacific Coast #8,  southern Alaska,  and #7,  BC Geographical Names Information System,  and Canadian Hydrographic Service charts.</p>
+	<p>Where colour photographs were taken,  in situ scale bars are approximate. Photos taken together with specimens are assigned the same station number and accession number as those specimens.</p>
+	<p>Thick sections of specimens were made by excising approx. one cm<sup>3</sup> surface blocks,  dehydrating in ethanol and embedding these in 68°C melting point histological paraffin. After cooling to room temperature,  the blocks were trimmed to either vertical or tangential orientation and re-warmed to 40°C for one hour to prevent cracking during sectioning. Warmed tissue blocks were set into a guiding jig and sectioned by hand with a straight razor at varied,  but only marginally controllable thicknesses of between 0.1 and 1.0 mm. The best sections were de-paraffinized in xylene and mounted on microscope slides in Canada balsam for observation,  measurement and photography.</p>
+	<p>Tissue-free spicule preparations were made by dissolving small pieces of sponge in sodium hypochlorite. For each spicule type we measured,  using a compound microscope,  the diameter or length and width of 50 spicules (unless noted otherwise by N=). We scanned microscope fields for spicules of variable sizes,  but ignored obviously ontogenetically young spicules in determining size ranges. We list spicule dimensions as three numbers,  the minimum,  mean and maximum,  e.g.,  200–(250)–300. All measurements are in micrometers (μm). For scanning electron microscopy (SEM),  cleaned spicules were either deposited onto membrane filters that were then taped to stubs,  or deposited directly on double-sided tape attached to stubs. Preparations were coated with gold-palladium and viewed either in a Hitachi S-3500N SEM at the University of Victoria,  or in one case an ETEC Biosem at Simon Fraser University.</p>
+	<p>Holotypes have been deposited in the Royal British Columbia Museum,  Victoria,  BC,  Canada and paratypes have been deposited in the Canadian Museum of Nature,  Ottawa,  Ontario.</p>
+	<p>Taxa including families,  genera and species are arranged alphabetically. Systematic hierarchy follows <xref class="xrefLink node_citation bibr" rid="422">Hooper and Van Soest 2002</xref>. Abbreviations used in the text ordered alphabetically are: approx.=approximate; BC=British Columbia; CASIZ=California Academy of Sciences,  Invertebrate Zoology,  San Francisco,  California,  U.S.A.; CMNI=Canadian Museum of Nature,  Ottawa,  Ontario,  Canada; coll.=collector; FRB=Fisheries Research Board of Canada,  Ottawa,  Ontario,  Canada; ID=identified; KML=Khoyatan Marine Laboratory,  lat.=latitude; long.=longitude; North Saanich,  BC,  Canada; PBS=Pacific Biological Station,  Nanaimo,  BC,  Canada; PEI=Pacific Environment Institute,  Fisheries and Oceans Canada,  West Vancouver,  BC,  Canada; RBCM=Royal British Columbia Museum,  Victoria,  BC,  Canada; Str.=strait.</p>
+</div>
+<div class="section">
+	<a name="descriptions"></a>
+	<span id="1" class="node_title" style="padding-bottom:0px">Descriptions</span>
+	<div class="section">
+		<a name="genusaulettaschmidt1870"></a>
+		<span id="1" class="node_title1 sec">Genus <i><span class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span></span></span></i> Schmidt,  1870 </span>
+		<p><b>Systematics</b></p>
+		<p>Phylum <span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Porifera"><span full-name="Porifera" class="fake-taxon-name-part">Porifera</span></span></span></span></p>
+		<p>Class <span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Demospongiae"><span full-name="Demospongiae" class="fake-taxon-name-part">Demospongiae</span></span></span></span></p>
+		<p>Order <span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Halichondrida"><span full-name="Halichondrida" class="fake-taxon-name-part">Halichondrida</span></span></span></span></p>
+		<p>Family <span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Axinellidae"><span full-name="Axinellidae" class="fake-taxon-name-part">Axinellidae</span></span></span></span> Carter,  1875</p>
+		<p>Genus <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span></span></span></i> Schmidt,  1870</p>
+		<p><b>Genus diagnosis.</b> Tubular,  erect on peduncle or narrow base. Surface smooth or tuberculated with choanosomal spicules projecting slightly; ectosome without specialised skeleton. Choanosomal skeleton plumoreticulate,  with longitudinally strongyle or sinuous oxea tracts,  connected by single styles or plumose tracts of styles; masses of sinuous strongyles reinforcing the stem and may reinforce the inner tube wall. Megascleres sinuous strongyles or oxeas,  always coring main spicule tracts and inner tube walls; styles and or oxeas,  plumo-echinating and connecting main tracts. Microscleres absent.</p>
+		<p>(Amended from <xref class="xrefLink node_citation bibr" rid="41">Alvarez and Hooper 2002</xref>)</p>
+		<div class="taxonTreatmentsHolder secHolder"><div class="taxonTreatmentRow node_taxon-treatment" data-is-taxon-treatment="1" instance_id="51">
+			<div class="taxonNomenclature">
+				<span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part"><i>Auletta</i></span></span> <span class="tn" data-taxon-parsed-name="Auletta                             krautteri"><span full-name="Auletta                             krautteri" class="fake-taxon-name-part"><i>krautteri</i></span></span></span></span>
+				sp. n.
+				<p class="node_object_id"><a target="_blank" href="http://zoobank.org/B1D4806D-AE5D-4D4E-8DDC-6B5E2685BB76">http://zoobank.org/B1D4806D-AE5D-4D4E-8DDC-6B5E2685BB76</a></p>
+				<p class="node_object_id"><a target="_blank" href="http://species-id.net/wiki/Auletta_krautteri">http://species-id.net/wiki/Auletta_krautteri</a></p>
+				<span class="xrefLink node_fig fig" rid="11">Fig. 1</span>
+			</div>
+			<div class="taxonTreatmentSec inlineSec">
+				<span id="1" class="node_title1 taxon-treatment">Etymology.</span>
+				<p>Named after Dr. Manfred Krautter who organized a dive program in the submersible <i>DELTA</i> on sponge bioherms and collected the holotype.</p>
+			<div class="unfloat"></div>
+</div>
+			<div class="taxonTreatmentSec inlineSec">
+				<span id="1" class="node_title1 taxon-treatment">Material examined.</span>
+				<p>Holotype: RBCM 013-00114-001; KML1105 KML Sta. 71/99 Hecate Strait,  BC,  (<a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="52.44" data-longitude="-129.66666666667"><span class="node_location">52°26.4'N,  129°40.0'W</span></a>),  215 m depth,  July 18,  1999,  coll. M. Krautter,  1 specimen. Paratype: CMNI 2013-0001,  KML1106,  west of Dixon Entrance,  BC,  (<a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="60.166666666667" data-longitude="-133.91666666667"><span class="node_location">54°370'N,  133°55.0'W</span></a>),  229 m depth,  1 specimen.</p>
+			<div class="unfloat"></div>
+</div>
+			<div class="taxonTreatmentSec inlineSec">
+				<span id="1" class="node_title1 taxon-treatment">Other material.</span>
+				<p>KML1106,  PBS 65-77,  west of Dixon Entrance,  BC,  (<a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="54.616666666667" data-longitude="-133.91666666667"><span class="node_location">54°37 0'N,  133°55.0'W</span></a>),  229 m depth,  21 specimens; KML1108,  PBS JWS-132,  Queen Charlotte Sound,  BC,  (<a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="51.375" data-longitude="-129.225"><span class="node_location">51°22.5'N,  129°13.5'W</span></a>),  Feb. 3,  1965,  16 specimens; KML1107,  KML Sta. 171/76,  West of Flamingo Inlet,  BC,  (<a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="52.163333333333" data-longitude="-131.39666666667"><span class="node_location">52°09.8'N,  131°23.8'W</span></a>),  200 m depth,  Aug. 31,  1976,  coll. W.C. Austin,  3 specimens; KML1109,  PBS 71-47,  off Dixon Entrance,  BC,  (<a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="54.503333333333" data-longitude="-135.88833333333"><span class="node_location">54°30.2'N,  135°53.3'W</span></a>),  256 m depth,  3 specimens; KML1105,  KML Sta. 71/99,  Hecate Strait,  BC,  (<a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="51.358333333333" data-longitude="-129.225"><span class="node_location">51°21.5'N,  129°13.5'W</span></a>),  183 m depth; CASIZ 020231,  NODC 366501,  Gulf of Alaska,  (<a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="59.033333333333" data-longitude="-141.06"><span class="node_location">59°2.0'N,  141°3.6'W</span></a>),  348 m depth,  2 specimens; KML1108,  PBS 981-60,  Dixon Entrance,  BC,  (<a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="54" data-longitude="-132"><span class="node_location">54°N,  132°W</span></a>),  128 m depth; CMN 1900-86,  Forester I.,  Alaska,  (<a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="54.8" data-longitude="-133.6"><span class="node_location">54°48'N,  133°36'W</span></a>),  depth no data,  coll. W. Van Vliet; CMN 1900-89,  sta. LM 43,  Tasu,  Queen Charlotte Islands,  BC,  (<a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="52.75" data-longitude="-132.1"><span class="node_location">52°45'N,  132°06'W</span></a>),  depth no data,  coll. L. Marhue; CMN 1900 sta. JWS-93,  Forester I.,  Alaska,  (<a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="54.8" data-longitude="-133.6"><span class="node_location">54°48'N,  133°36'W</span></a>),  depth no data,  coll. J.W. Scogoen; CMN 1900-91,  W. of Queen Charlotte Islands,  BC,  (<a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="53" data-longitude="-132"><span class="node_location">53°N,  132°W</span></a>),  depth no data,  coll. W. Van Vliet; CMN 1900-93,  sta. FRB 66 221 m depth,  Forester I,  Alaska,  (<a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="54.8" data-longitude="-133.6"><span class="node_location">54°48'N,  133°36'W</span></a>),  depth no data; CMN 1900-94,  sta. LM-43,  Tasu,  Queen Charlotte I.,  BC,  (<a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="52.75" data-longitude="-132.1"><span class="node_location">52°45'N,  132°06'W</span></a>),  depth no data,  coll. L. Marhue; CMN 1900-96,  sta. FRB 66-2-6,  off Sitka,  Alaska,  (<a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="57.038333333333" data-longitude="-135.33833333333"><span class="node_location">57°02.3'N,  135°20.3'W</span></a>),  depth no data,  coll. W. Van Vliet.</p>
+			<div class="unfloat"></div>
+</div>
+			<div class="taxonTreatmentSec inlineSec">
+				<span id="1" class="node_title1 taxon-treatment">Description.</span>
+				<p><b><i>Macroscopic features</i>.</b> Erect,  stalked tubes typically single (<span class="xrefLink node_fig fig" rid="11">Fig. 1A</span>),  occasionally branched (2 to 3 tubes on a common base); branched forms uncommon. Overall height 5–13 cm,  width of tubes 0.7–2 cm. Stalk comprises up to one third of overall height. A single 2–8 mm diameter osculum at the tube apex leads into an atrial cavity extending the length of the tube and into the stalk where the tube diameter is restricted. Wall thickness of the tube 5–10 mm. Surface felt-like to touch. Smooth inner wall penetrated by a series of elongate openings. Consistency compressible but firm and tough. Colour in life reddish-brown; grey or cream in alcohol. Specimens collected in 1965 contained oocytes 130 to 150 µm diameter.</p>
+				<div class="imgFloatLeft"><div class="graphicHolder">
+<div class="graphicImg"><a target="_blank" href="https://zookeys.pensoft.net/showimg/oo_22800.jpg"><img alt="" data-src="https://zookeys.pensoft.net/showimg/oo_22800.jpg"></a></div>
+<div class="graphicCaptions">
+<span class="graphicCaption"></span><span class="graphicDescription"></span>
+</div>
+<div class="unfloat"></div>
+</div></div>
+<div class="ImgTextFloatRight">
+					<span id="1" class="node_label">Figure 1.</span>
+					<p><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta krautteri"><span full-name="Auletta krautteri" class="fake-taxon-name-part">krautteri</span></span></span></span></i> sp. n. <b>A</b> Fresh specimen,  KML1107,  KML Sta. 171/76,  West of Flamingo Inlet,  BC,  scale bar 5 cm <b>B</b> KML1105,  vertical longitudinal section,  scale bar 3 mm <b>C</b> KML1105,  cross section,  scale bar 3 mm; D–O. KML1105,  spicules <b>D</b> ends of style,  scale bar 50 µm <b>E</b> style associated with osculum (under light microscope),  scale bar 100 µm <b>F–I</b> various forms of styles <b>F</b> scale bar 100 µm; G. scale bar 100 µm <b>H</b> scale bar 200 µm <b>I</b> scale bar 300 µm <b>J</b> ends of oxea,  scale bar 50 µm <b>K–M</b> various forms of oxeas <b>K</b> scale bar 300 µm <b>L</b> scale bar 200 µm <b>M</b> scale bar 300 µm <b>N</b> ends of strongyle,  scale bar 50 µm <b>O,  P</b> two forms of strongyles,  scale bar 300 µm.</p>
+				</div>
+<div class="unfloat"></div>
+
+				<p><i>Microscopic features</i>. Skeletal architecture simple,  composed of one to three multi-spicule tracts oriented parallel to and lining the atrial cavity,  which is relatively smooth as a result (<span class="xrefLink node_fig fig" rid="11">Fig. 1B</span>). Single,  or multispicular tracts branch from this longitudinal tract approximately at right angles and project to the outer surface. The branches also form short brushes,  and where each branch penetrates the surface,  the terminal brush forms a tuft to produce a hispid appearance (<span class="xrefLink node_fig fig" rid="11">Fig. 1C</span>).</p>
+				<p>Each tract varies from 150–400 µm in diameter. Ascending tracts are composed primarily of straight and curved styles,  and secondarily of sinuous oxeas,  curved oxeas and occasional sinuous strongyles (<span class="xrefLink node_fig fig" rid="11">Fig. 1O,  P</span>). Straight styles or styles curved near the base form the exterior tips of ascending fibres and curved,  bent or sinuous oxeas and styles form cross tract links.</p>
+				<p>The multi-spicule tracts of the atrial cavity are 500–700 µm diameter and composed of bundles of 10 to 15 spicules cemented by spongin Ascending tracts composed of fewer,  typically 5 or 6,  spicules in a bundle cemented by spongin. Atrial tracts composed primarily of sinuous oxeas,  secondarily of curved and straight styles; occasionally sinuous strongyles,  sinuous styles,  and curved oxeas located in axial tracts.</p>
+				<p>Ectosome surface forms a reticulation in the areas with pores where it is elevated about 2 mm above the general surface. Easily detachable aspicular membranes are present on dermal surface stretched between spicule tracts,  and on atrial surface below the longitudinal spicule tracts (<span class="xrefLink node_fig fig" rid="11">Fig. 1B,  C</span>). The choanosome occupies the space between the detachable membranes and is distinguished by radial orientation of the spicule tracts,  and by the somewhat different proportion of spicules,  which is quite variable among different specimens.</p>
+				<p>Oscula may be ringed by long,  straight styles singly or in tufts. Fringe may be absent,  but if present,  extends 100–300 µm beyond the osculum.</p>
+				<p>Stalk is denser than the tube,  not hollow except near the tube base,  and packed with branching and anastomosing multi-spicule tracts,  forming a dense reticulation of two to ten or more spicules to a bundle cemented by spongin. Stalk tracts 100–400 µm diameter. Primary spicules sinuous strongyles which serve to reinforce the stem. The proportion of other stalk spicules is quite variable with sinuous oxeas,  bent and curved and straight styles being variably the next most abundant. Sinuous styles and curved or bent oxeas are uncommon.</p>
+				<p><i>Spicules</i>. Spicule types include straight (<span class="xrefLink node_fig fig" rid="11">Fig. 1F</span>) and bent (<span class="xrefLink node_fig fig" rid="11">Fig. 1H</span>) styles of the multi-spicule tracts; long,  straight styles of the oscular fringe (<span class="xrefLink node_fig fig" rid="11">Fig. 1E</span>) and proximate area; sinuous (<span class="xrefLink node_fig fig" rid="11">Fig. 1K,  L</span>),  curved or bent (<span class="xrefLink node_fig fig" rid="11">Fig. 1M</span>) oxeas,  and sinuous strongyles (<span class="xrefLink node_fig fig" rid="11">Fig. 1O,  P</span>). Occasionally sinuous oxeas occur that are rounded on one end forming sinuous styles. These latter were enumerated separately to give a qualitative idea of their abundance.</p>
+				<p>Longer styles often have a reduced diameter at the head comparable to mycalostyles. Oxeas are often anisometric. Both oxeas and styles occasionally have mucronate or rounded apices. Oxeas and strongyles may occasionally be centrotylote.</p>
+				<p>Five specimens were examined in detail (<span class="xrefLink node_citation table" rid="21">Table 1</span>).</p>
+				<div class="tableWrapHolder Table">
+					<span id="1" class="node_label">Table 1.</span>
+					<p>Comparison of spicules in <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta krautteri"><span full-name="Auletta krautteri" class="fake-taxon-name-part">krautteri</span></span></span></span></i> specimens examined in detail.<br></p>
+					
+<table cellspacing="0" cellpadding="0" class="innerTable Table"><tr><th class="cell_1" colspan="1" rowspan="2" style="text-align:left"><b>ID</b></th>
+<th class="cell_2" colspan="1" rowspan="2" style="text-align:left"><b>Location</b></th>
+<th class="cell_3" colspan="2" rowspan="2" style="text-align:left"><b>Latitude,  Longitude</b></th>
+<th class="cell_4" colspan="1" rowspan="2"><b>Depth (m)</b></th>
+<th class="cell_5" colspan="6" rowspan="1"><b>Length (µm)</b></th>
+</tr><tr><th class="cell_1" colspan="1" rowspan="1"><b>Straight Style</b></th>
+<th class="cell_2" colspan="1" rowspan="1"><b>Curved Style</b></th>
+<th class="cell_3" colspan="1" rowspan="1"><b>Sinuous Oxea</b></th>
+<th class="cell_4" colspan="1" rowspan="1"><b>Curved oxeas</b></th>
+<th class="cell_5" colspan="1" rowspan="1"><b>Sinuous Strongyle</b></th>
+<th class="cell_6" colspan="1" rowspan="1"><b>Oscular Styles</b></th>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1105</td>
+<td class="cell_2" colspan="1" rowspan="1">Hecate Strait,  BC</td>
+<td class="cell_3" colspan="2" rowspan="1"><a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="52.44" data-longitude="-129.66666666667"><span class="node_location">52°26.4'N,  129°40.0'W</span></a></td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">215</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">270–1350</td>
+<td class="cell_6" colspan="1" rowspan="1" style="text-align:center">240–880</td>
+<td class="cell_7" colspan="1" rowspan="1" style="text-align:center">440–1300</td>
+<td class="cell_8" colspan="1" rowspan="1" style="text-align:center">330–1070</td>
+<td class="cell_9" colspan="1" rowspan="1" style="text-align:center">420–1595</td>
+<td class="cell_10" colspan="1" rowspan="1" style="text-align:center">none</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">Spicule Abundance</td>
+<td class="cell_2" colspan="10" rowspan="1">Many straight and curved styles,  and sinuous oxeas throughout. Strongyles abundant in stem,  rare in atriosome,  uncommon in ectosome. Curved oxeas uncommon in stem. Bent and curved oxeas uncommon to moderately common.</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1106</td>
+<td class="cell_2" colspan="1" rowspan="1">Dixon Entrance,  BC</td>
+<td class="cell_3" colspan="2" rowspan="1"><a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="54.616666666667" data-longitude="-133.91666666667"><span class="node_location">54°37.0'N,  133°55.0'W</span></a></td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">229</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">320–1280</td>
+<td class="cell_6" colspan="1" rowspan="1" style="text-align:center">220–990</td>
+<td class="cell_7" colspan="1" rowspan="1" style="text-align:center">380–1274</td>
+<td class="cell_8" colspan="1" rowspan="1" style="text-align:center">220–880</td>
+<td class="cell_9" colspan="1" rowspan="1" style="text-align:center">250–1430</td>
+<td class="cell_10" colspan="1" rowspan="1" style="text-align:center">none</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">Spicule Abundance</td>
+<td class="cell_2" colspan="10" rowspan="1">Styles and sinuous oxeas abundant in ectosome and atriosome,  uncommon to moderately common in stem. Strongyles abundant in stem,  uncommon in ectosome and rare in atriosome. Bent and curved oxeas uncommon to rare.</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1108</td>
+<td class="cell_2" colspan="1" rowspan="1">Goose Bank,  QC Sound BC</td>
+<td class="cell_3" colspan="2" rowspan="1"><a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="51.5" data-longitude="-128"><span class="node_location">51°30.0'N,  128°0.0'W</span></a></td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">92</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">111–1300</td>
+<td class="cell_6" colspan="1" rowspan="1" style="text-align:center">119–940</td>
+<td class="cell_7" colspan="1" rowspan="1" style="text-align:center">310–1100</td>
+<td class="cell_8" colspan="1" rowspan="1" style="text-align:center">250–880</td>
+<td class="cell_9" colspan="1" rowspan="1" style="text-align:center">300–1150</td>
+<td class="cell_10" colspan="1" rowspan="1" style="text-align:center">970–2375</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">Spicule Abundance</td>
+<td class="cell_2" colspan="10" rowspan="1">Straight styles abundant in ectosome,  common in atriosome,  uncommon in stem; bent styles abundant throughout. Sinuous oxeas common throughout. Strongyles abundant in stem,  uncommon in atriosome,  rare in ectosome. Bent and curved oxeas moderately common except rare in stem.</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1109</td>
+<td class="cell_2" colspan="1" rowspan="1">Dixon Entrance,  BC</td>
+<td class="cell_3" colspan="2" rowspan="1"><a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="54.503333333333" data-longitude="-133.88833333333"><span class="node_location">54°30.2'N,  133°53.3'W</span></a></td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">256</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">250–1500</td>
+<td class="cell_6" colspan="1" rowspan="1" style="text-align:center">230–720</td>
+<td class="cell_7" colspan="1" rowspan="1" style="text-align:center">105–1250</td>
+<td class="cell_8" colspan="1" rowspan="1" style="text-align:center">123–920</td>
+<td class="cell_9" colspan="1" rowspan="1" style="text-align:center">440–1120</td>
+<td class="cell_10" colspan="1" rowspan="1" style="text-align:center">680–2450</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">Spicule Abundance</td>
+<td class="cell_2" colspan="10" rowspan="1">Styles and sinuous oxeas abundant throughout. Sinuous strongyles abundant in stem,  uncommon elsewhere. Bent and curved oxeas rare in stem,  common elsewhere.</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1107</td>
+<td class="cell_2" colspan="1" rowspan="1">W of Flamingo Inlet,  BC</td>
+<td class="cell_3" colspan="2" rowspan="1"><a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="53.496666666667" data-longitude="-131.39666666667"><span class="node_location">52°89.8'N,  131°23.8'W</span></a></td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">200</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">325–926</td>
+<td class="cell_6" colspan="1" rowspan="1" style="text-align:center">220–790</td>
+<td class="cell_7" colspan="1" rowspan="1" style="text-align:center">325–1005</td>
+<td class="cell_8" colspan="1" rowspan="1" style="text-align:center">276–768</td>
+<td class="cell_9" colspan="1" rowspan="1" style="text-align:center">286–1281</td>
+<td class="cell_10" colspan="1" rowspan="1" style="text-align:center">926–1050</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">Spicule Abundance</td>
+<td class="cell_2" colspan="10" rowspan="1">Styles and sinuous oxeas abundant in the ectosome and atriosome; uncommon to rare in the stem. Strongyles abundant in the stem,  rare in atriosome,  uncommon in the ectosome. Bent &amp; curved oxeas rare in stem,  uncommon elsewhere.</td>
+</tr></table></div>
+			<div class="unfloat"></div>
+</div>
+			<div class="taxonTreatmentSec inlineSec">
+				<span id="1" class="node_title1 taxon-treatment">Remarks.</span>
+				<p>Evident from the <span class="xrefLink node_citation table" rid="21">Table 1</span> above is the relatively large variability in disposition and size of spicules from specimen to specimen.</p>
+				<p>Our specimens fit the diagnosis for <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span></span></span></i> by <xref class="xrefLink node_citation bibr" rid="41">Alvarez and Hooper (2002)</xref> except that the sinuous diacts are primarily oxeas in the tube and strongyles in the stem. Several species of <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span></span></span></i> are reportedtohave sinuous oxeas but no strongyles (e.g.,  <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta aurantiaca"><span full-name="Auletta aurantiaca" class="fake-taxon-name-part">aurantiaca</span></span></span></span></i> Dendy,  1889,  <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta consimilis"><span full-name="Auletta consimilis" class="fake-taxon-name-part">consimilis</span></span></span></span></i> Thiele,  1898,  <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta pedunculata"><span full-name="Auletta pedunculata" class="fake-taxon-name-part">pedunculata</span></span></span></span></i> Topsent,  1896,  <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta lyrata"><span full-name="Auletta lyrata" class="fake-taxon-name-part">lyrata</span></span></span></span></i> (Esper,  1794)).</p>
+				<p>The following species are not conspecific with <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta krautteri"><span full-name="Auletta krautteri" class="fake-taxon-name-part">krautteri</span></span></span></span></i> based on the absence of one or more spicule types.</p>
+				<p><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta andamensis"><span full-name="Auletta andamensis" class="fake-taxon-name-part">andamensis</span></span></span></span></i> Pattanayak,  2006,  p. 66	No strongyles</p>
+				<p><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta aurantiaca"><span full-name="Auletta aurantiaca" class="fake-taxon-name-part">aurantiaca</span></span></span></span></i> Dendy,  1889,  p. 92No strongyles</p>
+				<p><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta consimilis"><span full-name="Auletta consimilis" class="fake-taxon-name-part">consimilis</span></span></span></span></i> Thiele,  1898,  p. 55	No strongyles</p>
+				<p><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta dendrophora"><span full-name="Auletta dendrophora" class="fake-taxon-name-part">dendrophora</span></span></span></span></i> Wilson,  1904,  p. 158	No oxeas</p>
+				<p><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta grantioides"><span full-name="Auletta grantioides" class="fake-taxon-name-part">grantioides</span></span></span></span></i> Lévi &amp; Vacelet,  1958,  p. 243	No oxeas</p>
+				<p><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta halicondroides"><span full-name="Auletta halicondroides" class="fake-taxon-name-part">halicondroides</span></span></span></span></i> Thiele,  1898,  p. 55	No strongyles</p>
+				<p><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta lyrata"><span full-name="Auletta lyrata" class="fake-taxon-name-part">lyrata</span></span></span></span></i> (Esper,  1794)	No strongyles</p>
+				<p><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta lyrata"><span full-name="Auletta lyrata" class="fake-taxon-name-part">lyrata</span></span></span></span></i> var. <i>brevispiculata</i> Dendy,  1922	No strongyles</p>
+				<p><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta pedunculata"><span full-name="Auletta pedunculata" class="fake-taxon-name-part">pedunculata</span></span></span></span></i> Topsent,  1896	No strongyles</p>
+				<p><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta sessilis"><span full-name="Auletta sessilis" class="fake-taxon-name-part">sessilis</span></span></span></span></i> Topsent,  1904	No oxeas</p>
+				<p><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta sycinularia"><span full-name="Auletta sycinularia" class="fake-taxon-name-part">sycinularia</span></span></span></span></i> Schmidt,  1870	No oxeas</p>
+				<p><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta tubulosa"><span full-name="Auletta tubulosa" class="fake-taxon-name-part">tubulosa</span></span></span></span></i> (Ridley &amp; Dendy,  1886),  p. 482	No oxeas or strongyles</p>
+				<p><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta tuberosa"><span full-name="Auletta tuberosa" class="fake-taxon-name-part">tuberosa</span></span></span></span></i> Alvarez,  Van Soest &amp; Rützler,  1998,  forms clusters of tubes which are tuberculate rather than smooth as in <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta krautteri"><span full-name="Auletta krautteri" class="fake-taxon-name-part">krautteri</span></span></span></span></i>. It does have oxeas,  but they are smaller (340–430–530) than in <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta krautteri"><span full-name="Auletta krautteri" class="fake-taxon-name-part">krautteri</span></span></span></span></i>. <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta elongata"><span full-name="Auletta elongata" class="fake-taxon-name-part">elongata</span></span></span></span></i> Dendy,  1905: external form consists of multiple tubes branching off a single stem rather than single tubes on each stem as in <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta krautteri"><span full-name="Auletta krautteri" class="fake-taxon-name-part">krautteri</span></span></span></span></i>. The axial skeleton consists of stout fibres with short perpendicular anastomosing branches rather than single to three longitudinal axial fibres with relatively long arching perpendicular fibres that branch but do not anastomose. <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta elongata"><span full-name="Auletta elongata" class="fake-taxon-name-part">elongata</span></span></span></span></i> var. <i>fruticosa</i> Dendy,  1916,  is similar to <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta elongata"><span full-name="Auletta elongata" class="fake-taxon-name-part">elongata</span></span></span></span></i> except it has smaller spicules.</p>
+				<p>Two other sponges originally assigned to <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span></span></span></i> have been reassigned to other genera: <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta elegans"><span full-name="Auletta elegans" class="fake-taxon-name-part">elegans</span></span></span></span></i> Vosmaer,  1882,  is now accepted as <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Semisuberites"><span full-name="Semisuberites" class="fake-taxon-name-part">Semisuberites</span></span> <span class="tn" data-taxon-parsed-name="Semisuberites cribrosa"><span full-name="Semisuberites cribrosa" class="fake-taxon-name-part">cribrosa</span></span></span></span></i> (Miklucho-Maclay,  1870) (<xref class="xrefLink node_citation bibr" rid="435">van Soest et al. 2005</xref>): Barents Sea. <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta celebensis"><span full-name="Auletta celebensis" class="fake-taxon-name-part">celebensis</span></span></span></span></i> Thiele,  1899 is now accepted as <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Stylissa"><span full-name="Stylissa" class="fake-taxon-name-part">Stylissa</span></span> <span class="tn" data-taxon-parsed-name="Stylissa massa"><span full-name="Stylissa massa" class="fake-taxon-name-part">massa</span></span></span></span></i> (Carter,  1887) (Van Soest et al.,  op. cit.): West Pacific.</p>
+				<p><xref class="xrefLink node_citation bibr" rid="437">Stone et al. (2011)</xref> briefly described and showed images of a tubular form they identified as <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Axinella"><span full-name="Axinella" class="fake-taxon-name-part">Axinella</span></span> <span class="tn" data-taxon-parsed-name="Axinella rugosa"><span full-name="Axinella rugosa" class="fake-taxon-name-part">rugosa</span></span></span></span></i> (Bowerbank,  1866) that might be con-specific with <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta krautteri"><span full-name="Auletta krautteri" class="fake-taxon-name-part">krautteri</span></span></span></span></i>. However,  <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Axinella"><span full-name="Axinella" class="fake-taxon-name-part">Axinella</span></span> <span class="tn" data-taxon-parsed-name="Axinella rugosa"><span full-name="Axinella rugosa" class="fake-taxon-name-part">rugosa</span></span></span></span></i> in the N. Atlantic is described as bushy with irregular branches (<xref class="xrefLink node_citation bibr" rid="436">van Soest 2013</xref>). <xref class="xrefLink node_citation bibr" rid="424">Lambe (1895)</xref> identified four specimens from Chika Island and Unalaska Island as belonging to <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Axinella"><span full-name="Axinella" class="fake-taxon-name-part">Axinella</span></span> <span class="tn" data-taxon-parsed-name="Axinella rugosa"><span full-name="Axinella rugosa" class="fake-taxon-name-part">rugosa</span></span></span></span></i>. However,  Cuenot (1913) argued that these were not <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Axinella"><span full-name="Axinella" class="fake-taxon-name-part">Axinella</span></span> <span class="tn" data-taxon-parsed-name="Axinella rugosa"><span full-name="Axinella rugosa" class="fake-taxon-name-part">rugosa</span></span></span></span></i> and proposed a new name <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Phakellia"><span full-name="Phakellia" class="fake-taxon-name-part">Phakellia</span></span> <span class="tn" data-taxon-parsed-name="Phakellia lambei"><span full-name="Phakellia lambei" class="fake-taxon-name-part">lambei</span></span></span></span></i> Topsent,  1913. <xref class="xrefLink node_citation bibr" rid="424">Lambe (1895)</xref> described his specimens as dividing close to the base into two branches which subdivide above into two lobate expansions.</p>
+			<div class="unfloat"></div>
+</div>
+			<div class="taxonTreatmentSec inlineSec">
+				<span id="1" class="node_title1 taxon-treatment">Conclusions.</span>
+				<p>No described species have a suite of characters matching those of our specimens. We therefore propose that the <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span></span></span></i> in British Columbia and Alaska be considered a new species,  <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta krautteri"><span full-name="Auletta krautteri" class="fake-taxon-name-part">krautteri</span></span></span></span></i>. We suggest that the tubular forms recorded by <xref class="xrefLink node_citation bibr" rid="437">Stone et al. (2011)</xref> are likely <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta krautteri"><span full-name="Auletta krautteri" class="fake-taxon-name-part">krautteri</span></span></span></span></i>.</p>
+			<div class="unfloat"></div>
+</div>
+			<div class="taxonTreatmentSec inlineSec">
+				<span id="1" class="node_title1 taxon-treatment">Bathymetric range.</span>
+				<p>180 to 320 meters depth; 87 to 712 meters depth if include <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Axinella"><span full-name="Axinella" class="fake-taxon-name-part">Axinella</span></span> <span class="tn" data-taxon-parsed-name="Axinella rugosa"><span full-name="Axinella rugosa" class="fake-taxon-name-part">rugosa</span></span></span></span></i> of <xref class="xrefLink node_citation bibr" rid="437">Stone et al. (2011)</xref>.</p>
+			<div class="unfloat"></div>
+</div>
+			<div class="taxonTreatmentSec inlineSec">
+				<span id="1" class="node_title1 taxon-treatment">Zoogeographic range.</span>
+				<p>Gulf of Alaska and south to the southern end of the Queen Charlotte Islands,  BC,  also central Aleutian Islands if include <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Axinella"><span full-name="Axinella" class="fake-taxon-name-part">Axinella</span></span> <span class="tn" data-taxon-parsed-name="Axinella rugosa"><span full-name="Axinella rugosa" class="fake-taxon-name-part">rugosa</span></span></span></span></i> of <xref class="xrefLink node_citation bibr" rid="437">Stone et al. (2011)</xref>.</p>
+			<div class="unfloat"></div>
+</div>
+			<div class="taxonTreatmentSec inlineSec">
+				<span id="1" class="node_title1 taxon-treatment">Ecology.</span>
+				<p>The sponge is a moderately common dredged species found on rock,  gravel or mud substrates. Some individuals have been found with a small red copepod (unidentified) burrowed into the surface. Two individuals examined contained a species of the isopod <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Gnathia"><span full-name="Gnathia" class="fake-taxon-name-part">Gnathia</span></span></span></span></i>,  oriented head down. Unidentified gammarid amphipods and unidentified spionid polychaetes have also been observed. Numbers of the crinoid <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Florometra"><span full-name="Florometra" class="fake-taxon-name-part">Florometra</span></span> <span class="tn" data-taxon-parsed-name="Florometra serratissima"><span full-name="Florometra serratissima" class="fake-taxon-name-part">serratissima</span></span></span></span></i> (A.H. Clark,  1907) were observed clinging to specimens of <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Auletta"><span full-name="Auletta" class="fake-taxon-name-part">Auletta</span></span> <span class="tn" data-taxon-parsed-name="Auletta krautteri"><span full-name="Auletta krautteri" class="fake-taxon-name-part">krautteri</span></span></span></span></i> in Hecate Strait,  BC.</p>
+			<div class="unfloat"></div>
+</div>
+		</div></div>
+	</div>
+	<div class="section" style="padding-top:15px">
+		<a name="genusdragmacidonhallman1917"></a>
+		<span id="1" class="node_title1 sec">Genus <i><span class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span></span></span></i> Hallman,  1917 </span>
+		<p><b>Genus diagnosis.</b> Unbranched,  club-shaped,  lobate,  shrub-like,  thickly encrusting or massive habit. Surface with short connules or tubercles; oscules circular,  flush or slightly elevated,  sometimes with superficial canals leading to opening. Ectosome without specialised skeleton. Choanosomal skeleton plumoreticulate with ascending plumose tracts,  anastomosing or interconnected by secondary multispicular tracts; not differentiated into axial or extra-axial regions. Megascleres oxeas and/or styles generally in similar proportions and dimensions. Microscleres,  if present,  raphids in tightly packed trichodragmas (<xref class="xrefLink node_citation bibr" rid="41">Alvarez and Hooper 2002</xref>)</p>
+		<div class="taxonTreatmentsHolder secHolder"><div class="taxonTreatmentRow node_taxon-treatment" data-is-taxon-treatment="1" instance_id="52">
+			<div class="taxonNomenclature">
+				<span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part"><i>Dragmacidon</i></span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon                             kishinensis"><span full-name="Dragmacidon                             kishinensis" class="fake-taxon-name-part"><i>kishinensis</i></span></span></span></span>
+				sp. n.
+				<p class="node_object_id"><a target="_blank" href="http://zoobank.org/53DA9618-DE0A-47E4-B78F-BB772C1D1400">http://zoobank.org/53DA9618-DE0A-47E4-B78F-BB772C1D1400</a></p>
+				<p class="node_object_id"><a target="_blank" href="http://species-id.net/wiki/Dragmacidon_kishinensis">http://species-id.net/wiki/Dragmacidon_kishinensis</a></p>
+				<span class="xrefLink node_fig fig" rid="12">Fig. 2</span>
+			</div>
+			<div class="taxonTreatmentSec inlineSec">
+				<span id="1" class="node_title1 taxon-treatment">Etymology.</span>
+				<p>After the ancient First Nation (aboriginal) village site kiix?in (pronounced keeshin) which includes Execution Rock Cave,  Barkley Sound,  BC,  where a specimen was collected in the low intertidal.</p>
+			<div class="unfloat"></div>
+</div>
+			<div class="taxonTreatmentSec inlineSec">
+				<span id="1" class="node_title1 taxon-treatment">Material examined.</span>
+				<p>Holotype: RBCM 013-00115-001,  KML1111,  PEI 44,  Steep I.,  Discovery Passage,  BC,  (<a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="50.082333333333" data-longitude="-125.25583333333"><span class="node_location">50°4.94'N,  125°15.35'W</span></a>),  30 m depth,  coll. N. McDaniel,  Feb. 26,  1976,  1 specimen &amp; in situ image. Paratype: CMNI 2013–-0002,  KML1113,  KML 139/80,  Limestone I.,  BC,  (ca. <a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="52.916666666667" data-longitude="-131.6"><span class="node_location">52°55'N,  131°36'W</span></a>),  3 m depth,  coll. W.C. Austin,  July 4,  1980,  1 specimen.</p>
+				<p><b>Other material.</b> KML1112,  PEI 130,  Copper Cliffs,  Discovery Passage,  BC,  (<a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="50.106666666667" data-longitude="-125.25583333333"><span class="node_location">50°6.40'N,  125°15.35'W</span></a>),  15 m depth,  coll. N. McDaniel,  Apr. 16,  1978,  1 specimen; KML1114,  PEI 53,  Grilse Pt. Texada I,  BC,  (<a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="49.8005" data-longitude="-124.5965"><span class="node_location">49°48.03'N,  124°35.79'W</span></a>),  10 m depth,  coll. N. McDaniel,  Mar. 13,  1977,  1 specimen; KML1116,  PEI 49,  Vivian I.,  BC,  (<a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="49.838" data-longitude="-124.69933333333"><span class="node_location">49°50.28'N,  124°41.96'W</span></a>),  15 m depth,  coll. N. McDaniel,  Apr. 10,  1976,  1 specimen; KML1121,  Sta. no data,  Rennell Sound,  BC,  (ca. <a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="53.4" data-longitude="-132.73333333333"><span class="node_location">53°24'N,  132°44'W</span></a>.),  depth no data,  coll. M. LeBlanc,  Apr. 14,  1989,  2 specimens; KML1294,  KML 127/76,  Execution Rock Cave (<a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="48.815" data-longitude="-125.17666666667"><span class="node_location">48°48.9'N,  125°10.6'W</span></a>),  0.2 m height,  coll. W.C. Austin,  July 28,  1976,  1 specimen; RBCM 976-1081,  Entrance I.,  Tasu Sound,  BC,  (ca. <a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="52.767333333333" data-longitude="-132.05916666667"><span class="node_location">52°46.04'N,  132°03.55'W</span></a>),  depth no data,  coll. P. Lambert,  1976,  1 specimen; RBCM 974-230-3,  Brundige Inlet,  BC,  (ca. <a target="_blank" class="localityLink" href="#" data-is-locality-coordinate="1" onclick="return false;" data-latitude="54.616666666667" data-longitude="-130.83333333333"><span class="node_location">54°37'N,  130°50'W</span></a>),  coll. P. Lambert,  June 19,  1974,  depth no data.</p>
+			<div class="unfloat"></div>
+</div>
+			<div class="taxonTreatmentSec inlineSec">
+				<span id="1" class="node_title1 taxon-treatment">Description.</span>
+				<p><b><i>Macroscopic features</i>.</b> Thick,  encrusting,  unbranched form,  20 × 20 × 4 cm thick in holotype. Surface with abundant,  small (1 mm diam.) and large (1 cm × 1–3 cm) irregular tubercles (<span class="xrefLink node_fig fig" rid="12">Fig. 2A</span>). Consistency preserved: moderately compressible but tough. Oscula numerous,  flush with surface and ranging from 0.2 to 4 mm diameter. Aquiferous canals tangential with those near surface leading to oscula. Orange colour in life (<span class="xrefLink node_fig fig" rid="12">Fig. 2A</span>),  light tan in alcohol.</p>
+				<div class="imgFloatLeft"><div class="graphicHolder">
+<div class="graphicImg"><a target="_blank" href="https://zookeys.pensoft.net/showimg/oo_22802.jpg"><img alt="" data-src="https://zookeys.pensoft.net/showimg/oo_22802.jpg"></a></div>
+<div class="graphicCaptions">
+<span class="graphicCaption"></span><span class="graphicDescription"></span>
+</div>
+<div class="unfloat"></div>
+</div></div>
+<div class="ImgTextFloatRight">
+					<span id="1" class="node_label">Figure 2.</span>
+					<p><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon kishinensis"><span full-name="Dragmacidon kishinensis" class="fake-taxon-name-part">kishinensis</span></span></span></span></i> sp. n. <b>A</b> Holotype <b>B–H</b> Paratype <b>A</b> KML1111,  in situ Steep I.,  BC,  scale bar approx. 10 cm <b>B</b> KML1114,  in situ Texada I.,  scale bar approx. 5 cm <b>C</b> KML1113,  long. section,  periphery to right,  scale bar 3 mm <b>D</b> KML1113,  cross section scale bar 500 µm <b>E</b> KML1113,  oxea,  scale bar 500 µm <b>F</b> KML1113,  oxea tip,  scale bar 100 µm <b>G</b> KML1113,  style,  scale bar 500 µm <b>H</b> KML1113,  head of style,  scale bar 100 µm.</p>
+				</div>
+<div class="unfloat"></div>
+
+				<p><i>Microscopic features</i>. Ostia about 0.5 mm diam. in situ penetrate a thin surface membrane between lobes (<span class="xrefLink node_fig fig" rid="12">Fig. 2B</span>); weakly developed plumoreticulate skeleton of 50-100 um diameter fibers extend from base to surface; uni or pauci spicular cross connections (<span class="xrefLink node_fig fig" rid="12">Fig. 2C</span>); halichondroid (confused) skeleton toward the base. No specialized ectosomal skeleton and no axial skeleton.</p>
+			<div class="unfloat"></div>
+</div>
+			<div class="taxonTreatmentSec inlineSec">
+				<span id="1" class="node_title1 taxon-treatment">Spicules.</span>
+				<p>Spicule types include straight oxeas (<span class="xrefLink node_fig fig" rid="12">Fig. 2E</span>),  slightly curved styles (<span class="xrefLink node_fig fig" rid="12">Fig. 2G</span>),  and strongyles. Oxea tips gradually and sharply pointed; style heads smoothly rounded,  slightly narrower than main style body. Styles and oxeas mostly slightly curved or straight; a few strongly curved or sinuous. Strongyles uncommon to rare.</p>
+				<p><span class="xrefLink node_citation table" rid="22">Table 2</span> lists spicule dimensions.</p>
+				<p>Oxea and styles in about equal numbers,  and of equivalent length. A second category of styles (styles II),  while of comparable length to style 1,  much thinner. Also much less abundant in two specimens and absent in eight other specimens. Strongyles of comparable width to oxeas and style I,  but shorter; few in number in seven specimens and absent in three other specimens. No loose raphids or trichodragmas observed.</p>
+				<div class="tableWrapHolder Table">
+					<span id="1" class="node_label">Table 2.</span>
+					<p>Spicule measurements of six specimens of <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon kishinensis"><span full-name="Dragmacidon kishinensis" class="fake-taxon-name-part">kishinensis</span></span></span></span></i> sp. n. examined in detail N=50 unless indicated.<br></p>
+					
+<table cellspacing="0" cellpadding="0" class="innerTable Table"><tr><th class="cell_1" colspan="1" rowspan="2" style="text-align:left"><b>Accession No.</b></th>
+<th class="cell_2" colspan="1" rowspan="2" style="text-align:left"><b>Location</b></th>
+<th class="cell_3" colspan="1" rowspan="2" style="text-align:left"><b>Sponge Tissue</b></th>
+<th class="cell_4" colspan="2" rowspan="1"><b>Styles 1</b></th>
+</tr><tr><th class="cell_1" colspan="1" rowspan="1"><b>L (µm)</b></th>
+<th class="cell_2" colspan="1" rowspan="1"><b>W (µm)</b></th>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1113</td>
+<td class="cell_2" colspan="1" rowspan="1">Limestone I.,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1"></td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">493–(916)–1300</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">11–(16.1)–28.6</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1111</td>
+<td class="cell_2" colspan="1" rowspan="1">Steep I.,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1"></td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">550–(1037)–1960</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">7.4–(18.0)–33</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1112</td>
+<td class="cell_2" colspan="1" rowspan="1">Copper Cliffs,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1"></td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">630–(851)–1100</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">11–(19.6)–30.8</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1114</td>
+<td class="cell_2" colspan="1" rowspan="1">Texada I,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1"></td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">520–(955)–1285</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">11–(14.5)–28.6</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1116</td>
+<td class="cell_2" colspan="1" rowspan="1">Vivian I.,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Ectosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">330–(738)–1060</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">11–(16.9)–26.1</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1116</td>
+<td class="cell_2" colspan="1" rowspan="1">Vivian I.,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Choanosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">580–(872)–1180</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">6.6–(15.7)–24.2</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1121 Specimen A</td>
+<td class="cell_2" colspan="1" rowspan="1">Rennell Sound,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Ectosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">300–(591)–970</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">8.8–(16)–26.4</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1121 Specimen A</td>
+<td class="cell_2" colspan="1" rowspan="1">Rennell Sound,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Choanosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">460–(809)–1150</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">8.8–(14.7)–22</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1121 Specimen B</td>
+<td class="cell_2" colspan="1" rowspan="1">Rennell Sound BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Ectosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">550–(930)–1238</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">8.8–(13.8)–19.8</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1121 Specimen B</td>
+<td class="cell_2" colspan="1" rowspan="1">Rennell Sound BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Choanosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">530–(910)–1060</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">4.4–(11.9)–17.6</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1113</td>
+<td class="cell_2" colspan="1" rowspan="1">Limestone I.,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1"></td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">580–(857)–1200</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">2.2–(6.1)–11</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1111</td>
+<td class="cell_2" colspan="1" rowspan="1">Steep I.,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1"></td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">500–(816)–1050 (n=19)</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">2.2–(7.4)–11 (n=19)</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1112</td>
+<td class="cell_2" colspan="1" rowspan="1">Copper Cliffs,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1"></td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">n=0</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center"></td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1114</td>
+<td class="cell_2" colspan="1" rowspan="1">Texada I,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1"></td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">n=0</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center"></td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1116</td>
+<td class="cell_2" colspan="1" rowspan="1">Vivian I.,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Ectosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">n=0</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center"></td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1116</td>
+<td class="cell_2" colspan="1" rowspan="1">Vivian I.,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Choanosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">n=0</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center"></td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1121 Specimen A</td>
+<td class="cell_2" colspan="1" rowspan="1">Rennell Sound,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Ectosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">n=0</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center"></td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1121 Specimen A</td>
+<td class="cell_2" colspan="1" rowspan="1">Rennell Sound,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Choanosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">n=0</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center"></td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1121 Specimen B</td>
+<td class="cell_2" colspan="1" rowspan="1">Rennell Sound BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Ectosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">n=0</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center"></td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1121 Specimen B</td>
+<td class="cell_2" colspan="1" rowspan="1">Rennell Sound BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Choanosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">n=0</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center"></td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1113</td>
+<td class="cell_2" colspan="1" rowspan="1">Limestone I.,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1"></td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">690–(1033)–1300</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">14.4–(20.8)–30.8</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1111</td>
+<td class="cell_2" colspan="1" rowspan="1">Steep I.,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1"></td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">904–(1200)–1593</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">12.4–(27.3)–42.2</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1112</td>
+<td class="cell_2" colspan="1" rowspan="1">Copper Cliffs,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1"></td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">670–(983)–1214</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">15.4–(28.1)–46.2</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1114</td>
+<td class="cell_2" colspan="1" rowspan="1">Texada I,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1"></td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">670–(1029)–1380</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">15.4–(24.2)–33</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1116</td>
+<td class="cell_2" colspan="1" rowspan="1">Vivian I.,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Ectosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">480–(890)–1200</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">15.4–(27.1)–37.4</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1116</td>
+<td class="cell_2" colspan="1" rowspan="1">Vivian I.,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Choanosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">780–(1021)–1238</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">13.2–(25.1)–35.2</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1121 Specimen A</td>
+<td class="cell_2" colspan="1" rowspan="1">Rennell Sound,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Ectosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">390–(701)–1010</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">11–(21.9)–35.2</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1121 Specimen A</td>
+<td class="cell_2" colspan="1" rowspan="1">Rennell Sound,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Choanosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">440–(966)–1285</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">15.4–(26.9)–33</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1121 Specimen B</td>
+<td class="cell_2" colspan="1" rowspan="1">Rennell Sound BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Ectosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">810–(1096)–1380</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">8.8–(19.3)–26.4</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1121 Specimen B</td>
+<td class="cell_2" colspan="1" rowspan="1">Rennell Sound BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Choanosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">500–(1006)–1285</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">3.3–(15.2)–26.4</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1113</td>
+<td class="cell_2" colspan="1" rowspan="1">Limestone I.,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1"></td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">520–(707)–800 (n=3)</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">22–(26.4)–33 (n=3)</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1111</td>
+<td class="cell_2" colspan="1" rowspan="1">Steep I.,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1"></td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">n=0</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center"></td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1112</td>
+<td class="cell_2" colspan="1" rowspan="1">Copper Cliffs,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1"></td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">580–(660)–770 (n=3)</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">15.4–(23.5)–28.6 (n=3)</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1114</td>
+<td class="cell_2" colspan="1" rowspan="1">Texada I,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1"></td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">580–(750)–900 (n=4)</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">15.4–(18.2)–22 (n=4)</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1116</td>
+<td class="cell_2" colspan="1" rowspan="1">Vivian I.,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Ectosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">220–(622)–900 (n=14)</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">15.4–(31.1)–44 (n=14)</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1116</td>
+<td class="cell_2" colspan="1" rowspan="1">Vivian I.,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Choanosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">570–(735)–900 (n=2)</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">22–(27.5)–33 (n=2)</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1121 Specimen A</td>
+<td class="cell_2" colspan="1" rowspan="1">Rennell Sound,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Ectosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">210–(399)–730 (n=19)</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">17.6–(26.2)35.2 (n=19)</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1121 Specimen A</td>
+<td class="cell_2" colspan="1" rowspan="1">Rennell Sound,  BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Choanosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">170–(467)–690 (n=6)</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center">19.8–(26.4)–35.2 (n=6)</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1121 Specimen B</td>
+<td class="cell_2" colspan="1" rowspan="1">Rennell Sound BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Ectosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">n=0</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center"></td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1">KML1121 Specimen B</td>
+<td class="cell_2" colspan="1" rowspan="1">Rennell Sound BC</td>
+<td class="cell_3" colspan="1" rowspan="1">Choanosome</td>
+<td class="cell_4" colspan="1" rowspan="1" style="text-align:center">n=0</td>
+<td class="cell_5" colspan="1" rowspan="1" style="text-align:center"></td>
+</tr></table></div>
+			<div class="unfloat"></div>
+</div>
+			<div class="taxonTreatmentSec inlineSec">
+				<span id="1" class="node_title1 taxon-treatment">Remarks.</span>
+				<p>The paucity of thin styles suggests that these are developmental stages. The strongyles may be anomalies or,  alternatively,  may be associated with one area of the sponge such as the oscula or the area of attachment to the substrate.</p>
+				<p>The choanosomal skeleton of <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon kishinensis"><span full-name="Dragmacidon kishinensis" class="fake-taxon-name-part">kishinensis</span></span></span></span></i> sp. n. is only weakly plumose. In our material the linear tracts are also less dense than in the type species <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon agariciformis"><span full-name="Dragmacidon agariciformis" class="fake-taxon-name-part">agariciformis</span></span></span></span></i> (Dendy,  1905). In other respects it fits the diagnosis for <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span></span></span></i> which includes species that are thickly encrusting,  the surface with tubercles,  ectosome without a specialized skeleton,  and skeleton not differentiated into an axial or extra-axial region. It also has both oxeas and styles of similar form and in similar numbers.</p>
+				<p>It does not fit the diagnosis for <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Axinyssa"><span full-name="Axinyssa" class="fake-taxon-name-part">Axinyssa</span></span></span></span></i> where the choanosomal skeleton is confused; and where the spicules may be oxeas,  strongyloxeas or stylote modifications of oxeas (<xref class="xrefLink node_citation bibr" rid="418">Erpenbeck and Van Soest 2002</xref>)</p>
+				<p>Twenty-six species of <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span></span></span></i> are presently recognized (<xref class="xrefLink node_citation bibr" rid="435">van Soest et al. 2005</xref>: World Porifera Database,  accessed February 2013).</p>
+				<p>Eight species can be excluded from being conspecific based on their having trichodragmas which are lacking in <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon kishinensis"><span full-name="Dragmacidon kishinensis" class="fake-taxon-name-part">kishinensis</span></span></span></span></i> sp. n. All but two of the remaining species without trichodragmas have oxeas and styles which are at least 50% shorter than those in <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon kishinensis"><span full-name="Dragmacidon kishinensis" class="fake-taxon-name-part">kishinensis</span></span></span></span></i> sp. n. The first exception is <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon oxeon"><span full-name="Dragmacidon oxeon" class="fake-taxon-name-part">oxeon</span></span></span></span></i> which has styles and oxeas only slightly shorter than those in <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon kishinensis"><span full-name="Dragmacidon kishinensis" class="fake-taxon-name-part">kishinensis</span></span></span></span></i> sp. n.; however,  it differs from <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon kishinensis"><span full-name="Dragmacidon kishinensis" class="fake-taxon-name-part">kishinensis</span></span></span></span></i> sp. n. in having a well developed detachable membrane. The second exception is <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon egregium"><span full-name="Dragmacidon egregium" class="fake-taxon-name-part">egregium</span></span></span></span></i> (Ridley,  1881) which has two classes of styles,  one 650–900 µm in length but the other as well as the oxeas only up to 400–450 µm in length.</p>
+				<p>The weakly developed skeleton is similar to that in <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon grayi"><span full-name="Dragmacidon grayi" class="fake-taxon-name-part">grayi</span></span></span></span></i> (Wells &amp; Wells in <xref class="xrefLink node_citation bibr" rid="444">Wells et al. 1960</xref>) as described by <xref class="xrefLink node_citation bibr" rid="42">Alvarez et al. (1998)</xref>.</p>
+				<p><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon kishinensis"><span full-name="Dragmacidon kishinensis" class="fake-taxon-name-part">kishinensis</span></span></span></span></i> sp. n. shows some similarities to species of <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Axinyssa"><span full-name="Axinyssa" class="fake-taxon-name-part">Axinyssa</span></span></span></span></i> (<span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Halichondridae"><span full-name="Halichondridae" class="fake-taxon-name-part">Halichondridae</span></span></span></span>) including a disorganized skeleton with,  in some species,  vaguely ascending vertical tracts toward the periphery. Spicules include oxeas and/or strongyloxeas,  here considered to have a fusiform shaft which is pointed at one end and rounded at the other. <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon kishinensis"><span full-name="Dragmacidon kishinensis" class="fake-taxon-name-part">kishinensis</span></span></span></span></i> sp. n. spicules consist of oxeas and styles,  the latter are isodiametric rather than being fusiform. There are 28 described species of <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Axinyssa"><span full-name="Axinyssa" class="fake-taxon-name-part">Axinyssa</span></span></span></span></i> (van Soest et al. consulted August 2013). They are nearly all tropical.</p>
+			<div class="unfloat"></div>
+</div>
+			<div class="taxonTreatmentSec inlineSec">
+				<span id="1" class="node_title1 taxon-treatment">Conclusions.</span>
+				<p>Based on the comparisons listed in <span class="xrefLink node_citation table" rid="23">Table 3</span>,  our <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span></span></span></i> is a new species. The combination of spicule types and sizes in <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon kishinensis"><span full-name="Dragmacidon kishinensis" class="fake-taxon-name-part">kishinensis</span></span></span></span></i> sp. n. do not match any other <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span></span></span></i> species described. The reduction of a plumoreticulate skeleton and evidence of unoriented spicules suggests a possible affinity with <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Axinyssa"><span full-name="Axinyssa" class="fake-taxon-name-part">Axinyssa</span></span></span></span></i> spp. but the latter have only oxeas or strongyloxeas while our species has both oxeas and styles as found in some <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span></span></span></i> spp. Finally,  we would not expect to find an <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Axinyssa"><span full-name="Axinyssa" class="fake-taxon-name-part">Axinyssa</span></span></span></span></i> sp. in the cold temperate waters of British Columbia.</p>
+				<div class="tableWrapHolder Table">
+					<span id="1" class="node_label">Table 3.</span>
+					<p>Compares the spicules of <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon kishinensis"><span full-name="Dragmacidon kishinensis" class="fake-taxon-name-part">kishinensis</span></span></span></span></i> sp. n. to other species of <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span></span></span></i>.<br></p>
+					
+<table cellspacing="0" cellpadding="0" class="innerTable Table"><tr><td class="cell_1" colspan="1" rowspan="1"><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon agariciforme"><span full-name="Dragmacidon agariciforme" class="fake-taxon-name-part">agariciforme</span></span></span></span></i> (Dendy,  1905),  p. 186</td>
+<td class="cell_2" colspan="1" rowspan="1">Indian Ocean</td>
+<td class="cell_3" colspan="1" rowspan="1">Has trichodragmas</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1"><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon australe"><span full-name="Dragmacidon australe" class="fake-taxon-name-part">australe</span></span></span></span></i> (Bergquist,  1970),  p. 20</td>
+<td class="cell_2" colspan="1" rowspan="1">Australia,  New Zealand</td>
+<td class="cell_3" colspan="1" rowspan="1">Surface extremely hispid,  oxeas 217–260–339,  styles 320–367–406</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1"><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon clathriforme"><span full-name="Dragmacidon clathriforme" class="fake-taxon-name-part">clathriforme</span></span></span></span></i> (Lendenfeld,  1888),  p. 82</td>
+<td class="cell_2" colspan="1" rowspan="1">Australia</td>
+<td class="cell_3" colspan="1" rowspan="1">Sponge lobate; has trichodragmas</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1"><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon coccineum"><span full-name="Dragmacidon coccineum" class="fake-taxon-name-part">coccineum</span></span></span></span></i> (Keller,  1891),  p. 307</td>
+<td class="cell_2" colspan="1" rowspan="1">Indian Ocean</td>
+<td class="cell_3" colspan="1" rowspan="1">Has trichodragmas</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1"><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon condylia"><span full-name="Dragmacidon condylia" class="fake-taxon-name-part">condylia</span></span></span></span></i> (Hooper &amp; Lévi,  1993),  p. 1405</td>
+<td class="cell_2" colspan="1" rowspan="1">New Caledonia</td>
+<td class="cell_3" colspan="1" rowspan="1">Oxeas 208–289–360,  styles same</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1"><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon debitusae"><span full-name="Dragmacidon debitusae" class="fake-taxon-name-part">debitusae</span></span></span></span></i> (Hooper &amp; Lévi,  1993),  p. 1437</td>
+<td class="cell_2" colspan="1" rowspan="1">New Caledonia</td>
+<td class="cell_3" colspan="1" rowspan="1">Oxeas 223–503 styles same,  rare</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1"><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon decipiens"><span full-name="Dragmacidon decipiens" class="fake-taxon-name-part">decipiens</span></span></span></span></i> (Wiedenmayer,  1989),  p. 47</td>
+<td class="cell_2" colspan="1" rowspan="1">Bass Str.,  Australia</td>
+<td class="cell_3" colspan="1" rowspan="1">Strongyles 542–770; oxeas styles 278–350–483</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1"><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon durissimum"><span full-name="Dragmacidon durissimum" class="fake-taxon-name-part">durissimum</span></span></span></span></i> (Dendy,  1905)</td>
+<td class="cell_2" colspan="1" rowspan="1">Indian Ocean</td>
+<td class="cell_3" colspan="1" rowspan="1">Has trichodragmas</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1"><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon egregium"><span full-name="Dragmacidon egregium" class="fake-taxon-name-part">egregium</span></span></span></span></i> (Ridley,  1881)</td>
+<td class="cell_2" colspan="1" rowspan="1">S. Chile; N. Atlantic</td>
+<td class="cell_3" colspan="1" rowspan="1">Ectosomal styles 230–450,  oxeas 280–400,  axial styles 650–900</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1"><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon explicatum"><span full-name="Dragmacidon explicatum" class="fake-taxon-name-part">explicatum</span></span></span></span></i> (Wiedenmayer,  1977),  p. 159</td>
+<td class="cell_2" colspan="1" rowspan="1">Bahamas,  N. Carolina</td>
+<td class="cell_3" colspan="1" rowspan="1">Styles 255–332–400 and oxeas 287–333–375</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1"><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon fibrosum"><span full-name="Dragmacidon fibrosum" class="fake-taxon-name-part">fibrosum</span></span></span></span></i> (Ridley &amp; Dendy,  1886),  p. 481</td>
+<td class="cell_2" colspan="1" rowspan="1">Str. of Magellan</td>
+<td class="cell_3" colspan="1" rowspan="1">No oxeas; styles 630</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1"><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon grayi"><span full-name="Dragmacidon grayi" class="fake-taxon-name-part">grayi</span></span></span></span></i> (Wells,  Wells &amp; Gray,  1960)</td>
+<td class="cell_2" colspan="1" rowspan="1">N. Carolina</td>
+<td class="cell_3" colspan="1" rowspan="1">Oxeas 360–460 and styles 240–300</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1"><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon incrustans"><span full-name="Dragmacidon incrustans" class="fake-taxon-name-part">incrustans</span></span></span></span></i> (Whitelegge,  1897),  p. 339</td>
+<td class="cell_2" colspan="1" rowspan="1">Gilbert/Ellise Is.,  S. Pacific</td>
+<td class="cell_3" colspan="1" rowspan="1">Styles 200–400 and oxeas 350</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1"><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon lunaecharta"><span full-name="Dragmacidon lunaecharta" class="fake-taxon-name-part">lunaecharta</span></span></span></span></i> (Ridley &amp; Dendy,  1886),  p. 481</td>
+<td class="cell_2" colspan="1" rowspan="1">Cape Verde E. Atlantic,  Africa</td>
+<td class="cell_3" colspan="1" rowspan="1">No styles and oxeas 350–400</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1"><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon mexicanum"><span full-name="Dragmacidon mexicanum" class="fake-taxon-name-part">mexicanum</span></span></span></span></i> (de Laubenfels,  1935),  p. 6</td>
+<td class="cell_2" colspan="1" rowspan="1">Gulf of California</td>
+<td class="cell_3" colspan="1" rowspan="1">Sponge very hispid; styles 400,  and oxeas 300–465</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1"><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon mutans"><span full-name="Dragmacidon mutans" class="fake-taxon-name-part">mutans</span></span></span></span></i> (Sarà,  1978)</td>
+<td class="cell_2" colspan="1" rowspan="1">Tierra del Fuego</td>
+<td class="cell_3" colspan="1" rowspan="1">Styles 100–220,  oxeas 200</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1"><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon ophisclera"><span full-name="Dragmacidon ophisclera" class="fake-taxon-name-part">ophisclera</span></span></span></span></i> de Laubenfels,  1935,  p. 7</td>
+<td class="cell_2" colspan="1" rowspan="1">Gulf of California</td>
+<td class="cell_3" colspan="1" rowspan="1">Styles 1200; oxeas 650 smaller; loose raphids and trichodragmas present</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1"><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon oxeon"><span full-name="Dragmacidon oxeon" class="fake-taxon-name-part">oxeon</span></span></span></span></i> (Dickinson,  1945),  p. 32</td>
+<td class="cell_2" colspan="1" rowspan="1">Gulf of California</td>
+<td class="cell_3" colspan="1" rowspan="1">Easily detached dermal membrane; styles 900,  oxeas 600–1150,  slightly smaller than <i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon kishinensis"><span full-name="Dragmacidon kishinensis" class="fake-taxon-name-part">kishinensis</span></span></span></span></i> sp. n.</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1"><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon reticulatum"><span full-name="Dragmacidon reticulatum" class="fake-taxon-name-part">reticulatum</span></span></span></span></i> (Ridley &amp; Dendy,  1886),  p. 481</td>
+<td class="cell_2" colspan="1" rowspan="1">Gulf of California</td>
+<td class="cell_3" colspan="1" rowspan="1">Styles 450 and oxeas 450</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1"><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon sanguineum"><span full-name="Dragmacidon sanguineum" class="fake-taxon-name-part">sanguineum</span></span></span></span></i> (Burton,  1933)</td>
+<td class="cell_2" colspan="1" rowspan="1">Natal</td>
+<td class="cell_3" colspan="1" rowspan="1">Styles 140 and oxeas 211</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1"><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon tuberosum"><span full-name="Dragmacidon tuberosum" class="fake-taxon-name-part">tuberosum</span></span></span></span></i> (Topsent,  1928),  p. 178</td>
+<td class="cell_2" colspan="1" rowspan="1">Boavista Is.,  E. Atlantic,  Africa</td>
+<td class="cell_3" colspan="1" rowspan="1">Has trichodragmas; styles 315–420,  oxeas 370–420</td>
+</tr><tr><td class="cell_1" colspan="1" rowspan="1"><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon tumidum"><span full-name="Dragmacidon tumidum" class="fake-taxon-name-part">tumidum</span></span></span></span></i> (Dendy,  1897),  p. 236</td>
+<td class="cell_2" colspan="1" rowspan="1">S. Australia</td>
+<td class="cell_3" colspan="1" rowspan="1">No oxeas; small styles 180</td>
+</tr></table></div>
+			<div class="unfloat"></div>
+</div>
+			<div class="taxonTreatmentSec inlineSec">
+				<span id="1" class="node_title1 taxon-treatment">Bathymetric range.</span>
+				<p>One intertidal record (0.2 m above 0 m [low tide]) in a cave; otherwise 3 m to 30 m depth.</p>
+			<div class="unfloat"></div>
+</div>
+			<div class="taxonTreatmentSec inlineSec">
+				<span id="1" class="node_title1 taxon-treatment">Zoogeographic range.</span>
+				<p>Recorded from Barkley Sound (49°N) to Rennell Sound (53°N),  BC.</p>
+			<div class="unfloat"></div>
+</div>
+			<div class="taxonTreatmentSec inlineSec">
+				<span id="1" class="node_title1 taxon-treatment">Ecology.</span>
+				<p><i><span id="1" class="node_taxon-name"><span><span class="tn" data-taxon-parsed-name="Dragmacidon"><span full-name="Dragmacidon" class="fake-taxon-name-part">Dragmacidon</span></span> <span class="tn" data-taxon-parsed-name="Dragmacidon kishinensis"><span full-name="Dragmacidon kishinensis" class="fake-taxon-name-part">kishinensis</span></span></span></span></i> sp. n. is recorded from high wave or high current energy habitats. The tough,  encrusting,  non branching form would be structurally adaptive for the physical impacts of strong water movement.</p>
+			<div class="unfloat"></div>
+</div>
+		</div></div>
+	</div>
+</div>
+	</div>
+<a name="acknowledgements"></a><div class="smallSecHolder acknowledgementsHolder"><div class="acknowledgementsText">
+	<span id="1" class="node_title">Acknowledgments</span>
+	<p>The two reviewers added significantly to the clarity of this manuscript. We thank Drs. Daniel Faber,  former Director,  Canadian Aquatic Identification Centre; Rita O’Clair,  former Assistant Curator,  National Museum of Canada; Charles O’Clair,  National Museum of Canada; and the staff of the Bamfield Marine Station for making facilities and materials available to us. SEM work was carried out at Simon Fraser University and University of Victoria. Partners in diving and shore collecting included Myriam Preker,  Mary Lou Malott,  Mike LeBlanc,  Sub-scuba zone material was collected from the submersibles <i>PISCES IV,  DELTA</i> and the ROV<i>ROPOS</i>. We thank their respective crews for their expert support in collecting material. Partial funding was provided by a Discovery Grant from the Natural Sciences and Engineering Research Council of Canada to HMR. Neil McDaniel,  McDaniel Photography,  took most of the <i>in situ</i> underwater photographs and gave his permission to use them. We thank Brent Gowen (Univ. Victoria) and Vic Bourne (Simon Fraser Univ.) for assistance with spicule SEM work.</p>
+</div></div>
+<a name="references"></a><div class="smallSecHolder  referencesHolder"><div class="referencesText">
+<span class="node_title">References</span><div class="referenceRow">Alvarez B, Hooper JNA (2002) Family Axinellidae Carter,  1875. In: Hooper JNA, Soest RWM van (Eds) Systema Porifera: A guide to the classification of sponges. Kluwer Academic/Plenum Pub.,  New York,  24-747.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Alvarez B, Soest RWM van, Rützler K (1998) A Revision of Axinellidae (Porifera: Demospongiae) of the central west Atlantic region. SmithsonianContributions to Zoology 598: 1-47. doi: <a target="_blank" href="https://doi.org/10.5479/si.00810282.598">10.5479/si.00810282.598</a><div class="unfloat"></div></div>
+
+<div class="referenceRow">Austin WC (1985) An annotated checklist of marine invertebrates of the cold temperate northeast Pacific. Khoyatan Marine Laboratory,  Cowichan Bay,  BC,  682 pp.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Austin WC, Ott B (1987) Phylum Porifera. In: Kozloff EN (Ed) Marine Invertebrates of the Pacific Northwest. University of Washington Press,  Seattle,  6-31.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Austin WC, Ott B, McDaniel NG, Reiswig HM, Romagosa P (2012) Sponges of the cold temperate NE Pacific,  1–7. <a target="_blank" href="http://mareco.org/KML/Projects/NESponges.asp">http://mareco.org/KML/Projects/NESponges.asp</a> [accessed Dec. 25,  2012,  edition 7]<div class="unfloat"></div></div>
+
+<div class="referenceRow">Austin WC, Ott B, Reiswig HM, Romagosa P, McDaniel NG (in prep.) Taxonomic review of Hadromerida (Porifera,  Demospongiae) from British Columbia,  Canada,  and adjacent waters,  with the description of nine new species. Zootaxa (submitted).<div class="unfloat"></div></div>
+
+<div class="referenceRow">Bergquist PR (1970) The Marine Fauna of New Zealand: Porifera,  Demospongiae,  Part 2 (Axinellida and Halichondrida). New Zealand Department of Scientific and Industrial Research Bulletin [New Zealand Oceanographic Institute Memoir 51] 197: 1–85.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Bowerbank JS (1866) A Monograph of the British Spongiadae,  Vol. II. Ray Society,  London,  UK. I-xx,  1–388.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Burton M (1933) Four new marine sponges from Natal. Annals of the Natal Museum 7(2): 249–254.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Carter HJ (1875) Notes Introductory to the Study and Classification of the Spongida. Part II. Proposed Classification of the Spongida. Annals and Magazine of Natural History (4) 16(92): 126–145,  177–200.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Carter HJ (1887) Report on the marine sponges,  chiefly from King Island in the Mergui Archipelago,  collected for the trustees of the Indian Museum,  Calcutta,  by Dr. John Anderson. Journal of the Linnean Society,  London 21: 61–84 + plates 5–7.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Dendy A (1889) Report on a second collection of sponges from the Gulf of Manaar. Annals and Magazine of Natural History 6(3): 73-99. doi: <a target="_blank" href="https://doi.org/10.1080/00222938909460303">10.1080/00222938909460303</a><div class="unfloat"></div></div>
+
+<div class="referenceRow">Dendy A (1897) Catalogue of Non-Calcareous Sponges collected by J. Bracebridge Wilson,  Esq.,  M.A.,  in the neighbourhood of Port Phillip Heads. Part III. Proceedings of the Royal Society of Victoria (New Series) 9: 230-259.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Dendy A (1905) Report on the sponges collected by Professor Herdman at Ceylon,  in 1902. In: Herdman WA,  Report to the Government of Ceylon on the Pearl Oyster Fisheries of the Gulf of Manaar: Part 3. Royal Society,  London,  57–246.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Dendy A (1916) Report on the non-Calcareous Sponges collected by Mr. James Hornell at Okhamandal in Kattiawar in 1905-6. Report to the Government of Baroda on the Marine Zoology of Okhamandal in Kattiawar 2: 93–146,  pls I–IV.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Dendy A (1922) Report on the Sigmatotetraxonida collected by H.M.S.‘Sealark’ in the Indian Ocean. In: Reports of the Percy Sladen Trust Expedition to the Indian Ocean in 1905,  Vol. 7. Transactions of the Linnean Society of London (2) 18(1): 1–164,  pls 1–18.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Dickinson MG (1945) Sponges of the Gulf of California. In: Reports on the collections obtained by Alan Hancock Pacific Expeditions of Velero III off the coast of Mexico,  Central America,  South America,  and Galapagos Islands in 1932,  in 1933,  in 1934,  in 1935,  in 1936,  in 1937,  in 1939,  and 1940. The University of Southern California Press,  Los Angeles. Alan Hancock Pacific Expeditions 1(1): 1-251.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Erpenbeck D, Soest RWM van (2002) Family Halichondriidae Gray,  1867. In: Hooper JNA, Soest RWM van (Eds) Systema Porifera: A guide to the classification of sponges. Kluwer Academic/Plenum Pub.,  New York,  787-815.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Esper ECJ (1794) Die Pflanzenthiere in Abbildungen nach der Natur mit Farben erleuchtet,  nebst Beschreibungen. Zweyter Theil. Raspe,  Nürnberg,  1–303.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Hallmann EF (1917) A revision of the genera with microscleres included,  or provisionally included,  in the family Axinellidae,  with descriptions of some Australian species. Part iii (Porifera). Proceedings of the Linnean Society of New South Wales 41: 634–675,  pls 29,  33,  38–44.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Hooper JNA, Lévi C (1993) Axinellida (Porifera: Demospongiae) from the New Caledonia Lagoon. Invertebrate Taxonomy 7(6): 1395-1472. doi: <a target="_blank" href="https://doi.org/10.1071/IT9931395">10.1071/IT9931395</a><div class="unfloat"></div></div>
+
+<div class="referenceRow">Hooper JNA, Soest RMW van (2002) Systema Porifera. A guide to the classification of sponges. Kluwer Academic/Plenum Pub.,  New York,  1,  1–1101 + vlviii,  2,  1103–1708.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Keller C (1891) Die Spongienfauna des Rothen Meeres (II. Halfte). Zeitschrift für wissenschaftliche Zoologie 52: 294–368,  pls XVI–XX.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Lambe LM  (1895 (1894)) Sponges form the western coast of North America. Transactions of the Royal Society of Canada 12(4): 113–138 pls. II–IV.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Laubenfels MW de (1935) Some sponges of Lower California (Mexico). American Museum Novitates 779: 1-14.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Lendenfeld R Von (1888) Descriptive Catalogue of the Sponges in the Australian Museum,  Sidney. Taylor &amp; Francis,  London,  i-xiv,  1–260,  pls 1–12.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Lévi C, Vacelet J (1958) Eponges récoltées dans l’Atlantique oriental par le “Président Théodore-Tissier” (1955–1956). Revue de Travaux de l’Institute des Pêche Maritimes,  No. 22,  225–246,  figs. 1–33.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Miklucho-Maclay NN (1870) Uber einige Schwämme des nördlichen Stillen Oceans und des Eismeeres,  welche im Zoologischen Museum der Kaiserlichen Akademie der Wissenschaften in St. Petersburg aufgestellt sind. Ein Beitrag zur Morphologie und Verbreitung der Spongien. Mémoires de l’Académie Impériale des Sciences de St. Petersbourg 15(3): 1-24.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Pattanayak JG (2006) Marine sponges of Andaman and Nicobar Islands,  India. Zoological Survey of India Occasional Paper 285: i–vi,  1–164.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Ridley SO (1881) XI. Spongida. Horny and Siliceous Sponges of Magellan Straits,  S.W. Chili,  and Atlantic off S.W. Brazil. In: Gunther A (Ed) Account of the Zoological Collections made during the Survey of H.M.S. ‘Alert’ in the Straits of Magellan and on the Coast of Patagonia,  107–137,  140–141,  pls X-XI.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Ridley SO, Dendy A (1886) Preliminary report on the Monaxonida collected by H.M.S. ‘Challenger’. The Annals and Magazine of Natural History,  5<sup>th</sup> Series 107: 325–351,  470–493.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Ridley SO, Dendy A (1887) Report on the Monaxonida collected by H.M.S. ‘Challenger’ during the years 1873–1876. Report on the Scientific Results of the Voyage of H.M.S. ‘Challenger’,  1873–1876. Zoology 20(59): 1–275,  pls 1–51.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Sarà M (1978) Demospongie di acque superficiali della Terra del Fuoco (Spedizioni AMF Mares - GRSTS e SAI). Bollettino dei Musei e degli Istituti Biologici della (R.) Università di Genova 46: 7-117.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Schmidt O (1870) Grundzüge einger Spongien-Fauna des Atlantischen Gebietes. Wilhelm Engelmann,  Leipzig,  88 pp.,  6 plates.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Van Soest RWM, Boury-Esnault N, Hooper JNA, Rützler K, de Voogd NJ, Alvarez de Glasby B, Hajdu E, Pisera AB, Manconi R, Schoenberg C, Janussen D, Tabachnick KR, Klautau M, Picton B, Kelly M, Vacelet J, Dohrmann M, Cristina Díaz M (2005) World Porifera Database. <a target="_blank" href="http://www.marinespecies.org/porifera">http://www.marinespecies.org/porifera</a> [accessed February 2013]<div class="unfloat"></div></div>
+
+<div class="referenceRow">Soest RWM van (2013) Sponges of the NE Atlantic. In: Marine Species identification Portal. <a target="_blank" href="http://species-identification.org">http://species-identification.org</a> [accessed March 3,  2013]<div class="unfloat"></div></div>
+
+<div class="referenceRow">Stone RP, Lehnert H, Reiswig H (2011) A guide to the deep-water sponges of the Aleutian Island Archipelago. NOAA Professional Paper,  NMFS 12: 187 pp.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Thiele J (1898) Studien über pacifische Spongien,  I. Zoological Heft 24: 1–72 + 5 pls.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Thiele J (1899) Studien über pacifisches Spongien,  II. Zoological Heft 24(2): 1–33,  5 pls.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Topsent E (1896) Matériaux pour server a l’étudie de la faune des spongiaires de France. Mémoires de la Société Zoologique de France (9): 113–133.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Topsent E (1904) Spongiaires des Açores. Résultats Campagnes Scientifiques par Albert I er Monaco 25: 1-280.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Topsent E (1928) Spongiaires de l’Atlantique et de la Méditerranée provenant des croisières du Prince Albert ler de Monaco. Résultats des campagnes scientifiques accomplies par le Prince Albert I. Monaco 74: 1–376,  pls I–XI.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Vosmaer GCJ (1882) Report on the sponges dredged up in the Arctic Sea by the “Willem Barents” in the years 1878 and 1879. Niederländisches Archiv für Zoologie: Supplement 1: 1-58.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Wells HW, Wells MJ, Gray IE (1960) Marine sponges of North Carolina. Journal of the Elisha Mitchell Scientific Society 76(2): 200-245.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Whitelegge T (1897) The Sponges of Funafuti. Memoirs of the Australian Museum 3: 323–332,  pl. XVIII. doi: <a target="_blank" href="https://doi.org/10.3853/j.0067-1967.3.1897.499">10.3853/j.0067-1967.3.1897.499</a><div class="unfloat"></div></div>
+
+<div class="referenceRow">Wiedenmayer F (1977) Shallow-water sponges of the western Bahamas. Experientia Supplementum 28: 1–287,  pls 1–43.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Wiedenmayer F (1989) Demospongiae (Porifera) from northern Bass Strait,  southern Australia. Memoirs Museum Victoria 50(1): 1–242,  pls 1–38.<div class="unfloat"></div></div>
+
+<div class="referenceRow">Wilson HV (1904) The sponges. No. 30 of reports on an exploration off the west coast of Mexico,  Central and South America,  and off the Galapagos Islands,  in charge of Alexander Agassiz,  by the U.S. Fish. Commission Steamer “Albatross” during 1891. Lieut. Comander ZL Taner,  U.S.N.,  commanding. Memoirs of the Museum of Comparative Zoology at Harvard College 30(1): 1-164.<div class="unfloat"></div></div>
+
+</div></div>
+<a name="supplementarymaterials"></a><div class="supMaterialsHolder"></div>
+</div>
+</div></div></div></div></div></div></div></div></div>
+<script xmlns="">initBalloons();</script>
+<script xmlns="">initScrollConstants()</script></body></html>
+	

@@ -9,7 +9,8 @@ library(taxize)
 library(purrr)
 
 # load processed WoRMS data
-data <- read_excel(here("processed_data", "WoRMS_taxlist_20250211_processed.xlsx"))
+# SWITCHED TO V2, WHICH INCLUDES SMALL CRITTERS
+data <- read_excel(here("processed_data", "WoRMS_taxlist_20250211_processed_V2.xlsx"))
 
 # screen classes
 classes <- data %>%
@@ -29,6 +30,7 @@ classes_ID <- data %>%
 # screen phylums & their associated scientific names (sub phylums / super classes)
 # first just look at the phylums with associated classes to screen phylums that majoratively are not applicable
 # identify unwanted phyla (> 50% classes excluded)
+# this is just a lot of code to remove phylum chordata
 phylums_class_to_excl <- data %>%
   filter(taxonRank=='Class') %>%
   select(c('Phylum', 'JKS Notes for Exclusion')) %>%
@@ -38,20 +40,23 @@ phylums_class_to_excl <- data %>%
     excl_count = sum(`JKS Notes for Exclusion` != "" & !is.na(`JKS Notes for Exclusion`)),
     frac = excl_count/total_count) %>%
   filter(frac > 0.5 ) %>%
-  select(Phylum)
+  select(Phylum) %>%
+  rename(taxa = Phylum)
 
 # filter out unwanted phyla
 phylums <- data %>%
   filter(is.na(`JKS Notes for Exclusion`)) %>%
   select(Phylum) %>%
   unique() %>%
-  anti_join(phylums_class_to_excl) %>%
-  rename(taxa = Phylum)
+  rename(taxa = Phylum) %>%
+  anti_join(phylums_class_to_excl)
+
 
 inter_taxa = data %>% 
   filter(is.na(`JKS Notes for Exclusion`)) %>%
   select(ScientificName) %>%
-  rename(taxa = ScientificName)
+  rename(taxa = ScientificName) %>%
+  anti_join(phylums_class_to_excl)
 
 # join phylums and classes to keep
 class_phylums <- rbind(classes, inter_taxa, phylums) %>%
@@ -62,24 +67,22 @@ class_phylums <- rbind(classes, inter_taxa, phylums) %>%
 ########################
 # add orders for desired classes
 
-
+# obtain everything down to the desired orders
 ds <- lapply(classes_ID$AphiaID, function(ID) downstream(ID, downto = "order", db = "worms"))
-
+# adds class name
 ds_df <- mapply(function(lst, name) {
   if (is.list(lst) && is.data.frame(lst[[1]]) && nrow(lst[[1]]) > 0) { 
     lst[[1]]$class <- name  # Add 'class' column only if it has rows
   }
   return(lst)
 }, ds, classes$taxa, SIMPLIFY = FALSE)
-
+# adds class id
 ds_df <- mapply(function(lst, name) {
   if (is.list(lst) && is.data.frame(lst[[1]]) && nrow(lst[[1]]) > 0) { 
     lst[[1]]$class_id <- name  # Add 'class' column only if it has rows
   }
   return(lst)
 }, ds_df, classes_ID$AphiaID, SIMPLIFY = FALSE)
-
-ds_df[[2]][[1]]
 
 # Extract all data frames from the list and combine them
 combined_df <- bind_rows(lapply(ds_df, function(lst) {
@@ -109,4 +112,7 @@ final_string_ocp <- ocp %>%
   pull(words) %>%
   str_c(collapse = " OR ")
 
+# this prints the string of all order/class/phylum names in the WOS format
 cat(final_string_ocp)
+
+# next move is to copy and paste the printed output into the species name section of the whole WOS search terms in OneNote
