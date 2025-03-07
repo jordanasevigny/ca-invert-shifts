@@ -6,7 +6,7 @@ library(openxlsx)
 
 
 # Set the directory containing Excel files
-directory <- "data/WOS_search27"
+directory <- "data/WOS_search29"
 
 # Get all Excel file paths
 files <- list.files(directory, pattern = "\\.xls[x]?$", full.names = TRUE)
@@ -21,7 +21,7 @@ print(data_combined)
 # Randomize row order
 data_combined <- data_combined %>%
   sample_frac(1) %>%  # Shuffle rows
-  mutate(New_Index = row_number()) %>%
+  mutate(PreDD_Index = row_number()) %>%
   select(where(~ !all(is.na(.)))) %>%
   mutate(r_DOI = NA)
 
@@ -79,23 +79,21 @@ for (i in seq_len(length(na_indices))) {
   }
 }
 
+na_indices <- which(is.na(data_combined$r_DOI))
+
+# check for duplicates
 any(duplicated(data_combined$r_DOI))
 data_combined$r_DOI[duplicated(data_combined$r_DOI) | duplicated(data_combined$r_DOI, fromLast = TRUE)]
+#deduplicate
+data_combined_clean <- data_combined[!duplicated(data_combined$r_DOI), ]
 
-# manually look through to remove some articles.
-# specifically, I looked at r_DOI duplicates - there were 3
-# one needed a different DOI
-# second is a calcofi report (i left it in it)... will just duplicate article or be calcofi, either way will get screened out
-# I did not alter the third. SEems like maybe a duplicate that was republished?
-data_combined_clean = data_combined %>%
-  mutate(r_DOI = ifelse(`Article Title` == "New records of ascidians from the NE Pacific:: a new species of Trididemnum, range extension and redescription of Aplidiopsis pannosum (Ritter, 1899) including its larva, and several non-indigenous species", "10.5281/zenodo.4525061", r_DOI))
-
-# move index column to start
+# move index column and r_DOI to start
 data_combined_clean <- data_combined_clean %>%
-  select(New_Index, everything()) 
+  mutate(Index = row_number()) %>%
+  select(Index, r_DOI, DOI, 'Article Title', 'Source Title', 'Publication Year', everything()) 
 
 # write to a new Excel file
-write.xlsx(data_combined_clean, "processed_data/combined_search27.xlsx")
+write.xlsx(data_combined_clean, "processed_data/combined_search29.xlsx")
 
 # format DOIs to load into zotero
 comma_separated_dois <- paste(data_combined_clean$r_DOI, collapse = ", ")
