@@ -27,7 +27,7 @@ class(world)
 
 # load in data
 # poor naming scheme but the file with the similar name but excel has two sheets with the other having the original excerpt
-df <- read_excel("data/20250516_CalCOFI Coding Form (Responses).xlsx")
+df <- read_excel("data/20250519_CalCOFI Coding Form (Responses).xlsx")
 
 
 # Identify the metadata columns by name or position
@@ -121,7 +121,21 @@ ggplot(data = world) +
   labs(color="Unusual Observation Location") +
   coord_sf(xlim = c(-115, -135), ylim = c(30, 56), expand = FALSE)
 
-
+ggplot(data = world) +
+  geom_sf() +
+  geom_point(
+    data = northmost_points_perspyr,
+    aes(
+      x = `14 Longitude (e.g., -127.123, if longitude is a range, put the farthest east/towards the coast)`,
+      y = `11 Latitude (e.g., 35.732; if the northward latitude is a range, put the farthest south)`,
+      color = `3 Latin name (e.g., pleuroncodes planipes)`
+    ),
+    size = 2.5,
+    position = position_jitter(width = 1, height = 0)  # jitter x only
+  ) +
+  xlab("Longitude") + ylab("Latitude") +
+  labs(color = "Unusual Observation Location") +
+  coord_sf(xlim = c(-135, -115), ylim = c(30, 56), expand = FALSE)
 
 # --- Ignore the following ---
 ################################
