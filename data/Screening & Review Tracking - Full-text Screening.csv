@@ -565,8 +565,8 @@ Columbia (Cosgrove 2005) and Alaska (Yakutat at
 396,JKS,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
 397,JKS,Exclude,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,
 398,JKS,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
-399,JKS,Include,original of data already recorded. has more specifics,,,,,,Kelletia kelletii,"Forbes, 1852",,species,,,,"Hopkins Marine Life Refuge, Pacific Grove, CA",,,,,,,1980,May,2,,"""These records are significant due to the lack of reports of Kelletia kelletii north of Point Conception""","Abbott 1974, McLean 1978",
-399,JKS,Include,original of data already recorded. has more specifics,,,,,,Kelletia kelletii,"Forbes, 1852",,species,,,,Monterey Macrocystis forest,,,,,,,1981,January,,,"""These records are significant due to the lack of reports of Kelletia kelletii north of Point Conception""","Abbott 1974, McLean 1978",
+399,JKS,Include,original of data already recorded. has more specifics,,,,,,Kelletia kelletii,"Forbes, 1852",,species,,,,"Hopkins Marine Life Refuge, Pacific Grove, CA",,,36.623995,Google Maps,,,1980,May,2,,"""These records are significant due to the lack of reports of Kelletia kelletii north of Point Conception""","Abbott 1974, McLean 1978",
+399,JKS,Include,original of data already recorded. has more specifics,,,,,,Kelletia kelletii,"Forbes, 1852",,species,,,,Monterey Macrocystis forest,,,36.611029,Google Maos,,,1981,January,,,"""These records are significant due to the lack of reports of Kelletia kelletii north of Point Conception""","Abbott 1974, McLean 1978",
 400,JKS,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
 401,JKS,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,In 1936 they seemed to be even more abundant all the way from Monterey Bay to San Diego. It was in this year that they were first recognized as a nuisance by the fishermen.
 402,JKS,,getting from library,,,,,,,,,,,,,,,,,,,,,,,,,,
