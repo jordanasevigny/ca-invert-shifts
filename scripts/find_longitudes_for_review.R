@@ -47,6 +47,14 @@ df_t <- df %>%
         lon_for_plot
       }
   ) %>%
+  mutate( # untested
+    Lon.for.plot.origin = 
+      if (Include.Exclude == 'Include' && (is.na(lon_for_plot) || lon_for_plot == "")) {
+        "R generated"
+      } else {
+        Lon.for.plot.origin
+      }
+  ) %>%
   ungroup()
 df_t <- select(df_t, -lon_for_plot)
 df_t <- rename(df_t, lon_for_plot = lon_for_plot2)
