@@ -294,7 +294,7 @@ Columbia (Cosgrove 2005) and Alaska (Yakutat at
 230,JKS,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
 231,JKS,Exclude,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,
 232,JKS,Exclude,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,,
-233,JKS,Include,,,,,,,Pryosoma atlanticum,,,species,,,,"Newport, OR",44.652,−124.295,44.652,Paper,124.295,Paper,2018,July,3-12,,"50°N to 50°S, though normally uncommon in the eastern Pacific north of southern California","Van Soest, 1981",
+233,JKS,Include,,,,,,,Pryosoma atlanticum,,,species,,,,"Newport, OR",44.652,−124.295,44.652,Paper,-124.295,Paper,2018,July,3-12,,"50°N to 50°S, though normally uncommon in the eastern Pacific north of southern California","Van Soest, 1981",
 234,JKS,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
 235,JKS,Exclude,,,TRUE,,,,,,,,,,,,,,,,,,,,,,,,
 236,JKS,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
@@ -476,7 +476,7 @@ Columbia (Cosgrove 2005) and Alaska (Yakutat at
 376,JKS,Include,,,,,,,Hespererato vitellina,,Appleseed Erato Snail,species,,,,"Shell Beach, CA",38.41743,-123.10728,38.41743,Paper,-123.10728,Paper,2016,April,6,,"Bodega Marine Reserve, CA",Morris et al. 1980,
 376,JKS,Include,,,,,,,Hespererato vitellina,,Appleseed Erato Snail,species,,,,"Cape Mendocino, CA",40.34137,-124.36262,40.34137,Paper,-124.36262,Paper,2017,May,25,,"Bodega Marine Reserve, CA",Morris et al. 1980,
 376,JKS,Include,,,,,,,Thylacodes squamigerus,,Scaled Tube Snail,species,,,,"Salt Point State Park, CA",38.565245,-123.33385,38.565245,Paper,-123.33385,Paper,2017,February,25,,"Bodega Marine Reserve, CA",Morris et al. 1980,
-376,JKS,Include,,,,,,,Creseis virgula,Bé and Gilmer 1977,Curved Needle Pteropod,species,,,,"Point Conception, CA",37,130,37,Paper,130,Paper,1950,April,,,off Central California,,
+376,JKS,Include,,,,,,,Creseis virgula,Bé and Gilmer 1977,Curved Needle Pteropod,species,,,,"Point Conception, CA",37,130,37,Paper,-130,Paper,1950,April,,,off Central California,,
 376,JKS,Include,,,,,,,Creseis virgula,Bé and Gilmer 1977,Curved Needle Pteropod,species,,,,Bodega Line Station 4,38.194175,-123.4,38.194175,Paper,-123.4,Paper,2014,November,4,,off Central California,,
 376,JKS,Include,,,,,,,Hyalocylis striata,"Tesch 1946, Tesch 1948, McGowan 1967, Bé and Gilmer 1977",Striated Sea Butterfly,species,,,,Bodega Line Station 4,38.194175,-123.4,38.194175,Paper,-123.4,Paper,2014,November,4,,"Baja California, Mexico",,32 km offshore from BLM sample
 376,JKS,Include,,,,,,,Berthella strongi,,Strong's Sidegill,species,,,,"MacKerricher State Park, CA",39.536724,-123.772568,39.536724,Paper,-123.772568,Paper,2016,July,4,,"Moss Beach, CA",Bertsch et al. 1972,
