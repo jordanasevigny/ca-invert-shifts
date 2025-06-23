@@ -73,7 +73,7 @@ Paper_ID,Initials (of screener),Include/Exclude,Inconclusive Note,Exclusion T0: 
 50,JKS,Exclude,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,
 51,JKS,Exclude,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,
 52,EJW,Inconclusive,requested article from the library,,,,,,,,,,,,,,,,,,,,,,,,,,
-53,EJW,Inconclusive,see screening note,,,,,,Neanthes micromma,Harper 1979,,Species,,,,"Gulf of Nicoya, subtidal: STA 2; 9º55'28"" N, 84º52'05"" W, 18 m, muddy sand, Jan. 1980 (1); STA 4; 9º53'40"" N, 84º46'10"" W, 40 m, mud, Jul. 1980 (1); STA 24; 9º49'25"" N, 84º41'20"" W, 11 m, sand, Oct. 1980 (12), Jan. 1981 (2), Apr. 1981 (2), Jun. 1981 (2), Aug. 1981 (3), Dec. 1993 (3); STA 27; 9º51'57"" N, 84º50'50"" W, 12 m, muddy sand, Jul. 1980 (1); STA 28; 9º52'16"" N, 84º45'30"" W, 26 m, mud, Aug. 1981 (1), Apr. 1982 (1); STA 29; 9º54'55"" N, 84º45'15"" W, 18 m, muddy sand, Aug. 1981 (1); STA 30; 9º54'40"" N, 84º45'50"" W, 18 m, muddy sand, Oct. 1980 (2); STA 44; 9º59'17"" N, 84º54'25"" W, 24m, muddy sand, Jul. 1980 (1). Intertidal: Punta Morales, 10º N; 84º58' W, north side; intertidal mud, Sep. 1988 (1), Jul. 1997 (19); intertidal sand Jul. 1997 (9); man-grove roots, Jan. 1996 (1): Punta Morales, south side; mid-intertidal muddy sand Jun. 1983 (1), Jun. 1986 (1); Lagartos Point, fine sand Sep. 1988 (1); soupy mud Jul. 1997 (10); Algal mat, tidal pool, Sep. 1988 (1). Golfo Dulce, Intertidal: Golfito, mid-intertidal mud Sep. 1986 (1).","9º57'30"" N","84º53'00"" W",,,,,1980-1986,,,,known from the Gulf of Mexico on muddy sand and silt-clay sediments at depths of 10-50 meters and from the Gulf of California from fine and silty sands at 28-79 m. This species was collected intertidally in Costa Rica,,"southward range extension not northward!!!, also another species was observed for the first time near here but it was only the seccond time the species had been recorded so hard to say anything about its range"
+53,EJW,Exclude,see screening note,,,,TRUE,TRUE,Neanthes micromma,Harper 1979,,Species,,,,"Gulf of Nicoya, subtidal: STA 2; 9º55'28"" N, 84º52'05"" W, 18 m, muddy sand, Jan. 1980 (1); STA 4; 9º53'40"" N, 84º46'10"" W, 40 m, mud, Jul. 1980 (1); STA 24; 9º49'25"" N, 84º41'20"" W, 11 m, sand, Oct. 1980 (12), Jan. 1981 (2), Apr. 1981 (2), Jun. 1981 (2), Aug. 1981 (3), Dec. 1993 (3); STA 27; 9º51'57"" N, 84º50'50"" W, 12 m, muddy sand, Jul. 1980 (1); STA 28; 9º52'16"" N, 84º45'30"" W, 26 m, mud, Aug. 1981 (1), Apr. 1982 (1); STA 29; 9º54'55"" N, 84º45'15"" W, 18 m, muddy sand, Aug. 1981 (1); STA 30; 9º54'40"" N, 84º45'50"" W, 18 m, muddy sand, Oct. 1980 (2); STA 44; 9º59'17"" N, 84º54'25"" W, 24m, muddy sand, Jul. 1980 (1). Intertidal: Punta Morales, 10º N; 84º58' W, north side; intertidal mud, Sep. 1988 (1), Jul. 1997 (19); intertidal sand Jul. 1997 (9); man-grove roots, Jan. 1996 (1): Punta Morales, south side; mid-intertidal muddy sand Jun. 1983 (1), Jun. 1986 (1); Lagartos Point, fine sand Sep. 1988 (1); soupy mud Jul. 1997 (10); Algal mat, tidal pool, Sep. 1988 (1). Golfo Dulce, Intertidal: Golfito, mid-intertidal mud Sep. 1986 (1).","9º57'30"" N","84º53'00"" W",,,,,1980-1986,,,,known from the Gulf of Mexico on muddy sand and silt-clay sediments at depths of 10-50 meters and from the Gulf of California from fine and silty sands at 28-79 m. This species was collected intertidally in Costa Rica,,"southward range extension not northward!!!, also another species was observed for the first time near here but it was only the seccond time the species had been recorded so hard to say anything about its range"
 54,EJW,Exclude,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,
 55,EJW,Exclude,,,TRUE,,,,,,,,,,,,,,,,,,,,,,,,
 56,EJW,Exclude,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,,
@@ -207,7 +207,7 @@ crassipes Randall. Pac Sci 2:135–213, Morris RH, Abbott DP, Haderlie EC (1980)
 161,BGL,Inconclusive,data came from 389. no date included in this paper - JKS,,,,,,Acanthinucella spirata,,,species,,,,"Cape Mendocino, California, USA (40.40°N)",40.396,-124.378,,,,,2017,june,17,,"Tomales Bay, CA",McLean 1978,cool map! https://link.springer.com/article/10.1007/s00442-024-05659-z/figures/1
 162,TVT,Exclude,,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,
 163,JKS,Exclude,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,
-164,JKS,Inconclusive,not really a range extensions since it was within the discussed historical range,,,,,,Pyrosoma atlanticum,,pyrosome,species,,,,"Cape Meares, OR",45.478,,,,,,2018,May,10,,"warm, tropical-temperate waters between 50° N and 50° S", (Van Soest 1981),
+164,JKS,Include,"not really a range extensions since it was within the discussed historical range, but authors considered it anomolous",,,,,,Pyrosoma atlanticum,,pyrosome,species,,,,"Cape Meares, OR",45.478,,45.478,,,,2018,May,10,,"warm, tropical-temperate waters between 50° N and 50° S", (Van Soest 1981),
 165,EJW,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
 166,TVT,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
 167,TVT,Exclude,,,TRUE,,,,,,,,,,,,,,,,,,,,,,,,
@@ -220,7 +220,7 @@ crassipes Randall. Pac Sci 2:135–213, Morris RH, Abbott DP, Haderlie EC (1980)
 174,AF,Exclude,,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,
 175,AF,Include,,,,,,,Dosidicus gigas,,"Giant squid, Humboldt squid",species,adult,,"""spawning
 events occurring probably throughout
-the year""","Alaska (Yakutat at ~59° N, Wing 2006)",,,59,Paper,,,2004,,,,"""eastern Pacific Ocean from 25° N to 25° S""",,"Recorded northernmost point but many intermediate observations: ""Moreover, arrivals of this species farther north off
+the year""","Alaska (Yakutat at ~59° N, Wing 2006)",,,59,Paper,-139.858311,Google Maps,2004,,,,"""eastern Pacific Ocean from 25° N to 25° S""",,"Recorded northernmost point but many intermediate observations: ""Moreover, arrivals of this species farther north off
 California (Zeidberg & Robison 2007), Oregon (Litz
 et al. 2011), Washington (Litz et al. 2011), British
 Columbia (Cosgrove 2005) and Alaska (Yakutat at
@@ -281,10 +281,10 @@ Columbia (Cosgrove 2005) and Alaska (Yakutat at
 220,JKS,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
 221,JKS,Exclude,,,TRUE,,,,,,,,,,,,,,,,,,,,,,,,
 222,JKS,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
-223,JKS,Include,,,,,,,Pryosoma atlanticum,"Peron, 1804",,species,,,,Washington,,,46.288831,Google Maps,,,2014,,,,Pyrosomes are relatively common off of the California coast south of Cape Mendocino,,
-223,JKS,Include,,,,,,,Pryosoma atlanticum,"Peron, 1804",,species,,,,Washington,,,46.288831,Google Maps,,,2015,,,,Pyrosomes are relatively common off of the California coast south of Cape Mendocino,,
-223,JKS,Include,,,,,,,Pryosoma atlanticum,"Peron, 1804",,species,,,,Washington,,,46.288831,Google Maps,,,2016,,,,Pyrosomes are relatively common off of the California coast south of Cape Mendocino,,
-223,JKS,Include,,,,,,,Pryosoma atlanticum,"Peron, 1804",,species,,,,"Vancouver Island, BC, Canada",49,,49,Paper,,,2017,August,,,Pyrosomes are relatively common off of the California coast south of Cape Mendocino,,
+223,JKS,Include,,,,,,,Pyrosoma atlanticum,"Peron, 1804",,species,,,,Washington,,,46.288831,Google Maps,,,2014,,,,Pyrosomes are relatively common off of the California coast south of Cape Mendocino,,
+223,JKS,Include,,,,,,,Pyrosoma atlanticum,"Peron, 1804",,species,,,,Washington,,,46.288831,Google Maps,,,2015,,,,Pyrosomes are relatively common off of the California coast south of Cape Mendocino,,
+223,JKS,Include,,,,,,,Pyrosoma atlanticum,"Peron, 1804",,species,,,,Washington,,,46.288831,Google Maps,,,2016,,,,Pyrosomes are relatively common off of the California coast south of Cape Mendocino,,
+223,JKS,Include,,,,,,,Pyrosoma atlanticum,"Peron, 1804",,species,,,,"Vancouver Island, BC, Canada",49,,49,Paper,,,2017,August,,,Pyrosomes are relatively common off of the California coast south of Cape Mendocino,,
 224,JKS,Exclude,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,
 225,JKS,Exclude,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,
 226,JKS,Exclude,,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,
@@ -294,7 +294,7 @@ Columbia (Cosgrove 2005) and Alaska (Yakutat at
 230,JKS,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
 231,JKS,Exclude,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,
 232,JKS,Exclude,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,,
-233,JKS,Include,,,,,,,Pryosoma atlanticum,,,species,,,,"Newport, OR",44.652,−124.295,44.652,Paper,-124.295,Paper,2018,July,3-12,,"50°N to 50°S, though normally uncommon in the eastern Pacific north of southern California","Van Soest, 1981",
+233,JKS,Include,,,,,,,Pyrosoma atlanticum,,,species,,,,"Newport, OR",44.652,−124.295,44.652,Paper,-124.295,Paper,2018,July,3-12,,"50°N to 50°S, though normally uncommon in the eastern Pacific north of southern California","Van Soest, 1981",
 234,JKS,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
 235,JKS,Exclude,,,TRUE,,,,,,,,,,,,,,,,,,,,,,,,
 236,JKS,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
@@ -378,9 +378,9 @@ Columbia (Cosgrove 2005) and Alaska (Yakutat at
 314,AF,Exclude,,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,
 315,AF,Exclude,,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,
 316,AF,Exclude,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,
-317,AF,Include,,,,,,,Mexacanthina lugubris lugubris,,Dark unicorn whelk,species,adult,,,Orange County,33.5,,33.5,Paper,,,1937,,,,"Baja California; Prior to the 1970s, the northern range limit of M. l. lugubris was located near Ensenada (Radwin 1974; Becker 2005), approximately two degrees south of its contemporary northern limit. ",,
-317,AF,Include,,,,,,,Mexacanthina lugubris lugubris,,Dark unicorn whelk,species,adult,,,Orange County,33.5,,33.5,Paper,,,1955,,,,"Baja California; Prior to the 1970s, the northern range limit of M. l. lugubris was located near Ensenada (Radwin 1974; Becker 2005), approximately two degrees south of its contemporary northern limit. ",,
-317,AF,Include,,,,,,,Mexacanthina lugubris lugubris,,Dark unicorn whelk,species,adult,,,"Thousand Steps Beach, CA",33.49°N,− 117.739,33.49,Paper,-117.739,Paper,2003-2007,,,,"Baja California; Prior to the 1970s, the northern range limit of M. l. lugubris was located near Ensenada (Radwin 1974; Becker 2005), approximately two degrees south of its contemporary northern limit. ",,"This does not make it clear that they recorded a range extension, but paper 344 says it was, so I'm updating this row so it's attributed to the right source paper. The longitude is also from paper 344; this paper only reported latitude. Date of survey is not recorded but could ask the author. "
+317,AF,Include,,,,,,,Mexacanthina lugubris,,Dark unicorn whelk,species,adult,,,Orange County,33.5,,33.5,Paper,,,1937,,,,"Baja California; Prior to the 1970s, the northern range limit of M. l. lugubris was located near Ensenada (Radwin 1974; Becker 2005), approximately two degrees south of its contemporary northern limit. ",,
+317,AF,Include,,,,,,,Mexacanthina lugubris,,Dark unicorn whelk,species,adult,,,Orange County,33.5,,33.5,Paper,,,1955,,,,"Baja California; Prior to the 1970s, the northern range limit of M. l. lugubris was located near Ensenada (Radwin 1974; Becker 2005), approximately two degrees south of its contemporary northern limit. ",,
+317,AF,Include,,,,,,,Mexacanthina lugubris,,Dark unicorn whelk,species,adult,,,"Thousand Steps Beach, CA",33.49°N,− 117.739,33.49,Paper,-117.739,Paper,2003-2007,,,,"Baja California; Prior to the 1970s, the northern range limit of M. l. lugubris was located near Ensenada (Radwin 1974; Becker 2005), approximately two degrees south of its contemporary northern limit. ",,"This does not make it clear that they recorded a range extension, but paper 344 says it was, so I'm updating this row so it's attributed to the right source paper. The longitude is also from paper 344; this paper only reported latitude. Date of survey is not recorded but could ask the author. "
 318,AF,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
 319,AF,Exclude,,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,
 320,AF,Exclude,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,,
@@ -440,7 +440,7 @@ Columbia (Cosgrove 2005) and Alaska (Yakutat at
 363,TVT,Exclude,,,TRUE,,,,,,,,,,,,,,,,,,,,,,,,
 364,TVT,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
 365,TVT,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
-366,JKS,Include,,,,,,,Emerita analoga,Pacific sand crab,,species,adult and juvenile (molts),,,"Karluk, Kodiak Island, AK",,,57.58193,Google Maps,,,1903,,,,"In California and Oregon it is abundant and persistent, although its Oregon population appears to be largely supplied by recruitment from California",,
+366,JKS,Include,,,,,,,Emerita analoga,Pacific sand crab,,species,adult and juvenile (molts),,,"Karluk, Kodiak Island, AK",,,57.58193,Google Maps,-154.460353,Google Maps,1903,,,,"In California and Oregon it is abundant and persistent, although its Oregon population appears to be largely supplied by recruitment from California",,
 366,JKS,Include,,,,,,,Emerita analoga,Pacific sand crab,,species,adult and juvenile (molts),,,"Columbia River to Kalaloch Beach, WA",,,47.604594,Google Maps,,,1941,,,,"In California and Oregon it is abundant and persistent, although its Oregon population appears to be largely supplied by recruitment from California",,
 366,JKS,Include,,,,,,,Emerita analoga,Pacific sand crab,,species,adult and juvenile (molts),,,"Columbia River to Kalaloch Beach, WA",,,47.604594,Google Maps,,,1942,,,,"In California and Oregon it is abundant and persistent, although its Oregon population appears to be largely supplied by recruitment from California",,
 366,JKS,Include,,,,,,,Emerita analoga,Pacific sand crab,,species,adult and juvenile (molts),,,"Fraser River, BC",,,49.110317,Google Maps,,,1957,,,,"In California and Oregon it is abundant and persistent, although its Oregon population appears to be largely supplied by recruitment from California",,
@@ -542,7 +542,7 @@ Columbia (Cosgrove 2005) and Alaska (Yakutat at
 380,EJW,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
 381,EJW,Exclude,,,TRUE,,,,,,,,,,,,,,,,,,,,,,,,
 382,JKS,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
-383,EJW,Include,,,,,,,Pyrosoma atlanticum,,,species,,,,"from Oregon to BritishColumbia, and occurred in scientific samples as far north asthe Gulf of Alaska",59-60 degrees N,-146 to -144 degrees E,59,Paper,,,2017,,,,"common only as far north as southern California, rarely seen North of the sate",,
+383,EJW,Include,,,,,,,Pyrosoma atlanticum,,,species,,,,"from Oregon to BritishColumbia, and occurred in scientific samples as far north asthe Gulf of Alaska",59-60 degrees N,-146 to -144 degrees E,59,Paper,-144,Paper,2017,,,,"common only as far north as southern California, rarely seen North of the sate",,
 384,EJW,Inconclusive,data used is from CalCOFI and analysis is primarily related to abundance - JKS,,,,,,Salpa maxima,,,species,,,,Southern California,,,,,,,1951-1976,,,,,,*seen here in 1951-1976 but then essentially absent from the region thereafter
 384,EJW,Inconclusive,data used is from CalCOFI and analysis is primarily related to abundance - JKS,,,,,,Pegea socia,,,species,,,,Southern California,,,,,,,1951-1976,,,,,,*seen here in 1951-1976 but then essentially absent from the region thereafter
 384,EJW,Inconclusive,data used is from CalCOFI and analysis is primarily related to abundance - JKS,,,,,,Cyclosalpa bakeri,,,species,,,,Southern California,,,,,,,1951-1976,,,,,,*seen here in 1951-1976 but then essentially absent from the region thereafter
@@ -550,15 +550,15 @@ Columbia (Cosgrove 2005) and Alaska (Yakutat at
 384,EJW,Inconclusive,data used is from CalCOFI and analysis is primarily related to abundance - JKS,,,,,,Cyclosalpa bakeri,,,species,,,,Southern California,,,,,,,2001,,,,,,*reappeared in large numbers in the region in 2001
 384,EJW,Inconclusive,data used is from CalCOFI and analysis is primarily related to abundance - JKS,,,,,,Cyclosalpa affinis,,,species,,,,Southern California,,,,,,,2001,,,,,,*reappeared in large numbers in the region in 2001
 385,TVT,Inconclusive,"Details global range shifts across broad groupings (benthic inverts, seabirds, etc) rather than individual species",,,,,,,,,,,,,,,,,,,,,,,,,,
-386,JKS,Include,,,,,,,Aplysia californica,Cooper J.G. (1863),sea hare,species,,,,"Yaquina Bay Jetty, OR",,,44.609567,Google Maos,,,1983,October,"14, 19",,California ,GBIF,
+386,JKS,Include,,,,,,,Aplysia californica,Cooper J.G. (1863),sea hare,species,,,,"Yaquina Bay Jetty, OR",,,44.609567,Google Maps,,,1983,October,"14, 19",,California ,GBIF,
 387,AF,Include,,,,,,,Dosidicus gigas,,"Giant squid, Humboldt squid",species,adult,,,Newport to Bandon,from 43°N to at least 43°40′N,,43.6667,Paper,,,1997,,,,"""endemic to the eastern tropical Pacific (Wormuth, 1976), but occasionally occurs off southern California.""","Wormuth, 1976",
-388,JKS,Include,,,,,,,Dosidicus gigas,,Jumbo squid,species,adult,,,San Pedro,,,33.700615,Google Maos,,,1934,August,6,,"Occasional specimens have been taken oft the eastern coast of Australia and in waters to the eastward, off Chile and Peru. from Southern California waters and from Monterey Bay.",,
-389,JKS,Include,,,,,,,Dosidicus gigas,,Jumbo squid,species,adult,,,"Monterey, CA",,,36.611029,Google Maos,,,1911,,,,"Occasional specimens have been taken oft the eastern coast of Australia and in waters to the eastward, off Chile and Peru. from Southern California waters and from Monterey Bay.",,
+388,JKS,Include,,,,,,,Dosidicus gigas,,Jumbo squid,species,adult,,,San Pedro,,,33.700615,Google Maps,,,1934,August,6,,"Occasional specimens have been taken oft the eastern coast of Australia and in waters to the eastward, off Chile and Peru. from Southern California waters and from Monterey Bay.",,
+389,JKS,Include,,,,,,,Dosidicus gigas,,Jumbo squid,species,adult,,,"Monterey, CA",,,36.611029,Google Maps,,,1911,,,,"Occasional specimens have been taken oft the eastern coast of Australia and in waters to the eastward, off Chile and Peru. from Southern California waters and from Monterey Bay.",,
 389,TVT,Include,,,,,,,Acanthinucella spirata,"Blainville, 1832",,species,,,,"Cape Mendocino, CA",40.396N,-124.378W,40.396,Paper,-124.378,Paper,2017,June,17,,"Tomales Bay, California to Punta Baja, Baja California",,
-390,EJW,Inconclusive,"*This paper doesn't give much detail other than saying that the species was in surveys south of Point Conception but wasn't in surveys north of Point Conception until the 1970's and cites an annotated list of benthic algae and invertebrates in the kelp forest community at Point Cabrillo, Pacific Grove, California which gives the details on these surveys but is only available to be viewed in person in the McHenry Library. I've added this to the backward search for someone to go check out and see if we can recover greater details from when the species appears in this list.",,,,,,Kelletia kelletii,"(Forbes, 1852)",,,,,,"California, north of point conception",,,,,,,1970's,,,,"California, south of point conception",,
-391,JKS,,getting from library,,,,,,,,,,,,,,,,,,,,,,,,,,
-392,JKS,,getting from library,,,,,,,,,,,,,,,,,,,,,,,,,,
-393,JKS,Include,,,,,,,Dosidicus gigas,,Humboldt squid or jumbo flying squid,species,,,,Yakutat,,,59.485662,Google Maos,,,1997,,,,has a range extending from 35° N (California) south to Tierra del Fuego in South America,"Norman, 2000; Roper et. al., 1984",
+390,EJW,Inconclusive,"DUPLICATE OF 303 - JKS; *This paper doesn't give much detail other than saying that the species was in surveys south of Point Conception but wasn't in surveys north of Point Conception until the 1970's and cites an annotated list of benthic algae and invertebrates in the kelp forest community at Point Cabrillo, Pacific Grove, California which gives the details on these surveys but is only available to be viewed in person in the McHenry Library. I've added this to the backward search for someone to go check out and see if we can recover greater details from when the species appears in this list",,,,,,Kelletia kelletii,"(Forbes, 1852)",,,,,,"California, north of point conception",,,,,,,1970's,,,,"California, south of point conception",,
+391,JKS,Exclude,getting from library; describes observed intertidal and subtidal species at Point Cabrillo in 1971 and 1972 but excludes uncommon species,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
+392,JKS,Inconclusive,getting from library. - library could not ascertain JKS,,,,,,,,,,,,,,,,,,,,,,,,,,
+393,JKS,Include,,,,,,,Dosidicus gigas,,Humboldt squid or jumbo flying squid,species,,,,Yakutat,,,59.485662,Google Maps,-139.858311,Google Maps,1997,,,,has a range extending from 35° N (California) south to Tierra del Fuego in South America,"Norman, 2000; Roper et. al., 1984",
 393,JKS,Include,,,,,,,Dosidicus gigas,,Humboldt squid or jumbo flying squid,species,,,,"The collection location was ""about 20 km southwest of Carmanah Point and 7 km south of Swiftsure Bank"" near Vancouver Island",,,48.5,ChatGPT,-124.85,ChatGPT,2004,October,2,,has a range extending from 35° N (California) south to Tierra del Fuego in South America,"Norman, 2000; Roper et. al., 1984",
 394,JKS,Include,,,,,,,Dosidicus gigas,,Jumbo squid,species,,,,Newport to Bandon,43°N to at least 43°40′N,,43.6667,Paper,,,1997,September,30,,occasionally occurs off southern California,,
 395,JKS,Exclude,,,TRUE,,,,,,,,,,,,,,,,,,,,,,,,
@@ -566,10 +566,38 @@ Columbia (Cosgrove 2005) and Alaska (Yakutat at
 397,JKS,Exclude,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,
 398,JKS,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
 399,JKS,Include,original of data already recorded. has more specifics,,,,,,Kelletia kelletii,"Forbes, 1852",,species,,,,"Hopkins Marine Life Refuge, Pacific Grove, CA",,,36.623995,Google Maps,,,1980,May,2,,"""These records are significant due to the lack of reports of Kelletia kelletii north of Point Conception""","Abbott 1974, McLean 1978",
-399,JKS,Include,original of data already recorded. has more specifics,,,,,,Kelletia kelletii,"Forbes, 1852",,species,,,,Monterey Macrocystis forest,,,36.611029,Google Maos,,,1981,January,,,"""These records are significant due to the lack of reports of Kelletia kelletii north of Point Conception""","Abbott 1974, McLean 1978",
+399,JKS,Include,original of data already recorded. has more specifics,,,,,,Kelletia kelletii,"Forbes, 1852",,species,,,,Monterey Macrocystis forest,,,36.611029,Google Maps,,,1981,January,,,"""These records are significant due to the lack of reports of Kelletia kelletii north of Point Conception""","Abbott 1974, McLean 1978",
 400,JKS,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
 401,JKS,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,In 1936 they seemed to be even more abundant all the way from Monterey Bay to San Diego. It was in this year that they were first recognized as a nuisance by the fishermen.
-402,JKS,,getting from library,,,,,,,,,,,,,,,,,,,,,,,,,,
+402,JKS,Include,,,,,,,Pleuroncodes planipes,,Pelagic red crab,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1941,,,,"""tropical region organism""",,
+402,JKS,Include,,,,,,,Pleuroncodes planipes,,Pelagic red crab,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1957,,,,"""tropical region organism""",,
+402,JKS,Include,,,,,,,Pleuroncodes planipes,,Pelagic red crab,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1958,,,,"""tropical region organism""",,
+402,JKS,Include,,,,,,,Pleuroncodes planipes,,Pelagic red crab,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1959,,,,"""tropical region organism""",,
+402,JKS,Include,,,,,,,Pleuroncodes planipes,,Pelagic red crab,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1960,,,,"""tropical region organism""",,
+402,JKS,Include,,,,,,,Pleuroncodes planipes,,Pelagic red crab,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1970,,,,"""tropical region organism""",,
+402,JKS,Include,,,,,,,Pleuroncodes planipes,,Pelagic red crab,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1972,,,,"""tropical region organism""",,
+402,JKS,Include,,,,,,,Pleuroncodes planipes,,Pelagic red crab,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1973,,,,"""tropical region organism""",,
+402,JKS,Include,,,,,,,Pleuroncodes planipes,,Pelagic red crab,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1979,,,,"""tropical region organism""",,
+402,JKS,Include,,,,,,,Pleuroncodes planipes,,Pelagic red crab,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1980,,,,"""tropical region organism""",,
+402,JKS,Include,,,,,,,Euphylax dovi,,Swimming crab,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1943,,,,"""tropical region organism""",,
+402,JKS,Include,,,,,,,Euphylax dovi,,Swimming crab,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1959,,,,"""tropical region organism""",,
+402,JKS,Include,,,,,,,Euphylax dovi,,Swimming crab,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1974,,,,"""tropical region organism""",,
+402,JKS,Include,,,,,,,Lophogorgia chiliensis,,White gorgonian,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1960,,,,"""tropical region organism""",,1960 and onwards
+402,JKS,Include,,,,,,,Panilurus gracilis,,Pinto lobser,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1961,,,,"""tropical region organism""",,
+402,JKS,Include,,,,,,,Lyropectin subnudosus,,Blunt-knobbed scallop,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1959,,,,"""tropical region organism""",,1959 and onwards
+402,JKS,Include,,,,,,,Dosidicus gigas,,Jumbo squid,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1909,,,,"""tropical region organism""",,
+402,JKS,Include,,,,,,,Dosidicus gigas,,Jumbo squid,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1934,,,,"""tropical region organism""",,
+402,JKS,Include,,,,,,,Dosidicus gigas,,Jumbo squid,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1935,,,,"""tropical region organism""",,
+402,JKS,Include,,,,,,,Dosidicus gigas,,Jumbo squid,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1936,,,,"""tropical region organism""",,
+402,JKS,Include,,,,,,,Dosidicus gigas,,Jumbo squid,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1937,,,,"""tropical region organism""",,
+402,JKS,Include,,,,,,,Dosidicus gigas,,Jumbo squid,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1975,,,,"""tropical region organism""",,
+402,JKS,Include,,,,,,,Dosidicus gigas,,Jumbo squid,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1976,,,,"""tropical region organism""",,
+402,JKS,Include,,,,,,,Eucidaris thouarsii,,Club-spined urchin,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1958,,,,"""tropical region organism""",,
+402,JKS,Include,,,,,,,Eucidaris thouarsii,,Club-spined urchin,species,,,,north of U.S.-Mexico international border (San Diegan region),,,32.663501,Google Maps,,,1960,,,,"""tropical region organism""",,
+402,JKS,Include,,,,,,,Emerita analoga,,Sand crab,species,,,,north of the California-Oregon boundary (central Oregonian region),,,41.999703,Google Maps,,,1941,,,,"""san diegan region organism""",,
+402,JKS,Include,,,,,,,Emerita analoga,,Sand crab,species,,,,north of the California-Oregon boundary (central Oregonian region),,,41.999703,Google Maps,,,1959,,,,"""san diegan region organism""",,
+402,JKS,Include,,,,,,,Loligo opalescens,,Market squid,species,,,,north of the California-Oregon boundary (central Oregonian region),,,41.999703,Google Maps,,,1941,,,,"""san diegan region organism""",,
+402,JKS,Include,,,,,,,Loligo opalescens,,Market squid,species,,,,north of the California-Oregon boundary (central Oregonian region),,,41.999703,Google Maps,,,1959,,,,"""san diegan region organism""",,
 403,JKS,Include,,,,,,,Dosidicus gigas,,Humboldt squid,species,,,,"Chesterman Beach, Tofino BC",49.11374,−125.8907608,49.11374,Paper,−125.8907608,Paper,2009,August,"days 2, 4, 6",,historic range extending along the eastern Pacific Ocean from Chile to California,Nigmatullin et al. 2001,
 403,JKS,Include,,,,,,,Dosidicus gigas,,Humboldt squid,species,,,,"Chesterman Beach, Tofino BC",49.11374,−125.8907608,49.11374,Paper,−125.8907608,Paper,2009,September,27,,historic range extending along the eastern Pacific Ocean from Chile to California,Nigmatullin et al. 2001,
 404,JKS,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
