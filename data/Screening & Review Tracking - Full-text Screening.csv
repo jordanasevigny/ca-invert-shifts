@@ -72,7 +72,7 @@ Paper_ID,Initials (of screener),Include/Exclude,Inconclusive Note,Exclusion T0: 
 49,JKS,Exclude,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,
 50,JKS,Exclude,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,
 51,JKS,Exclude,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,
-52,EJW,Inconclusive,requested article from the library,,,,,,,,,,,,,,,,,,,,,,,,,,
+52,EJW,Exclude,,,TRUE,,,,,,,,,,,,,,,,,,,,,,,,
 53,EJW,Exclude,see screening note,,,,TRUE,TRUE,Neanthes micromma,Harper 1979,,Species,,,,"Gulf of Nicoya, subtidal: STA 2; 9º55'28"" N, 84º52'05"" W, 18 m, muddy sand, Jan. 1980 (1); STA 4; 9º53'40"" N, 84º46'10"" W, 40 m, mud, Jul. 1980 (1); STA 24; 9º49'25"" N, 84º41'20"" W, 11 m, sand, Oct. 1980 (12), Jan. 1981 (2), Apr. 1981 (2), Jun. 1981 (2), Aug. 1981 (3), Dec. 1993 (3); STA 27; 9º51'57"" N, 84º50'50"" W, 12 m, muddy sand, Jul. 1980 (1); STA 28; 9º52'16"" N, 84º45'30"" W, 26 m, mud, Aug. 1981 (1), Apr. 1982 (1); STA 29; 9º54'55"" N, 84º45'15"" W, 18 m, muddy sand, Aug. 1981 (1); STA 30; 9º54'40"" N, 84º45'50"" W, 18 m, muddy sand, Oct. 1980 (2); STA 44; 9º59'17"" N, 84º54'25"" W, 24m, muddy sand, Jul. 1980 (1). Intertidal: Punta Morales, 10º N; 84º58' W, north side; intertidal mud, Sep. 1988 (1), Jul. 1997 (19); intertidal sand Jul. 1997 (9); man-grove roots, Jan. 1996 (1): Punta Morales, south side; mid-intertidal muddy sand Jun. 1983 (1), Jun. 1986 (1); Lagartos Point, fine sand Sep. 1988 (1); soupy mud Jul. 1997 (10); Algal mat, tidal pool, Sep. 1988 (1). Golfo Dulce, Intertidal: Golfito, mid-intertidal mud Sep. 1986 (1).","9º57'30"" N","84º53'00"" W",,,,,1980-1986,,,,known from the Gulf of Mexico on muddy sand and silt-clay sediments at depths of 10-50 meters and from the Gulf of California from fine and silty sands at 28-79 m. This species was collected intertidally in Costa Rica,,"southward range extension not northward!!!, also another species was observed for the first time near here but it was only the seccond time the species had been recorded so hard to say anything about its range"
 54,EJW,Exclude,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,
 55,EJW,Exclude,,,TRUE,,,,,,,,,,,,,,,,,,,,,,,,
@@ -181,7 +181,7 @@ Paper_ID,Initials (of screener),Include/Exclude,Inconclusive Note,Exclusion T0: 
 Cerithidea californica Haldeman. J Exp Mar Biol Ecol 166:19–
 37, Hiatt RW (1948) The biology of the lined shore crab, Pachygrapsus
 crassipes Randall. Pac Sci 2:135–213, Morris RH, Abbott DP, Haderlie EC (1980) Intertidal invertebrates of California. Stanford University Press, Stanford",
-138,EJW,Inconclusive,requested the paper from the library,,,,,,,,,,,,,,,,,,,,,,,,,,
+138,JKS,Inconclusive,requested the paper from the library,,,,,,,,,,,,,,,,,,,,,,,,,,
 139,EJW,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
 140,BGL,Exclude,,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,
 141,BGL,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
@@ -207,7 +207,7 @@ crassipes Randall. Pac Sci 2:135–213, Morris RH, Abbott DP, Haderlie EC (1980)
 161,BGL,Inconclusive,data came from 389. no date included in this paper - JKS,,,,,,Acanthinucella spirata,,,species,,,,"Cape Mendocino, California, USA (40.40°N)",40.396,-124.378,,,,,2017,june,17,,"Tomales Bay, CA",McLean 1978,cool map! https://link.springer.com/article/10.1007/s00442-024-05659-z/figures/1
 162,TVT,Exclude,,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,
 163,JKS,Exclude,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,
-164,JKS,Include,"not really a range extensions since it was within the discussed historical range, but authors considered it anomolous",,,,,,Pyrosoma atlanticum,,pyrosome,species,,,,"Cape Meares, OR",45.478,,45.478,,,,2018,May,10,,"warm, tropical-temperate waters between 50° N and 50° S", (Van Soest 1981),
+164,JKS,Include,"not really a range extensions since it was within the discussed historical range, but authors considered it anomolous",,,,,,Pyrosoma atlanticum,,pyrosome,species,,,,"Cape Meares, OR",45.478,,45.478,,,,2018,February-March; May; September,,,"warm, tropical-temperate waters between 50° N and 50° S", (Van Soest 1981),
 165,EJW,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
 166,TVT,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
 167,TVT,Exclude,,,TRUE,,,,,,,,,,,,,,,,,,,,,,,,
@@ -218,14 +218,14 @@ crassipes Randall. Pac Sci 2:135–213, Morris RH, Abbott DP, Haderlie EC (1980)
 172,AF,Exclude,,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,
 173,AF,Exclude,,,TRUE,,,,,,,,,,,,,,,,,,,,,,,,
 174,AF,Exclude,,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,
-175,AF,Include,,,,,,,Dosidicus gigas,,"Giant squid, Humboldt squid",species,adult,,"""spawning
+175,AF,Inconclusive,See paper 393 for the original record,,,,,,Dosidicus gigas,,"Giant squid, Humboldt squid",species,adult,,"""spawning
 events occurring probably throughout
 the year""","Alaska (Yakutat at ~59° N, Wing 2006)",,,59,Paper,-139.858311,Google Maps,2004,,,,"""eastern Pacific Ocean from 25° N to 25° S""",,"Recorded northernmost point but many intermediate observations: ""Moreover, arrivals of this species farther north off
 California (Zeidberg & Robison 2007), Oregon (Litz
 et al. 2011), Washington (Litz et al. 2011), British
 Columbia (Cosgrove 2005) and Alaska (Yakutat at
 ~59° N, Wing 2006) occurred after the El Niño of
-1997−1998"""
+1997−1998""; see 393"
 176,AF,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
 177,TVT,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
 178,TVT,Exclude,,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,
@@ -242,7 +242,12 @@ Columbia (Cosgrove 2005) and Alaska (Yakutat at
 188,JKS,Exclude,,,TRUE,,,,,,,,,,,,,,,,,,,,,,,,
 189,JKS,Include,,,,,,,Crucigera websteri,"Benedict, 1887",,,Juvenile specimen,,,"Humboldt Bay, CA",,,40.724912,Google Maps,,,2003,September,,,Santa Barbara Island,,
 189,JKS,Include,,,,,,,Hydroides gracilis,"Bush, 1905",,,,,,"San Francisco, CA",,,37.76588,Google Maps,,,2000,September,,,"Pacfic Grove, CA",Bush 1905,
+189,JKS,Include,,,,,,,Hydroides gracilis,"Bush, 1905",,,,,,"San Francisco, CA",,,37.76588,Google Maps,,,2001,September,,,"Pacfic Grove, CA",Bush 1905,
+189,JKS,Include,,,,,,,Hydroides gracilis,"Bush, 1905",,,,,,"Long Beach, CA",,,33.724877,Google Maps,,,2003,September,,,"Pacfic Grove, CA",Bush 1905,
+189,JKS,Include,,,,,,,Hydroides gracilis,"Bush, 1905",,,,,,"Morro Bay, CA",,,35.36557,Google Maps,,,2013,September,,,"Pacfic Grove, CA",Bush 1905,
 189,JKS,Include,,,,,,,Hydroides elegans,"Haswell, 1883",,,,,,"Humboldt Bay, CA",,,40.724912,Google Maps,,,2003,September,,,"San Francisco, CA",,
+189,JKS,Include,,,,,,,Hydroides elegans,"Haswell, 1883",,,,,,"San Diego, CA",,,32.645003,Google Maps,,,2000,September,,,"San Francisco, CA",,
+189,JKS,Include,,,,,,,Hydroides elegans,"Haswell, 1883",,,,,,"Mission Bay, CA",,,32.770359,Google Maps,,,2013,July,,,"San Francisco, CA",,
 190,TVT,Exclude,,,TRUE,,,,,,,,,,,,,,,,,,,,,,,,
 191,TVT,Exclude,,,TRUE,,,,,,,,,,,,,,,,,,,,,,Sea of Cortez,"Martin & Haney, 2005",
 192,TVT,Include,,,,,,,Neolithodes diomedeae,"Benedict, 1895",,species,adult,,,Central California,37°13 26.4N,123°12 00W,37.224,Paper,-123.2,,1999,October,25,,"Previous northernmost records were reported from the Gulf of California at 23°39 N at 1382 m depth (Parker, 1964) and between 16°33 N and 00°04 S off Mexico and Ecuador","Haig, 1974",
@@ -253,10 +258,10 @@ Columbia (Cosgrove 2005) and Alaska (Yakutat at
 195,BGL,Exclude,paper references other papers discussing the range extensions - JKS,,,,TRUE,,Dosidicus gigas,,humboldt squid,species,,,,Monterey Bay ,,,,,,,1998,jan-mar (winter),,,,,"cool fun fact! After an initial pulse of Humboldt squid sightings in this region associated with the 1997/1998 El Niño (Fig. 2b), Humboldt squid were not seen until 2002, and were then encountered in every year through 2010."
 196,TVT,Exclude,,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,
 197,TVT,Exclude,,,TRUE,,,,,,,,,,,,,,,,,,,,,,,,
-198,TVT,Include,,,,,,,Pleuroncodes planipes,,Tuna crab,species,,,,,36.80N,,36.8,Paper,,,2013-2015,,,,27.84N,"Putnam-Abbott and Haderlie, 1980",The year range is ambiguously 2013-2015 for all.
-198, JKS,Include,,,,,,,Arbacia stellata,,Spiny Black Urchin,species,,,,,37.00°N,,37,Paper,,,2013-2015,,,,27.84N,"Kroh and Mooi, 2015",The year range is ambiguously 2013-2015 for all.
-198, JKS,Include,,,,,,,Lytechinus pictus,,Painted Sea Urchin,species,,,,,36.80°N,,36.8,Paper,,,2013-2015,,,,34.45°N ,"Love et al., 2005;",The year range is ambiguously 2013-2015 for all.
-198, JKS,Include,,,,,,,Argonauta argo,,Greater Argonaut,species,,,,,36.80°N,,36.8,Paper,,,2013-2015,,,,34.00°N,"Love et al., 2005;",The year range is ambiguously 2013-2015 for all.
+198,TVT,Include,,,,,,,Pleuroncodes planipes,,Tuna crab,species,,,,,36.80N,,36.8,Paper,,,2013,,,,27.84N,"Putnam-Abbott and Haderlie, 1980",The year range is ambiguously 2013-2015 for all.
+198, JKS,Include,,,,,,,Arbacia stellata,,Spiny Black Urchin,species,,,,,37.00°N,,37,Paper,,,2013,,,,27.84N,"Kroh and Mooi, 2015",The year range is ambiguously 2013-2015 for all.
+198, JKS,Include,,,,,,,Lytechinus pictus,,Painted Sea Urchin,species,,,,,36.80°N,,36.8,Paper,,,2013,,,,34.45°N ,"Love et al., 2005;",The year range is ambiguously 2013-2015 for all.
+198, JKS,Include,,,,,,,Argonauta argo,,Greater Argonaut,species,,,,,36.80°N,,36.8,Paper,,,2013,,,,34.00°N,"Love et al., 2005;",The year range is ambiguously 2013-2015 for all.
 199,TVT,Exclude,,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,
 200,EJW,Exclude,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,,
 201,JKS,Exclude,,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,
@@ -380,7 +385,7 @@ Columbia (Cosgrove 2005) and Alaska (Yakutat at
 316,AF,Exclude,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,
 317,AF,Include,,,,,,,Mexacanthina lugubris,,Dark unicorn whelk,species,adult,,,Orange County,33.5,,33.5,Paper,,,1937,,,,"Baja California; Prior to the 1970s, the northern range limit of M. l. lugubris was located near Ensenada (Radwin 1974; Becker 2005), approximately two degrees south of its contemporary northern limit. ",,
 317,AF,Include,,,,,,,Mexacanthina lugubris,,Dark unicorn whelk,species,adult,,,Orange County,33.5,,33.5,Paper,,,1955,,,,"Baja California; Prior to the 1970s, the northern range limit of M. l. lugubris was located near Ensenada (Radwin 1974; Becker 2005), approximately two degrees south of its contemporary northern limit. ",,
-317,AF,Include,,,,,,,Mexacanthina lugubris,,Dark unicorn whelk,species,adult,,,"Thousand Steps Beach, CA",33.49°N,− 117.739,33.49,Paper,-117.739,Paper,2003-2007,,,,"Baja California; Prior to the 1970s, the northern range limit of M. l. lugubris was located near Ensenada (Radwin 1974; Becker 2005), approximately two degrees south of its contemporary northern limit. ",,"This does not make it clear that they recorded a range extension, but paper 344 says it was, so I'm updating this row so it's attributed to the right source paper. The longitude is also from paper 344; this paper only reported latitude. Date of survey is not recorded but could ask the author. "
+317,AF,Include,,,,,,,Mexacanthina lugubris,,Dark unicorn whelk,species,adult,,,"Thousand Steps Beach, CA",33.49°N,− 117.739,33.49,Paper,-117.739,Paper,2003,,,,"Baja California; Prior to the 1970s, the northern range limit of M. l. lugubris was located near Ensenada (Radwin 1974; Becker 2005), approximately two degrees south of its contemporary northern limit. ",,"This does not make it clear that they recorded a range extension, but paper 344 says it was, so I'm updating this row so it's attributed to the right source paper. The longitude is also from paper 344; this paper only reported latitude. Date of survey is not recorded but could ask the author. "
 318,AF,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
 319,AF,Exclude,,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,
 320,AF,Exclude,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,,
@@ -411,7 +416,7 @@ Columbia (Cosgrove 2005) and Alaska (Yakutat at
 342,AF,Include,,,,,,,Oceanapia flava,,sponge,,,,,"Sakinaw Rock, Sechelt Inlet, British Columbia",49° 34.005' N,123° 48.194' W,49.5668,Paper,-123.8032,Paper,2016,,,,Gulf of California,,other records after this; I wrote down the first year. opportunistic survey (may have been present but unseen earlier).
 343,AF,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
 344,AF,Include,,,,,,,Mexacanthina lugubris,,Dark unicorn whelk,species,adult,"""like other whelks, Mexacanthina develop directly from benthic egg cases limiting the potential for dispersal via oceanic currents""",,"San Diego, CA",,,32.663501,Google Maps,,,1974,,,,"""Native to Baja California, Mexico""",,
-344,AF,Include,,,,,,,Mexacanthina lugubris,,Dark unicorn whelk,species,adult,"""like other whelks, Mexacanthina develop directly from benthic egg cases limiting the potential for dispersal via oceanic currents""",,"Thousand Steps Beach, CA",33.493,− 117.739,33.493,Paper,−117.739,Paper,2003-2007,,,,"""Native to Baja California, Mexico""",,Duplicate of record from paper 317
+344,AF,Include,,,,,,,Mexacanthina lugubris,,Dark unicorn whelk,species,adult,"""like other whelks, Mexacanthina develop directly from benthic egg cases limiting the potential for dispersal via oceanic currents""",,"Thousand Steps Beach, CA",33.493,− 117.739,33.493,Paper,−117.739,Paper,2003,,,,"""Native to Baja California, Mexico""",,Duplicate of record from paper 317
 344,AF,Include,,,,,,,Mexacanthina lugubris,,Dark unicorn whelk,species,adult,"""like other whelks, Mexacanthina develop directly from benthic egg cases limiting the potential for dispersal via oceanic currents""",,Heisler Park,33.543,− 117.793,33.543,Paper,−117.793,Paper,2013,,,,"""Native to Baja California, Mexico""",,
 344,AF,Include,,,,,,,Mexacanthina lugubris,,Dark unicorn whelk,species,adult,"""like other whelks, Mexacanthina develop directly from benthic egg cases limiting the potential for dispersal via oceanic currents""",,Leo Carillo Beach,34.044,− 118.937,34.044,Paper,−118.937,Paper,2017,,,,"""Native to Baja California, Mexico""",,unverified iNaturalist reference
 345,AF,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
@@ -541,7 +546,7 @@ Columbia (Cosgrove 2005) and Alaska (Yakutat at
 379,EJW,Exclude,,,,,,,,,,,,,,,,,,,,,,,,,,,
 380,EJW,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
 381,EJW,Exclude,,,TRUE,,,,,,,,,,,,,,,,,,,,,,,,
-382,JKS,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,
+382,JKS,Exclude,,,,,TRUE,,,,,,,,,,,,,,,,,,,,,,see 393
 383,EJW,Include,,,,,,,Pyrosoma atlanticum,,,species,,,,"from Oregon to BritishColumbia, and occurred in scientific samples as far north asthe Gulf of Alaska",59-60 degrees N,-146 to -144 degrees E,59,Paper,-144,Paper,2017,,,,"common only as far north as southern California, rarely seen North of the sate",,
 384,EJW,Inconclusive,data used is from CalCOFI and analysis is primarily related to abundance - JKS,,,,,,Salpa maxima,,,species,,,,Southern California,,,,,,,1951-1976,,,,,,*seen here in 1951-1976 but then essentially absent from the region thereafter
 384,EJW,Inconclusive,data used is from CalCOFI and analysis is primarily related to abundance - JKS,,,,,,Pegea socia,,,species,,,,Southern California,,,,,,,1951-1976,,,,,,*seen here in 1951-1976 but then essentially absent from the region thereafter
