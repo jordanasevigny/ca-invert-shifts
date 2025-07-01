@@ -2,6 +2,8 @@
 # By: Jordana Sevigny, jordana.sevigny@gmail.com
 # Date created: 6/19/2025
 
+# FIRST SCRIPT TO PROCESS LAB REVIEW DATA
+
 # Load libraries
 library(dplyr)
 library(sf)

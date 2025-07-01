@@ -14,6 +14,9 @@ library(tidyr)
 library(stringr)
 library(purrr)
 library(rsoi)
+library(lubridate)
+library(zoo)
+
 
 # AS OF 6/19/2025, THIS DATA STILL NEEDS TO BE DEDUPLICATED
 
@@ -25,28 +28,57 @@ class(world)
 df <- read.csv("processed_data/lab_review_with_longitudes.csv")
 
 # Load enso data
+# I TOGGLE BETWEEN USING phase == 'Warm Phase/El Nino' and dSST3.4 > 0 HERE
 enso <- download_enso(climate_idx = "oni", create_csv = FALSE)
 enso_yr <- enso %>%
-  select(c(Year, phase)) %>%
+  select(c(Year, Month, phase)) %>%
   filter(phase == 'Warm Phase/El Nino') %>%
   distinct() %>%
-  select(Year)
-
+  select(Year, Month)
+# enso_yr <- enso %>%
+#   select(c(Year, Month, dSST3.4)) %>%
+#   filter(dSST3.4 > 0) %>%
+#   distinct() %>%
+#   select(Year, Month)
+oni_years <- enso_yr %>%
+  select(Year) %>%
+  distinct()
 # Manually add historical el nino events from Quinn et al. 1987 for 1850-1950
 # https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/JC092iC13p14449
 # Their data extends back to 1525!
 man_hist_enso <- c(1864, 1871, 1877, 1878, 1884, 1891, 1899, 1900, 1911, 1912, 1917, 1925, 1926, 1932, 1940, 1941)
 man_hist_df <- data.frame(Year = man_hist_enso)
 
-# Append manual data to ONI
-enso_yr <- rbind(enso_yr, man_hist_df)
-
-# Add enso to time series
-enso_bands <- data.frame(
-  xmin = enso_yr$Year - 0.5,
-  xmax = enso_yr$Year + 0.5
+enso_bands_old <- data.frame(
+  xmin = man_hist_df$Year - 0.5,
+  xmax = man_hist_df$Year + 0.5
 )
 
+# Convert to date
+enso_yr <- enso_yr %>%
+  mutate(
+    Month = match(Month, month.abb),  # convert "Aug" -> 8, etc.
+    Date = ymd(paste(Year, Month, 15, sep = "-"))  # use 15th as mid-month
+  ) %>%
+  arrange(Date)
+# Calculate difference in months
+enso_yr <- enso_yr %>%
+  arrange(Date) %>%
+  mutate(
+    month_diff = c(0, diff(as.yearmon(Date))),
+    new_event = month_diff > 3/12,  # if jump > 1 month, new group
+    group_id = cumsum(new_event)
+  )
+
+enso_bands_oni <- enso_yr %>%
+  group_by(group_id) %>%
+  summarise(
+    xmin = min(as.numeric(as.yearmon(Date))),
+    xmax = max(as.numeric(as.yearmon(Date))) + 1/12  # to cover full last month
+  ) %>%
+  select(c(xmin, xmax))
+
+enso_bands <- rbind(enso_bands_oni, enso_bands_old)
 
 
 # Filter for included data only
@@ -153,7 +185,7 @@ ggplot(northmost_points_perspyr, aes(x = Year, y = Latin.name)) +
 
 # load in data
 # poor naming scheme but the file with the similar name but excel has two sheets with the other having the original excerpt
-ca <- read_excel("data/20250519_CalCOFI Coding Form (Responses).xlsx")
+ca <- read_excel("data/CalCOFI Coding Form (Responses).xlsx")
 
 
 # Identify the metadata columns by name or position
@@ -207,14 +239,16 @@ colnames(ca_clean)
 
 
 # --- Inspecting data ---
+# Filter for included excerpts
 ca_inc <- ca_clean %>%
   filter(`Should this excerpt be included or excluded?` == "Include")
+
 unique_sp_latin <- unique(df_inc$`3 Latin name (e.g., pleuroncodes planipes)`)
 print(unique_sp_latin)
 years <- unique(df_inc$`18 Year (if range like 1957-1958, put most recent like 1958)`)
 print(years)
 
-
+# Filter out NAs and look at distinct species/years
 ca_sp_yr <- ca_inc %>%
   filter(!is.na(`18 Year (if range like 1957-1958, put most recent like 1958)`), !is.na(`3 Latin name (e.g., pleuroncodes planipes)`)) %>%
   distinct(`18 Year (if range like 1957-1958, put most recent like 1958)`, `3 Latin name (e.g., pleuroncodes planipes)`)
@@ -241,16 +275,18 @@ ca_df_for_merge <- ca_northmost_points_perspyr %>%
          lon = `14 Longitude (e.g., -127.123, if longitude is a range, put the farthest east/towards the coast)`) %>%
   select(c(latin_name, year, lat, lon)) %>%
   drop_na()
+
 # Make latin names uppercase
 ca_df_for_merge$latin_name <- gsub("^(\\w)", "\\U\\1", ca_df_for_merge$latin_name, perl = TRUE)
   
 # Merge CalCOFI and Lab data
 combined_df <- bind_rows(lab_df_for_merge, ca_df_for_merge)
+# Choose the northermost observation for each species/year combo
 combined_df <- combined_df %>%
   group_by(year, latin_name) %>%
   slice_max(order_by = lat, n = 1, with_ties = FALSE) %>%
   ungroup()
-
+unique(combined_df$latin_name)
 # Plot combined data
 # Map extensions
 ggplot(data = world) +
@@ -301,13 +337,54 @@ ggplot(rank_df, aes(x = year, y = latin_name)) +
   labs(
     x = "Year",
     y = "Latin Name",
-    title = "Species-Year Dot Plot Combined Data"
+    title = "Species-Year Dot Plot Combined Data - ONI El Niño"
   ) +
   theme_minimal() +
   theme(
     axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
   ) +
   scale_x_continuous(breaks = seq(1850, 2025, by = 5))
+
+# Plot timeseries for each independent species
+# Create output folder if it doesn't exist
+output_dir <- "species_plots"
+dir.create(output_dir, showWarnings = FALSE)
+
+# Get unique species names
+species_list <- unique(rank_df$latin_name)
+
+# Copy the rank_df table and manually record the extensions events during and not during el nino
+#write.table(rank_df, pipe("pbcopy"), sep = "\t", row.names = FALSE)
+
+# Loop through each species and save a plot
+for (sp in species_list) {
+  
+  df_sp <- rank_df %>% filter(latin_name == sp)
+
+  p <- ggplot(df_sp, aes(x = year, y = latin_name)) +
+    geom_rect(data = enso_bands, inherit.aes = FALSE,
+              aes(xmin = xmin, xmax = xmax, ymin = -Inf, ymax = Inf),
+              fill = "red", alpha = 0.2) +
+    geom_point() +
+    labs(
+      x = "Year",
+      y = "Latin Name",
+      title = paste("Time Series for", sp)
+    ) +
+    theme_minimal() +
+    theme(
+      axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
+    ) +
+    scale_x_continuous(limits = c(1850, 2025),
+                       breaks = seq(1850, 2025, by = 5))
+  print(p)
+  # Clean filename (remove illegal characters)
+  filename <- paste0(gsub("[^a-zA-Z0-9]", "_", sp), ".png")
+  
+  # Save plot
+  ggsave(filename = file.path(output_dir, filename), plot = p, width = 8, height = 4, dpi = 300)
+}
+
 
 # Filter to the top benthic macro zoo plankton
 macro_benthic <- rank_df %>%
@@ -369,3 +446,138 @@ ggplot(macro_benthic, aes(x = year, y = latin_name)) +
   scale_x_continuous(limits = c(1935, 2025),
                      breaks = seq(1935, 2025, by = 5))
 
+
+
+# enso - extension frequency ----------------------------------------------
+
+# El Nino frequency
+## Monthly res
+en_count <- enso %>%
+  filter(str_detect(phase, "Warm")) %>%
+  tally()
+en_freq_month <- en_count$n / nrow(enso)
+
+## Yearly res
+oni_years_all <- enso %>%
+  select(Year) %>%
+  distinct()
+
+en_freq_year <- nrow(oni_years) / nrow(oni_years_all)
+
+## SST > 0 res
+sst_count <- enso %>%
+  filter(dSST3.4 > 0) %>%
+  tally()
+en_freq_sst <- sst_count$n / nrow(enso)
+
+# Extension frequency - wo blob 
+rank_df <- rank_df %>%
+  arrange(latin_name, year) %>%
+  group_by(latin_name) %>%
+  mutate(
+    year_diff = year - lag(year, default = first(year)),
+    new_group = if_else(year_diff > 1, 1, 0),
+    group_id = cumsum(new_group)
+  ) %>%
+  ungroup() %>%
+  select(-c(year_diff, new_group))
+enso_years <- rbind(oni_years, man_hist_df)
+
+
+# The below goes only by El Nino and does not include the onset of MHW prior to El Nino
+# Identify whether first year in each group is an El Niño year
+group_flags <- rank_df %>%
+  group_by(latin_name, group_id) %>%
+  summarise(first_year = min(year), .groups = "drop") %>%
+  mutate(started_during_enso = if_else(first_year %in% enso_years$Year, "y", NA_character_))
+
+# Join back to rank_df to label all rows in those groups
+rank_df_enso <- rank_df %>%
+  left_join(group_flags, by = c("latin_name", "group_id"))
+
+# Tally the fraction of extensions occurring during El Nino for each species
+# Total groups per species
+
+enso_group_counts <- rank_df_enso %>%
+  filter(started_during_enso == "y") %>%
+  distinct(latin_name, group_id) %>%  # avoid duplicate rows within the same group
+  count(latin_name, name = "n_enso_groups")
+
+total_group_counts <- rank_df_enso %>%
+  distinct(latin_name, group_id) %>%
+  count(latin_name, name = "n_total_groups")
+
+# Merge with enso counts
+enso_summary <- total_group_counts %>%
+  left_join(enso_group_counts, by = "latin_name") %>%
+  mutate(
+    n_enso_groups = replace_na(n_enso_groups, 0),
+    prop_enso = n_enso_groups / n_total_groups
+  )
+
+# Filter for species with 3+ extensions
+enso_summary_3 <- enso_summary %>%
+  filter(n_total_groups >= 3)
+
+hist(enso_summary_3$prop_enso,
+     main = "Proportion of Extensions Starting During an El Niño year\n Red line is El Niño frequency at monthly resolution | Blue line is El Niño frequency at yearly resolution\n Green line is dSST3.4 > 0 frequency at monthly resolution",
+     xlab = "Proportion of extensions during El Niño",
+     ylab = "Frequency")
+abline(v = en_freq_month, col = "red", lty = 2, lwd = 2)
+abline(v = en_freq_sst, col = "green", lty = 2, lwd = 2)
+abline(v = en_freq_year, col = "blue", lty = 2, lwd = 2)
+
+
+
+
+# Extension frequency - with blob 
+
+# The below goes only by El Nino and does not include the onset of MHW prior to El Nino
+# Identify whether first year in each group is an El Niño year
+group_flags <- rank_df %>%
+  group_by(latin_name, group_id) %>%
+  summarise(first_year = min(year), .groups = "drop") %>%
+  mutate(
+    started_during_enso = if_else(
+      first_year %in% c(enso_years$Year, 2013, 2014),
+      "y",
+      NA_character_
+    )
+  )
+
+# Join back to rank_df to label all rows in those groups
+rank_df_enso <- rank_df %>%
+  left_join(group_flags, by = c("latin_name", "group_id"))
+
+# Tally the fraction of extensions occurring during El Nino for each species
+# Total groups per species
+
+enso_group_counts <- rank_df_enso %>%
+  filter(started_during_enso == "y") %>%
+  distinct(latin_name, group_id) %>%  # avoid duplicate rows within the same group
+  count(latin_name, name = "n_enso_groups")
+
+total_group_counts <- rank_df_enso %>%
+  distinct(latin_name, group_id) %>%
+  count(latin_name, name = "n_total_groups")
+
+# Merge with enso counts
+enso_summary <- total_group_counts %>%
+  left_join(enso_group_counts, by = "latin_name") %>%
+  mutate(
+    n_enso_groups = replace_na(n_enso_groups, 0),
+    prop_enso = n_enso_groups / n_total_groups
+  )
+
+# Filter for species with 3+ extensions
+enso_summary_3 <- enso_summary %>%
+  filter(n_total_groups >= 3)
+
+hist(enso_summary_3$prop_enso,
+     xlim=c(0,1),
+     main = "Proportion of Extensions Starting During an El Niño year or the blob\n Red line is El Niño frequency at monthly resolution | Blue line is El Niño frequency at yearly resolution\n Green line is dSST3.4 > 0 frequency at monthly resolution",
+     xlab = "Proportion of extensions during El Niño",
+     ylab = "Frequency")
+abline(v = en_freq_month, col = "red", lty = 2, lwd = 2)
+abline(v = en_freq_sst, col = "green", lty = 2, lwd = 2)
+abline(v = en_freq_year, col = "blue", lty = 2, lwd = 2)
