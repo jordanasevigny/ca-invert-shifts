@@ -221,7 +221,7 @@ ca_blocks <- map_dfr(question_blocks, function(block_num) {
 ca_blocks <- select(ca_blocks, -`23Is Day exact or approximate?`)
 
 # Identify question columns 2–24 (adjust the names as needed)
-question_cols <- as.character(2:24)
+question_cols <- as.character(2:26)
 
 # If your columns are named like "2 Question text", "3 Question text", etc.
 # and you want to match those that start with "2 ", "3 ", ..., "24 "

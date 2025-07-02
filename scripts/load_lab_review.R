@@ -1,6 +1,7 @@
-# Add missing longitudes to lab review data
+# Load in lab review data and add missing longitudes
 # By: Jordana Sevigny, jordana.sevigny@gmail.com
 # Date created: 6/19/2025
+# Updated: 07/02/2025
 
 # FIRST SCRIPT TO PROCESS LAB REVIEW DATA
 
@@ -14,6 +15,7 @@ library(geosphere)
 # Load review data
 df <- read.csv("data/Screening & Review TRacking - Full-text Screening.csv")
 
+# Add missing longitudes for observation points ---------------------------
 # Load coastlines
 coast <- ne_download(scale = 10, type = "coastline", category = "physical", returnclass = "sf")
 # Bounding box for North America-ish
@@ -61,6 +63,43 @@ df_t <- df %>%
 df_t <- select(df_t, -lon_for_plot)
 df_t <- rename(df_t, lon_for_plot = lon_for_plot2)
 
+# Rename columns
+colnames(df_t)
+
+colnames(df_t) <- c(
+  "paper_id",
+  "screener_initials",
+  "include_exclude",
+  "inconclusive_note",
+  "exclude_t0_calcofi_report",
+  "exclude_t1_not_marine_species",
+  "exclude_t2_outdated_pre1900",
+  "exclude_t3_not_poleward",
+  "exclude_t3_not_in_california",
+  "latin_name",
+  "species_reference",
+  "common_name",
+  "taxonomic_rank",
+  "life_stage_verbatim",
+  "planktonic_larval_duration",
+  "spawn_season",
+  "observation_location_verbatim",
+  "latitude_verbatim",
+  "longitude_verbatim",
+  "latitude",
+  "latitude_location",
+  "longitude_location",
+  "year",
+  "month",
+  "day",
+  "time",
+  "historical_northern_latitude",
+  "historical_latitude_origin",
+  "historical_north_range_verbatim",
+  "historical_north_range_reference",
+  "screening_notes",
+  "longitude"
+)
 
 # Write a new data sheet with the longitudes
 write.csv(df_t, "processed_data/lab_review_with_longitudes.csv", row.names = FALSE)
