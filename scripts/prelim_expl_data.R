@@ -2,6 +2,8 @@
 # By: Jordana Sevigny, jordana.sevigny@gmail.com
 # Date created: 6/19/2025
 
+# This was a preliminary script to explore the data, but new scripts are being made to replace it in a more organized fashion 07/02/2025
+
 # Load libraries
 library("ggplot2")
 theme_set(theme_bw())
@@ -16,9 +18,6 @@ library(purrr)
 library(rsoi)
 library(lubridate)
 library(zoo)
-
-
-# AS OF 6/19/2025, THIS DATA STILL NEEDS TO BE DEDUPLICATED
 
 # load a world map
 world <- ne_countries(scale = "medium", returnclass = "sf")
