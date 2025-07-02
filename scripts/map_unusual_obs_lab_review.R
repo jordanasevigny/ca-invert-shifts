@@ -30,6 +30,7 @@ df <- read.csv("processed_data/lab_review_with_longitudes.csv")
 # Load enso data
 # I TOGGLE BETWEEN USING phase == 'Warm Phase/El Nino' and dSST3.4 > 0 HERE
 enso <- download_enso(climate_idx = "oni", create_csv = FALSE)
+#write.csv(enso, "enso_data.csv")
 enso_yr <- enso %>%
   select(c(Year, Month, phase)) %>%
   filter(phase == 'Warm Phase/El Nino') %>%
@@ -386,7 +387,9 @@ for (sp in species_list) {
 }
 
 
-# Filter to the top benthic macro zoo plankton
+# Top zoo inverts ---------------------------------------------------------
+
+# Filter to the top benthic macro zoo inverts
 macro_benthic <- rank_df %>%
   filter(latin_name %in% c("Pleuroncodes planipes", 
                            "Emerita analoga",
@@ -445,6 +448,8 @@ ggplot(macro_benthic, aes(x = year, y = latin_name)) +
   ) +
   scale_x_continuous(limits = c(1935, 2025),
                      breaks = seq(1935, 2025, by = 5))
+
+
 
 
 
@@ -527,12 +532,23 @@ abline(v = en_freq_month, col = "red", lty = 2, lwd = 2)
 abline(v = en_freq_sst, col = "green", lty = 2, lwd = 2)
 abline(v = en_freq_year, col = "blue", lty = 2, lwd = 2)
 
-
+# STATS
+## El Nino wo blob - el nino month resolution
+# Observed counts
+observed <- c(sum(enso_summary_3$n_enso_groups), sum(enso_summary_3$n_total_groups)-sum(enso_summary_3$n_enso_groups))  # 35 El Niño, 65 Not El Niño
+# Expected proportions
+expected_proportions_month <- c(en_freq_month, (1-en_freq_month))
+expected_proportions_sst <- c(en_freq_sst, (1-en_freq_sst))
+expected_proportions_year <- c(en_freq_year, (1-en_freq_year))
+# Run chi-squared goodness-of-fit test
+chisq.test(x = observed, p = expected_proportions_month)
+chisq.test(x = observed, p = expected_proportions_sst)
+chisq.test(x = observed, p = expected_proportions_year)
 
 
 # Extension frequency - with blob 
 
-# The below goes only by El Nino and does not include the onset of MHW prior to El Nino
+# The below goes only by El Nino and DOES include the onset of MHW prior to El Nino
 # Identify whether first year in each group is an El Niño year
 group_flags <- rank_df %>%
   group_by(latin_name, group_id) %>%
@@ -581,3 +597,172 @@ hist(enso_summary_3$prop_enso,
 abline(v = en_freq_month, col = "red", lty = 2, lwd = 2)
 abline(v = en_freq_sst, col = "green", lty = 2, lwd = 2)
 abline(v = en_freq_year, col = "blue", lty = 2, lwd = 2)
+
+# STATS
+## El Nino w blob - el nino month resolution
+# Observed counts
+observed <- c(sum(enso_summary_3$n_enso_groups), sum(enso_summary_3$n_total_groups)-sum(enso_summary_3$n_enso_groups))  # 35 El Niño, 65 Not El Niño
+# Expected proportions
+expected_proportions_month <- c(en_freq_month, (1-en_freq_month))
+expected_proportions_sst <- c(en_freq_sst, (1-en_freq_sst))
+expected_proportions_year <- c(en_freq_year, (1-en_freq_year))
+# Run chi-squared goodness-of-fit test
+chisq.test(x = observed, p = expected_proportions_month)
+chisq.test(x = observed, p = expected_proportions_sst)
+chisq.test(x = observed, p = expected_proportions_year)
+
+
+
+# The Blob ----------------------------------------------------------------
+
+rank_df_enso
+blob <- rank_df_enso %>%
+  filter(first_year==2013 | first_year==2014)
+
+# Map extensions
+ggplot(data = world) +
+  geom_sf() +
+  geom_point(
+    data = blob,
+    aes(
+      x = lon,
+      y = lat,
+      color = latin_name
+    ),
+    size = 2.5,
+    position = position_jitter(width = 1, height = 0)  # jitter x only
+  ) +
+  xlab("Longitude") + ylab("Latitude") +
+  labs(color = "Unusual Observation Location\n the Blob edition") +
+  coord_sf(xlim = c(-180, -115), ylim = c(30, 63), expand = FALSE)
+
+# Time series
+ggplot(blob, aes(x = year, y = latin_name)) +
+  # El Niño bands
+  geom_rect(data = enso_bands, inherit.aes = FALSE,
+            aes(xmin = xmin, xmax = xmax, ymin = -Inf, ymax = Inf),
+            fill = "red", alpha = 0.2) +  # Transparent red
+  # Your points
+  geom_point() +
+  labs(
+    x = "Year",
+    y = "Latin Name",
+    title = "Species-Year Dot - Plot the Blob"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
+  ) +
+  scale_x_continuous(limits = c(2012, 2017),
+    breaks = seq(2012, 2017, by = 1))
+
+# 2015 El Nino -------------------------------
+
+rank_df_enso
+en2015 <- rank_df_enso %>%
+  filter(first_year==2015 | first_year==2016)
+
+# Map extensions
+ggplot(data = world) +
+  geom_sf() +
+  geom_point(
+    data = en2015,
+    aes(
+      x = lon,
+      y = lat,
+      color = latin_name
+    ),
+    size = 2.5,
+    position = position_jitter(width = 1, height = 0)  # jitter x only
+  ) +
+  xlab("Longitude") + ylab("Latitude") +
+  labs(color = "Unusual Observation Location\n the 2015 El Niño edition") +
+  coord_sf(xlim = c(-180, -115), ylim = c(30, 63), expand = FALSE)
+
+# Time series
+ggplot(en2015, aes(x = year, y = latin_name)) +
+  # El Niño bands
+  geom_rect(data = enso_bands, inherit.aes = FALSE,
+            aes(xmin = xmin, xmax = xmax, ymin = -Inf, ymax = Inf),
+            fill = "red", alpha = 0.2) +  # Transparent red
+  # Your points
+  geom_point() +
+  labs(
+    x = "Year",
+    y = "Latin Name",
+    title = "Species-Year Dot Plot -  2015 El Niño "
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
+  ) +
+  scale_x_continuous(limits = c(2012, 2017),
+                     breaks = seq(2012, 2017, by = 1))
+
+blob_sp <- unique(blob$latin_name)
+en2015_sp <- unique(en2015$latin_name)
+shared_species <- intersect(blob_sp, en2015_sp)
+only_in_blob <- setdiff(blob_sp, en2015_sp)
+only_in_en2015 <- setdiff(en2015_sp, blob_sp)
+list(
+  shared = shared_species,
+  only_blob = only_in_blob,
+  only_en2015 = only_in_en2015
+)
+
+# Number of species with extensions in the blob / total # extensions
+rank_df_enso
+num_ext_blob <- rank_df_enso %>%
+  group_by(latin_name, group_id) %>%
+  summarise(first_year = min(year), .groups = "drop") %>%
+  mutate(blob = first_year %in% c(2013, 2014))
+
+# Count how many groups started in 2013 or 2014
+num_blob_groups <- sum(num_ext_blob$blob, na.rm = TRUE)
+
+# Count total number of groups
+total_groups <- nrow(num_ext_blob)
+
+# Calculate proportion
+prop_blob_groups <- num_blob_groups / total_groups
+
+# 3+ events map and time series -----------------------------------------------------------
+ext_3andup <- rank_df %>%
+  group_by(latin_name) %>%
+  arrange(year) %>%  # assuming you want to order within each species by year
+  mutate(num_ext = max(group_id)+1) %>%
+  ungroup() %>%
+  filter(num_ext >= 3)
+
+ggplot(ext_3andup, aes(x = year, y = latin_name)) +
+  geom_rect(data = enso_bands, inherit.aes = FALSE,
+            aes(xmin = xmin, xmax = xmax, ymin = -Inf, ymax = Inf),
+            fill = "red", alpha = 0.2) +
+  geom_point() +
+  labs(
+    x = "Year",
+    y = "Latin Name",
+    title = "Species-Year Dot Plot Combined Data - Species with 3+ events"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
+  ) +
+  scale_x_continuous(breaks = seq(1850, 2025, by = 5))
+
+ggplot(data = world) +
+  geom_sf() +
+  geom_point(
+    data = ext_3andup,
+    aes(
+      x = lon,
+      y = lat,
+      color = latin_name
+    ),
+    size = 2.5,
+    position = position_jitter(width = 1, height = 0)  # jitter x only
+  ) +
+  xlab("Longitude") + ylab("Latitude") +
+  labs(color = "Unusual Observation Location\n Species with 3+ events") +
+  coord_sf(xlim = c(-160, -115), ylim = c(30, 60), expand = FALSE)
+

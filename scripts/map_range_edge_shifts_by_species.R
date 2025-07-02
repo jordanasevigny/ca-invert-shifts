@@ -7,6 +7,7 @@
 ## https://r-spatial.org/r/2018/10/25/ggplot2-sf.html
 ## https://r-spatial.org/r/2018/10/25/ggplot2-sf-2.html
 
+# CalCOFI only
 
 # libraries
 
