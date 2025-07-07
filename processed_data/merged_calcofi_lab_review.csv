@@ -1,264 +1,265 @@
-"","latin_name","taxonomic_rank","common_name","latitude","latitude_location","longitude","longitude_location","year","month","day","historical_northern_latitude","source"
-"1","Doliolum denticulatum","Species",NA,34.46,"Online search",-120.49,"Online search",1957,"October",NA,34.5,"ca_rev"
-"2","Pleuroncodes planipes","Species","pelagic red crab",33.74,"Online search",-118.297697,"Online search",1957,"December",NA,NA,"ca_rev"
-"3","Vellela sp.","Genus","by-the-wind sailors",54.7,"Online search",-132.041327,"Online search",1957,NA,NA,NA,"ca_rev"
-"4","Nyctiphanes simplex","Species",NA,38,"Text",-122.9,"Online search",1958,"April",NA,NA,"ca_rev"
-"5","Pleuroncodes planipes","Species","pelagic red crab",32.839,"Online search",-117.416177,"Online search",1957,"December",NA,NA,"ca_rev"
-"6","Doliolum denticulatum","Species",NA,38,"Figure",-123.5,"Online search",1969,"January","29",NA,"ca_rev"
-"7","Nyctiphanes simplex","Species","euphausiid",40,"Text",-124.184758,"Online search",1958,"February",NA,NA,"ca_rev"
-"8","Euphausia eximia","Species",NA,32.77,"Online search",-117.348996,"Online search",1978,"March",NA,NA,"ca_rev"
-"9","Doliolum denticulatum","Species","salp",34.453,"Figure",-120.520075,"Figure",1969,"January","30",34.5,"ca_rev"
-"10","Pleuroncodes planipes","Species",NA,33.566,"Online search",-118.884083,"Online search",1982,NA,NA,NA,"ca_rev"
-"11","Scoelcithrix danae","Species",NA,34.28,"Figure",-120.29,"Figure",1958,"March","30",NA,"ca_rev"
-"12","Pleuroncodes planipes","Species","pelagic red crab",33.73,"Online search",-118.409191,"Online search",1984,NA,NA,NA,"ca_rev"
-"13","Vellela sp.","Genus",NA,48.59,"Text",-124.990973,"Text",1926,NA,NA,NA,"ca_rev"
-"14","Pleuroncodes planipes","Species","pelagic red crab",32.69,"Text",-117.36,"Text",1941,"March",NA,NA,"ca_rev"
-"15","Dosidicus gigas","Species","humboldt squid",54.67,"Text",-132.041327,"Text",2003,NA,NA,20.5,"ca_rev"
-"16","Dosidicus gigas","Species","humboldt squid or jumbo flying squid",46.1667,"Figure",-124.286333,"Figure",2009,"September","18",NA,"ca_rev"
-"17","Pleuroncodes planipes","Species","pelagic red crab",36,"Text",-121.6,"Text",2015,"May",NA,NA,"ca_rev"
-"18","Pleuroncodes planipes","Species","pelagic red crab",34.69,"Online search",-120.757882,"Online search",2015,"January",NA,NA,"ca_rev"
-"19","Pleuroncodes planipes","Species","red crabs",32.539285,"Online search",-117.129169,"Online search",2015,"January",NA,NA,"ca_rev"
-"20","Pleuroncodes planipes","Species","red or tuna crab",32.533,"Online search",-117.35,"Online search",2014,"July","29",NA,"ca_rev"
-"21","Pleuroncodes planipes","Species","red crab",37.76687,"Online search",-123.08237,"Online search",2015,"September",NA,NA,"ca_rev"
-"22","Pleuroncodes planipes","Species","pelagic red crab",32.95,"Figure",-117.28,"Online search",2015,"May",NA,NA,"ca_rev"
-"23","Panulirus interruptus","Species","california spiny lobster (phyllosoma)",38.4,"Figure",-123.2,"Online search",2005,NA,NA,NA,"ca_rev"
-"24","Pleuroncodes planipes","Species","pelagic red crab",36.4,"Online search",-121.98,"Online search",2015,NA,NA,NA,"ca_rev"
-"25","Nyctiphanes simplex","Species",NA,41,"Text",-124.26,"Online search",2019,"April",NA,NA,"ca_rev"
-"26","Pyrosomella verticillata","Species",NA,37,"Text",-122.24,"Online search",2019,NA,NA,NA,"ca_rev"
-"27","Pyrosoma sp.","Genus","pyrosome",41.8,"Text",-124.27,"Online search",2020,"September",NA,NA,"ca_rev"
-"28","Nyctiphanes simplex","Species",NA,41.0518,"Online search",-124.1514,"Online search",2018,"December",NA,NA,"ca_rev"
-"29","Euphausia recurva","Species",NA,41.0518,"Online search",-124.1514,"Online search",2014,NA,NA,NA,"ca_rev"
-"30","Doliolum denticulatum","Species",NA,36.455949,"Figure",-121.969068,"Figure",1958,"April",NA,34.5,"ca_rev"
-"31","Pleuroncodes planipes","Species","pelagic red crab",33.702963,"Online search",-118.297697,"Online search",1941,"April",NA,NA,"ca_rev"
-"32","Pleuroncodes planipes","Species",NA,36.64,"Online search",-122.063636,"Online search",1958,"April",NA,NA,"ca_rev"
-"33","Nyctiphanes simplex","Species",NA,36.52,"Online search",-122.084259,"Online search",1977,"December",NA,34.5,"ca_rev"
-"34","Calanus minor","Species",NA,40.2,"Figure",-124.3,"Figure",1958,"March","30",NA,"ca_rev"
-"35","Pleuroncodes planipes","Species","pelagic red crab",36.75,"Online search",-122.06,"Online search",1859,NA,NA,NA,"ca_rev"
-"36","Dosidicus gigas","Species","humboldt squid or jumbo flying squid",46.1667,"Figure",-124.286333,"Figure",2006,"August","28",NA,"ca_rev"
-"37","Panulirus interruptus","Species","spiny lobster",36,"Text",-121.6,"Text",2015,"May",NA,NA,"ca_rev"
-"38","Pyrosoma atlanticum","Species",NA,32.95,"Online search",-117.28,"Online search",2015,"May",NA,NA,"ca_rev"
-"39","Panulirus interruptus","Species","california spiny lobster (phyllosoma)",38.4,"Figure",-123.2,"Online search",2015,NA,NA,NA,"ca_rev"
-"40","Euphausia recurva","Species",NA,41,"Text",-124.26,"Online search",2019,"January",NA,NA,"ca_rev"
-"41","Nyctiphanes simplex",NA,NA,41.0518,"Online search",-124.1514,"Online search",2019,"December",NA,NA,"ca_rev"
-"42","Euphausia recurva","Species",NA,41.0518,"Online search",-124.1514,"Online search",2015,NA,NA,NA,"ca_rev"
-"43","Pleuroncodes planipes","Species",NA,32.69,"Online search",-117.368929,"Online search",1958,NA,NA,NA,"ca_rev"
-"44","Rhincalanus nasutus","Species",NA,40.2,"Figure",-124.3,"Figure",1958,"March","30",NA,"ca_rev"
-"45","Pleuroncodes planipes","Species","pelagic red crab",36.75,"Online search",-122.06,"Online search",1969,NA,NA,NA,"ca_rev"
-"46","Nyctiphanes simplex","Species","subtropical krill",36,"Text",-121.6,"Text",2015,"May",NA,NA,"ca_rev"
-"47","Panulirus interruptus","Species","california spiny lobster (phyllosoma)",34.5,"Figure",-120.53,"Online search",2009,NA,NA,NA,"ca_rev"
-"48","Euphausia recurva","Species",NA,41.0518,"Online search",-124.1514,"Online search",2018,"December",NA,NA,"ca_rev"
-"49","Pleuroncodes planipes","Species",NA,33.618,"Online search",-118.400066,"Online search",1959,"January",NA,NA,"ca_rev"
-"50","Euphausia eximia","Species",NA,36.182,"Figure",-122.77,"Figure",1958,"March","30",NA,"ca_rev"
-"51","Pleuroncodes planipes","Species","pelagic red crab",32.6,"Online search",-117.21,"Online search",1972,NA,NA,NA,"ca_rev"
-"52","Argonauta argo","Species","greater argonaut",36,"Text",-121.6,"Text",2015,"May",NA,NA,"ca_rev"
-"53","Euphausia recurva",NA,NA,41.0518,"Online search",-124.1514,"Online search",2019,"December",NA,NA,"ca_rev"
-"54","Pleuroncodes planipes","Species",NA,33.7,"Online search",-118.304486,"Online search",1959,"March",NA,NA,"ca_rev"
-"55","Doliolum denticulatum","Species",NA,36.18,"Figure",-121.72,"Figure",1958,"March","30",NA,"ca_rev"
-"56","Pleuroncodes planipes","Species","pelagic red crab",32.6,"Online search",-117.21,"Online search",2002,NA,NA,NA,"ca_rev"
-"57","Euphausia eximia","Species","subtropical krill",36,"Text",-121.6,"Text",2015,"May",NA,NA,"ca_rev"
-"58","Pleuroncodes planipes","Species",NA,33.28,"Online search",-119.556245,"Online search",1959,"December",NA,NA,"ca_rev"
-"59","Candacia curta","Species",NA,40.44,"Figure",-124.41,"Figure",1958,"March","30",NA,"ca_rev"
-"60","Pleuroncodes planipes","Species","pelagic red crab",32.6,"Online search",-117.21,"Online search",1997,NA,NA,NA,"ca_rev"
-"61","Pleuroncodes planipes","Species",NA,33.384,"Online search",-118.492346,"Online search",1960,"January",NA,NA,"ca_rev"
-"62","Pleuroncodes planipes","Species","pelagic red crab",32.6,"Online search",-117.21,"Online search",1982,NA,NA,NA,"ca_rev"
-"63","Portunus xantusii","Species","Xantus Swimming Crab",38.22836,"Paper",-122.97186,"Paper",2016,"11","22",34.89536,"lab_rev"
-"64","Pleuroncodes planipes","Species","pelagic red crab",31.87,"Paper",-114.920613833209,"R generated",1957,"June-July, October, December","",32.38,"lab_rev"
-"65","Pleuroncodes planipes","Species","pelagic red crab",36.6,"Paper",-121.964029292987,"R generated",1958,"April","",32.38,"lab_rev"
-"66","Pleuroncodes planipes","Species","pelagic red crab",33.8,"Paper",-118.405260650672,"R generated",1959,"January-March, December","",32.38,"lab_rev"
-"67","Pleuroncodes planipes","Species","pelagic red crab",36.6,"Paper",-121.964029292987,"R generated",1960,"January ","",32.38,"lab_rev"
-"68","Pleuroncodes planipes","Species","pelagic red crab",36.6,"Paper",-121.964029292987,"R generated",1969,"December","",32.38,"lab_rev"
-"69","Pleuroncodes planipes","Species","pelagic red crab",36.6,"Paper",-121.964029292987,"R generated",1970,"January-March ","",32.38,"lab_rev"
-"70","Pleuroncodes planipes","Species","pelagic red crab",36.6,"Paper",-121.964029292987,"R generated",1972,"December","",32.38,"lab_rev"
-"71","Pleuroncodes planipes","Species","pelagic red crab",36.6,"Paper",-121.964029292987,"R generated",1973,"January-March ","",32.38,"lab_rev"
-"72","Pleuroncodes planipes","Species","pelagic red crab",34,"Paper",-120.247171429253,"R generated",1979,"April","",32.38,"lab_rev"
-"73","Pleuroncodes planipes","Species","pelagic red crab",34,"Paper",-120.247171429253,"R generated",1980,"February","",32.38,"lab_rev"
-"74","Pleuroncodes planipes","Species","pelagic red crab",33.25,"Paper",-119.566956960394,"R generated",1982,"December","",32.38,"lab_rev"
-"75","Pleuroncodes planipes","Species","pelagic red crab",33.25,"Paper",-119.566956960394,"R generated",1983,"July","",32.38,"lab_rev"
-"76","Pleuroncodes planipes","Species","pelagic red crab",33.25,"Paper",-119.566956960394,"R generated",1983,"July","",32.38,"lab_rev"
-"77","Pleuroncodes planipes","Species","pelagic red crab",37.902138,"Paper",-122.722987753551,"R generated",1985,"January","",32.38,"lab_rev"
-"78","Pleuroncodes planipes","Species","pelagic red crab",36.6,"Paper",-121.964029292987,"R generated",1997,"","",32.38,"lab_rev"
-"79","Pleuroncodes planipes","Species","pelagic red crab",32.55,"Google Maps",-117.128359408246,"R generated",2002,"","",32.38,"lab_rev"
-"80","Tetraclita rubescens","species","volcano barnacle",38.2333,"Paper",-122.965419307808,"R generated",1948,"June","",37.5,"lab_rev"
-"81","Tetraclita rubescens","species","volcano barnacle",38.4167,"Paper",-123.107802139271,"R generated",1957,"","",37.5,"lab_rev"
-"82","Tetraclita rubescens","species","volcano barnacle",38.4167,"Paper",-123.107802139271,"R generated",1970,"","",37.5,"lab_rev"
-"83","Tetraclita rubescens","species","volcano barnacle",38.8667,"Paper",-123.659362687166,"R generated",1984,"","",37.5,"lab_rev"
-"84","Tetraclita rubescens","species","volcano barnacle",40.4,"Paper",-124.38494674543,"R generated",1995,"","",37.5,"lab_rev"
-"85","Tetraclita rubescens","species","volcano barnacle",40.4,"Paper",-124.38494674543,"R generated",1996,"","",37.5,"lab_rev"
-"86","Tetraclita rubescens","species","volcano barnacle",40.4,"Paper",-124.38494674543,"R generated",2005,"spring","",37.5,"lab_rev"
-"87","Tetraclita rubescens","species","volcano barnacle",42.3833,"Paper",-124.426756003522,"R generated",2007,"","",37.5,"lab_rev"
-"88","Dosidicus gigas","species","humboldt squid",36.793978,"Google Maps",-121.793693163778,"R generated",1997,"","",34,"lab_rev"
-"89","Dosidicus gigas","species","humboldt squid",36.793978,"Google Maps",-121.793693163778,"R generated",1998,"","",34,"lab_rev"
-"90","Dosidicus gigas","species","humboldt squid",36.793978,"Google Maps",-121.793693163778,"R generated",1999,"","",34,"lab_rev"
-"91","Dosidicus gigas","species","humboldt squid",36.793978,"Google Maps",-121.793693163778,"R generated",2000,"","",34,"lab_rev"
-"92","Dosidicus gigas","species","humboldt squid",36.793978,"Google Maps",-121.793693163778,"R generated",2002,"","",34,"lab_rev"
-"93","Pyrosoma atlanticum","species","pyrosome",45.478,"",-123.970750356227,"R generated",2018,"February-March; May; September","",50,"lab_rev"
-"94","Serpulorbis squamigerus","species","",37.5167,"Paper",-122.202067207176,"R generated",1994,"January","",34.45,"lab_rev"
-"95","Serpulorbis squamigerus","species","",37.5167,"Paper",-122.202067207176,"R generated",1996,"June","",34.45,"lab_rev"
-"96","Crucigera websteri","","",40.724912,"Google Maps",-124.248884641509,"R generated",2003,"September","",33.475,"lab_rev"
-"97","Hydroides gracilis","","",37.76588,"Google Maps",-122.382579838484,"R generated",2000,"September","",36.636,"lab_rev"
-"98","Hydroides gracilis","","",37.76588,"Google Maps",-122.382579838484,"R generated",2001,"September","",36.636,"lab_rev"
-"99","Hydroides gracilis","","",33.724877,"Google Maps",-118.349635867536,"R generated",2003,"September","",36.636,"lab_rev"
-"100","Hydroides gracilis","","",35.36557,"Google Maps",-120.85134385582,"R generated",2013,"September","",36.636,"lab_rev"
-"101","Hydroides elegans","","",40.724912,"Google Maps",-124.248884641509,"R generated",2003,"September","",37.5,"lab_rev"
-"102","Hydroides elegans","","",32.645003,"Google Maps",-117.138576985576,"R generated",2000,"September","",37.5,"lab_rev"
-"103","Hydroides elegans","","",32.770359,"Google Maps",-117.255092784241,"R generated",2013,"July","",37.5,"lab_rev"
-"104","Neolithodes diomedeae","species","",37.224,"Paper",-123.2,"",1999,"October","25",23.65,"lab_rev"
-"105","Neolithodes diomedeae","species","",34.981,"Paper",-121.6,"",2000,"November","4",23.65,"lab_rev"
-"106","Neolithodes diomedeae","species","",36.713,"Paper",-122.3,"",2001,"October","31",23.65,"lab_rev"
-"107","Pleuroncodes planipes","species","Tuna crab",36.8,"Paper",-121.791780117123,"R generated",2013,"","",27.84,"lab_rev"
-"108","Arbacia stellata","species","Spiny Black Urchin",37,"Paper",-122.183734824568,"R generated",2013,"","",27.84,"lab_rev"
-"109","Lytechinus pictus","species","Painted Sea Urchin",36.8,"Paper",-121.791780117123,"R generated",2013,"","",34.45,"lab_rev"
-"110","Argonauta argo","species","Greater Argonaut",36.8,"Paper",-121.791780117123,"R generated",2013,"","",34,"lab_rev"
-"111","Pyrosoma atlanticum","species","",46.288831,"Google Maps",-123.671945416237,"R generated",2014,"","",40.438,"lab_rev"
-"112","Pyrosoma atlanticum","species","",46.288831,"Google Maps",-123.671945416237,"R generated",2015,"","",40.438,"lab_rev"
-"113","Pyrosoma atlanticum","species","",46.288831,"Google Maps",-123.671945416237,"R generated",2016,"","",40.438,"lab_rev"
-"114","Pyrosoma atlanticum","species","",49,"Paper",-123.579344684795,"R generated",2017,"August","",40.438,"lab_rev"
-"115","Pyrosoma atlanticum","species","",44.652,"Paper",-124.295,"Paper",2018,"July","3-12",34.45,"lab_rev"
-"116","Kelletia kelletii","species","Kellet's whelk",36.6212,"Paper",-121.9017,"Paper",1980,"","",34.45,"lab_rev"
-"117","Mexacanthina lugubris","species","Dark unicorn whelk",33.5,"Paper",-117.749328266462,"R generated",1937,"","",31.822395,"lab_rev"
-"118","Mexacanthina lugubris","species","Dark unicorn whelk",33.5,"Paper",-117.749328266462,"R generated",1955,"","",31.822395,"lab_rev"
-"119","Mexacanthina lugubris","species","Dark unicorn whelk",33.49,"Paper",-117.739,"Paper",2003,"","",33.822395,"lab_rev"
-"120","Eurypon reiswigi","","sponge",49.6177,"Paper",-123.8038,"Paper",2012,"","",32.5,"lab_rev"
-"121","Eurypon scruposus","","sponge",49.4987,"Paper",-123.2998,"Paper",2011,"","",32.5,"lab_rev"
-"122","Oceanapia polytuba","","sponge",48.8317,"Paper",-125.1783,"Paper",1975,"","",22.89663,"lab_rev"
-"123","Oceanapia flava","","sponge",49.5668,"Paper",-123.8032,"Paper",2016,"","",32.5,"lab_rev"
-"124","Mexacanthina lugubris","species","Dark unicorn whelk",32.663501,"Google Maps",-117.149846084033,"R generated",1974,"","",32.5,"lab_rev"
-"125","Mexacanthina lugubris","species","Dark unicorn whelk",33.493,"Paper",-117.742847466044,"R generated",2003,"","",32.5,"lab_rev"
-"126","Mexacanthina lugubris","species","Dark unicorn whelk",33.543,"Paper",-117.796795218415,"R generated",2013,"","",32.5,"lab_rev"
-"127","Mexacanthina lugubris","species","Dark unicorn whelk",34.044,"Paper",-120.430191700117,"R generated",2017,"","",32.5,"lab_rev"
-"128","Nyctiphanes simplex","species","euphausiid",46,"Paper",-123.92667729486,"R generated",1983,"","",34,"lab_rev"
-"129","Nyctiphanes simplex","species","euphausiid",48,"Paper",-122.20909968173,"R generated",1998,"","",34,"lab_rev"
-"130","Euphausia recurva","species","euphausiid",44.6667,"Paper",-124.65,"https://globec.whoi.edu/nep/reports/ccs_cruises/jul01cr.pdf",1998,"","",34,"lab_rev"
-"131","Euphausia mutica","species","euphausiid",44.6667,"Paper",-124.65,"https://globec.whoi.edu/nep/reports/ccs_cruises/jul01cr.pdf",1998,"","",34,"lab_rev"
-"132","Sagitta pseudoserratodentata","species","chaetognath",44.6667,"Paper",-124.41,"https://globec.whoi.edu/nep/reports/ccs_cruises/jul01cr.pdf",1998,"","",43,"lab_rev"
-"133","Centropages bradyi","species","copepod",46.2667,"Paper",-125.42,"Paper",1997,"","",34,"lab_rev"
-"134","Emerita analoga","species","",57.58193,"Google Maps",-154.460353,"Google Maps",1903,"","",41.98,"lab_rev"
-"135","Emerita analoga","species","",47.604594,"Google Maps",-122.97650711089,"R generated",1941,"","",41.98,"lab_rev"
-"136","Emerita analoga","species","",47.604594,"Google Maps",-122.97650711089,"R generated",1942,"","",41.98,"lab_rev"
-"137","Emerita analoga","species","",49.110317,"Google Maps",-123.069991450524,"R generated",1957,"","",41.98,"lab_rev"
-"138","Emerita analoga","species","",49.0333,"2016 time point from Paper",-125.703826637543,"R generated",1958,"","",41.98,"lab_rev"
-"139","Emerita analoga","species","",49.0333,"2017 time point from Paper",-125.703826637543,"R generated",1959,"","",41.98,"lab_rev"
-"140","Emerita analoga","species","",49.0333,"2018 time point from Paper",-125.703826637543,"R generated",1960,"","",41.98,"lab_rev"
-"141","Emerita analoga","species","",49.0333,"2019 time point from Paper",-125.703826637543,"R generated",1961,"","",41.98,"lab_rev"
-"142","Emerita analoga","species","",50.029345,"Google Maps",-124.972550228271,"R generated",1983,"","",41.98,"lab_rev"
-"143","Emerita analoga","species","",47.577678,"Google Maps",-123.007320808685,"R generated",2006,"","",41.98,"lab_rev"
-"144","Emerita analoga","species","",47.577678,"Google Maps",-123.007320808685,"R generated",2007,"","",41.98,"lab_rev"
-"145","Emerita analoga","species","",47.577678,"Google Maps",-123.007320808685,"R generated",2008,"","",41.98,"lab_rev"
-"146","Emerita analoga","species","",47.577678,"Google Maps",-123.007320808685,"R generated",2015,"","",41.98,"lab_rev"
-"147","Emerita analoga","species","",49.0333,"Paper",-125.6925,"Paper",2016,"May","28",41.98,"lab_rev"
-"148","Uca princeps","species","Mexican fiddler crab; princely fiddler crab",33.7,"Paper",-118.05,"Paper",2018,"July","8",31.85,"lab_rev"
-"149","Acanthinucella spirata","species","Angular Unicorn Snail",38.322295,"Paper",-123.04954,"Paper",1949,"","",38.1,"lab_rev"
-"150","Acanthinucella spirata","species","Angular Unicorn Snail",40.396,"Paper",-124.378,"Paper",2017,"June","",38.1,"lab_rev"
-"151","Anthopleura sola","species","Sunburst Sea Anemone",39.60206,"Paper",-123.78892,"Paper",2018,"May","",38.316,"lab_rev"
-"152","Hippopodius hippopus","species","Siphonophore",38.32486,"Paper",-123.07265,"Paper",2016,"April","",34.5,"lab_rev"
-"153","Physophora hydrostatica","species","Hula Skirt Siphonophore",40.916195,"Paper",-124.140865,"Paper",2018,"March","",36.78,"lab_rev"
-"154","Chrysaora colorata","species","Purple-striped Jellyfish",38.305175,"Paper",-123.05303,"Paper",1973,"July","20",36.78,"lab_rev"
-"155","Chrysaora colorata","species","Purple-striped Jellyfish",40.916195,"Paper",-124.140865,"Paper",2006,"October","",38.312,"lab_rev"
-"156","Chrysaora colorata","species","Purple-striped Jellyfish",40.76099,"Paper",-124.2343,"Paper",2014,"August","29",38.312,"lab_rev"
-"157","Chrysaora colorata","species","Purple-striped Jellyfish",45.84735,"Paper",-123.96122,"Paper",2017,"February","",38.312,"lab_rev"
-"158","Cestum veneris","species","Venus' Girdle Ctenophore",48.96887,"Paper",-125.022978,"Paper",2014,"April","1",36.78,"lab_rev"
-"159","Hespererato vitellina","species","Appleseed Erato Snail",38.41743,"Paper",-123.10728,"Paper",2016,"April","6",38.316,"lab_rev"
-"160","Hespererato vitellina","species","Appleseed Erato Snail",40.34137,"Paper",-124.36262,"Paper",2017,"May","25",38.316,"lab_rev"
-"161","Thylacodes squamigerus","species","Scaled Tube Snail",38.565245,"Paper",-123.33385,"Paper",2017,"February","25",38.316,"lab_rev"
-"162","Creseis virgula","species","Curved Needle Pteropod",37,"Paper",-130,"Paper",1950,"April","",36.78,"lab_rev"
-"163","Creseis virgula","species","Curved Needle Pteropod",38.194175,"Paper",-123.4,"Paper",2014,"November","4",36.78,"lab_rev"
-"164","Hyalocylis striata","species","Striated Sea Butterfly",38.194175,"Paper",-123.4,"Paper",2014,"November","4",32.5,"lab_rev"
-"165","Berthella strongi","species","Strong's Sidegill",39.536724,"Paper",-123.772568,"Paper",2016,"July","4",37.53,"lab_rev"
-"166","Anteaeolidiella oliviae","species","Olive's Nudibranch",39.4513,"Paper",-123.8139,"Paper",2015,"February","16",37.89,"lab_rev"
-"167","Doriopsilla albopunctata","species","White-spotted Sea Goddess",42.2227,"Paper",-124.383,"Paper",2017,"May","",39.31,"lab_rev"
-"168","Doriopsilla fulva","species","White-spotted Dorid",42.2227,"Paper",-124.383,"Paper",2015,"June","",33.74,"lab_rev"
-"169","Doriopsilla fulva","species","White-spotted Dorid",45.42947,"Paper",-123.94776,"Paper",2016,"June","",33.74,"lab_rev"
-"170","Doriopsilla fulva","species","White-spotted Dorid",45.42947,"Paper",-123.94776,"Paper",2017,"June","",33.74,"lab_rev"
-"171","Janolus barbarensis","species","Janolus Nudibranch",38.322295,"Paper",-123.04954,"Paper",2015,"September","11",37.5,"lab_rev"
-"172","Okenia angelensis","species","Los Angeles Okenia",37.84328,"Paper",-122.39656,"Paper",1964,"September","",34.5,"lab_rev"
-"173","Okenia angelensis","species","Los Angeles Okenia",37.501618,"Paper",-122.483152,"Paper",2015,"July","",34.5,"lab_rev"
-"174","Okenia angelensis","species","Los Angeles Okenia",38.36147,"Paper",-123.069915,"Paper",2017,"May","4",37.89,"lab_rev"
-"175","Phidiana hiltoni","species","Hilton's Nudibranch",38.2542,"Paper",-122.969385,"Paper",2014,"April","9",37.89,"lab_rev"
-"176","Phidiana hiltoni","species","Hilton's Nudibranch",38.305185,"Paper",-123.077205,"Paper",2015,"November","25",37.89,"lab_rev"
-"177","Phidiana hiltoni","species","Hilton's Nudibranch",38.305185,"Paper",-123.077205,"Paper",2018,"November","26",37.89,"lab_rev"
-"178","Panulirus interruptus","species","Spiny Lobster",37.84328,"Paper",-122.39656,"Paper",1940,"March","",34.5,"lab_rev"
-"179","Panulirus interruptus","species","Spiny Lobster",38.322295,"Paper",-123.04954,"Paper",2001,"","",34.5,"lab_rev"
-"180","Panulirus interruptus","species","Spiny Lobster",40.021645,"Paper",-124.069105,"Paper",2005,"","",34.5,"lab_rev"
-"181","Panulirus interruptus","species","Spiny Lobster",37.901315,"Paper",-122.720366,"Paper",2011,"September","",34.5,"lab_rev"
-"182","Panulirus interruptus","species","Spiny Lobster",37.901315,"Paper",-122.720366,"Paper",2013,"September","",34.5,"lab_rev"
-"183","Panulirus interruptus","species","Spiny Lobster",36.80405,"Paper",-121.945835,"Paper",2015,"April","",34.5,"lab_rev"
-"184","Panulirus interruptus","species","Spiny Lobster",37.66241,"Paper",-122.37481,"Paper",2016,"August","",34.5,"lab_rev"
-"185","Panulirus interruptus","species","Spiny Lobster",38.316795,"Paper",-123.06941,"Paper",2017,"September","19",37.5,"lab_rev"
-"186","Petrolisthes manimaculis","species","Chocolate Porcelain Crab",38.5127,"Paper",-123.24772,"Paper",2006,"","27",41.05,"lab_rev"
-"187","Petrolisthes manimaculis","species","Chocolate Porcelain Crab",41.770605,"Paper",-124.253885,"Paper",2017,"May","27",41.05,"lab_rev"
-"188","Portunus xantusii","species","Xantus' Swimming Crab",38.213,"Paper",-122.955465,"Paper",1999,"","",34.39,"lab_rev"
-"189","Portunus xantusii","species","Xantus' Swimming Crab",38.213,"Paper",-122.955465,"Paper",2016,"November","22",35.36,"lab_rev"
-"190","Pleuroncodes planipes","species","Pelagic Red Crab",36.80405,"Paper",-121.945835,"Paper",1859,"","",32.5,"lab_rev"
-"191","Pleuroncodes planipes","species","Pelagic Red Crab",36.80405,"Paper",-121.945835,"Paper",1960,"","",32.5,"lab_rev"
-"192","Pleuroncodes planipes","species","Pelagic Red Crab",36.80405,"Paper",-121.945835,"Paper",1973,"","",32.5,"lab_rev"
-"193","Pleuroncodes planipes","species","Pelagic Red Crab",37.698795,"Paper",-123.00325,"Paper",1983,"","",32.5,"lab_rev"
-"194","Pleuroncodes planipes","species","Pelagic Red Crab",39.4513,"Paper",-123.8139,"Paper",1985,"","",32.5,"lab_rev"
-"195","Pleuroncodes planipes","species","Pelagic Red Crab",36.80405,"Paper",-121.945835,"Paper",1998,"","",32.5,"lab_rev"
-"196","Pleuroncodes planipes","species","Pelagic Red Crab",36.80405,"Paper",-121.945835,"Paper",2015,"October","",32.5,"lab_rev"
-"197","Pleuroncodes planipes","species","Pelagic Red Crab",36.80405,"Paper",-121.945835,"Paper",2016,"May","",32.5,"lab_rev"
-"198","Pleuroncodes planipes","species","Pelagic Red Crab",44.65821,"Paper",-124.06085,"Paper",2017,"March","1",39.45,"lab_rev"
-"199","Megabalanus californicus","species","Pink-striped Barnacle",40.76099,"Paper",-124.2343,"Paper",1939,"","",36.61,"lab_rev"
-"200","Megabalanus californicus","species","Pink-striped Barnacle",38.03306,"Paper",-123.444035,"Paper",1981,"","",36.61,"lab_rev"
-"201","Megabalanus californicus","species","Pink-striped Barnacle",38.316795,"Paper",-123.06941,"Paper",1996,"","",36.61,"lab_rev"
-"202","Megabalanus californicus","species","Pink-striped Barnacle",38.240895,"Paper",-122.99475,"Paper",2009,"April","",36.61,"lab_rev"
-"203","Megabalanus californicus","species","Pink-striped Barnacle",38.31180556,"Paper",-123.083028,"Paper",2006,"September","",36.61,"lab_rev"
-"204","Megabalanus californicus","species","Pink-striped Barnacle",42.683253,"Paper",-124.449214,"Paper",2015,"June","5",36.61,"lab_rev"
-"205","Paraconcavus pacificus","species","Red-striped Barnacle",38.32486,"Paper",-123.07265,"Paper",2016,"February","",37.5,"lab_rev"
-"206","Paraconcavus pacificus","species","Red-striped Barnacle",39.536724,"Paper",-123.772568,"Paper",2017,"November","12",37.5,"lab_rev"
-"207","Paraconcavus pacificus","species","Red-striped Barnacle",38.2542,"Paper",-122.969385,"Paper",2019,"February","",37.5,"lab_rev"
-"208","Ophiothrix spiculata","species","Glass-spined Brittle Star",37.698795,"Paper",-123.00325,"Paper",1962,"","",37.69,"lab_rev"
-"209","Ophiothrix spiculata","species","Glass-spined Brittle Star",38.03306,"Paper",-123.444035,"Paper",1979,"","",37.69,"lab_rev"
-"210","Ophiothrix spiculata","species","Glass-spined Brittle Star",37.84328,"Paper",-122.39656,"Paper",2002,"April","",37.69,"lab_rev"
-"211","Ophiothrix spiculata","species","Glass-spined Brittle Star",38.305185,"Paper",-123.077205,"Paper",2014,"November","8",37.69,"lab_rev"
-"212","Ophiothrix spiculata","species","Glass-spined Brittle Star",41.13197,"Paper",-124.16403,"Paper",2016,"May","12",37.69,"lab_rev"
-"213","Ophiothrix spiculata","species","Glass-spined Brittle Star",38.316795,"Paper",-123.06941,"Paper",2018,"August","",37.69,"lab_rev"
-"214","Lissothuria nutriens","species","Scarlet Sea Cucumber",38.305175,"Paper",-123.05303,"Paper",2010,"July","",38.316,"lab_rev"
-"215","Lissothuria nutriens","species","Scarlet Sea Cucumber",38.50203,"Paper",-123.230115,"Paper",2017,"June","25",38.316,"lab_rev"
-"216","Pachythyone rubra","species","Red Sea Cucumber",38.305185,"Paper",-123.077205,"Paper",1976,"July","",36.78,"lab_rev"
-"217","Pachythyone rubra","species","Red Sea Cucumber",37.11285,"Paper",-122.32908,"Paper",1971,"","",36.78,"lab_rev"
-"218","Pachythyone rubra","species","Red Sea Cucumber",37.11285,"Paper",-122.32908,"Paper",1972,"","",36.78,"lab_rev"
-"219","Pachythyone rubra","species","Red Sea Cucumber",37.11285,"Paper",-122.32908,"Paper",1973,"","",36.78,"lab_rev"
-"220","Pachythyone rubra","species","Red Sea Cucumber",37.18138,"Paper",-122.39418,"Paper",1997,"","",36.78,"lab_rev"
-"221","Pachythyone rubra","species","Red Sea Cucumber",38.31874,"Paper",-123.07411,"Paper",2017,"December","30",36.78,"lab_rev"
-"222","Pyrosoma atlanticum","species","",59,"Paper",-144,"Paper",2017,"","",34.5,"lab_rev"
-"223","Aplysia californica","species","sea hare",44.609567,"Google Maps",-124.063123786977,"R generated",1983,"October","14, 19",41.98,"lab_rev"
-"224","Dosidicus gigas","species","Giant squid, Humboldt squid",43.6667,"Paper",-124.191656438226,"R generated",1997,"","",23.5,"lab_rev"
-"225","Dosidicus gigas","species","Jumbo squid",33.700615,"Google Maps",-118.054704482789,"R generated",1934,"August","6",36.78,"lab_rev"
-"226","Dosidicus gigas","species","Jumbo squid",36.611029,"Google Maps",-121.94983042397,"R generated",1911,"","",36.78,"lab_rev"
-"227","Acanthinucella spirata","species","",40.396,"Paper",-124.378,"Paper",2017,"June","17",38.15,"lab_rev"
-"228","Dosidicus gigas","species","Humboldt squid or jumbo flying squid",59.485662,"Google Maps",-139.858311,"Google Maps",1997,"","",35,"lab_rev"
-"229","Dosidicus gigas","species","Humboldt squid or jumbo flying squid",48.5,"ChatGPT",-124.85,"ChatGPT",2004,"October","2",35,"lab_rev"
-"230","Dosidicus gigas","species","Jumbo squid",43.6667,"Paper",-124.191656438226,"R generated",1997,"September","30",34.5,"lab_rev"
-"231","Kelletia kelletii","species","",36.623995,"Google Maps",-121.91189734422,"R generated",1980,"May","2",34.5,"lab_rev"
-"232","Kelletia kelletii","species","",36.611029,"Google Maps",-121.94983042397,"R generated",1981,"January","",34.5,"lab_rev"
-"233","Pleuroncodes planipes","species","Pelagic red crab",32.663501,"Google Maps",-117.149846084033,"R generated",1941,"","",23.5,"lab_rev"
-"234","Pleuroncodes planipes","species","Pelagic red crab",32.663501,"Google Maps",-117.149846084033,"R generated",1957,"","",23.5,"lab_rev"
-"235","Pleuroncodes planipes","species","Pelagic red crab",32.663501,"Google Maps",-117.149846084033,"R generated",1958,"","",23.5,"lab_rev"
-"236","Pleuroncodes planipes","species","Pelagic red crab",32.663501,"Google Maps",-117.149846084033,"R generated",1959,"","",23.5,"lab_rev"
-"237","Pleuroncodes planipes","species","Pelagic red crab",32.663501,"Google Maps",-117.149846084033,"R generated",1960,"","",23.5,"lab_rev"
-"238","Pleuroncodes planipes","species","Pelagic red crab",32.663501,"Google Maps",-117.149846084033,"R generated",1970,"","",23.5,"lab_rev"
-"239","Pleuroncodes planipes","species","Pelagic red crab",32.663501,"Google Maps",-117.149846084033,"R generated",1972,"","",23.5,"lab_rev"
-"240","Pleuroncodes planipes","species","Pelagic red crab",32.663501,"Google Maps",-117.149846084033,"R generated",1973,"","",23.5,"lab_rev"
-"241","Pleuroncodes planipes","species","Pelagic red crab",32.663501,"Google Maps",-117.149846084033,"R generated",1979,"","",23.5,"lab_rev"
-"242","Pleuroncodes planipes","species","Pelagic red crab",32.663501,"Google Maps",-117.149846084033,"R generated",1980,"","",23.5,"lab_rev"
-"243","Euphylax dovi","species","Swimming crab",32.663501,"Google Maps",-117.149846084033,"R generated",1943,"","",23.5,"lab_rev"
-"244","Euphylax dovi","species","Swimming crab",32.663501,"Google Maps",-117.149846084033,"R generated",1959,"","",23.5,"lab_rev"
-"245","Euphylax dovi","species","Swimming crab",32.663501,"Google Maps",-117.149846084033,"R generated",1974,"","",23.5,"lab_rev"
-"246","Lophogorgia chiliensis","species","White gorgonian",32.663501,"Google Maps",-117.149846084033,"R generated",1960,"","",23.5,"lab_rev"
-"247","Panilurus gracilis","species","Pinto lobser",32.663501,"Google Maps",-117.149846084033,"R generated",1961,"","",23.5,"lab_rev"
-"248","Lyropectin subnudosus","species","Blunt-knobbed scallop",32.663501,"Google Maps",-117.149846084033,"R generated",1959,"","",23.5,"lab_rev"
-"249","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1909,"","",23.5,"lab_rev"
-"250","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1934,"","",23.5,"lab_rev"
-"251","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1935,"","",23.5,"lab_rev"
-"252","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1936,"","",23.5,"lab_rev"
-"253","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1937,"","",23.5,"lab_rev"
-"254","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1975,"","",23.5,"lab_rev"
-"255","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1976,"","",23.5,"lab_rev"
-"256","Eucidaris thouarsii","species","Club-spined urchin",32.663501,"Google Maps",-117.149846084033,"R generated",1958,"","",23.5,"lab_rev"
-"257","Eucidaris thouarsii","species","Club-spined urchin",32.663501,"Google Maps",-117.149846084033,"R generated",1960,"","",23.5,"lab_rev"
-"258","Emerita analoga","species","Sand crab",41.999703,"Google Maps",-124.214582683163,"R generated",1941,"","",32.67,"lab_rev"
-"259","Emerita analoga","species","Sand crab",41.999703,"Google Maps",-124.214582683163,"R generated",1959,"","",32.67,"lab_rev"
-"260","Loligo opalescens","species","Market squid",41.999703,"Google Maps",-124.214582683163,"R generated",1941,"","",32.67,"lab_rev"
-"261","Loligo opalescens","species","Market squid",41.999703,"Google Maps",-124.214582683163,"R generated",1959,"","",32.67,"lab_rev"
-"262","Dosidicus gigas","species","Humboldt squid",49.11374,"Paper",-123.065823380089,"R generated",2009,"August","days 2, 4, 6",32.5,"lab_rev"
-"263","Dosidicus gigas","species","Humboldt squid",49.11374,"Paper",-123.065823380089,"R generated",2009,"September","27",32.5,"lab_rev"
+"","latin_name","taxonomic_rank","common_name","latitude","latitude_location","longitude","longitude_location","year","month","day","historical_northern_latitude","source","average_hist_latitude"
+"1","Doliolum denticulatum","Species",NA,34.46,"Online search",-120.49,"Online search",1957,"October",NA,34.5,"ca_rev",34.5
+"2","Pleuroncodes planipes","Species","pelagic red crab",33.74,"Online search",-118.297697,"Online search",1957,"December",NA,NA,"ca_rev",30.0102777777778
+"3","Pleuroncodes planipes","Species","pelagic red crab",32.839,"Online search",-117.416177,"Online search",1957,"December",NA,NA,"ca_rev",30.0102777777778
+"4","Doliolum denticulatum","Species",NA,38,"Figure",-123.5,"Online search",1969,"January","29",NA,"ca_rev",34.5
+"5","Nyctiphanes simplex","Species","euphausiid",40,"Text",-124.184758,"Online search",1958,"February",NA,NA,"ca_rev",34.1666666666667
+"6","Euphausia eximia","Species",NA,32.77,"Online search",-117.348996,"Online search",1978,"March",NA,32.5,"ca_rev",32.5
+"7","Pleuroncodes planipes","Species",NA,33.566,"Online search",-118.884083,"Online search",1982,NA,NA,NA,"ca_rev",30.0102777777778
+"8","Scoelcithrix danae","Species",NA,34.28,"Figure",-120.29,"Figure",1958,"March","30",32.5,"ca_rev",32.5
+"9","Pleuroncodes planipes","Species","pelagic red crab",33.73,"Online search",-118.409191,"Online search",1984,NA,NA,NA,"ca_rev",30.0102777777778
+"10","Velella sp.","Genus",NA,48.59,"Text",-124.990973,"Text",1926,NA,NA,34.5,"ca_rev",34.5
+"11","Pleuroncodes planipes","Species","pelagic red crab",32.69,"Text",-117.36,"Text",1941,"March",NA,NA,"ca_rev",30.0102777777778
+"12","Dosidicus gigas","Species","humboldt squid",54.67,"Text",-132.041327,"Text",2003,NA,NA,20.5,"ca_rev",29.5980952380952
+"13","Dosidicus gigas","Species","humboldt squid or jumbo flying squid",46.1667,"Figure",-124.286333,"Figure",2009,"September","18",NA,"ca_rev",29.5980952380952
+"14","Pleuroncodes planipes","Species","pelagic red crab",36,"Text",-121.6,"Text",2015,"May",NA,NA,"ca_rev",30.0102777777778
+"15","Pleuroncodes planipes","Species","pelagic red crab",34.69,"Online search",-120.757882,"Online search",2015,"January",NA,NA,"ca_rev",30.0102777777778
+"16","Pleuroncodes planipes","Species","red crabs",32.539285,"Online search",-117.129169,"Online search",2015,"January",NA,NA,"ca_rev",30.0102777777778
+"17","Pleuroncodes planipes","Species","red or tuna crab",32.533,"Online search",-117.35,"Online search",2014,"July","29",NA,"ca_rev",30.0102777777778
+"18","Pleuroncodes planipes","Species","red crab",37.76687,"Online search",-123.08237,"Online search",2015,"September",NA,NA,"ca_rev",30.0102777777778
+"19","Pleuroncodes planipes","Species","pelagic red crab",32.95,"Figure",-117.28,"Online search",2015,"May",NA,NA,"ca_rev",30.0102777777778
+"20","Panulirus interruptus","Species","california spiny lobster (phyllosoma)",38.4,"Figure",-123.2,"Online search",2005,NA,NA,NA,"ca_rev",34.875
+"21","Pleuroncodes planipes","Species","pelagic red crab",36.4,"Online search",-121.98,"Online search",2015,NA,NA,NA,"ca_rev",30.0102777777778
+"22","Nyctiphanes simplex","Species",NA,41,"Text",-124.26,"Online search",2019,"April",NA,NA,"ca_rev",34.1666666666667
+"23","Velella sp.","Genus","by-the-wind sailors",54.7,"Online search",-132.041327,"Online search",1957,NA,NA,NA,"ca_rev",34.5
+"24","Nyctiphanes simplex","Species",NA,38,"Text",-122.9,"Online search",1958,"April",NA,NA,"ca_rev",34.1666666666667
+"25","Euphausia eximia","Species",NA,34.4208,"Figure",-119.7,"Figure",1958,"February","24",32.5,"ca_rev",32.5
+"26","Doliolum denticulatum","Species","salp",34.453,"Figure",-120.520075,"Figure",1969,"January","30",34.5,"ca_rev",34.5
+"27","Pyrosoma sp.","Genus","pyrosome",41.8,"Text",-124.27,"Online search",2020,"September",NA,50,"ca_rev",50
+"28","Nyctiphanes simplex","Species",NA,41.0518,"Online search",-124.1514,"Online search",2018,"December",NA,NA,"ca_rev",34.1666666666667
+"29","Euphausia recurva","Species",NA,41.0518,"Online search",-124.1514,"Online search",2014,NA,NA,NA,"ca_rev",34
+"30","Doliolum denticulatum","Species",NA,36.455949,"Figure",-121.969068,"Figure",1958,"April",NA,34.5,"ca_rev",34.5
+"31","Pleuroncodes planipes","Species","pelagic red crab",33.702963,"Online search",-118.297697,"Online search",1941,"April",NA,NA,"ca_rev",30.0102777777778
+"32","Pleuroncodes planipes","Species",NA,36.64,"Online search",-122.063636,"Online search",1958,"April",NA,NA,"ca_rev",30.0102777777778
+"33","Nyctiphanes simplex","Species",NA,36.52,"Online search",-122.084259,"Online search",1977,"December",NA,34.5,"ca_rev",34.1666666666667
+"34","Calanus minor","Species",NA,40.2,"Figure",-124.3,"Figure",1958,"March","30",32.5,"ca_rev",32.5
+"35","Pleuroncodes planipes","Species","pelagic red crab",36.75,"Online search",-122.06,"Online search",1859,NA,NA,NA,"ca_rev",30.0102777777778
+"36","Dosidicus gigas","Species","humboldt squid or jumbo flying squid",46.1667,"Figure",-124.286333,"Figure",2006,"August","28",NA,"ca_rev",29.5980952380952
+"37","Panulirus interruptus","Species","spiny lobster",36,"Text",-121.6,"Text",2015,"May",NA,NA,"ca_rev",34.875
+"38","Pyrosoma atlanticum","Species",NA,32.95,"Online search",-117.28,"Online search",2015,"May",NA,NA,"ca_rev",40.1002857142857
+"39","Panulirus interruptus","Species","california spiny lobster (phyllosoma)",38.4,"Figure",-123.2,"Online search",2015,NA,NA,NA,"ca_rev",34.875
+"40","Euphausia recurva","Species",NA,41,"Text",-124.26,"Online search",2019,"January",NA,NA,"ca_rev",34
+"41","Nyctiphanes simplex",NA,NA,41.0518,"Online search",-124.1514,"Online search",2019,"December",NA,NA,"ca_rev",34.1666666666667
+"42","Euphausia recurva","Species",NA,41.0518,"Online search",-124.1514,"Online search",2015,NA,NA,NA,"ca_rev",34
+"43","Pleuroncodes planipes","Species",NA,32.69,"Online search",-117.368929,"Online search",1958,NA,NA,NA,"ca_rev",30.0102777777778
+"44","Rhincalanus nasutus","Species",NA,40.2,"Figure",-124.3,"Figure",1958,"March","30",32.5,"ca_rev",32.5
+"45","Pleuroncodes planipes","Species","pelagic red crab",36.75,"Online search",-122.06,"Online search",1969,NA,NA,NA,"ca_rev",30.0102777777778
+"46","Nyctiphanes simplex","Species","subtropical krill",36,"Text",-121.6,"Text",2015,"May",NA,NA,"ca_rev",34.1666666666667
+"47","Panulirus interruptus","Species","california spiny lobster (phyllosoma)",34.5,"Figure",-120.53,"Online search",2009,NA,NA,NA,"ca_rev",34.875
+"48","Euphausia recurva","Species",NA,41.0518,"Online search",-124.1514,"Online search",2018,"December",NA,NA,"ca_rev",34
+"49","Pleuroncodes planipes","Species",NA,33.618,"Online search",-118.400066,"Online search",1959,"January",NA,NA,"ca_rev",30.0102777777778
+"50","Euphausia eximia","Species",NA,36.182,"Figure",-122.77,"Figure",1958,"March","30",NA,"ca_rev",32.5
+"51","Pleuroncodes planipes","Species","pelagic red crab",32.6,"Online search",-117.21,"Online search",1972,NA,NA,NA,"ca_rev",30.0102777777778
+"52","Argonauta argo","Species","greater argonaut",36,"Text",-121.6,"Text",2015,"May",NA,NA,"ca_rev",34
+"53","Euphausia recurva",NA,NA,41.0518,"Online search",-124.1514,"Online search",2019,"December",NA,NA,"ca_rev",34
+"54","Pleuroncodes planipes","Species",NA,33.7,"Online search",-118.304486,"Online search",1959,"March",NA,NA,"ca_rev",30.0102777777778
+"55","Doliolum denticulatum","Species",NA,36.18,"Figure",-121.72,"Figure",1958,"March","30",NA,"ca_rev",34.5
+"56","Pleuroncodes planipes","Species","pelagic red crab",32.6,"Online search",-117.21,"Online search",2002,NA,NA,NA,"ca_rev",30.0102777777778
+"57","Euphausia eximia","Species","subtropical krill",36,"Text",-121.6,"Text",2015,"May",NA,NA,"ca_rev",32.5
+"58","Pleuroncodes planipes","Species",NA,33.28,"Online search",-119.556245,"Online search",1959,"December",NA,NA,"ca_rev",30.0102777777778
+"59",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,32.5,"ca_rev",32.5
+"60","Candacia curta","Species",NA,40.44,"Figure",-124.41,"Figure",1958,"March","30",32.5,"ca_rev",32.5
+"61","Pleuroncodes planipes","Species","pelagic red crab",32.6,"Online search",-117.21,"Online search",1997,NA,NA,NA,"ca_rev",30.0102777777778
+"62","Pleuroncodes planipes","Species",NA,33.384,"Online search",-118.492346,"Online search",1960,"January",NA,NA,"ca_rev",30.0102777777778
+"63","Pleuroncodes planipes","Species","pelagic red crab",32.6,"Online search",-117.21,"Online search",1982,NA,NA,NA,"ca_rev",30.0102777777778
+"64","Portunus xantusii","Species","Xantus Swimming Crab",38.22836,"Paper",-122.97186,"Paper",2016,"11","22",34.89536,"lab_rev",34.8817866666667
+"65","Pleuroncodes planipes","Species","pelagic red crab",31.87,"Paper",-114.920613833209,"R generated",1957,"June-July, October, December","",32.38,"lab_rev",30.0102777777778
+"66","Pleuroncodes planipes","Species","pelagic red crab",36.6,"Paper",-121.964029292987,"R generated",1958,"April","",32.38,"lab_rev",30.0102777777778
+"67","Pleuroncodes planipes","Species","pelagic red crab",33.8,"Paper",-118.405260650672,"R generated",1959,"January-March, December","",32.38,"lab_rev",30.0102777777778
+"68","Pleuroncodes planipes","Species","pelagic red crab",36.6,"Paper",-121.964029292987,"R generated",1960,"January ","",32.38,"lab_rev",30.0102777777778
+"69","Pleuroncodes planipes","Species","pelagic red crab",36.6,"Paper",-121.964029292987,"R generated",1969,"December","",32.38,"lab_rev",30.0102777777778
+"70","Pleuroncodes planipes","Species","pelagic red crab",36.6,"Paper",-121.964029292987,"R generated",1970,"January-March ","",32.38,"lab_rev",30.0102777777778
+"71","Pleuroncodes planipes","Species","pelagic red crab",36.6,"Paper",-121.964029292987,"R generated",1972,"December","",32.38,"lab_rev",30.0102777777778
+"72","Pleuroncodes planipes","Species","pelagic red crab",36.6,"Paper",-121.964029292987,"R generated",1973,"January-March ","",32.38,"lab_rev",30.0102777777778
+"73","Pleuroncodes planipes","Species","pelagic red crab",34,"Paper",-120.247171429253,"R generated",1979,"April","",32.38,"lab_rev",30.0102777777778
+"74","Pleuroncodes planipes","Species","pelagic red crab",34,"Paper",-120.247171429253,"R generated",1980,"February","",32.38,"lab_rev",30.0102777777778
+"75","Pleuroncodes planipes","Species","pelagic red crab",33.25,"Paper",-119.566956960394,"R generated",1982,"December","",32.38,"lab_rev",30.0102777777778
+"76","Pleuroncodes planipes","Species","pelagic red crab",33.25,"Paper",-119.566956960394,"R generated",1983,"July","",32.38,"lab_rev",30.0102777777778
+"77","Pleuroncodes planipes","Species","pelagic red crab",33.25,"Paper",-119.566956960394,"R generated",1983,"July","",32.38,"lab_rev",30.0102777777778
+"78","Pleuroncodes planipes","Species","pelagic red crab",37.902138,"Paper",-122.722987753551,"R generated",1985,"January","",32.38,"lab_rev",30.0102777777778
+"79","Pleuroncodes planipes","Species","pelagic red crab",36.6,"Paper",-121.964029292987,"R generated",1997,"","",32.38,"lab_rev",30.0102777777778
+"80","Pleuroncodes planipes","Species","pelagic red crab",32.55,"Google Maps",-117.128359408246,"R generated",2002,"","",32.38,"lab_rev",30.0102777777778
+"81","Tetraclita rubescens","species","volcano barnacle",38.2333,"Paper",-122.965419307808,"R generated",1948,"June","",37.5,"lab_rev",37.5
+"82","Tetraclita rubescens","species","volcano barnacle",38.4167,"Paper",-123.107802139271,"R generated",1957,"","",37.5,"lab_rev",37.5
+"83","Tetraclita rubescens","species","volcano barnacle",38.4167,"Paper",-123.107802139271,"R generated",1970,"","",37.5,"lab_rev",37.5
+"84","Tetraclita rubescens","species","volcano barnacle",38.8667,"Paper",-123.659362687166,"R generated",1984,"","",37.5,"lab_rev",37.5
+"85","Tetraclita rubescens","species","volcano barnacle",40.4,"Paper",-124.38494674543,"R generated",1995,"","",37.5,"lab_rev",37.5
+"86","Tetraclita rubescens","species","volcano barnacle",40.4,"Paper",-124.38494674543,"R generated",1996,"","",37.5,"lab_rev",37.5
+"87","Tetraclita rubescens","species","volcano barnacle",40.4,"Paper",-124.38494674543,"R generated",2005,"spring","",37.5,"lab_rev",37.5
+"88","Tetraclita rubescens","species","volcano barnacle",42.3833,"Paper",-124.426756003522,"R generated",2007,"","",37.5,"lab_rev",37.5
+"89","Dosidicus gigas","species","humboldt squid",36.793978,"Google Maps",-121.793693163778,"R generated",1997,"","",34,"lab_rev",29.5980952380952
+"90","Dosidicus gigas","species","humboldt squid",36.793978,"Google Maps",-121.793693163778,"R generated",1998,"","",34,"lab_rev",29.5980952380952
+"91","Dosidicus gigas","species","humboldt squid",36.793978,"Google Maps",-121.793693163778,"R generated",1999,"","",34,"lab_rev",29.5980952380952
+"92","Dosidicus gigas","species","humboldt squid",36.793978,"Google Maps",-121.793693163778,"R generated",2000,"","",34,"lab_rev",29.5980952380952
+"93","Dosidicus gigas","species","humboldt squid",36.793978,"Google Maps",-121.793693163778,"R generated",2002,"","",34,"lab_rev",29.5980952380952
+"94","Pyrosoma atlanticum","species","pyrosome",45.478,"",-123.970750356227,"R generated",2018,"February-March; May; September","",50,"lab_rev",40.1002857142857
+"95","Serpulorbis squamigerus","species","",37.5167,"Paper",-122.202067207176,"R generated",1994,"January","",34.45,"lab_rev",34.45
+"96","Serpulorbis squamigerus","species","",37.5167,"Paper",-122.202067207176,"R generated",1996,"June","",34.45,"lab_rev",34.45
+"97","Crucigera websteri","","",40.724912,"Google Maps",-124.248884641509,"R generated",2003,"September","",33.475,"lab_rev",33.475
+"98","Hydroides gracilis","","",37.76588,"Google Maps",-122.382579838484,"R generated",2000,"September","",36.636,"lab_rev",36.636
+"99","Hydroides gracilis","","",37.76588,"Google Maps",-122.382579838484,"R generated",2001,"September","",36.636,"lab_rev",36.636
+"100","Hydroides gracilis","","",33.724877,"Google Maps",-118.349635867536,"R generated",2003,"September","",36.636,"lab_rev",36.636
+"101","Hydroides gracilis","","",35.36557,"Google Maps",-120.85134385582,"R generated",2013,"September","",36.636,"lab_rev",36.636
+"102","Hydroides elegans","","",40.724912,"Google Maps",-124.248884641509,"R generated",2003,"September","",37.5,"lab_rev",37.5
+"103","Hydroides elegans","","",32.645003,"Google Maps",-117.138576985576,"R generated",2000,"September","",37.5,"lab_rev",37.5
+"104","Hydroides elegans","","",32.770359,"Google Maps",-117.255092784241,"R generated",2013,"July","",37.5,"lab_rev",37.5
+"105","Neolithodes diomedeae","species","",37.224,"Paper",-123.2,"",1999,"October","25",23.65,"lab_rev",23.65
+"106","Neolithodes diomedeae","species","",34.981,"Paper",-121.6,"",2000,"November","4",23.65,"lab_rev",23.65
+"107","Neolithodes diomedeae","species","",36.713,"Paper",-122.3,"",2001,"October","31",23.65,"lab_rev",23.65
+"108","Pleuroncodes planipes","species","Tuna crab",36.8,"Paper",-121.791780117123,"R generated",2013,"","",27.84,"lab_rev",30.0102777777778
+"109","Arbacia stellata","species","Spiny Black Urchin",37,"Paper",-122.183734824568,"R generated",2013,"","",27.84,"lab_rev",27.84
+"110","Lytechinus pictus","species","Painted Sea Urchin",36.8,"Paper",-121.791780117123,"R generated",2013,"","",34.45,"lab_rev",34.45
+"111","Argonauta argo","species","Greater Argonaut",36.8,"Paper",-121.791780117123,"R generated",2013,"","",34,"lab_rev",34
+"112","Pyrosoma atlanticum","species","",46.288831,"Google Maps",-123.671945416237,"R generated",2014,"","",40.438,"lab_rev",40.1002857142857
+"113","Pyrosoma atlanticum","species","",46.288831,"Google Maps",-123.671945416237,"R generated",2015,"","",40.438,"lab_rev",40.1002857142857
+"114","Pyrosoma atlanticum","species","",46.288831,"Google Maps",-123.671945416237,"R generated",2016,"","",40.438,"lab_rev",40.1002857142857
+"115","Pyrosoma atlanticum","species","",49,"Paper",-123.579344684795,"R generated",2017,"August","",40.438,"lab_rev",40.1002857142857
+"116","Pyrosoma atlanticum","species","",44.652,"Paper",-124.295,"Paper",2018,"July","3-12",34.45,"lab_rev",40.1002857142857
+"117","Kelletia kelletii","species","Kellet's whelk",36.6212,"Paper",-121.9017,"Paper",1980,"","",34.45,"lab_rev",34.4833333333333
+"118","Mexacanthina lugubris","species","Dark unicorn whelk",33.5,"Paper",-117.749328266462,"R generated",1937,"","",31.822395,"lab_rev",32.4953121428571
+"119","Mexacanthina lugubris","species","Dark unicorn whelk",33.5,"Paper",-117.749328266462,"R generated",1955,"","",31.822395,"lab_rev",32.4953121428571
+"120","Mexacanthina lugubris","species","Dark unicorn whelk",33.49,"Paper",-117.739,"Paper",2003,"","",33.822395,"lab_rev",32.4953121428571
+"121","Eurypon reiswigi","","sponge",49.6177,"Paper",-123.8038,"Paper",2012,"","",32.5,"lab_rev",32.5
+"122","Eurypon scruposus","","sponge",49.4987,"Paper",-123.2998,"Paper",2011,"","",32.5,"lab_rev",32.5
+"123","Oceanapia polytuba","","sponge",48.8317,"Paper",-125.1783,"Paper",1975,"","",22.89663,"lab_rev",22.89663
+"124","Oceanapia flava","","sponge",49.5668,"Paper",-123.8032,"Paper",2016,"","",32.5,"lab_rev",32.5
+"125","Mexacanthina lugubris","species","Dark unicorn whelk",32.663501,"Google Maps",-117.149846084033,"R generated",1974,"","",32.5,"lab_rev",32.4953121428571
+"126","Mexacanthina lugubris","species","Dark unicorn whelk",33.493,"Paper",-117.742847466044,"R generated",2003,"","",32.5,"lab_rev",32.4953121428571
+"127","Mexacanthina lugubris","species","Dark unicorn whelk",33.543,"Paper",-117.796795218415,"R generated",2013,"","",32.5,"lab_rev",32.4953121428571
+"128","Mexacanthina lugubris","species","Dark unicorn whelk",34.044,"Paper",-120.430191700117,"R generated",2017,"","",32.5,"lab_rev",32.4953121428571
+"129","Nyctiphanes simplex","species","euphausiid",46,"Paper",-123.92667729486,"R generated",1983,"","",34,"lab_rev",34.1666666666667
+"130","Nyctiphanes simplex","species","euphausiid",48,"Paper",-122.20909968173,"R generated",1998,"","",34,"lab_rev",34.1666666666667
+"131","Euphausia recurva","species","euphausiid",44.6667,"Paper",-124.65,"https://globec.whoi.edu/nep/reports/ccs_cruises/jul01cr.pdf",1998,"","",34,"lab_rev",34
+"132","Euphausia mutica","species","euphausiid",44.6667,"Paper",-124.65,"https://globec.whoi.edu/nep/reports/ccs_cruises/jul01cr.pdf",1998,"","",34,"lab_rev",34
+"133","Sagitta pseudoserratodentata","species","chaetognath",44.6667,"Paper",-124.41,"https://globec.whoi.edu/nep/reports/ccs_cruises/jul01cr.pdf",1998,"","",43,"lab_rev",43
+"134","Centropages bradyi","species","copepod",46.2667,"Paper",-125.42,"Paper",1997,"","",34,"lab_rev",34
+"135","Emerita analoga","species","",57.58193,"Google Maps",-154.460353,"Google Maps",1903,"","",41.98,"lab_rev",40.81625
+"136","Emerita analoga","species","",47.604594,"Google Maps",-122.97650711089,"R generated",1941,"","",41.98,"lab_rev",40.81625
+"137","Emerita analoga","species","",47.604594,"Google Maps",-122.97650711089,"R generated",1942,"","",41.98,"lab_rev",40.81625
+"138","Emerita analoga","species","",49.110317,"Google Maps",-123.069991450524,"R generated",1957,"","",41.98,"lab_rev",40.81625
+"139","Emerita analoga","species","",49.0333,"2016 time point from Paper",-125.703826637543,"R generated",1958,"","",41.98,"lab_rev",40.81625
+"140","Emerita analoga","species","",49.0333,"2017 time point from Paper",-125.703826637543,"R generated",1959,"","",41.98,"lab_rev",40.81625
+"141","Emerita analoga","species","",49.0333,"2018 time point from Paper",-125.703826637543,"R generated",1960,"","",41.98,"lab_rev",40.81625
+"142","Emerita analoga","species","",49.0333,"2019 time point from Paper",-125.703826637543,"R generated",1961,"","",41.98,"lab_rev",40.81625
+"143","Emerita analoga","species","",50.029345,"Google Maps",-124.972550228271,"R generated",1983,"","",41.98,"lab_rev",40.81625
+"144","Emerita analoga","species","",47.577678,"Google Maps",-123.007320808685,"R generated",2006,"","",41.98,"lab_rev",40.81625
+"145","Emerita analoga","species","",47.577678,"Google Maps",-123.007320808685,"R generated",2007,"","",41.98,"lab_rev",40.81625
+"146","Emerita analoga","species","",47.577678,"Google Maps",-123.007320808685,"R generated",2008,"","",41.98,"lab_rev",40.81625
+"147","Emerita analoga","species","",47.577678,"Google Maps",-123.007320808685,"R generated",2015,"","",41.98,"lab_rev",40.81625
+"148","Emerita analoga","species","",49.0333,"Paper",-125.6925,"Paper",2016,"May","28",41.98,"lab_rev",40.81625
+"149","Uca princeps","species","Mexican fiddler crab; princely fiddler crab",33.7,"Paper",-118.05,"Paper",2018,"July","8",31.85,"lab_rev",31.85
+"150","Acanthinucella spirata","species","Angular Unicorn Snail",38.322295,"Paper",-123.04954,"Paper",1949,"","",38.1,"lab_rev",38.1166666666667
+"151","Acanthinucella spirata","species","Angular Unicorn Snail",40.396,"Paper",-124.378,"Paper",2017,"June","",38.1,"lab_rev",38.1166666666667
+"152","Anthopleura sola","species","Sunburst Sea Anemone",39.60206,"Paper",-123.78892,"Paper",2018,"May","",38.316,"lab_rev",38.316
+"153","Hippopodius hippopus","species","Siphonophore",38.32486,"Paper",-123.07265,"Paper",2016,"April","",34.5,"lab_rev",34.5
+"154","Physophora hydrostatica","species","Hula Skirt Siphonophore",40.916195,"Paper",-124.140865,"Paper",2018,"March","",36.78,"lab_rev",36.78
+"155","Chrysaora colorata","species","Purple-striped Jellyfish",38.305175,"Paper",-123.05303,"Paper",1973,"July","20",36.78,"lab_rev",37.929
+"156","Chrysaora colorata","species","Purple-striped Jellyfish",40.916195,"Paper",-124.140865,"Paper",2006,"October","",38.312,"lab_rev",37.929
+"157","Chrysaora colorata","species","Purple-striped Jellyfish",40.76099,"Paper",-124.2343,"Paper",2014,"August","29",38.312,"lab_rev",37.929
+"158","Chrysaora colorata","species","Purple-striped Jellyfish",45.84735,"Paper",-123.96122,"Paper",2017,"February","",38.312,"lab_rev",37.929
+"159","Cestum veneris","species","Venus' Girdle Ctenophore",48.96887,"Paper",-125.022978,"Paper",2014,"April","1",36.78,"lab_rev",36.78
+"160","Hespererato vitellina","species","Appleseed Erato Snail",38.41743,"Paper",-123.10728,"Paper",2016,"April","6",38.316,"lab_rev",38.316
+"161","Hespererato vitellina","species","Appleseed Erato Snail",40.34137,"Paper",-124.36262,"Paper",2017,"May","25",38.316,"lab_rev",38.316
+"162","Thylacodes squamigerus","species","Scaled Tube Snail",38.565245,"Paper",-123.33385,"Paper",2017,"February","25",38.316,"lab_rev",38.316
+"163","Creseis virgula","species","Curved Needle Pteropod",37,"Paper",-130,"Paper",1950,"April","",36.78,"lab_rev",36.78
+"164","Creseis virgula","species","Curved Needle Pteropod",38.194175,"Paper",-123.4,"Paper",2014,"November","4",36.78,"lab_rev",36.78
+"165","Hyalocylis striata","species","Striated Sea Butterfly",38.194175,"Paper",-123.4,"Paper",2014,"November","4",32.5,"lab_rev",32.5
+"166","Berthella strongi","species","Strong's Sidegill",39.536724,"Paper",-123.772568,"Paper",2016,"July","4",37.53,"lab_rev",37.53
+"167","Anteaeolidiella oliviae","species","Olive's Nudibranch",39.4513,"Paper",-123.8139,"Paper",2015,"February","16",37.89,"lab_rev",37.89
+"168","Doriopsilla albopunctata","species","White-spotted Sea Goddess",42.2227,"Paper",-124.383,"Paper",2017,"May","",39.31,"lab_rev",39.31
+"169","Doriopsilla fulva","species","White-spotted Dorid",42.2227,"Paper",-124.383,"Paper",2015,"June","",33.74,"lab_rev",33.74
+"170","Doriopsilla fulva","species","White-spotted Dorid",45.42947,"Paper",-123.94776,"Paper",2016,"June","",33.74,"lab_rev",33.74
+"171","Doriopsilla fulva","species","White-spotted Dorid",45.42947,"Paper",-123.94776,"Paper",2017,"June","",33.74,"lab_rev",33.74
+"172","Janolus barbarensis","species","Janolus Nudibranch",38.322295,"Paper",-123.04954,"Paper",2015,"September","11",37.5,"lab_rev",37.5
+"173","Okenia angelensis","species","Los Angeles Okenia",37.84328,"Paper",-122.39656,"Paper",1964,"September","",34.5,"lab_rev",35.63
+"174","Okenia angelensis","species","Los Angeles Okenia",37.501618,"Paper",-122.483152,"Paper",2015,"July","",34.5,"lab_rev",35.63
+"175","Okenia angelensis","species","Los Angeles Okenia",38.36147,"Paper",-123.069915,"Paper",2017,"May","4",37.89,"lab_rev",35.63
+"176","Phidiana hiltoni","species","Hilton's Nudibranch",38.2542,"Paper",-122.969385,"Paper",2014,"April","9",37.89,"lab_rev",37.89
+"177","Phidiana hiltoni","species","Hilton's Nudibranch",38.305185,"Paper",-123.077205,"Paper",2015,"November","25",37.89,"lab_rev",37.89
+"178","Phidiana hiltoni","species","Hilton's Nudibranch",38.305185,"Paper",-123.077205,"Paper",2018,"November","26",37.89,"lab_rev",37.89
+"179","Panulirus interruptus","species","Spiny Lobster",37.84328,"Paper",-122.39656,"Paper",1940,"March","",34.5,"lab_rev",34.875
+"180","Panulirus interruptus","species","Spiny Lobster",38.322295,"Paper",-123.04954,"Paper",2001,"","",34.5,"lab_rev",34.875
+"181","Panulirus interruptus","species","Spiny Lobster",40.021645,"Paper",-124.069105,"Paper",2005,"","",34.5,"lab_rev",34.875
+"182","Panulirus interruptus","species","Spiny Lobster",37.901315,"Paper",-122.720366,"Paper",2011,"September","",34.5,"lab_rev",34.875
+"183","Panulirus interruptus","species","Spiny Lobster",37.901315,"Paper",-122.720366,"Paper",2013,"September","",34.5,"lab_rev",34.875
+"184","Panulirus interruptus","species","Spiny Lobster",36.80405,"Paper",-121.945835,"Paper",2015,"April","",34.5,"lab_rev",34.875
+"185","Panulirus interruptus","species","Spiny Lobster",37.66241,"Paper",-122.37481,"Paper",2016,"August","",34.5,"lab_rev",34.875
+"186","Panulirus interruptus","species","Spiny Lobster",38.316795,"Paper",-123.06941,"Paper",2017,"September","19",37.5,"lab_rev",34.875
+"187","Petrolisthes manimaculis","species","Chocolate Porcelain Crab",38.5127,"Paper",-123.24772,"Paper",2006,"","27",41.05,"lab_rev",41.05
+"188","Petrolisthes manimaculis","species","Chocolate Porcelain Crab",41.770605,"Paper",-124.253885,"Paper",2017,"May","27",41.05,"lab_rev",41.05
+"189","Portunus xantusii","species","Xantus' Swimming Crab",38.213,"Paper",-122.955465,"Paper",1999,"","",34.39,"lab_rev",34.8817866666667
+"190","Portunus xantusii","species","Xantus' Swimming Crab",38.213,"Paper",-122.955465,"Paper",2016,"November","22",35.36,"lab_rev",34.8817866666667
+"191","Pleuroncodes planipes","species","Pelagic Red Crab",36.80405,"Paper",-121.945835,"Paper",1859,"","",32.5,"lab_rev",30.0102777777778
+"192","Pleuroncodes planipes","species","Pelagic Red Crab",36.80405,"Paper",-121.945835,"Paper",1960,"","",32.5,"lab_rev",30.0102777777778
+"193","Pleuroncodes planipes","species","Pelagic Red Crab",36.80405,"Paper",-121.945835,"Paper",1973,"","",32.5,"lab_rev",30.0102777777778
+"194","Pleuroncodes planipes","species","Pelagic Red Crab",37.698795,"Paper",-123.00325,"Paper",1983,"","",32.5,"lab_rev",30.0102777777778
+"195","Pleuroncodes planipes","species","Pelagic Red Crab",39.4513,"Paper",-123.8139,"Paper",1985,"","",32.5,"lab_rev",30.0102777777778
+"196","Pleuroncodes planipes","species","Pelagic Red Crab",36.80405,"Paper",-121.945835,"Paper",1998,"","",32.5,"lab_rev",30.0102777777778
+"197","Pleuroncodes planipes","species","Pelagic Red Crab",36.80405,"Paper",-121.945835,"Paper",2015,"October","",32.5,"lab_rev",30.0102777777778
+"198","Pleuroncodes planipes","species","Pelagic Red Crab",36.80405,"Paper",-121.945835,"Paper",2016,"May","",32.5,"lab_rev",30.0102777777778
+"199","Pleuroncodes planipes","species","Pelagic Red Crab",44.65821,"Paper",-124.06085,"Paper",2017,"March","1",39.45,"lab_rev",30.0102777777778
+"200","Megabalanus californicus","species","Pink-striped Barnacle",40.76099,"Paper",-124.2343,"Paper",1939,"","",36.61,"lab_rev",36.61
+"201","Megabalanus californicus","species","Pink-striped Barnacle",38.03306,"Paper",-123.444035,"Paper",1981,"","",36.61,"lab_rev",36.61
+"202","Megabalanus californicus","species","Pink-striped Barnacle",38.316795,"Paper",-123.06941,"Paper",1996,"","",36.61,"lab_rev",36.61
+"203","Megabalanus californicus","species","Pink-striped Barnacle",38.240895,"Paper",-122.99475,"Paper",2009,"April","",36.61,"lab_rev",36.61
+"204","Megabalanus californicus","species","Pink-striped Barnacle",38.31180556,"Paper",-123.083028,"Paper",2006,"September","",36.61,"lab_rev",36.61
+"205","Megabalanus californicus","species","Pink-striped Barnacle",42.683253,"Paper",-124.449214,"Paper",2015,"June","5",36.61,"lab_rev",36.61
+"206","Paraconcavus pacificus","species","Red-striped Barnacle",38.32486,"Paper",-123.07265,"Paper",2016,"February","",37.5,"lab_rev",37.5
+"207","Paraconcavus pacificus","species","Red-striped Barnacle",39.536724,"Paper",-123.772568,"Paper",2017,"November","12",37.5,"lab_rev",37.5
+"208","Paraconcavus pacificus","species","Red-striped Barnacle",38.2542,"Paper",-122.969385,"Paper",2019,"February","",37.5,"lab_rev",37.5
+"209","Ophiothrix spiculata","species","Glass-spined Brittle Star",37.698795,"Paper",-123.00325,"Paper",1962,"","",37.69,"lab_rev",37.69
+"210","Ophiothrix spiculata","species","Glass-spined Brittle Star",38.03306,"Paper",-123.444035,"Paper",1979,"","",37.69,"lab_rev",37.69
+"211","Ophiothrix spiculata","species","Glass-spined Brittle Star",37.84328,"Paper",-122.39656,"Paper",2002,"April","",37.69,"lab_rev",37.69
+"212","Ophiothrix spiculata","species","Glass-spined Brittle Star",38.305185,"Paper",-123.077205,"Paper",2014,"November","8",37.69,"lab_rev",37.69
+"213","Ophiothrix spiculata","species","Glass-spined Brittle Star",41.13197,"Paper",-124.16403,"Paper",2016,"May","12",37.69,"lab_rev",37.69
+"214","Ophiothrix spiculata","species","Glass-spined Brittle Star",38.316795,"Paper",-123.06941,"Paper",2018,"August","",37.69,"lab_rev",37.69
+"215","Lissothuria nutriens","species","Scarlet Sea Cucumber",38.305175,"Paper",-123.05303,"Paper",2010,"July","",38.316,"lab_rev",38.316
+"216","Lissothuria nutriens","species","Scarlet Sea Cucumber",38.50203,"Paper",-123.230115,"Paper",2017,"June","25",38.316,"lab_rev",38.316
+"217","Pachythyone rubra","species","Red Sea Cucumber",38.305185,"Paper",-123.077205,"Paper",1976,"July","",36.78,"lab_rev",36.78
+"218","Pachythyone rubra","species","Red Sea Cucumber",37.11285,"Paper",-122.32908,"Paper",1971,"","",36.78,"lab_rev",36.78
+"219","Pachythyone rubra","species","Red Sea Cucumber",37.11285,"Paper",-122.32908,"Paper",1972,"","",36.78,"lab_rev",36.78
+"220","Pachythyone rubra","species","Red Sea Cucumber",37.11285,"Paper",-122.32908,"Paper",1973,"","",36.78,"lab_rev",36.78
+"221","Pachythyone rubra","species","Red Sea Cucumber",37.18138,"Paper",-122.39418,"Paper",1997,"","",36.78,"lab_rev",36.78
+"222","Pachythyone rubra","species","Red Sea Cucumber",38.31874,"Paper",-123.07411,"Paper",2017,"December","30",36.78,"lab_rev",36.78
+"223","Pyrosoma atlanticum","species","",59,"Paper",-144,"Paper",2017,"","",34.5,"lab_rev",40.1002857142857
+"224","Aplysia californica","species","sea hare",44.609567,"Google Maps",-124.063123786977,"R generated",1983,"October","14, 19",41.98,"lab_rev",41.98
+"225","Dosidicus gigas","species","Giant squid, Humboldt squid",43.6667,"Paper",-124.191656438226,"R generated",1997,"","",23.5,"lab_rev",29.5980952380952
+"226","Dosidicus gigas","species","Jumbo squid",33.700615,"Google Maps",-118.054704482789,"R generated",1934,"August","6",36.78,"lab_rev",29.5980952380952
+"227","Dosidicus gigas","species","Jumbo squid",36.611029,"Google Maps",-121.94983042397,"R generated",1911,"","",36.78,"lab_rev",29.5980952380952
+"228","Acanthinucella spirata","species","",40.396,"Paper",-124.378,"Paper",2017,"June","17",38.15,"lab_rev",38.1166666666667
+"229","Dosidicus gigas","species","Humboldt squid or jumbo flying squid",59.485662,"Google Maps",-139.858311,"Google Maps",1997,"","",35,"lab_rev",29.5980952380952
+"230","Dosidicus gigas","species","Humboldt squid or jumbo flying squid",48.5,"ChatGPT",-124.85,"ChatGPT",2004,"October","2",35,"lab_rev",29.5980952380952
+"231","Dosidicus gigas","species","Jumbo squid",43.6667,"Paper",-124.191656438226,"R generated",1997,"September","30",34.5,"lab_rev",29.5980952380952
+"232","Kelletia kelletii","species","",36.623995,"Google Maps",-121.91189734422,"R generated",1980,"May","2",34.5,"lab_rev",34.4833333333333
+"233","Kelletia kelletii","species","",36.611029,"Google Maps",-121.94983042397,"R generated",1981,"January","",34.5,"lab_rev",34.4833333333333
+"234","Pleuroncodes planipes","species","Pelagic red crab",32.663501,"Google Maps",-117.149846084033,"R generated",1941,"","",23.5,"lab_rev",30.0102777777778
+"235","Pleuroncodes planipes","species","Pelagic red crab",32.663501,"Google Maps",-117.149846084033,"R generated",1957,"","",23.5,"lab_rev",30.0102777777778
+"236","Pleuroncodes planipes","species","Pelagic red crab",32.663501,"Google Maps",-117.149846084033,"R generated",1958,"","",23.5,"lab_rev",30.0102777777778
+"237","Pleuroncodes planipes","species","Pelagic red crab",32.663501,"Google Maps",-117.149846084033,"R generated",1959,"","",23.5,"lab_rev",30.0102777777778
+"238","Pleuroncodes planipes","species","Pelagic red crab",32.663501,"Google Maps",-117.149846084033,"R generated",1960,"","",23.5,"lab_rev",30.0102777777778
+"239","Pleuroncodes planipes","species","Pelagic red crab",32.663501,"Google Maps",-117.149846084033,"R generated",1970,"","",23.5,"lab_rev",30.0102777777778
+"240","Pleuroncodes planipes","species","Pelagic red crab",32.663501,"Google Maps",-117.149846084033,"R generated",1972,"","",23.5,"lab_rev",30.0102777777778
+"241","Pleuroncodes planipes","species","Pelagic red crab",32.663501,"Google Maps",-117.149846084033,"R generated",1973,"","",23.5,"lab_rev",30.0102777777778
+"242","Pleuroncodes planipes","species","Pelagic red crab",32.663501,"Google Maps",-117.149846084033,"R generated",1979,"","",23.5,"lab_rev",30.0102777777778
+"243","Pleuroncodes planipes","species","Pelagic red crab",32.663501,"Google Maps",-117.149846084033,"R generated",1980,"","",23.5,"lab_rev",30.0102777777778
+"244","Euphylax dovi","species","Swimming crab",32.663501,"Google Maps",-117.149846084033,"R generated",1943,"","",23.5,"lab_rev",23.5
+"245","Euphylax dovi","species","Swimming crab",32.663501,"Google Maps",-117.149846084033,"R generated",1959,"","",23.5,"lab_rev",23.5
+"246","Euphylax dovi","species","Swimming crab",32.663501,"Google Maps",-117.149846084033,"R generated",1974,"","",23.5,"lab_rev",23.5
+"247","Lophogorgia chiliensis","species","White gorgonian",32.663501,"Google Maps",-117.149846084033,"R generated",1960,"","",23.5,"lab_rev",23.5
+"248","Panilurus gracilis","species","Pinto lobser",32.663501,"Google Maps",-117.149846084033,"R generated",1961,"","",23.5,"lab_rev",23.5
+"249","Lyropectin subnudosus","species","Blunt-knobbed scallop",32.663501,"Google Maps",-117.149846084033,"R generated",1959,"","",23.5,"lab_rev",23.5
+"250","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1909,"","",23.5,"lab_rev",29.5980952380952
+"251","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1934,"","",23.5,"lab_rev",29.5980952380952
+"252","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1935,"","",23.5,"lab_rev",29.5980952380952
+"253","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1936,"","",23.5,"lab_rev",29.5980952380952
+"254","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1937,"","",23.5,"lab_rev",29.5980952380952
+"255","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1975,"","",23.5,"lab_rev",29.5980952380952
+"256","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1976,"","",23.5,"lab_rev",29.5980952380952
+"257","Eucidaris thouarsii","species","Club-spined urchin",32.663501,"Google Maps",-117.149846084033,"R generated",1958,"","",23.5,"lab_rev",23.5
+"258","Eucidaris thouarsii","species","Club-spined urchin",32.663501,"Google Maps",-117.149846084033,"R generated",1960,"","",23.5,"lab_rev",23.5
+"259","Emerita analoga","species","Sand crab",41.999703,"Google Maps",-124.214582683163,"R generated",1941,"","",32.67,"lab_rev",40.81625
+"260","Emerita analoga","species","Sand crab",41.999703,"Google Maps",-124.214582683163,"R generated",1959,"","",32.67,"lab_rev",40.81625
+"261","Loligo opalescens","species","Market squid",41.999703,"Google Maps",-124.214582683163,"R generated",1941,"","",32.67,"lab_rev",32.67
+"262","Loligo opalescens","species","Market squid",41.999703,"Google Maps",-124.214582683163,"R generated",1959,"","",32.67,"lab_rev",32.67
+"263","Dosidicus gigas","species","Humboldt squid",49.11374,"Paper",-123.065823380089,"R generated",2009,"August","days 2, 4, 6",32.5,"lab_rev",29.5980952380952
+"264","Dosidicus gigas","species","Humboldt squid",49.11374,"Paper",-123.065823380089,"R generated",2009,"September","27",32.5,"lab_rev",29.5980952380952

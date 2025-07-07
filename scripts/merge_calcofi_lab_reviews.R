@@ -48,11 +48,7 @@ merged_df$latin_name <- gsub("^(\\w)", "\\U\\1", merged_df$latin_name, perl = TR
 merged_df_histave <- merged_df %>%
   group_by(latin_name) %>%
   mutate(average_hist_latitude = mean(historical_northern_latitude, na.rm=TRUE))
-sp_missing_hist_lat <- merged_df_histave %>%
-  filter(is.na(average_hist_latitude)) %>%
-  select(latin_name) %>%
-  distinct()
 
 # Write dataframe
-write.csv(merged_df, "processed_data/merged_calcofi_lab_review.csv")
+write.csv(merged_df_histave, "processed_data/merged_calcofi_lab_review.csv")
           
