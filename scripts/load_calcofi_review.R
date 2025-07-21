@@ -2,7 +2,11 @@
 # By: Jordana Sevigny, jordana.sevigny@gmail.com
 # Date created: 07/02/2025
 
+library(readxl)
 library(tidyr)
+library(stringr)
+library(purrr)
+library(dplyr)
 
 # load in data
 # poor naming scheme but the file with the similar name but excel has two sheets with the other having the original excerpt
