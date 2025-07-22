@@ -54,14 +54,10 @@ merged_df$latin_name <- gsub("^(\\w)", "\\U\\1", merged_df$latin_name, perl = TR
 #   group_by(latin_name) %>%
 #   mutate(average_hist_latitude = mean(historical_northern_latitude, na.rm=TRUE))
 
-# Merge historical distributions with extension dataset
-merged_df_histedge <- merged_df %>%
-  left_join(hist_dist, by="latin_name")
-
 # Make species / genus into one category if likely shared (e.g. pyrosomes, velella)
-unique(merged_df_histedge$latin_name)
-merged_df_histedge$latin_name_original <- merged_df_histedge$latin_name
-merged_df_histedge <- merged_df_histedge %>%
+unique(merged_df$latin_name)
+merged_df$latin_name_original <- merged_df$latin_name
+merged_df_histedge <- merged_df %>%
   mutate(latin_name = case_when(
     str_detect(latin_name, regex("thetys", ignore_case = TRUE)) ~ "Thetys",
     TRUE ~ latin_name
@@ -74,10 +70,41 @@ merged_df_histedge <- merged_df_histedge %>%
     str_detect(latin_name, regex("Pyrosoma", ignore_case = TRUE)) ~ "Pyrosoma",
     TRUE ~ latin_name
   ))
+#unique(merged_df_histedge$latin_name)
+
+# Merge historical distributions with extension dataset
+merged_df_histedge <- merged_df_histedge %>%
+  left_join(hist_dist, by="latin_name")
 
 # Drop any dataspoints prior to 1900
 merged_df_histedge <- merged_df_histedge %>%
   filter(year >= 1900)
+
+# Add missing longitudes for historical latitudes ---------------------------
+# Load coastlines
+coast <- ne_download(scale = 10, type = "coastline", category = "physical", returnclass = "sf")
+# Bounding box for North America-ish
+coast_na <- st_crop(coast, xmin = -170, xmax = -50, ymin = 5, ymax = 80)
+
+
+# Define function to find longitude given latitude
+find_lon <- function(given_lat) {
+  # Create a line at given latitude
+  lon_range <- seq(-180, -114, by = 0.1)
+  line <- st_linestring(cbind(lon_range, rep(given_lat, length(lon_range))))
+  line_sf <- st_sfc(line, crs = 4326)
+  # Find nearest point on cost
+  nearest <- st_nearest_points(line_sf, st_union(coast_na))
+  intersection_point <- st_cast(nearest, "POINT")[2]
+  lon <- st_coordinates(intersection_point)[1]
+  return(lon)
+}
+
+merged_df_histedge_lon <- merged_df_histedge %>%
+  rowwise() %>%
+  mutate(
+    hist_range_lon = find_lon(hist_range_lat)) %>%
+  ungroup()
 
 # Write dataframe
 write.csv(merged_df_histedge, "processed_data/merged_calcofi_lab_review.csv")
