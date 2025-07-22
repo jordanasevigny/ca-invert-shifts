@@ -132,37 +132,15 @@ en_freq_month <- en_count$n / nrow(enso_df)
 
 # Prep review data for mapping --------------------------------------------
 
-# Choose the northernmost observation for each species/year combo
-north_df <- df %>%
-  group_by(year, latin_name) %>%
-  slice_max(order_by = latitude, n = 1, with_ties = FALSE) %>%
-  ungroup() %>%
-  filter(!is.na(latin_name))
-
-# Make extension event ids
-ext_ids <- north_df %>%
-  arrange(latin_name, year) %>%
-  group_by(latin_name) %>%
-  mutate(
-    year_diff = year - lag(year, default = first(year)),
-    new_group = if_else(year_diff > 1, 1, 0),
-    group_id = cumsum(new_group)
-  ) %>%
-  ungroup() %>%
-  select(-c(year_diff, new_group)) %>%
-  group_by(latin_name, group_id) %>%
-  mutate(first_year = min(year)) %>%
-  ungroup()
-
 # Identify the species with X+ events and filter for those species
-species_with_group2plus <- ext_ids %>%
+species_with_group2plus <- df %>%
   group_by(latin_name) %>%
   filter(any(group_id >= 2)) %>% # 2 would be three events (0, 1, 2)
   pull(latin_name) %>%
   unique()
 
 # Filter full dataset for those species
-ext_Xplus <- ext_ids %>%
+ext_Xplus <- df %>%
   filter(latin_name %in% species_with_group2plus)
 # unique(ext_Xplus$latin_name)
 # library(clipr)
@@ -336,14 +314,14 @@ chisq.test(x = observed, p = expected_proportions_month)
 # Plotting The Blob 2014-2016 -------------------------------------------------------
 
 # Identify the species with X+ events and filter for those species
-species_with_group2plus <- ext_ids %>%
+species_with_group2plus <- df %>%
   group_by(latin_name) %>%
   filter(any(group_id >= 0)) %>% # 2 would be three events (0, 1, 2)
   pull(latin_name) %>%
   unique()
 
 # Filter full dataset for those species
-ext_Xplus <- ext_ids %>%
+ext_Xplus <- df %>%
   filter(latin_name %in% species_with_group2plus)
 # unique(ext_Xplus$latin_name)
 # library(clipr)

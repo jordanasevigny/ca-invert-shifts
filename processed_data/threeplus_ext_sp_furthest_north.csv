@@ -1,0 +1,19 @@
+"X","latin_name","taxonomic_rank","common_name","latitude","latitude_location","longitude","longitude_location","year","month","day","source","latin_name_original","hist_range_lat","hist_range_lon","group_id","first_year"
+3,"Aplysia californica","species","sea hare",44.609567,"Google Maps",-124.063123786977,"R generated",1983,"October","14, 19","lab_rev","Aplysia californica",34.5,-120.496897011342,0,1983
+32,"Chrysaora colorata","species","Purple-striped Jellyfish",45.84735,"Paper",-123.96122,"Paper",2017,"February","","lab_rev","Chrysaora colorata",34.5,-120.496897011342,3,2017
+54,"Dosidicus gigas","species","Humboldt squid or jumbo flying squid",59.485662,"Google Maps",-139.858311,"Google Maps",1997,"","","lab_rev","Dosidicus gigas",32.5,-117.12386688112,3,1997
+63,"Emerita analoga","species","",57.58193,"Google Maps",-154.460353,"Google Maps",1903,"","","lab_rev","Emerita analoga",32.67,-117.237240155482,0,1903
+79,"Euphausia eximia","Species",NA,36.182,"Figure",-122.77,"Figure",1958,"March","30","ca_rev","Euphausia eximia",32.5,-117.12386688112,0,1958
+83,"Euphausia recurva","species","euphausiid",44.6667,"Paper",-124.65,"https://globec.whoi.edu/nep/reports/ccs_cruises/jul01cr.pdf",1998,"","","lab_rev","Euphausia recurva",34.5,-120.496897011342,0,1998
+88,"Euphylax dovii","species","Swimming crab",32.663501,"Google Maps",-117.149846084033,"R generated",1943,"","","lab_rev","Euphylax dovii",32.5,-117.12386688112,0,1943
+114,"Megabalanus californicus","species","Pink-striped Barnacle",42.683253,"Paper",-124.449214,"Paper",2015,"June","5","lab_rev","Megabalanus californicus",36.78,-121.798132483637,5,2015
+119,"Mexacanthina lugubris","species","Dark unicorn whelk",34.044,"Paper",-120.430191700117,"R generated",2017,"","","lab_rev","Mexacanthina lugubris",31.8,-114.833929777882,4,2017
+125,"Nyctiphanes simplex","","",48.333,"Paper",-124.92,"Paper",1983,"September","15","lab_rev","Nyctiphanes simplex",32.5,-117.12386688112,2,1983
+132,"Okenia angelensis","species","Los Angeles Okenia",38.36147,"Paper",-123.069915,"Paper",2017,"May","4","lab_rev","Okenia angelensis",37.5,-122.15331578474,2,2017
+137,"Ophiothrix spiculata","species","Glass-spined Brittle Star",41.13197,"Paper",-124.16403,"Paper",2016,"May","12","lab_rev","Ophiothrix spiculata",37.69,-122.38970598225,4,2016
+144,"Pachythyone rubra","species","Red Sea Cucumber",38.31874,"Paper",-123.07411,"Paper",2017,"December","30","lab_rev","Pachythyone rubra",36.78,-121.798132483637,3,2017
+148,"Panulirus interruptus","species","Spiny Lobster",40.021645,"Paper",-124.069105,"Paper",2005,"","","lab_rev","Panulirus interruptus",34.5,-120.496897011342,2,2005
+188,"Pleuroncodes planipes","species","Pelagic Red Crab",44.65821,"Paper",-124.06085,"Paper",2017,"March","1","lab_rev","Pleuroncodes planipes",32.5,-117.12386688112,8,2014
+204,"Spirobranchs spinosus","species","Christmas tree worm",36.625496,"Paper",-121.913745,"Paper",2018,"March","8","lab_rev","Spirobranchs spinosus",36,-121.504087815328,3,2018
+212,"Tetraclita rubescens","species","volcano barnacle",42.3833,"Paper",-124.426756003522,"R generated",2007,"","","lab_rev","Tetraclita rubescens",37.5,-122.15331578474,6,2007
+220,"Velella","Genus","by-the-wind sailors",54.7,"Online search",-132.041327,"Online search",1957,NA,NA,"ca_rev","Velella sp.",34.5,-120.496897011342,1,1957

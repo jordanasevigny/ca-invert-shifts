@@ -129,5 +129,5 @@ ext_ids <- north_df %>%
   ungroup()
 
 # Write dataframe
-write.csv(merged_df_histedge, "processed_data/merged_calcofi_lab_review.csv")
+write.csv(ext_ids, "processed_data/merged_calcofi_lab_review.csv")
           
