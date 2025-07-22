@@ -51,7 +51,7 @@ df_t <- df %>%
         lon_for_plot
       }
   ) %>%
-  mutate( # untested
+  mutate( 
     Lon.for.plot.origin = 
       if (Include.Exclude == 'Include' && (is.na(lon_for_plot) || lon_for_plot == "")) {
         "R generated"
@@ -93,11 +93,12 @@ colnames(df_t) <- c(
   "month",
   "day",
   "time",
-  "historical_northern_latitude",
+  "historical_northern_latitude_archive",
   "historical_latitude_origin",
   "historical_north_range_verbatim",
   "historical_north_range_reference",
   "screening_notes",
+  "extension_confidence_criteria",
   "longitude"
 )
 

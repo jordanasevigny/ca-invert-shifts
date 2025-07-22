@@ -1,16 +1,21 @@
-# Merge CalCOFI and lab reviews
+# Merge CalCOFI and lab reviews & add in historical latitudes 
 # By: Jordana Sevigny, jordana.sevigny@gmail.com
 # Date created: 07/02/2025
 
+# Library
 library(dplyr)
 
 # Load data
 ca_rev <- read.csv("processed_data/calcofi_review_data_clean.csv")
 lab_rev <- read.csv("processed_data/lab_review_with_longitudes.csv")
+hist_dist <- read.csv("processed_data/historical-distributions-clean.csv")
 
 # Filter to included data
 ca_rev_inc <- filter(ca_rev, include_exclude == "Include")
 lab_rev_inc  <- filter(lab_rev, include_exclude == "Include")
+
+# Filter out the low confidence extensions from the lab review
+lab_rev_inc <- filter(lab_rev_inc, extension_confidence_criteria != "Opportunistic")
 
 # Merge like columns of the two datasets
 
@@ -44,11 +49,36 @@ merged_df <- merged_df %>%
 # Make latin names uppercase
 merged_df$latin_name <- gsub("^(\\w)", "\\U\\1", merged_df$latin_name, perl = TRUE)
 
-# Find average latitude for historical range edge THIS DOESN'T WORK YET
-merged_df_histave <- merged_df %>%
-  group_by(latin_name) %>%
-  mutate(average_hist_latitude = mean(historical_northern_latitude, na.rm=TRUE))
+# # Find average latitude for historical range edge THIS DOESN'T WORK YET
+# merged_df_histave <- merged_df %>%
+#   group_by(latin_name) %>%
+#   mutate(average_hist_latitude = mean(historical_northern_latitude, na.rm=TRUE))
+
+# Merge historical distributions with extension dataset
+merged_df_histedge <- merged_df %>%
+  left_join(hist_dist, by="latin_name")
+
+# Make species / genus into one category if likely shared (e.g. pyrosomes, velella)
+unique(merged_df_histedge$latin_name)
+merged_df_histedge$latin_name_original <- merged_df_histedge$latin_name
+merged_df_histedge <- merged_df_histedge %>%
+  mutate(latin_name = case_when(
+    str_detect(latin_name, regex("thetys", ignore_case = TRUE)) ~ "Thetys",
+    TRUE ~ latin_name
+  )) %>%
+  mutate(latin_name = case_when(
+    str_detect(latin_name, regex("velella", ignore_case = TRUE)) ~ "Velella",
+    TRUE ~ latin_name
+  )) %>%
+  mutate(latin_name = case_when(
+    str_detect(latin_name, regex("Pyrosoma", ignore_case = TRUE)) ~ "Pyrosoma",
+    TRUE ~ latin_name
+  ))
+
+# Drop any dataspoints prior to 1900
+merged_df_histedge <- merged_df_histedge %>%
+  filter(year >= 1900)
 
 # Write dataframe
-write.csv(merged_df_histave, "processed_data/merged_calcofi_lab_review.csv")
+write.csv(merged_df_histedge, "processed_data/merged_calcofi_lab_review.csv")
           

@@ -27,7 +27,6 @@ df <- read.csv("processed_data/merged_calcofi_lab_review.csv")
 #Lload a world map
 world <- ne_countries(scale = "medium", returnclass = "sf")
 
-
 # Load enso data
 enso_df <- download_enso(climate_idx = "oni", create_csv = FALSE)
 #write.csv(enso_df, "enso_data.csv")
@@ -39,11 +38,6 @@ enso <- enso_df %>%
   filter(phase == 'Warm Phase/El Nino') %>%
   distinct() %>%
   select(Year, Month)
-# enso_yr <- enso_df %>%
-#   select(c(Year, Month, dSST3.4)) %>%
-#   filter(dSST3.4 > 0) %>%
-#   distinct() %>%
-#   select(Year, Month)
 
 oni_years <- enso %>%
   select(Year) %>%
@@ -74,9 +68,10 @@ enso <- enso %>%
   arrange(Date) %>%
   mutate(
     month_diff = c(0, diff(as.yearmon(Date))),
-    new_event = month_diff > 3/12,  # if jump > 1 month, new group
+    new_event = month_diff > 3/12,  # if jump > 3 month, new group
     group_id = cumsum(new_event)
   )
+
 # Make x bands
 enso_bands_oni <- enso %>%
   group_by(group_id) %>%
@@ -144,7 +139,7 @@ north_df <- df %>%
   ungroup() %>%
   filter(!is.na(latin_name))
 
-# Make extension event ids and add a minimum number of extensions
+# Make extension event ids
 ext_ids <- north_df %>%
   arrange(latin_name, year) %>%
   group_by(latin_name) %>%
@@ -173,28 +168,40 @@ ext_Xplus <- ext_ids %>%
 # library(clipr)
 # write_clip(unique(ext_Xplus$latin_name))
 
+# Drop any 'extensions' that did not get past the historical range edge we have documented
+ext_Xplus <- ext_Xplus %>%
+  filter(latitude > hist_range_lat)
+
+# This is an odd dataset. For each extensions per species, this has the northernmost latitude of all observations of that possibly multi-year period paired to the first year of the extension episode
+northern_most_per_ext <- ext_Xplus %>% 
+  select(c(latin_name, latitude, longitude, first_year, hist_range_lat, group_id)) %>%
+  group_by(latin_name, group_id) %>%
+  slice_max(latitude, with_ties = FALSE)
+
 # Plots of historical range edge vs extension position --------------------------------------------
 # Arrow map
 ggplot() +
   geom_sf(data = world, fill = "gray90", color = "black") +
-  geom_segment(data = ext_Xplus, 
-               aes(x = longitude, y = average_hist_latitude, 
+  geom_segment(data = northern_most_per_ext, 
+               aes(x = longitude, y = hist_range_lat, 
                    xend = longitude, yend = latitude, color = latin_name),
                arrow = arrow(length = unit(0.2, "cm")),
                size = 0.7) +
-  coord_sf(xlim = c(-150, -110), ylim = c(20, 60), expand = FALSE) +
+  coord_sf(xlim = c(-150, -110), ylim = c(30, 60), expand = FALSE) +
   theme_minimal() +
-  labs(title = "Species Range Extensions", 
+  labs(title = "Species Range Extensions (3+ extensions required)", 
        x = "Longitude", 
        y = "Latitude", 
-       color = "Year")
+       color = "Species")
 
+nrow(northern_most_per_ext) # number of extensions
+length(unique(northern_most_per_ext$latin_name)) # number of species
 
 # Animated Map
 # p <- ggplot() +
 #   geom_sf(data = world, fill = "gray90", color = "black") +
 #   geom_segment(data = ext_Xplus, 
-#                aes(x = longitude, y = average_hist_latitude, 
+#                aes(x = longitude, y = hist_range_lat, 
 #                    xend = longitude, yend = latitude, color = latin_name),
 #                arrow = arrow(length = unit(0.2, "cm")),
 #                linewidth = 0.7) +
@@ -207,13 +214,25 @@ ggplot() +
 # anim_save("preliminary_plots/range_extensions.gif", animation = anim)
 # dev.off()
 
-# Need to figure out what to do with these ones. Maybe look more closely at "historical range edge"
-north_df_lower <- ext_Xplus %>%
-  filter(latitude < average_hist_latitude)
+
 
 # Plot time series ordered by group id
 ext_Xplus <- ext_Xplus %>%
   mutate(latin_name = fct_reorder(latin_name, group_id, .desc = TRUE))
+
+ggplot(ext_Xplus, aes(x = year, y = latin_name)) +
+  geom_point() +
+  labs(
+    x = "Year",
+    y = "Latin Name",
+    title = "Species-Year Dot Plot (3+ extensions required)"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
+  ) +
+  scale_x_continuous(limits = c(1850, 2025),
+                     breaks = seq(1850, 2025, by = 5))
 
 ggplot(ext_Xplus, aes(x = year, y = latin_name)) +
   geom_rect(data = enso_bands, inherit.aes = FALSE,
@@ -223,7 +242,7 @@ ggplot(ext_Xplus, aes(x = year, y = latin_name)) +
   labs(
     x = "Year",
     y = "Latin Name",
-    title = "Species-Year Dot Plot Combined Data - ONI El Niño"
+    title = "Species-Year Dot Plot (3+ extensions required) - El Niño in red"
   ) +
   theme_minimal() +
   theme(
@@ -233,7 +252,106 @@ ggplot(ext_Xplus, aes(x = year, y = latin_name)) +
                      breaks = seq(1850, 2025, by = 5))
 
 
+
+# Histograms of el nino-related extensions -------------------------------------------------------
+
+# Dataframe of all extension events for species with X events combined with el nino phase data (start, peak, end)
+ext_year_phase <- left_join(ext_Xplus, year_phases, by = c("first_year" = "Year"))
+
+# Limit Dataframe to just the initial extensions
+lim_ext_year_phase <- ext_year_phase %>%
+  group_by(latin_name, group_id) %>% 
+  slice_min(year) %>%
+  mutate(enso_phase = ifelse(is.na(enso_phase), "non-El Niño", as.character(enso_phase)))
+
+# Number of extensions by ENSO phase classification
+ggplot(lim_ext_year_phase, aes(x = enso_phase)) +
+  geom_bar(fill = "cyan4") +
+  labs(
+    title = "Total Range Extensions by ENSO Phase (3+ extensions required)",
+    x = "ENSO Phase Classification",
+    y = "Number of Extensions"
+  ) +
+  theme_minimal()
+
+# Faceted by species
+ggplot(lim_ext_year_phase, aes(x = enso_phase)) +
+  geom_bar(fill = "cyan4") +
+  facet_wrap(~ latin_name, scales = "free_y") +
+  labs(
+    title = "Range Extensions by ENSO Phase per Species (3+ extensions required)",
+    x = "ENSO Phase Classification",
+    y = "Extensions"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# Tally number of extensions per species occurring in peak or end el nino phase
+ext_summary <- lim_ext_year_phase %>%
+  mutate(
+    is_peak_or_end = str_detect(enso_phase, "peak|end")
+  ) %>%
+  group_by(latin_name) %>%
+  summarise(
+    total_extensions = n(),
+    peak_or_end_extensions = sum(is_peak_or_end, na.rm = TRUE),
+    proportion_peak_or_end = peak_or_end_extensions / total_extensions
+  ) %>%
+  arrange(desc(proportion_peak_or_end))
+
+# Proportion of extensions in el nino by species
+ggplot(ext_summary, aes(x = reorder(latin_name, -proportion_peak_or_end), y = proportion_peak_or_end)) +
+  geom_col(fill = "cyan4") +
+  coord_flip() +
+  labs(
+    title = "Proportion of Extensions in El Niño Peak/End Years (3+ extensions required)",
+    x = "Species",
+    y = "Proportion of Extensions in El Niño Peak/End Years"
+  ) +
+  theme_minimal()
+
+# Proportion of extensions histogram
+ggplot(ext_summary, aes(x = proportion_peak_or_end)) +
+  geom_histogram(binwidth = 0.1, fill = "cyan4", color = "white", boundary = 0) +
+  geom_vline(xintercept = en_freq_month, linetype = "dashed", color = "red") +
+  scale_x_continuous(labels = scales::percent_format(accuracy = 1)) +
+  labs(
+    title = "Distribution of Species by Proportion of Extensions During El Niño Peak/End Years\n(El Niño frequency in red dotted line)",
+    x = "Proportion of Extensions in El Niño Peak/End Years",
+    y = "Number of Species"
+  ) +
+  theme_minimal()
+
+
+
+# STATS
+## El Nino wo blob - el nino month resolution
+# Observed counts
+observed <- c(sum(ext_summary$peak_or_end_extensions), sum(ext_summary$total_extensions)-sum(ext_summary$peak_or_end_extensions))  # 35 El Niño, 65 Not El Niño
+# Expected proportions
+expected_proportions_month <- c(en_freq_month, (1-en_freq_month))
+# Run chi-squared goodness-of-fit test
+chisq.test(x = observed, p = expected_proportions_month)
+
 # Plotting The Blob 2014-2016 -------------------------------------------------------
+
+# Identify the species with X+ events and filter for those species
+species_with_group2plus <- ext_ids %>%
+  group_by(latin_name) %>%
+  filter(any(group_id >= 0)) %>% # 2 would be three events (0, 1, 2)
+  pull(latin_name) %>%
+  unique()
+
+# Filter full dataset for those species
+ext_Xplus <- ext_ids %>%
+  filter(latin_name %in% species_with_group2plus)
+# unique(ext_Xplus$latin_name)
+# library(clipr)
+# write_clip(unique(ext_Xplus$latin_name))
+
+# Drop any 'extensions' that did not get past the historical range edge we have documented
+ext_Xplus <- ext_Xplus %>%
+  filter(latitude > hist_range_lat)
 
 # The blob df (extension events 2014-2016)
 blob_df <- ext_Xplus %>%
@@ -243,30 +361,46 @@ blob_df <- ext_Xplus %>%
 ggplot() +
   geom_sf(data = world, fill = "gray90", color = "black") +
   geom_segment(data = blob_df, 
-               aes(x = longitude, y = average_hist_latitude, 
+               aes(x = longitude, y = hist_range_lat, 
                    xend = longitude, yend = latitude, color = latin_name),
                arrow = arrow(length = unit(0.2, "cm")),
                size = 0.7) +
   coord_sf(xlim = c(-130, -110), ylim = c(30, 50), expand = FALSE) +
   theme_minimal() +
-  labs(title = "Species Range Extensions 2014-2016.", 
+  labs(title = "Species Range Extensions 2014-2016 (1+ extension required)", 
        x = "Longitude", 
        y = "Latitude", 
        color = "Year")
-# Arrow map colored by species the extension year
+# Arrow map colored by extension year
 ggplot() +
   geom_sf(data = world, fill = "gray90", color = "black") +
   geom_segment(data = blob_df, 
-               aes(x = longitude, y = average_hist_latitude, 
+               aes(x = longitude, y = hist_range_lat, 
                    xend = longitude, yend = latitude, color = factor(first_year)),
                arrow = arrow(length = unit(0.2, "cm")),
                size = 0.7) +
   coord_sf(xlim = c(-130, -110), ylim = c(30, 50), expand = FALSE) +
   theme_minimal() +
-  labs(title = "Species Range Extensions 2014-2016.", 
+  labs(title = "Species Range Extensions 2014-2016 (1+ extension required)", 
        x = "Longitude", 
        y = "Latitude", 
        color = "Year")
+# Arrow may colored by species and faceted by the extension year
+ggplot() +
+  geom_sf(data = world, fill = "gray90", color = "black") +
+  geom_segment(data = blob_df, 
+               aes(x = longitude, y = hist_range_lat, 
+                   xend = longitude, yend = latitude, 
+                   color = latin_name),   # Color remains by species
+               arrow = arrow(length = unit(0.2, "cm")),
+               size = 0.7) +
+  coord_sf(xlim = c(-130, -110), ylim = c(30, 50), expand = FALSE) +
+  theme_minimal() +
+  labs(title = "Species Range Extensions 2014-2016 (1+ extension required)", 
+       x = "Longitude", 
+       y = "Latitude", 
+       color = "Species") +                # Change legend title to 'Species'
+  facet_wrap(~ first_year)
 
 # Time series
 ggplot(blob_df, aes(x = year, y = latin_name)) +
@@ -287,79 +421,13 @@ ggplot(blob_df, aes(x = year, y = latin_name)) +
   ) +
   scale_x_continuous(limits = c(2013, 2017),
                      breaks = seq(2013, 2017, by = 1))
-
-# Histograms of el nino-related extensions -------------------------------------------------------
-
-# Dataframe of all extension events for species with X events combined with el nino phase data (start, peak, end)
-ext_year_phase <- left_join(ext_Xplus, year_phases, by = c("first_year" = "Year"))
-
-# Limit Dataframe to just the initial extensions
-lim_ext_year_phase <- ext_year_phase %>%
-  group_by(latin_name, group_id) %>% 
+# Blob Stats
+lim_first_ext <- ext_Xplus %>%
+  group_by(latin_name, group_id) %>%
   slice_min(year)
-
-# Number of extensions by ENSO phase classification
-ggplot(lim_ext_year_phase, aes(x = enso_phase)) +
-  geom_bar(fill = "steelblue") +
-  labs(
-    title = "Total Range Extensions by ENSO Phase",
-    x = "ENSO Phase Classification",
-    y = "Number of Extensions"
-  ) +
-  theme_minimal()
-# Faceted by species
-ggplot(lim_ext_year_phase, aes(x = enso_phase)) +
-  geom_bar(fill = "steelblue") +
-  facet_wrap(~ latin_name, scales = "free_y") +
-  labs(
-    title = "Range Extensions by ENSO Phase, per Species",
-    x = "ENSO Phase Classification",
-    y = "Extensions"
-  ) +
-  theme_minimal()
-
-# Tally number of extensions per species occurring in peak or end el nino phase
-ext_summary <- lim_ext_year_phase %>%
-  mutate(
-    is_peak_or_end = str_detect(enso_phase, "peak|end")
-  ) %>%
-  group_by(latin_name) %>%
-  summarise(
-    total_extensions = n(),
-    peak_or_end_extensions = sum(is_peak_or_end, na.rm = TRUE),
-    proportion_peak_or_end = peak_or_end_extensions / total_extensions
-  ) %>%
-  arrange(desc(proportion_peak_or_end))
-
-# Proportion of extensions in el nino by species
-ggplot(ext_summary, aes(x = reorder(latin_name, -proportion_peak_or_end), y = proportion_peak_or_end)) +
-  geom_col(fill = "skyblue4") +
-  coord_flip() +
-  labs(
-    title = "Proportion of Extensions in El Niño Peak/End Years",
-    x = "Species",
-    y = "Proportion of Extensions"
-  ) +
-  theme_minimal()
-
-# Proportion of extensions histogram
-ggplot(ext_summary, aes(x = proportion_peak_or_end)) +
-  geom_histogram(binwidth = 0.1, fill = "steelblue", color = "white", boundary = 0) +
-  geom_vline(xintercept = en_freq_month, linetype = "dashed", color = "red") +
-  scale_x_continuous(labels = scales::percent_format(accuracy = 1)) +
-  labs(
-    title = "Distribution of Species by Proportion of Extensions\nDuring El Niño Peak/End Years",
-    x = "Proportion of Extensions in El Niño Peak/End Years",
-    y = "Number of Species"
-  ) +
-  theme_minimal()
-
-# STATS
-## El Nino wo blob - el nino month resolution
-# Observed counts
-observed <- c(sum(ext_summary$peak_or_end_extensions), sum(ext_summary$total_extensions)-sum(ext_summary$peak_or_end_extensions))  # 35 El Niño, 65 Not El Niño
-# Expected proportions
-expected_proportions_month <- c(en_freq_month, (1-en_freq_month))
-# Run chi-squared goodness-of-fit test
-chisq.test(x = observed, p = expected_proportions_month)
-
+nrow(lim_first_ext) # number of extensions
+lim_first_ext_blob <- ext_Xplus %>%
+  group_by(latin_name, group_id) %>%
+  slice_min(year) %>%
+  filter(first_year>=2014 & first_year<=2016)
+nrow(lim_first_ext_blob) # number of blob extensions
