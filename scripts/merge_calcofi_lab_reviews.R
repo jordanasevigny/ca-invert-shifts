@@ -106,6 +106,28 @@ merged_df_histedge_lon <- merged_df_histedge %>%
     hist_range_lon = find_lon(hist_range_lat)) %>%
   ungroup()
 
+# Choose the northernmost observation for each species/year combo
+north_df <- merged_df_histedge_lon %>%
+  group_by(year, latin_name) %>%
+  slice_max(order_by = latitude, n = 1, with_ties = FALSE) %>%
+  ungroup() %>%
+  filter(!is.na(latin_name))
+
+# Make extension event ids
+ext_ids <- north_df %>%
+  arrange(latin_name, year) %>%
+  group_by(latin_name) %>%
+  mutate(
+    year_diff = year - lag(year, default = first(year)),
+    new_group = if_else(year_diff > 1, 1, 0),
+    group_id = cumsum(new_group)
+  ) %>%
+  ungroup() %>%
+  select(-c(year_diff, new_group)) %>%
+  group_by(latin_name, group_id) %>%
+  mutate(first_year = min(year)) %>%
+  ungroup()
+
 # Write dataframe
 write.csv(merged_df_histedge, "processed_data/merged_calcofi_lab_review.csv")
           
