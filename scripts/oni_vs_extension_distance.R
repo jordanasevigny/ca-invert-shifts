@@ -147,3 +147,11 @@ model <- lm(max_ext_dist ~ max_oni, data = max_ext_oni)
 
 # View the model summary
 summary(model)
+
+# Density Plot Low vs High ONI
+max_ext_oni %>%
+  mutate(oni_cat = ifelse(max_oni >= 0.5, "High ONI (>=0.5)", "Low ONI")) %>%
+  drop_na() %>%
+  ggplot(aes(x = max_ext_dist, fill = oni_cat)) +
+  geom_density(alpha = 0.4) +
+  labs(x = "Max Extension Distance (km)", y= "Density", fill = "ONI Category")
