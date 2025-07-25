@@ -156,6 +156,98 @@ northern_most_per_ext <- ext_Xplus %>%
   group_by(latin_name, group_id) %>%
   slice_max(latitude, with_ties = FALSE)
 
+###############################################################################################
+#emma: just to get curved arrows for northernmost range extensions
+ggplot() +
+  geom_sf(data = world, fill = "gray90", color = "black") +
+  geom_curve(data = northern_most_per_ext, 
+             aes(x = longitude, y = hist_range_lat, 
+                 xend = longitude, yend = latitude, color = latin_name),
+             curvature = -0.2,
+             arrow = arrow(length = unit(0.2, "cm"))) +
+  coord_sf(xlim = c(-150, -110), ylim = c(30, 60), expand = FALSE) +
+  theme_minimal() +
+  labs(title = "Species Range Extensions (3+ extensions required)", 
+       x = "Longitude", 
+       y = "Latitude", 
+       color = "Species")
+
+#emma: to include each observed range extension: sorry this is messy and not annotated to be easy to follow just yet but it works
+coastline <- world %>% filter(admin == "United States of America" | admin == "Canada" | admin == "Mexico") %>%
+  st_cast("MULTILINESTRING") %>%
+  st_cast("POINT") %>%
+  st_transform(4326) %>%
+  st_coordinates() %>%
+  as.data.frame() %>%
+  mutate(Yapx = round(Y, digits=3)) %>%
+  group_by(Yapx) %>%
+  mutate(westcoast = min(X)) %>%
+  select(westcoast, Yapx) %>%
+  filter(westcoast<(-115))
+
+ggplot() +
+  geom_sf(data = world, fill = "gray90", color = "black") +
+  geom_point(data = coastline, 
+             aes(x = westcoast, y = Yapx), color="red") +
+  coord_sf(xlim = c(-150, -110), ylim = c(30, 60), expand = FALSE) +
+  theme_minimal()
+
+keepcoast<-coastline %>% filter(Yapx>30)
+colnames(keepcoast)<-c("startlong", "Yapx")
+pin<-coastline %>% filter(Yapx<30) %>% mutate(start = -120) %>% select(start, Yapx)
+colnames(pin)<-c("startlong", "Yapx")
+newcoast<-rbind(keepcoast,pin)
+newcoast
+
+north_per_ext <- ext_Xplus %>% 
+  select(c(latin_name, latitude, longitude, first_year, hist_range_lat, group_id)) %>%
+  group_by(latin_name, group_id)
+head(north_per_ext)
+
+start_points<-north_per_ext %>% 
+  select(latin_name, hist_range_lat) %>%
+  mutate(latitude = hist_range_lat, first_year=as.integer(NA), group_id=as.integer(NA)) %>%
+  select(latin_name, latitude, first_year, hist_range_lat, group_id) %>%
+  unique()
+
+library("fuzzyjoin")
+west_startpts<-difference_join(start_points, newcoast, 
+                               by = c("latitude" = "Yapx"), 
+                               mode = "left",
+                               max_dist = Inf,
+                               distance_col = "diff") %>%
+  group_by(latin_name) %>%
+  slice_min(order_by = diff, n=1) %>%
+  select(startlong)
+
+start_points<-merge(start_points, west_startpts, by="latin_name") %>%
+  mutate(longitude = startlong) %>%
+  select(latin_name, latitude, longitude, first_year, hist_range_lat, group_id)
+
+north_per_ext<-unique(rbind(start_points, ungroup(north_per_ext)))
+north_per_ext<-north_per_ext %>%
+  ungroup() %>%
+  select(latin_name, latitude, longitude) %>%
+  unique() %>%
+  group_by(latin_name) %>%
+  mutate(prevlat = latitude, prevlong = longitude, lat = lead(latitude), long = lead(longitude)) %>%
+  drop_na(lat)
+
+ggplot() +
+  geom_sf(data = world, fill = "gray90", color = "black") +
+  geom_curve(data = north_per_ext,
+             aes(x = prevlong, y = prevlat, xend = long, yend = lat, color = latin_name),
+             curvature = -0.2,
+             arrow = arrow(length = unit(0.2, "cm"))
+  ) +
+  coord_sf(xlim = c(-150, -110), ylim = c(30, 60), expand = FALSE) +
+  theme_minimal() +
+  labs(title = "Species Range Extensions (3+ extensions required)", 
+       x = "Longitude", 
+       y = "Latitude", 
+       color = "Species")
+###############################################################################################
+
 # Plots of historical range edge vs extension position --------------------------------------------
 # Arrow map
 ggplot() +
