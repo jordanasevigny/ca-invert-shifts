@@ -73,7 +73,7 @@ year_phases <- event_year_labels %>%
 
 # Averages oni by year from complete enso dataset (without filtering for el nino)
 oni_ave_by_yr <- enso_df %>%
-  select(c(Year, ONI)) %>%
+  dplyr::select(Year, ONI) %>%
   group_by(Year) %>%
   summarise(oni_ave = mean(ONI, na.rm = TRUE))
 
@@ -135,7 +135,7 @@ max_ext_oni <- ext_distance_oni %>%
   mutate(max_oni = max(oni_year)) %>%
   mutate(max_ext_dist = max(distance_km)) %>%
   ungroup() %>%
-  select(c(latin_name, group_id, max_ext_dist, max_oni)) %>%
+  dplyr::select(latin_name, group_id, max_ext_dist, max_oni) %>%
   distinct()
 
 ggplot(max_ext_oni, aes(max_oni, max_ext_dist)) +
@@ -182,7 +182,7 @@ max_ext_oni <- ext_distance_oni %>%
   mutate(max_oni = max(oni_adj_yr)) %>%
   mutate(max_ext_dist = max(distance_km)) %>%
   ungroup() %>%
-  select(c(latin_name, group_id, max_ext_dist, max_oni)) %>%
+  dplyr::select(latin_name, group_id, max_ext_dist, max_oni) %>%
   distinct()
 
 ggplot(max_ext_oni, aes(max_oni, max_ext_dist)) +
