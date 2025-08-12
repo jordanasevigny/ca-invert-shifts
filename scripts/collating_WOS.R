@@ -1,3 +1,5 @@
+# This script pulls all the web of science results into one dataframe (each page of results had to be downloaded separately), deduplicates,  and adds DOIs
+
 library(readxl)
 library(dplyr)
 library(purrr)
@@ -11,7 +13,7 @@ directory <- "data/WOS_search29"
 # Get all Excel file paths
 files <- list.files(directory, pattern = "\\.xls[x]?$", full.names = TRUE)
 
-# Read and combine all files row-wise
+# Read and combine all files row-wise (files are 5-16 because I was trialling the download process the first 5 times to see how many I could download at a time)
 data_combined <- files %>%
   map_df(~ read_excel(.x, col_types = "text"))  # Reads each file and binds them row-wise
 

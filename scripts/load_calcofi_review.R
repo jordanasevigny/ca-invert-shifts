@@ -1,15 +1,16 @@
 # Load in CalCOFI review data and rename columns
 # By: Jordana Sevigny, jordana.sevigny@gmail.com
 # Date created: 07/02/2025
-
+rm(list = ls())
 library(readxl)
 library(tidyr)
 library(stringr)
 library(purrr)
 library(dplyr)
+library(grateful)
+cite_packages(out.dir = ".")            # save report to working directory
 
 # load in data
-# poor naming scheme but the file with the similar name but excel has two sheets with the other having the original excerpt
 ca <- read_excel("data/CalCOFI Coding Form (Responses).xlsx")
 
 
@@ -18,7 +19,7 @@ metadata_cols <- c("Timestamp", "Email Address", "Editor Name", "Excerpt ID", "S
 
 # Extract question columns (e.g., 1.1 ..., 2.1 ..., etc.)
 question_blocks <- ca %>%
-  select(-all_of(metadata_cols)) %>%
+  dplyr::select(-all_of(metadata_cols)) %>%
   names() %>%
   str_extract("^\\d+(?=\\.)") %>%
   unique()

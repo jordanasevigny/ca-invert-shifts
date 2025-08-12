@@ -10,7 +10,8 @@ library(dplyr)
 library(sf)
 library(rnaturalearth)
 library(geosphere)
-
+library(grateful)
+cite_packages(out.dir = ".")            # save report to working directory
 
 # Load review data
 df <- read.csv("data/Screening & Review TRacking - Full-text Screening.csv")
@@ -22,7 +23,7 @@ coast <- ne_download(scale = 10, type = "coastline", category = "physical", retu
 coast_na <- st_crop(coast, xmin = -170, xmax = -50, ymin = 5, ymax = 80)
 
 
-# Define funciton to find longitude given latitude
+# Define function to find longitude given latitude
 find_lon <- function(given_lat) {
   # Create a line at given latitude
   lon_range <- seq(-180, -114, by = 0.1)
