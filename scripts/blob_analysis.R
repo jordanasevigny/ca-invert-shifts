@@ -82,8 +82,8 @@ extension_counts <- extension_counts %>%
   ))
 
 ggplot(extension_counts, aes(x = year, y = n_extensions, fill = period)) +
-  geom_col() +
-  scale_fill_manual(values = c("non_blob" = "gray70", "blob" = "firebrick")) +
+  geom_col(color = "black") +  # Adds black outline to all bars
+  scale_fill_manual(values = c("non_blob" = "gray70", "blob" = "white")) +
   theme_minimal()
 
 mean(extension_counts$n_extensions)
@@ -106,9 +106,9 @@ scale_factor <- 3  # Adjust this based on your data
 ggplot() +
   geom_col(
     data = extension_counts,
-    aes(x = Date, y = n_extensions, fill = period)
+    aes(x = Date, y = n_extensions, fill = period), color = "black"
   ) +
-  scale_fill_manual(values = c("non_blob" = "gray70", "blob" = "firebrick")) +
+  scale_fill_manual(values = c("non_blob" = "gray70", "blob" = "white")) +
   
   # Plot rescaled dSST3.4 (to align with n_extensions)
   geom_line(
@@ -128,7 +128,7 @@ ggplot() +
   ) +
   
   scale_x_date(
-    limits = as.Date(c("1950-01-01", "2020-01-01")),
+    limits = as.Date(c("1995-01-01", "2020-01-01")),
     date_breaks = "3 years",
     date_labels = "%Y"
   ) +

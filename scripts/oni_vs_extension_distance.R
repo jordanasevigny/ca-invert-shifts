@@ -83,7 +83,7 @@ oni_ave_by_yr <- enso_df %>%
 # Identify the species with X+ events and filter for those species
 species_with_group2plus <- df %>%
   group_by(latin_name) %>%
-  filter(any(group_id >= 2)) %>% # 2 would be three events (0, 1, 2)
+  filter(any(group_id >= 0)) %>% # 2 would be three events (0, 1, 2)
   pull(latin_name) %>%
   unique()
 
@@ -213,3 +213,21 @@ oni_test_data <- max_ext_oni %>%
 
 # Run t-test
 t.test(max_ext_dist ~ oni_cat, data = oni_test_data)
+
+
+
+# Max ONI vs extension count --------------------------------------------------
+ggplot(max_ext_oni, aes(x = max_oni)) + 
+  geom_histogram(binwidth = 0.5, fill = "gray70", color = "black") +
+  labs(x = "Max ONI of Extension Event", y = "Number of Extension Events", title = "Histogram of Extension Events by Max ONI (1+ Extension Events Required)") +
+  theme_minimal()
+
+# Test for skewness
+# Load moments package
+install.packages("moments")
+library(moments)
+# Test skewness
+skewness(na.omit(max_ext_oni$max_oni))  # Positive = right-skewed (toward high ONI)
+# Test significance of skewness (D'Agostino test)
+agostino.test(na.omit(max_ext_oni$max_oni))  # From 'moments' package
+shapiro.test(na.omit(max_ext_oni$max_oni))
