@@ -60,7 +60,7 @@ df_t <- df %>%
       }
   ) %>%
   ungroup()
-df_t <- select(df_t, -lon_for_plot)
+df_t <- dplyr::select(df_t, -lon_for_plot)
 df_t <- rename(df_t, lon_for_plot = lon_for_plot2)
 
 # Rename columns
@@ -68,6 +68,7 @@ colnames(df_t)
 
 colnames(df_t) <- c(
   "paper_id",
+  "forward_backward",
   "screener_initials",
   "include_exclude",
   "inconclusive_note",

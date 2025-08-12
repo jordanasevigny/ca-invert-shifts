@@ -44,7 +44,7 @@ merged_df <- bind_rows(ca_rev_inc_common, lab_rev_inc_common)
 
 # Drop Include Exclude column
 merged_df <- merged_df %>%
-  select(-include_exclude)
+  dplyr::select(-include_exclude)
 
 # Make latin names uppercase
 merged_df$latin_name <- gsub("^(\\w)", "\\U\\1", merged_df$latin_name, perl = TRUE)
@@ -123,7 +123,7 @@ ext_ids <- north_df %>%
     group_id = cumsum(new_group)
   ) %>%
   ungroup() %>%
-  select(-c(year_diff, new_group)) %>%
+  dplyr::select(-c(year_diff, new_group)) %>%
   group_by(latin_name, group_id) %>%
   mutate(first_year = min(year)) %>%
   ungroup()
