@@ -81,7 +81,7 @@ oni_ave_by_yr <- enso_df %>%
 # Prep review data for analysis --------------------------------------------
 
 # Identify the species with X+ events and filter for those species
-species_with_group2plus <- df %>%
+species_with_groupXplus <- df %>%
   group_by(latin_name) %>%
   filter(any(group_id >= 0)) %>% # 2 would be three events (0, 1, 2)
   pull(latin_name) %>%
@@ -89,7 +89,7 @@ species_with_group2plus <- df %>%
 
 # Filter full dataset for those species
 ext_Xplus <- df %>%
-  filter(latin_name %in% species_with_group2plus)
+  filter(latin_name %in% species_with_groupXplus)
 # unique(ext_Xplus$latin_name)
 # library(clipr)
 # write_clip(unique(ext_Xplus$latin_name))
