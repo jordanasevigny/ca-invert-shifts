@@ -20,6 +20,9 @@ library(zoo)
 library(gganimate)
 library(forcats)
 
+# #2B5275FF = la nina ; #D16647FF = el nino ; gray60 = enso outline / oni ; black at alpha=0.6 = extension event tallies ; #A69F55FF = extension stats ; #FFFBDDFF = blob (white fill)
+# theme_minimal(base_size = 16) for all ggplot
+
 # Load review data
 df <- read.csv("processed_data/merged_calcofi_lab_review.csv")
 
@@ -63,13 +66,13 @@ dataset_c <- tibble(
 )
 
 ggplot(dataset_c, aes(x = period, y = n_extensions)) +
-  geom_col(fill = "steelblue") +
+  geom_col(fill = "black", alpha=0.6) +
   labs(
     x = "Time Period",
     y = "Number of Extension Events",
     title = "Species Range Extension Events by Time Period"
   ) +
-  theme_minimal()
+  theme_minimal(base_size = 16)
 
 
 
@@ -106,9 +109,10 @@ scale_factor <- 3  # Adjust this based on your data
 ggplot() +
   geom_col(
     data = extension_counts,
-    aes(x = Date, y = n_extensions, fill = period), color = "black"
+    aes(x = Date, y = n_extensions, fill = period), color = "gray60", alpha=0.6
   ) +
-  scale_fill_manual(values = c("non_blob" = "gray70", "blob" = "white")) +
+  scale_fill_manual(values = c("non_blob" = "black", "blob" = "white"), labels = c("blob" = "Blob",
+                                                                                   "non_blob" = "Not Blob")) +
   
   # Plot rescaled dSST3.4 (to align with n_extensions)
   geom_line(
@@ -117,6 +121,7 @@ ggplot() +
     linetype = "twodash",
     color = "black"
   ) +
+  
   
   # Add the secondary axis
   scale_y_continuous(
@@ -132,5 +137,9 @@ ggplot() +
     date_breaks = "3 years",
     date_labels = "%Y"
   ) +
-  
-  theme_minimal()
+  labs(fill=" ", title = "Number of Extensions and ONI Over Time - Highlighting the Blob (1+ extensions required)") +
+  theme_minimal(base_size = 16)
+
+sum(extension_counts$n_extensions[extension_counts$period == "blob"]) # num blob extensions
+sum(extension_counts$n_extensions) # num total extensions
+sum(extension_counts$n_extensions[extension_counts$period == "blob"]) / sum(extension_counts$n_extensions) # fraction extensions during blob

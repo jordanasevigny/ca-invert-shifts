@@ -2,6 +2,7 @@
 # By: Jordana Sevigny, jordana.sevigny@gmail.com
 # Date created: 07/24/2025
 
+rm(list = ls())
 # Load libraries
 library("ggplot2")
 theme_set(theme_bw())
@@ -20,9 +21,12 @@ library(gganimate)
 library(forcats)
 library(geosphere)
 library(ggh4x)
+library(paletteer)
+paletteer_d("lisa::Pierre_AugusteRenoir")
 
-#install.packages("gifski")
-#install.packages("av")  
+# Color palette
+# #2B5275FF = la nina ; #D16647FF = el nino ; gray60 = enso outline / oni ; black at alpha=0.6 = extension event tallies ; #A69F55FF = free variable (green) ; #FFFBDDFF = blob (white fill)
+# theme_minimal(base_size = 16) for all ggplot
 
 # Load review data
 df <- read.csv("processed_data/merged_calcofi_lab_review.csv")
@@ -67,12 +71,12 @@ ggplot() +
   # Ribbon for ONI > 0 (red)
   geom_ribbon(data = enso_df,
               aes(x = Date, ymin = 0, ymax = ifelse(ONI>0, ONI * scale_factor, 0)),
-              fill = "red", alpha = 0.2) +
+              fill = "#D16647FF", alpha = 0.5) +
   
   # Ribbon for ONI < 0 (blue)
   geom_ribbon(data = enso_df,
               aes(x = Date, ymin = ifelse(ONI < 0, ONI * scale_factor, 0), ymax = 0),
-              fill = "blue", alpha = 0.2) +
+              fill = "#2B5275FF", alpha = 0.5) +
   
   # ONI line
   geom_line(data = enso_df,
@@ -107,15 +111,15 @@ ggplot() +
   
   scale_x_date(
     limits = as.Date(c("1953-01-01", "2020-06-01")),
-    date_breaks = "2 years",
+    date_breaks = "3 years",
     date_labels = "%Y"
   ) +
   
-  theme_minimal() +
+  theme_minimal(base_size = 16) +
   labs(x = "Year", title = "Species Range Extensions vs. ONI (1+ extensions required)") +
   theme(
     legend.position = "right",
     axis.title.y.right = element_blank()
   )
-sum(extension_counts$n_extensions)
-length(unique(first_ext$latin_name))
+sum(extension_counts$n_extensions) # total number of extension events
+length(unique(first_ext$latin_name)) # Number of species with extension events

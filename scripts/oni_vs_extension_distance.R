@@ -19,9 +19,10 @@ library(zoo)
 library(gganimate)
 library(forcats)
 library(geosphere)
+library(moments)
 
-#install.packages("gifski")
-#install.packages("av")  
+# #2B5275FF = la nina ; #D16647FF = el nino ; gray60 = enso outline / oni ; black at alpha=0.6 = extension event tallies ; #A69F55FF = extension stats ; #FFFBDDFF = blob (white fill)
+# theme_minimal(base_size = 16) for all ggplot
 
 # Load review data
 df <- read.csv("processed_data/merged_calcofi_lab_review.csv")
@@ -138,11 +139,12 @@ max_ext_oni <- ext_distance_oni %>%
   dplyr::select(latin_name, group_id, max_ext_dist, max_oni) %>%
   distinct()
 
+# no ONI pre 1950 (drops any extensions pre 1950)
 ggplot(max_ext_oni, aes(max_oni, max_ext_dist)) +
-  geom_point() +
-  geom_smooth(method = "lm", se = TRUE) +  # se = FALSE to hide confidence interval
-  labs(x = "Max ONI of Extension Event", y = "Max Extension Distance (km) per Extension Event", title = "Max Extension vs. Max ONI by Extension Event") +
-  theme_minimal()
+  geom_point(color="black") +
+  geom_smooth(method = "lm", se = TRUE, color="#A69F55FF", fill="#A69F55FF") +  # se = FALSE to hide confidence interval
+  labs(x = "Max ONI of Extension Event", y = "Max Extension Event Distance (km)", title = "Maximum Extension Distance vs. Maximum ONI\nNo Correction for First Year = End El Niño\n(1+ extensions required)") +
+  theme_minimal(base_size = 16)
 
 # Fit the linear model
 model <- lm(max_ext_dist ~ max_oni, data = max_ext_oni)
@@ -155,8 +157,13 @@ max_ext_oni %>%
   mutate(oni_cat = ifelse(max_oni >= 0.5, "High ONI (>=0.5)", "Low ONI")) %>%
   drop_na() %>%
   ggplot(aes(x = max_ext_dist, fill = oni_cat)) +
-  geom_density(alpha = 0.4) +
-  labs(x = "Max Extension Distance (km)", y= "Density", fill = "ONI Category")
+  geom_density(alpha = 0.5) +
+  labs(x = "Max Extension Distance (km)", y= "Density", fill = "ONI Level", title="Density of Extension Distances by ONI Level\nNo Correction for First Year = End El Niño\n(1+ extensions required)") +
+  scale_fill_manual(
+    values = c("High ONI (>=0.5)" = "#D16647FF",   # red
+               "Low ONI" = "#2B5275FF")           # blue
+  ) +
+  theme_minimal(base_size = 16)
 
 # Create category and drop NA
 oni_test_data <- max_ext_oni %>%
@@ -185,11 +192,12 @@ max_ext_oni <- ext_distance_oni %>%
   dplyr::select(latin_name, group_id, max_ext_dist, max_oni) %>%
   distinct()
 
+# no ONI pre 1950 (drops any extensions pre 1950)
 ggplot(max_ext_oni, aes(max_oni, max_ext_dist)) +
-  geom_point() +
-  geom_smooth(method = "lm", se = TRUE) +  # se = FALSE to hide confidence interval
-  labs(x = "Max ONI of Extension Event", y = "Max Extension Distance (km) per Extension Event", title = "Max Extension vs. Max ONI by Extension Event With End Years Shifted to One Year Prior") +
-  theme_minimal()
+  geom_point(color="black") +
+  geom_smooth(method = "lm", se = TRUE, color="#A69F55FF", fill="#A69F55FF") +  # se = FALSE to hide confidence interval
+  labs(x = "Max ONI of Extension Event", y = "Max Extension Event Distance (km)", title = "Maximum Extension Distance vs. Maximum ONI (1+ extensions required)") +
+  theme_minimal(base_size = 16)
 
 # Fit the linear model
 model <- lm(max_ext_dist ~ max_oni, data = max_ext_oni)
@@ -203,7 +211,12 @@ max_ext_oni %>%
   drop_na() %>%
   ggplot(aes(x = max_ext_dist, fill = oni_cat)) +
   geom_density(alpha = 0.4) +
-  labs(x = "Max Extension Distance (km)", y= "Density", fill = "ONI Category")
+  labs(x = "Max Extension Distance (km)", y= "Density", fill = "ONI Category", title="Density of Extension Distances by ONI Level (1+ extensions required)") +
+  scale_fill_manual(
+    values = c("High ONI (>=0.5)" = "#D16647FF",   # red
+               "Low ONI" = "#2B5275FF")           # blue
+  ) +
+  theme_minimal(base_size = 16)
 
 
 # Create category and drop NA
@@ -218,14 +231,11 @@ t.test(max_ext_dist ~ oni_cat, data = oni_test_data)
 
 # Max ONI vs extension count --------------------------------------------------
 ggplot(max_ext_oni, aes(x = max_oni)) + 
-  geom_histogram(binwidth = 0.5, fill = "gray70", color = "black") +
-  labs(x = "Max ONI of Extension Event", y = "Number of Extension Events", title = "Histogram of Extension Events by Max ONI (1+ Extension Events Required)") +
-  theme_minimal()
+  geom_histogram(binwidth = 0.25, fill = "black", color = "black", alpha=0.6) +
+  labs(x = "Max ONI of Extension Event", y = "Number of Extension Events", title = "Histogram of Extension Events by Max ONI (1+ extensions required)") +
+  theme_minimal(base_size = 16)
 
 # Test for skewness
-# Load moments package
-install.packages("moments")
-library(moments)
 # Test skewness
 skewness(na.omit(max_ext_oni$max_oni))  # Positive = right-skewed (toward high ONI)
 # Test significance of skewness (D'Agostino test)

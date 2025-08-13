@@ -2,8 +2,11 @@
 # By: Jordana Sevigny, jordana.sevigny@gmail.com
 # Date created: 07/02/2025
 
+rm(list = ls())
 # Library
 library(dplyr)
+library(rnaturalearth)
+library(sf)
 
 # Load data
 ca_rev <- read.csv("processed_data/calcofi_review_data_clean.csv")
@@ -113,8 +116,12 @@ north_df <- merged_df_histedge_lon %>%
   ungroup() %>%
   filter(!is.na(latin_name))
 
+# Filter to make sure observations are further north that hisrotical range edge
+north_df_filt <- north_df %>%
+  filter(latitude > hist_range_lat)
+
 # Make extension event ids
-ext_ids <- north_df %>%
+ext_ids <- north_df_filt %>%
   arrange(latin_name, year) %>%
   group_by(latin_name) %>%
   mutate(
@@ -127,6 +134,8 @@ ext_ids <- north_df %>%
   group_by(latin_name, group_id) %>%
   mutate(first_year = min(year)) %>%
   ungroup()
+
+
 
 # Write dataframe
 write.csv(ext_ids, "processed_data/merged_calcofi_lab_review.csv")
