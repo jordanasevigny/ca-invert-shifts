@@ -84,7 +84,7 @@ oni_ave_by_yr <- enso_df %>%
 # Identify the species with X+ events and filter for those species
 species_with_groupXplus <- df %>%
   group_by(latin_name) %>%
-  filter(any(group_id >= 0)) %>% # 2 would be three events (0, 1, 2)
+  filter(any(group_id >= 2)) %>% # 2 would be three events (0, 1, 2)
   pull(latin_name) %>%
   unique()
 
@@ -125,9 +125,6 @@ ext_distance_oni <- ext_distance %>%
   left_join(oni_ave_by_yr, by = c("first_year" = "Year")) %>%
   rename(oni_first_year = oni_ave)
 
-# # Now choose which ONI value to use based on whether `enso phase` is NA
-# ext_distance <- ext_distance_oni %>%
-#   mutate(oni_final = if_else(!is.na(enso_phase), oni_first_year, oni_year))
 
 #===================================
 # Max ONI - Max extension distance per event
@@ -229,15 +226,151 @@ t.test(max_ext_dist ~ oni_cat, data = oni_test_data)
 
 
 
-# Max ONI vs extension count --------------------------------------------------
-ggplot(max_ext_oni, aes(x = max_oni)) + 
-  geom_histogram(binwidth = 0.25, fill = "black", color = "black", alpha=0.6) +
-  labs(x = "Max ONI of Extension Event", y = "Number of Extension Events", title = "Histogram of Extension Events by Max ONI (1+ extensions required)") +
+#===================================
+# Max ONI (all shifted to year prior) - Max extension distance per event
+ext_distance_oni <- ext_distance %>%
+  mutate(year_prior = year-1) %>%
+  left_join(oni_ave_by_yr, by = c("year" = "Year")) %>%
+  rename(oni_year = oni_ave) %>%
+  left_join(oni_ave_by_yr, by = c("first_year" = "Year")) %>%
+  rename(oni_first_year = oni_ave) %>%
+  left_join(oni_ave_by_yr, by = c("year_prior" = "Year")) %>%
+  rename(oni_prior_yr = oni_ave)
+
+max_ext_oni_yr_prior <- ext_distance_oni %>%
+  group_by(latin_name, group_id) %>%
+  mutate(max_oni = max(oni_prior_yr)) %>%
+  mutate(max_ext_dist = max(distance_km)) %>%
+  ungroup() %>%
+  dplyr::select(latin_name, group_id, max_ext_dist, max_oni) %>%
+  distinct()
+
+# no ONI pre 1950 (drops any extensions pre 1950)
+ggplot(max_ext_oni_yr_prior, aes(max_oni, max_ext_dist)) +
+  geom_point(color="black") +
+  geom_smooth(method = "lm", se = TRUE, color="#A69F55FF", fill="#A69F55FF") +  # se = FALSE to hide confidence interval
+  labs(x = "Max ONI of Extension Event", y = "Max Extension Event Distance (km)", title = "Maximum Extension Distance vs. Maximum ONI\nONI Shifted Back One Year\n(3+ extensions required)") +
   theme_minimal(base_size = 16)
 
-# Test for skewness
-# Test skewness
-skewness(na.omit(max_ext_oni$max_oni))  # Positive = right-skewed (toward high ONI)
-# Test significance of skewness (D'Agostino test)
-agostino.test(na.omit(max_ext_oni$max_oni))  # From 'moments' package
-shapiro.test(na.omit(max_ext_oni$max_oni))
+# Fit the linear model
+model <- lm(max_ext_dist ~ max_oni, data = max_ext_oni_yr_prior)
+
+# View the model summary
+summary(model)
+
+# Density Plot Low vs High ONI
+max_ext_oni_yr_prior %>%
+  mutate(oni_cat = ifelse(max_oni >= 0.5, "High ONI (>=0.5)", "Low ONI")) %>%
+  drop_na() %>%
+  ggplot(aes(x = max_ext_dist, fill = oni_cat)) +
+  geom_density(alpha = 0.6) +
+  labs(x = "Max Extension Distance (km)", y= "Density", fill = "ONI Level", title="Density of Extension Distances by ONI Level\nONI Shifted Back One Year\n(3+ extensions required)") +
+  scale_fill_manual(
+    values = c("High ONI (>=0.5)" = "#7A2314",   # red
+               "Low ONI" = "#5E7CA3")           # blue
+  ) +
+  theme_minimal(base_size = 16)
+
+# Create category and drop NA
+oni_test_data <- max_ext_oni_yr_prior %>%
+  mutate(oni_cat = ifelse(max_oni >= 0.5, "High ONI (>=0.5)", "Low ONI")) %>%
+  drop_na(max_ext_dist, oni_cat)
+
+# Run t-test
+t.test(max_ext_dist ~ oni_cat, data = oni_test_data)
+
+
+
+# Max ONI (year prior) vs extension count --------------------------------------------------
+# ggplot(max_ext_oni_yr_prior, aes(x = max_oni)) + 
+#   geom_histogram(binwidth = 0.25, fill = "black", color = "black", alpha=0.6) +
+#   labs(x = "Max ONI of Extension Event", y = "Number of Extension Events", title = "Histogram of Extension Events by Max ONI (3+ extensions required)") +
+#   theme_minimal(base_size = 16)
+# 
+# ggplot(max_ext_oni_yr_prior, aes(x = max_oni)) +
+#   stat_bin(binwidth = 0.25, geom = "point", aes(y = after_stat(count))) +
+#   labs(x = "Max ONI of Extension Event", y = "Number of Extension Events",
+#        title = "Counts by Max ONI (scatter of binned counts)") +
+#   theme_minimal(base_size = 16)
+# 
+# # Test for skewness
+# # Test skewness
+# skewness(na.omit(max_ext_oni_yr_prior$max_oni))  # Positive = right-skewed (toward high ONI)
+# # Test significance of skewness (D'Agostino test)
+# agostino.test(na.omit(max_ext_oni_yr_prior$max_oni))  # From 'moments' package
+# shapiro.test(na.omit(max_ext_oni_yr_prior$max_oni))
+
+
+# Linear regression
+oni_freq <- max_ext_oni_yr_prior %>%
+  count(max_oni) %>%
+  drop_na()
+ggplot(oni_freq, aes(x=max_oni, y=n)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = TRUE, color="#A69F55FF", fill="#A69F55FF") + 
+  labs(x = "Max ONI of Extension Event", y = "Number of Extension Events", title = "Number Extension Events vs. Maximum ONI\nONI Shifted Back One Year\n(3+ extensions required)") +
+  theme_minimal(base_size = 16)
+
+# Fit the linear model
+model <- lm(n ~ max_oni, data = oni_freq)
+# View the model summary
+summary(model)
+
+
+# Do more extensions occur during el nino than expected by chance? --------------------------------------------------
+# MAKE SURE THIS IS 1+ EXTENSIONS
+
+# El Nino frequency
+## Monthly res
+en_count <- enso_df %>%
+  filter(str_detect(phase, "Warm")) %>%
+  tally()
+en_freq_month <- en_count$n / nrow(enso_df)
+
+ext_summary <- ext_year_phase %>%
+  filter(year == first_year) %>%
+  mutate(
+    is_peak_or_end = str_detect(enso_phase, "peak|end")
+  ) %>%
+  group_by(latin_name) %>%
+  summarise(
+    total_extensions = n(),
+    peak_or_end_extensions = sum(is_peak_or_end, na.rm = TRUE),
+    proportion_peak_or_end = peak_or_end_extensions / total_extensions
+  ) %>%
+  arrange(desc(proportion_peak_or_end))
+
+# Proportion of extensions histogram
+ggplot(ext_summary, aes(x = proportion_peak_or_end)) +
+  geom_histogram(binwidth = 0.1, fill = "black", color = "black", boundary = 0, alpha=0.6) +
+  geom_vline(xintercept = en_freq_month, linetype = "dashed", color = "#D16647FF", size=0.8) +
+  scale_x_continuous(labels = scales::percent_format(accuracy = 1)) +
+  labs(
+    title = "Distribution of Species by Proportion of Extensions During El Niño Peak/End Years\n(El Niño frequency in red dotted line; 3+ extensions required)",
+    x = "Proportion of Extensions in El Niño Peak/End Years",
+    y = "Number of Species"
+  ) +
+  theme_minimal()
+
+ggplot(ext_summary, aes(x = proportion_peak_or_end)) +
+  geom_dotplot() +
+  geom_vline(xintercept = en_freq_month, linetype = "dashed", color = "#D16647FF", size=0.8) +
+  labs(
+    title = "Number of Species vs Proportion of Extensions During El Niño\n(El Niño frequency in red dotted line; 3+ extensions required)",
+    x = "Proportion of Extensions in El Niño Peak/End Years",
+    y = "Number of Species"
+  ) +
+  theme_minimal() +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y  = element_blank())
+  
+
+# STATS
+## El Nino wo blob - el nino month resolution
+# Observed counts
+observed <- c(sum(ext_summary$peak_or_end_extensions), sum(ext_summary$total_extensions)-sum(ext_summary$peak_or_end_extensions))  # 35 El Niño, 65 Not El Niño
+# Expected proportions
+expected_proportions_month <- c(en_freq_month, (1-en_freq_month))
+# Run chi-squared goodness-of-fit test
+chisq.test(x = observed, p = expected_proportions_month)
+

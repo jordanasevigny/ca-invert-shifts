@@ -71,22 +71,22 @@ ggplot() +
   # Ribbon for ONI > 0 (red)
   geom_ribbon(data = enso_df,
               aes(x = Date, ymin = 0, ymax = ifelse(ONI>0, ONI * scale_factor, 0)),
-              fill = "#D16647FF", alpha = 0.5) +
+              fill = "#D16647FF", alpha = 0.4) +
   
   # Ribbon for ONI < 0 (blue)
   geom_ribbon(data = enso_df,
               aes(x = Date, ymin = ifelse(ONI < 0, ONI * scale_factor, 0), ymax = 0),
-              fill = "#2B5275FF", alpha = 0.5) +
+              fill = "#1A3146", alpha = 0.4) +
   
   # ONI line
-  geom_line(data = enso_df,
-            aes(x = Date, y = ONI * scale_factor),
-            color = "gray60", size = 0.5) +
+  # geom_line(data = enso_df,
+  #           aes(x = Date, y = ONI * scale_factor),
+  #           color = "gray60", size = 0.5) +
   
   # Extensions as dots at y = 0, with size by count
   geom_point(data = extension_counts,
              aes(x = Date, y = 0, size = n_extensions),
-             color = "black", alpha = 0.6) +
+             color = "black", alpha = 0.3) +
   
   # Horizontal zero line
   geom_hline(yintercept = 0, color = "gray60", linetype = "dashed") +
@@ -123,3 +123,5 @@ ggplot() +
   )
 sum(extension_counts$n_extensions) # total number of extension events
 length(unique(first_ext$latin_name)) # Number of species with extension events
+
+
