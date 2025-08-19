@@ -84,7 +84,7 @@ oni_ave_by_yr <- enso_df %>%
 # Identify the species with X+ events and filter for those species
 species_with_groupXplus <- df %>%
   group_by(latin_name) %>%
-  filter(any(group_id >= 2)) %>% # 2 would be three events (0, 1, 2)
+  filter(any(group_id >= 0)) %>% # 2 would be three events (0, 1, 2)
   pull(latin_name) %>%
   unique()
 
@@ -117,6 +117,16 @@ ext_distance <- ext_year_phase %>%
   rowwise() %>%
   mutate(distance_km = get_distance_km(hist_range_lat, hist_range_lon, latitude, longitude)) %>%
   ungroup()
+
+# # Average (or sd) max extension distance 1) by max per event 2) by all observations
+# ext_distance %>%
+#   group_by(latin_name, group_id) %>%
+#   summarise(max_dist = max(distance_km, na.rm = TRUE)) %>%
+#   pull(max_dist) %>%
+#   mean(na.rm = TRUE) # can switch with sd if desired
+# ext_distance %>%
+#   pull(distance_km) %>%
+#   mean(na.rm = TRUE) # can switch with sd if desired
 
 # Join both year and first_year ONI values to main_df
 ext_distance_oni <- ext_distance %>%
@@ -373,7 +383,7 @@ ggplot(ext_summary, aes(x = proportion_peak_or_end)) +
        title = "ECDF of El Niño-associated extensions") +
   theme_classic()
 
-install.packages("ggbeeswarm")
+
 library(ggbeeswarm)
 ggplot(ext_summary, aes(x = proportion_peak_or_end)) +
   geom_quasirandom(aes(y = 0), width = 0.25, alpha = 0.9) +

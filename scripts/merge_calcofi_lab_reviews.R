@@ -130,6 +130,9 @@ ext_ids <- north_df_filt %>%
   mutate(first_year = min(year)) %>%
   ungroup()
 
+# nrow(ext_ids %>%
+#   group_by(latin_name) %>%
+#   distinct(group_id))
 
 
 # Write dataframe
