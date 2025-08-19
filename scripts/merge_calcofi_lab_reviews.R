@@ -52,11 +52,6 @@ merged_df <- merged_df %>%
 # Make latin names uppercase
 merged_df$latin_name <- gsub("^(\\w)", "\\U\\1", merged_df$latin_name, perl = TRUE)
 
-# # Find average latitude for historical range edge THIS DOESN'T WORK YET
-# merged_df_histave <- merged_df %>%
-#   group_by(latin_name) %>%
-#   mutate(average_hist_latitude = mean(historical_northern_latitude, na.rm=TRUE))
-
 # Make species / genus into one category if likely shared (e.g. pyrosomes, velella)
 unique(merged_df$latin_name)
 merged_df$latin_name_original <- merged_df$latin_name

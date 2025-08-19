@@ -65,6 +65,7 @@ ggplot() +
        y = "Latitude", 
        color = "Species")
 
+
 # Zoom out
 ggplot() +
   geom_sf(data = world, fill = "gray90", color = "black") +
@@ -81,3 +82,69 @@ ggplot() +
        x = "Longitude", 
        y = "Latitude", 
        color = "Species")
+
+
+
+
+set.seed(47) # 47 is pretty good
+eps <- 1  # degrees; tune smaller/larger as needed
+palette_18 <- c(
+  "#E41A1C", "#D6EEFF", "#3E442B", "#984EA3", "#AF3800", "#FFFF33",
+  "#A65628", "#F781BF", "#999999", "#00FFE7", "#FE621D", "#8DA0CB",
+  "#E78AC3", "#A6D854", "#FFD92F", "#E5C494", "#C6D8D3", "#1B9E77"
+)
+palette_18_alt <- c(
+  "#1F77B4", "#FF7F0E", "#2CA02C", "#D62728", "#9467BD", "#E5C494",
+  "#E377C2", "#7F7F7F", "#BCBD22", "#17BECF", "#393B79", "#637939",
+  "#8C6D31", "#843C39", "#7B4173", "#FFD92F", "#E6550D", "#A6D854"
+)
+
+# need to change yellow, orange, turquoise and pink duplicates
+
+furthest_noth_j <- furthest_noth %>%
+  mutate(
+    x0 = hist_range_lon + runif(n(), -eps, eps),
+    y0 = hist_range_lat + runif(n(), 0, 0),
+    x1 = longitude      + runif(n(), -eps, eps),
+    y1 = latitude       + runif(n(), -0, 0)
+  ) %>%
+  mutate(len = sqrt((x1-x0)^2 + (y1-y0)^2)) %>%
+  arrange(desc(len))
+
+ggplot() +
+  geom_sf(data = world, fill = "gray90", color = "gray80") +
+  geom_sf(data = states, fill = NA, color = "gray80", size = 0.3) +
+  geom_curve(
+    data = furthest_noth_j,
+    aes(x = x0, y = y0, xend = x1, yend = y1, color = latin_name),
+    curvature = -0.2,
+    arrow = arrow(length = unit(0.4, "cm")),
+    size=0.7
+  ) +
+  scale_color_manual(values = palette_18_alt) +
+  coord_sf(xlim = c(-127, -114), ylim = c(30, 50), expand = FALSE) +
+  scale_x_continuous(breaks = c(-126, -122, -118, -114)) +
+  theme_minimal(base_size = 16) +
+  labs(title = "Furthest Species Range Extensions\n(3+ extensions required)", 
+       x = "Longitude", 
+       y = "Latitude", 
+       color = "Species")
+
+# Zoom out
+ggplot() +
+  geom_sf(data = world, fill = "gray90", color = "gray80") +
+  geom_sf(data = states, fill = NA, color = "gray80", size = 0.3) +
+  geom_curve(data = furthest_noth_j,
+             aes(x = x0, y = y0, xend = x1, yend = y1, color = latin_name),
+             curvature = -0.2,
+             arrow = arrow(length = unit(0.4, "cm"))
+  ) +
+  scale_color_manual(values = palette_18_alt) +
+  coord_sf(xlim = c(-160, -114), ylim = c(30, 60), expand = FALSE) +
+  scale_x_continuous(breaks = c(-152, -146, -138, -130, -122, -114)) +
+  theme_minimal(base_size = 16) +
+  labs(title = "Furthest Species Range Extensions\n(3+ extensions required)", 
+       x = "Longitude", 
+       y = "Latitude", 
+       color = "Species")
+

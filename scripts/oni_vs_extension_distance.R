@@ -363,7 +363,23 @@ ggplot(ext_summary, aes(x = proportion_peak_or_end)) +
   theme_minimal() +
   theme(axis.ticks.y = element_blank(),
         axis.text.y  = element_blank())
-  
+
+
+ggplot(ext_summary, aes(x = proportion_peak_or_end)) +
+  stat_ecdf(geom = "step", linewidth = 1) +
+  geom_vline(xintercept = en_freq_month, linetype = "dashed", color = "#D16647FF") +
+  labs(x = "Proportion of extensions in El Niño years",
+       y = "Cumulative fraction of species",
+       title = "ECDF of El Niño-associated extensions") +
+  theme_classic()
+
+install.packages("ggbeeswarm")
+library(ggbeeswarm)
+ggplot(ext_summary, aes(x = proportion_peak_or_end)) +
+  geom_quasirandom(aes(y = 0), width = 0.25, alpha = 0.9) +
+  geom_vline(xintercept = en_freq_month, linetype = "dashed", color = "#D16647FF") +
+  labs(x = "Proportion of extensions in El Niño years by Species", y = NULL) +
+  theme_classic() + theme(axis.text.y = element_blank(), axis.ticks.y = element_blank())
 
 # STATS
 ## El Nino wo blob - el nino month resolution
