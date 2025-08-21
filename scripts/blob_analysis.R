@@ -143,3 +143,32 @@ ggplot() +
 sum(extension_counts$n_extensions[extension_counts$period == "blob"]) # num blob extensions
 sum(extension_counts$n_extensions) # num total extensions
 sum(extension_counts$n_extensions[extension_counts$period == "blob"]) / sum(extension_counts$n_extensions) # fraction extensions during blob
+
+
+# STATS - chi sq test
+# Observed counts
+yrs_dif <- as.numeric(max(extension_counts$Date) - min(extension_counts$Date)) / 365
+blob_prop <- (2017-2014)/yrs_dif
+observed <- c(sum(extension_counts$n_extensions[extension_counts$period == "blob"]), sum(extension_counts$n_extensions)-sum(extension_counts$n_extensions[extension_counts$period == "blob"]))  # 35 El Niño, 65 Not El Niño
+# Expected proportions
+expected_proportions <- c(blob_prop, (1-blob_prop))
+# Run chi-squared goodness-of-fit test
+chisq.test(x = observed, p = expected_proportions)
+
+# What species had blob extensions?
+first_ext_periods <- first_ext %>%
+  mutate(period = case_when(
+    year >= 2014 & year <= 2016 ~ "blob",
+    TRUE ~ "non_blob"
+  ))
+# species in blob years
+species_blob <- unique(first_ext_periods$latin_name[first_ext_periods$period == "blob"])
+
+# species in non-blob years
+species_nonblob <- unique(first_ext_periods$latin_name[first_ext_periods$period == "non_blob"])
+
+# species that ONLY appear in blob years
+species_only_blob <- setdiff(species_blob, species_nonblob)
+
+length(species_only_blob)
+species_only_blob

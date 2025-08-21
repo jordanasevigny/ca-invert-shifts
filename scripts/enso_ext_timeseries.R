@@ -34,7 +34,7 @@ df <- read.csv("processed_data/merged_calcofi_lab_review.csv")
 # Prep review data for analysis --------------------------------------------
 
 # Identify the species with X+ events and filter for those species
-species_with_group2plus <- df %>%
+species_with_groupXplus <- df %>%
   group_by(latin_name) %>%
   filter(any(group_id >= 0)) %>% # 2 would be three events (0, 1, 2)
   pull(latin_name) %>%
@@ -42,7 +42,7 @@ species_with_group2plus <- df %>%
 
 # Filter full dataset for those species
 ext_Xplus <- df %>%
-  filter(latin_name %in% species_with_group2plus)
+  filter(latin_name %in% species_with_groupXplus)
 
 # Filter to just keep the first extension of each event (double check that there aren't duplicates)
 first_ext <- ext_Xplus %>%
@@ -54,6 +54,9 @@ extension_counts <- first_ext %>%
 
 # Add Date (middle of the year) column to align with ONI
 extension_counts$Date <- as.Date(paste0(extension_counts$year, "-06-15"))
+
+# Average number events/year
+sum(extension_counts$n)/(2020-1903)
 
 
 # ENSO Data ---------------------------------------------------------------
@@ -125,3 +128,42 @@ sum(extension_counts$n_extensions) # total number of extension events
 length(unique(first_ext$latin_name)) # Number of species with extension events
 
 
+# CalCOFI vs Lab Review Extensions ----------------------------------------
+# Tally the number of extensions events for each year
+extension_counts_source <- first_ext %>%
+  count(year, source, name = "n_extensions")
+extension_counts_source$Date <- as.Date(paste0(extension_counts_source$year, "-06-15"))
+
+#scale_factor <- 3 
+ggplot() +
+  geom_col(
+    data = extension_counts_source,
+    aes(x = Date, y = n_extensions, fill = source), color = "gray30"
+  ) +
+  scale_fill_manual(values = c("ca_rev" = "#7570B3", "lab_rev" = "#66A61E"), labels = c("ca_rev" = "CalCOFI",
+                                                                                   "lab_rev" = "Lit. Review")) +
+  
+  # # Plot rescaled dSST3.4 (to align with n_extensions)
+  # geom_line(
+  #   data = enso_df,
+  #   aes(x = Date, y = ONI * scale_factor),
+  #   linetype = "twodash",
+  #   color = "black"
+  # ) +
+  # 
+  # 
+  # # Add the secondary axis
+  # scale_y_continuous(
+  #   name = "Number of Extensions",
+  #   sec.axis = sec_axis(
+  #     ~ . / scale_factor,
+  #     name = "ONI"
+  #   )
+  # ) +
+  
+  scale_x_date(,
+    date_breaks = "10 years",
+    date_labels = "%Y"
+  ) +
+  labs(fill=" ", title = "Number of Extensions by CalCOFI and Literature Reveiw", y="Number of Extension Events", x="Year") +
+  theme_minimal(base_size = 16)
