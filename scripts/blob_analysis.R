@@ -123,7 +123,7 @@ blob <- ggplot() +
   
   # Add the secondary axis
   scale_y_continuous(
-    name = "Number of Extensions",
+    name = "Number of\nExtension Events",
     sec.axis = sec_axis(
       ~ . / scale_factor,
       name = "ONI"
@@ -141,7 +141,7 @@ blob <- ggplot() +
       #  axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)
       )
 blob
-ggsave("figures/Figure4.png", plot = blob, width = 14, height = 4, unit = "in", dpi = 600)
+ggsave("figures/figure4.png", plot = blob, width = 14, height = 4, unit = "in", dpi = 600)
 
 sum(extension_counts$n_extensions[extension_counts$period == "blob"]) # num blob extensions
 sum(extension_counts$n_extensions) # num total extensions

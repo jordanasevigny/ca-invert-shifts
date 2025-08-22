@@ -99,7 +99,7 @@ A <- ggplot() +
   ) +
   
   scale_size_continuous(
-    name = "Number of\nextensions",
+    name = "Number of\nextension events",
     range = c(1, 14),
     c(2, 6, 10, 14)
   ) +
