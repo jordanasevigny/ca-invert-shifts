@@ -169,7 +169,7 @@ n_ext_plot <- ggplot() +
     date_labels = "%Y"
   ) +
   labs(fill=" ", x="", y="Number of Extensions") +
-  theme_minimal(base_size = 16) +
+  theme_minimal(base_size = 22) +
   theme(
     legend.text = element_text(size=10),
     legend.position = c(0.1, 0.95),   # (x, y) inside plot coordinates
