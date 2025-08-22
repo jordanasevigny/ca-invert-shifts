@@ -91,8 +91,8 @@ palette_18 <- c(
 )
 palette_18_alt <- c(
   "#1F77B4", "#FF7F0E", "#2CA02C", "#D62728", "#9467BD", "#E5C494",
-  "#E377C2", "#7F7F7F", "#BCBD22", "#17BECF", "#393B79", "#637939",
-  "#8C6D31", "#843C39", "#7B4173", "#FFD92F", "#E6550D", "#A6D854"
+  "#843C39", "#7F7F7F", "#BCBD22", "#17BECF", "#393B79", "#637939",
+  "#8C6D31", "#E377C2", "#7B4173", "#FFD92F", "#E6550D", "#A6D854"
 )
 
 # need to change yellow, orange, turquoise and pink duplicates
@@ -106,7 +106,8 @@ furthest_noth_j <- furthest_noth %>%
   ) %>%
   mutate(len = sqrt((x1-x0)^2 + (y1-y0)^2)) %>%
   arrange(desc(len))
-
+# Manually fix the gulf of ca coordinate
+furthest_noth_j$x0[which.max(furthest_noth_j$x0)] <- furthest_noth_j$hist_range_lon[which.max(furthest_noth_j$x0)]
 map <- ggplot() +
   geom_sf(data = world, fill = "gray90", color = "gray80") +
   geom_sf(data = states, fill = NA, color = "gray80", size = 0.3) +
@@ -128,10 +129,12 @@ map <- ggplot() +
   theme(
          legend.text = element_text(size=10, face = "italic"),
          legend.position = c(0.999, 0.999),   # (x, y) inside plot coordinates
-         legend.justification = c("right", "top") # anchor legend box at that point
+         legend.justification = c("right", "top"), # anchor legend box at that point
+         legend.box.margin = margin(0,0,0,0),
+         legend.margin = margin(0,0,0,0)
        )
-
-ggsave("figures/ext_map.png", plot = map, width = 4, height = 8, unit = "in", dpi = 600)
+map
+ggsave("figures/ext_map.png", plot = map, width = 6, height = 8, units = "in", dpi = 600)
 
 
 # Zoom out
@@ -144,7 +147,7 @@ map_supp <- ggplot() +
              arrow = arrow(length = unit(0.4, "cm"))
   ) +
   scale_color_manual(values = palette_18_alt) +
-  coord_sf(xlim = c(-170, -114), ylim = c(30, 62), expand = FALSE) +
+  coord_sf(xlim = c(-170, -114), ylim = c(30, 60), expand = FALSE) +
   scale_x_continuous(breaks = c(-158, -152, -146, -138, -130, -122, -114)) +
   theme_minimal(base_size = 16) +
   labs(
@@ -156,6 +159,6 @@ map_supp <- ggplot() +
     legend.position = c(0.001, 0.001),   # (x, y) inside plot coordinates
     legend.justification = c("left", "bottom") # anchor legend box at that point
   )
-
+map_supp
 ggsave("figures/ext_map_supp.png", plot = map_supp, width = 8, height = 8, units = "in", dpi = 600)
 

@@ -9,7 +9,7 @@ hi <- read_excel("data/historical-distributions.xlsx")
 
 hi_c <- hi %>%
   filter(!is.na(hist_range_lat)) %>%
-  select(c(latin_name, hist_range_lat))
+  dplyr::select(c(latin_name, hist_range_lat))
 
 write.csv(hi_c, "processed_data/historical-distributions-clean.csv", row.names = FALSE)
 
