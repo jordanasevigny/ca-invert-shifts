@@ -1,7 +1,7 @@
 # The Blob Analysis
 # By: Jordana Sevigny, jordana.sevigny@gmail.com
 # Date created: 07/30/2025
-
+  
 
 # Load libraries
 library("ggplot2")
@@ -93,9 +93,6 @@ mean(extension_counts$n_extensions)
 var(extension_counts$n_extensions)
 # var >> mean -> can't use poisson
 
-library(MASS)
-model_nb <- glm.nb(n_extensions ~ period, data = extension_counts)
-summary(model_nb)
 
 # ENSO - Blob Analysis ---------------------------------------------------------------
 
@@ -106,20 +103,21 @@ enso_df <- download_enso(climate_idx = "oni", create_csv = FALSE)
 # Example: if max n_extensions ≈ 100 and max dSST3.4 ≈ 2.5, then:
 scale_factor <- 3  # Adjust this based on your data
 
-ggplot() +
+blob <- ggplot() +
   geom_col(
     data = extension_counts,
-    aes(x = Date, y = n_extensions, fill = period), color = "gray60", alpha=0.6
+    aes(x = Date, y = n_extensions, fill = period), color = "gray40", alpha=0.6
   ) +
-  scale_fill_manual(values = c("non_blob" = "black", "blob" = "white"), labels = c("blob" = "Blob",
-                                                                                   "non_blob" = "Not Blob")) +
+  scale_fill_manual(values = c("non_blob" = "white", "blob" = "black"), labels = c("blob" = "2014-2016",
+                                                                                   "non_blob" = "Other Years")) +
   
   # Plot rescaled dSST3.4 (to align with n_extensions)
   geom_line(
     data = enso_df,
     aes(x = Date, y = ONI * scale_factor),
     linetype = "twodash",
-    color = "black"
+    color = "black",
+    size=0.5
   ) +
   
   
@@ -137,8 +135,13 @@ ggplot() +
     date_breaks = "3 years",
     date_labels = "%Y"
   ) +
-  labs(fill=" ", title = "Number of Extensions and ONI Over Time - Highlighting the Blob (1+ extensions required)") +
-  theme_minimal(base_size = 16)
+  labs(x = "") +
+  theme_minimal(base_size = 16) +
+  theme(legend.position = "none"
+      #  axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)
+      )
+ggsave("figures/Figure4Horz.png", plot = blob, width = 14, height = 4, unit = "in", dpi = 600)
+#ggsave("figures/Figure4Vert.png", plot = blob, width = 4, height = 8, unit = "in", dpi = 600)
 
 sum(extension_counts$n_extensions[extension_counts$period == "blob"]) # num blob extensions
 sum(extension_counts$n_extensions) # num total extensions

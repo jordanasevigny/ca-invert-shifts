@@ -102,7 +102,7 @@ ext_Xplus <- ext_Xplus %>%
 
 # Dataframe of all extension events for species with X events combined with el nino phase data (start, peak, end)
 ext_year_phase <- left_join(ext_Xplus, year_phases, by = c("first_year" = "Year"))
- 
+
 # Calculate extension distance
 # Distance function
 get_distance_km <- function(lat1, lon1, lat2, lon2) {
@@ -262,8 +262,8 @@ max_ext_oni_yr_prior <- ext_distance_oni %>%
 # no ONI pre 1950 (drops any extensions pre 1950)
 ggplot(max_ext_oni_yr_prior, aes(max_oni, max_ext_dist)) +
   geom_point(color="black") +
-  geom_smooth(method = "lm", se = TRUE, color="#A69F55FF", fill="#A69F55FF") +  # se = FALSE to hide confidence interval
-  labs(x = "Max ONI of Extension Event", y = "Max Extension Event Distance (km)", title = "Maximum Extension Distance vs. Maximum ONI\nONI Shifted Back One Year\n(3+ extensions required)") +
+  geom_smooth(method = "lm", se = TRUE, color="#E9C46A", fill="#E9C46A") +  # se = FALSE to hide confidence interval
+  labs(x = "Extension Event ONI", y = "Extension Event Distance (km)", ) +
   theme_minimal(base_size = 16)
 
 # Fit the linear model
@@ -296,12 +296,19 @@ max_ext_oni_yr_prior %>%
   drop_na() %>%
   ggplot(aes(x = max_ext_dist, fill = oni_cat)) +
   geom_density(alpha = 0.6) +
-  labs(x = "Max Extension Distance (km)", y= "Density", fill = "ONI Level", title="Density of Extension Distances by ONI Level\nONI Shifted Back One Year\n(3+ extensions required)") +
+  labs(x = "Extension Event Distance (km)", y= "Density", fill = "ONI Level") +
   scale_fill_manual(
-    values = c("High ONI (>=0.5)" = "#7A2314",   # red
-               "Low ONI" = "#5E7CA3")           # blue
+    values = c("High ONI (>=0.5)" = "#D62828",   # red
+               "Low ONI" = "#003049")           # blue
   ) +
-  theme_minimal(base_size = 16)
+  theme_minimal(base_size = 16) +
+  theme(
+    legend.title = element_text(size=10),
+    legend.text = element_text(size=10),
+    legend.position = c(0.999, 0.999),   # (x, y) inside plot coordinates
+    legend.justification = c("right", "top"), # anchor legend box at that point
+    axis.title.y.right = element_blank()
+  )
 
 # Create category and drop NA
 oni_test_data <- max_ext_oni_yr_prior %>%
@@ -322,8 +329,8 @@ oni_freq <- max_ext_oni_yr_prior %>%
   drop_na()
 ggplot(oni_freq, aes(x=max_oni, y=n)) +
   geom_point() +
-  geom_smooth(method = "lm", se = TRUE, color="#A69F55FF", fill="#A69F55FF") + 
-  labs(x = "Max ONI of Extension Event", y = "Number of Extension Events", title = "Number Extension Events vs. Maximum ONI\nONI Shifted Back One Year\n(3+ extensions required)") +
+  geom_smooth(method = "lm", se = TRUE, color="#E9C46A", fill="#E9C46A") + 
+  labs(x = "Extension Event ONI", y = "Number of Extension Events") +
   theme_minimal(base_size = 16)
 
 # Fit the linear model
@@ -346,7 +353,7 @@ summary(gam_model)
 plot(gam_model, shade = TRUE, main = "GAM fit: max_ext_dist ~ s(max_oni)")
 
 # AIC
-AIC(model, poly_model, gam_model)
+AIC(lin_model, poly_model, gam_model)
 
 
 # Do more extensions occur during el nino than expected by chance? --------------------------------------------------
@@ -374,44 +381,26 @@ ext_summary <- ext_year_phase %>%
 
 # Proportion of extensions histogram
 ggplot(ext_summary, aes(x = proportion_peak_or_end)) +
-  geom_histogram(binwidth = 0.1, fill = "black", color = "black", boundary = 0, alpha=0.6) +
-  geom_vline(xintercept = en_freq_month, linetype = "dashed", color = "#D16647FF", size=0.8) +
+  geom_histogram(binwidth = 0.1, fill = "white", color = "black", size=1.1, boundary=0) +
+  geom_vline(xintercept = en_freq_month, linetype = "dashed", color = "#D62828", size=1.3) +
   scale_x_continuous(labels = scales::percent_format(accuracy = 1)) +
   labs(
-    title = "Distribution of Species by Proportion of Extensions During El Niño Peak/End Years\n(El Niño frequency in red dotted line; 3+ extensions required)",
-    x = "Proportion of Extensions in El Niño Peak/End Years",
+    x = "Proportion of Extension Events in El Niño Peak/End Years",
     y = "Number of Species"
   ) +
   theme_minimal()
 
 ggplot(ext_summary, aes(x = proportion_peak_or_end)) +
-  geom_dotplot() +
-  geom_vline(xintercept = en_freq_month, linetype = "dashed", color = "#D16647FF", size=0.8) +
+  geom_dotplot(binwidth = 0.1, fill = "white", color = "black", stroke=2) +
+  geom_vline(xintercept = en_freq_month, linetype = "dashed", color = "#D62828", size=1.3) +
   labs(
-    title = "Number of Species vs Proportion of Extensions During El Niño\n(El Niño frequency in red dotted line; 3+ extensions required)",
-    x = "Proportion of Extensions in El Niño Peak/End Years",
+    x = "Proportion of Extensions Events in El Niño Peak/End Years",
     y = "Number of Species"
   ) +
   theme_minimal() +
   theme(axis.ticks.y = element_blank(),
         axis.text.y  = element_blank())
 
-
-ggplot(ext_summary, aes(x = proportion_peak_or_end)) +
-  stat_ecdf(geom = "step", linewidth = 1) +
-  geom_vline(xintercept = en_freq_month, linetype = "dashed", color = "#D16647FF") +
-  labs(x = "Proportion of extensions in El Niño years",
-       y = "Cumulative fraction of species",
-       title = "ECDF of El Niño-associated extensions") +
-  theme_classic()
-
-
-library(ggbeeswarm)
-ggplot(ext_summary, aes(x = proportion_peak_or_end)) +
-  geom_quasirandom(aes(y = 0), width = 0.25, alpha = 0.9) +
-  geom_vline(xintercept = en_freq_month, linetype = "dashed", color = "#D16647FF") +
-  labs(x = "Proportion of extensions in El Niño years by Species", y = NULL) +
-  theme_classic() + theme(axis.text.y = element_blank(), axis.ticks.y = element_blank())
 
 # STATS
 ## El Nino wo blob - el nino month resolution

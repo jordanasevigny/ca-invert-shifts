@@ -19,10 +19,6 @@ library(zoo)
 library(gganimate)
 library(forcats)
 
-# Color palette
-# #2B5275FF = la nina ; #D16647FF = el nino ; gray60 = enso outline / oni ; black at alpha=0.6 = extension event tallies ; #A69F55FF = free variable (green) ; #FFFBDDFF = blob (white fill)
-# theme_minimal(base_size = 16) for all ggplot
-
 
 # Load review data
 df <- read.csv("processed_data/merged_calcofi_lab_review.csv")
@@ -103,36 +99,44 @@ palette_18_alt <- c(
 
 furthest_noth_j <- furthest_noth %>%
   mutate(
-    x0 = hist_range_lon + runif(n(), -eps, eps),
+    x0 = hist_range_lon + runif(n(), -eps, 0),
     y0 = hist_range_lat + runif(n(), 0, 0),
-    x1 = longitude      + runif(n(), -eps, eps),
+    x1 = longitude      + runif(n(), -eps, 0),
     y1 = latitude       + runif(n(), -0, 0)
   ) %>%
   mutate(len = sqrt((x1-x0)^2 + (y1-y0)^2)) %>%
   arrange(desc(len))
 
-ggplot() +
+map <- ggplot() +
   geom_sf(data = world, fill = "gray90", color = "gray80") +
   geom_sf(data = states, fill = NA, color = "gray80", size = 0.3) +
   geom_curve(
     data = furthest_noth_j,
     aes(x = x0, y = y0, xend = x1, yend = y1, color = latin_name),
     curvature = -0.2,
-    arrow = arrow(length = unit(0.4, "cm")),
-    size=0.7
+    arrow = arrow(length = unit(0.6, "cm")),
+    size=1.2,
+    alpha=0.8
   ) +
   scale_color_manual(values = palette_18_alt) +
   coord_sf(xlim = c(-127, -114), ylim = c(30, 50), expand = FALSE) +
   scale_x_continuous(breaks = c(-126, -122, -118, -114)) +
   theme_minimal(base_size = 16) +
-  labs(title = "Furthest Species Range Extensions\n(3+ extensions required)", 
-       x = "Longitude", 
+  labs(x = "Longitude", 
        y = "Latitude", 
-       color = "Species")
+       color = "Species") + 
+  theme(
+         legend.text = element_text(size=10, face = "italic"),
+         legend.position = c(0.999, 0.999),   # (x, y) inside plot coordinates
+         legend.justification = c("right", "top") # anchor legend box at that point
+       )
+
+ggsave("figures/ext_map.png", plot = map, width = 4, height = 8, unit = "in", dpi = 600)
+
 
 # Zoom out
 ggplot() +
-  geom_sf(data = world, fill = "gray90", color = "gray80") +
+  geom_sf(data = world, fill = "gray95", color = "gray80") +
   geom_sf(data = states, fill = NA, color = "gray80", size = 0.3) +
   geom_curve(data = furthest_noth_j,
              aes(x = x0, y = y0, xend = x1, yend = y1, color = latin_name),
@@ -140,11 +144,16 @@ ggplot() +
              arrow = arrow(length = unit(0.4, "cm"))
   ) +
   scale_color_manual(values = palette_18_alt) +
-  coord_sf(xlim = c(-160, -114), ylim = c(30, 60), expand = FALSE) +
-  scale_x_continuous(breaks = c(-152, -146, -138, -130, -122, -114)) +
+  coord_sf(xlim = c(-170, -114), ylim = c(30, 62), expand = FALSE) +
+  scale_x_continuous(breaks = c(-158, -152, -146, -138, -130, -122, -114)) +
   theme_minimal(base_size = 16) +
-  labs(title = "Furthest Species Range Extensions\n(3+ extensions required)", 
+  labs(
        x = "Longitude", 
        y = "Latitude", 
-       color = "Species")
+       color = "Species") + 
+  theme(
+    legend.text = element_text(size=10, face = "italic"),
+    legend.position = c(0.001, 0.001),   # (x, y) inside plot coordinates
+    legend.justification = c("left", "bottom") # anchor legend box at that point
+  )
 
