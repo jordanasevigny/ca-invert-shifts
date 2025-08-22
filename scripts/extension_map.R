@@ -135,7 +135,7 @@ ggsave("figures/ext_map.png", plot = map, width = 4, height = 8, unit = "in", dp
 
 
 # Zoom out
-ggplot() +
+map_supp <- ggplot() +
   geom_sf(data = world, fill = "gray95", color = "gray80") +
   geom_sf(data = states, fill = NA, color = "gray80", size = 0.3) +
   geom_curve(data = furthest_noth_j,
@@ -156,4 +156,6 @@ ggplot() +
     legend.position = c(0.001, 0.001),   # (x, y) inside plot coordinates
     legend.justification = c("left", "bottom") # anchor legend box at that point
   )
+
+ggsave("figures/ext_map_supp.png", plot = map_supp, width = 8, height = 8, units = "in", dpi = 600)
 

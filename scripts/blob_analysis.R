@@ -136,12 +136,11 @@ blob <- ggplot() +
     date_labels = "%Y"
   ) +
   labs(x = "") +
-  theme_minimal(base_size = 16) +
+  theme_minimal(base_size = 22) +
   theme(legend.position = "none"
       #  axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)
       )
 ggsave("figures/Figure4Horz.png", plot = blob, width = 14, height = 4, unit = "in", dpi = 600)
-#ggsave("figures/Figure4Vert.png", plot = blob, width = 4, height = 8, unit = "in", dpi = 600)
 
 sum(extension_counts$n_extensions[extension_counts$period == "blob"]) # num blob extensions
 sum(extension_counts$n_extensions) # num total extensions
