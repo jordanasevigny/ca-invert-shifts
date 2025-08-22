@@ -106,9 +106,9 @@ scale_factor <- 3  # Adjust this based on your data
 blob <- ggplot() +
   geom_col(
     data = extension_counts,
-    aes(x = Date, y = n_extensions, fill = period), color = "gray40", alpha=0.6
+    aes(x = Date, y = n_extensions, fill = period), color = "gray40"
   ) +
-  scale_fill_manual(values = c("non_blob" = "white", "blob" = "black"), labels = c("blob" = "2014-2016",
+  scale_fill_manual(values = c("non_blob" = "white", "blob" = "gray70"), labels = c("blob" = "2014-2016",
                                                                                    "non_blob" = "Other Years")) +
   
   # Plot rescaled dSST3.4 (to align with n_extensions)
@@ -117,7 +117,7 @@ blob <- ggplot() +
     aes(x = Date, y = ONI * scale_factor),
     linetype = "twodash",
     color = "black",
-    size=0.5
+    size=0.6
   ) +
   
   
@@ -140,6 +140,7 @@ blob <- ggplot() +
   theme(legend.position = "none"
       #  axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)
       )
+blob
 ggsave("figures/Figure4Horz.png", plot = blob, width = 14, height = 4, unit = "in", dpi = 600)
 
 sum(extension_counts$n_extensions[extension_counts$period == "blob"]) # num blob extensions
