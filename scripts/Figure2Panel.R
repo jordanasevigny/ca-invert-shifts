@@ -120,7 +120,7 @@ A <- ggplot() +
   theme(
     legend.title = element_text(size=12),
     legend.text = element_text(size=14),
-    legend.position = c(0.001, 0.9999),   # (x, y) inside plot coordinates
+    legend.position = c(0.0001, 0.9999),   # (x, y) inside plot coordinates
     legend.justification = c("left", "top"), # anchor legend box at that point
     axis.title.y.right = element_blank()
   )
@@ -227,7 +227,7 @@ ext_summary <- ext_year_phase %>%
   arrange(desc(proportion_peak_or_end))
 
 B <- ggplot(ext_summary, aes(x = proportion_peak_or_end)) +
-  geom_dotplot(binwidth = 0.1, fill = "gray60", color = "black", stroke=2) +
+  geom_dotplot(binwidth = 0.1, fill = "gray70", color = "black", stroke=1) +
   geom_vline(xintercept = en_freq_month, linetype = "dashed", color = "#E63946", size=1.3) +
   labs(
     x = "Proportion of Extensions Events\nin El Niño Peak/End Years",
