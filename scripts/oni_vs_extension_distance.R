@@ -47,7 +47,7 @@ enso_events <- enso_df %>%
   arrange(Date) %>%
   mutate(
     month_diff = c(0, diff(yearmon)),
-    new_event = month_diff >  3/12,
+    new_event = month_diff >  1.5/12, # Requires more than a month of non-el nino to have passed for an el nino event to be distinct from the last
     group_id = cumsum(new_event)
   )
 
@@ -125,7 +125,7 @@ ext_distance %>%
   group_by(latin_name, group_id) %>%
   summarise(max_dist = max(distance_km, na.rm = TRUE)) %>%
   pull(max_dist) %>%
-  mean(na.rm = TRUE) # can switch with sd if desired
+  max(na.rm = TRUE) # can switch with sd if desired
 
 #   pull(distance_km) %>%
 #   mean(na.rm = TRUE) # can switch with sd if desired
