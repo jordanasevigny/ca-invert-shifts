@@ -102,6 +102,7 @@ ext_Xplus <- ext_Xplus %>%
 
 # Dataframe of all extension events for species with X events combined with el nino phase data (start, peak, end)
 ext_year_phase <- left_join(ext_Xplus, year_phases, by = c("first_year" = "Year"))
+ext_year_phase <- filter(ext_year_phase, year >= 1950) # 1950 is the cutoff for ONI
 
 # Calculate extension distance
 # Distance function
@@ -357,7 +358,7 @@ AIC(lin_model, poly_model, gam_model)
 
 
 # Do more extensions occur during el nino than expected by chance? --------------------------------------------------
-# MAKE SURE THIS IS 1+ EXTENSIONS
+# MAKE SURE THIS IS 3+ EXTENSIONS
 
 # El Nino frequency
 ## Monthly res

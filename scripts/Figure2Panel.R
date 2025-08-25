@@ -120,7 +120,66 @@ A <- ggplot() +
   theme(
     legend.title = element_text(size=12),
     legend.text = element_text(size=14),
-    legend.position = c(0.0001, 0.9999),   # (x, y) inside plot coordinates
+    legend.position = c(0.00001, 0.9999),   # (x, y) inside plot coordinates
+    legend.justification = c("left", "top"), # anchor legend box at that point
+    axis.title.y.right = element_blank()
+  )
+
+
+
+A_supp <- ggplot() +
+  # Ribbon for ONI > 0 (red)
+  geom_ribbon(data = enso_df,
+              aes(x = Date, ymin = 0, ymax = ifelse(ONI>0, ONI * scale_factor, 0)),
+              fill = "#E63946", color = "gray60", alpha = 0.7) +
+  
+  # Ribbon for ONI < 0 (blue)
+  geom_ribbon(data = enso_df,
+              aes(x = Date, ymin = ifelse(ONI < 0, ONI * scale_factor, 0), ymax = 0),
+              fill = "#457B9D", color = "gray60", alpha = 0.7) +
+  
+  # ONI line
+  # geom_line(data = enso_df,
+  #           aes(x = Date, y = ONI * scale_factor),
+  #           color = "gray60", size = 0.5) +
+  
+  # Extensions as dots at y = 0, with size by count
+  geom_point(data = extension_counts,
+             aes(x = Date, y = 0, size = n_extensions),
+             shape=21, fill = "white", color="black", stroke = 1.2, alpha = 0.7) +
+  
+  
+  
+  # Y axis scaled for ONI only
+  scale_y_continuous(
+    name = "ONI",
+    breaks = seq(-2, 2, 1) * scale_factor,
+    labels = seq(-2, 2, 1)
+  ) +
+  
+  scale_size_continuous(
+    name = "Number of\nextension events",
+    range = c(1, 14),
+    c(2, 6, 10, 14)
+  ) +
+  # scale_size_continuous(
+  #   name = "Number of extensions",
+  #   range = c(1, 6),
+  #   c(1, 3, 6)
+  # ) +
+  
+  scale_x_date(
+    limits = as.Date(c("1900-01-01", "2021-06-01")),
+    date_breaks = "10 years",
+    date_labels = "%Y"
+  ) +
+  
+  theme_minimal(base_size = 22) +
+  labs(x = " ", ) +
+  theme(
+    legend.title = element_text(size=12),
+    legend.text = element_text(size=14),
+    legend.position = c(0.00001, 0.9999),   # (x, y) inside plot coordinates
     legend.justification = c("left", "top"), # anchor legend box at that point
     axis.title.y.right = element_blank()
   )
@@ -204,7 +263,7 @@ ext_Xplus <- ext_Xplus %>%
 
 # Dataframe of all extension events for species with X events combined with el nino phase data (start, peak, end)
 ext_year_phase <- left_join(ext_Xplus, year_phases, by = c("first_year" = "Year"))
-
+ext_year_phase <- filter(ext_year_phase, year >= 1950) # 1950 is the cutoff for ONI
 
 # El Nino frequency
 ## Monthly res
@@ -302,4 +361,7 @@ panel <- plot_grid(A, BC, labels = c('A', ''), label_size = 18, ncol = 1)
 
 ggsave("figures/figure2panel.png", plot = panel, width = 14, height = 8, unit = "in", dpi = 600)
 
+
+# A_supp plot
+ggsave("figures/figure2a_supp.png", plot = A_supp, width = 14, height = 4, unit = "in", dpi = 600)
 
