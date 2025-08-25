@@ -120,13 +120,13 @@ ext_distance <- ext_year_phase %>%
   mutate(distance_km = get_distance_km(hist_range_lat, hist_range_lon, latitude, longitude)) %>%
   ungroup()
 
-# # Average (or sd) max extension distance 1) by max per event 2) by all observations
-# ext_distance %>%
-#   group_by(latin_name, group_id) %>%
-#   summarise(max_dist = max(distance_km, na.rm = TRUE)) %>%
-#   pull(max_dist) %>%
-#   mean(na.rm = TRUE) # can switch with sd if desired
-# ext_distance %>%
+# Average (or sd) max extension distance 1) by max per event 2) by all observations
+ext_distance %>%
+  group_by(latin_name, group_id) %>%
+  summarise(max_dist = max(distance_km, na.rm = TRUE)) %>%
+  pull(max_dist) %>%
+  mean(na.rm = TRUE) # can switch with sd if desired
+
 #   pull(distance_km) %>%
 #   mean(na.rm = TRUE) # can switch with sd if desired
 
