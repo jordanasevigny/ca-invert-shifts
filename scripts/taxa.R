@@ -2,6 +2,8 @@
 # Author: Jordana Sevigny
 # Date: 8/17/2025
 
+rm(list = ls())
+
 # Load libraries
 library(dplyr)
 library(taxize)

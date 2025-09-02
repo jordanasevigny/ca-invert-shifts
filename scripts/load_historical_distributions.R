@@ -2,6 +2,8 @@
 # By: Jordana Sevigny, jordana.sevigny@gmail.com
 # Date created: 07/21/2025
 
+rm(list = ls())
+
 library(readxl)
 library(dplyr)
 
@@ -13,3 +15,5 @@ hi_c <- hi %>%
 
 write.csv(hi_c, "processed_data/historical-distributions-clean.csv", row.names = FALSE)
 
+hi_c %>%
+  count(resource)

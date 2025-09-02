@@ -2,6 +2,8 @@
 # By: Jordana Sevigny, jordana.sevigny@gmail.com
 # Date created: 07/24/2025
 
+rm(list = ls())
+
 # Load libraries
 library("ggplot2")
 theme_set(theme_bw())
@@ -22,13 +24,11 @@ library(geosphere)
 library(moments)
 library(mgcv)
 
-# #2B5275FF = la nina ; #D16647FF = el nino ; gray60 = enso outline / oni ; black at alpha=0.6 = extension event tallies ; #A69F55FF = extension stats ; #FFFBDDFF = blob (white fill)
-# theme_minimal(base_size = 16) for all ggplot
 
 # Load review data
 df <- read.csv("processed_data/merged_calcofi_lab_review.csv")
 
-#Lload a world map
+# Load a world map
 world <- ne_countries(scale = "medium", returnclass = "sf")
 
 # Load enso data

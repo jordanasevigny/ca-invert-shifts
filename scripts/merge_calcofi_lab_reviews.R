@@ -2,7 +2,10 @@
 # By: Jordana Sevigny, jordana.sevigny@gmail.com
 # Date created: 07/02/2025
 
+# Must have already run all three "load*.R" scripts
+
 rm(list = ls())
+
 # Library
 library(dplyr)
 library(rnaturalearth)
@@ -19,8 +22,6 @@ lab_rev_inc  <- filter(lab_rev, include_exclude == "Include")
 
 # Filter out the low confidence extensions from the lab review
 lab_rev_inc <- filter(lab_rev_inc, extension_confidence_criteria != "Opportunistic")
-
-# Merge like columns of the two datasets
 
 # Identify shared columns
 shared_cols <- intersect(names(ca_rev_inc), names(lab_rev_inc))

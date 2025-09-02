@@ -1,5 +1,6 @@
 # Figure 3 Panel
 
+rm(list = ls())
 
 # Load libraries
 library("ggplot2")

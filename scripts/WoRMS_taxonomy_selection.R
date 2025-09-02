@@ -1,5 +1,7 @@
 # script to make the list of classes and phylum to use for review
 
+rm(list = ls())
+
 # libraries
 library(tidyverse)
 library(here)
