@@ -47,7 +47,7 @@ enso_events <- enso_df %>%
   arrange(Date) %>%
   mutate(
     month_diff = c(0, diff(yearmon)),
-    new_event = month_diff >  1.5/12, # Requires more than a month of non-el nino to have passed for an el nino event to be distinct from the last
+    new_event = month_diff >  1.5/12, # Requires more than a month (1 month is the min between any phase classification) of non-el nino to have passed for an el nino event to be distinct from the last
     group_id = cumsum(new_event)
   )
 
@@ -93,14 +93,8 @@ species_with_groupXplus <- df %>%
 ext_Xplus <- df %>%
   filter(latin_name %in% species_with_groupXplus)
 # unique(ext_Xplus$latin_name)
-# library(clipr)
-# write_clip(unique(ext_Xplus$latin_name))
 
-# Drop any 'extensions' that did not get past the historical range edge we have documented - this is already done in the merge script and should not make a difference here
-ext_Xplus <- ext_Xplus %>%
-  filter(latitude > hist_range_lat)
-
-# Dataframe of all extension events for species with X events combined with el nino phase data (start, peak, end)
+# Dataframe of all extension events for species with X+ events combined with el nino phase data (start, peak, end)
 ext_year_phase <- left_join(ext_Xplus, year_phases, by = c("first_year" = "Year"))
 ext_year_phase <- filter(ext_year_phase, year >= 1950) # 1950 is the cutoff for ONI
 
@@ -120,135 +114,18 @@ ext_distance <- ext_year_phase %>%
   mutate(distance_km = get_distance_km(hist_range_lat, hist_range_lon, latitude, longitude)) %>%
   ungroup()
 
-# Average (or sd) max extension distance 1) by max per event 2) by all observations
+# Average/sd/max/mix extension distance 1) by max per event 2) by all observations
 ext_distance %>%
   group_by(latin_name, group_id) %>%
   summarise(max_dist = max(distance_km, na.rm = TRUE)) %>%
   pull(max_dist) %>%
-  max(na.rm = TRUE) # can switch with sd if desired
-
-#   pull(distance_km) %>%
-#   mean(na.rm = TRUE) # can switch with sd if desired
-
-
-# May delete the commented section here...
-# 
-# # Join both year and first_year ONI values to main_df
-# ext_distance_oni <- ext_distance %>%
-#   left_join(oni_ave_by_yr, by = c("year" = "Year")) %>%
-#   rename(oni_year = oni_ave) %>%
-#   left_join(oni_ave_by_yr, by = c("first_year" = "Year")) %>%
-#   rename(oni_first_year = oni_ave)
-# 
-# 
-# #===================================
-# # Max ONI - Max extension distance per event
-# max_ext_oni <- ext_distance_oni %>%
-#   group_by(latin_name, group_id) %>%
-#   mutate(max_oni = max(oni_year)) %>%
-#   mutate(max_ext_dist = max(distance_km)) %>%
-#   ungroup() %>%
-#   dplyr::select(latin_name, group_id, max_ext_dist, max_oni) %>%
-#   distinct()
-# 
-# # no ONI pre 1950 (drops any extensions pre 1950)
-# ggplot(max_ext_oni, aes(max_oni, max_ext_dist)) +
-#   geom_point(color="black") +
-#   geom_smooth(method = "lm", se = TRUE, color="#A69F55FF", fill="#A69F55FF") +  # se = FALSE to hide confidence interval
-#   labs(x = "Max ONI of Extension Event", y = "Max Extension Event Distance (km)", title = "Maximum Extension Distance vs. Maximum ONI\nNo Correction for First Year = End El Niño\n(1+ extensions required)") +
-#   theme_minimal(base_size = 16)
-# 
-# # Fit the linear model
-# model <- lm(max_ext_dist ~ max_oni, data = max_ext_oni)
-# 
-# # View the model summary
-# summary(model)
-# 
-# # Density Plot Low vs High ONI
-# max_ext_oni %>%
-#   mutate(oni_cat = ifelse(max_oni >= 0.5, "High ONI (>=0.5)", "Low ONI")) %>%
-#   drop_na() %>%
-#   ggplot(aes(x = max_ext_dist, fill = oni_cat)) +
-#   geom_density(alpha = 0.5) +
-#   labs(x = "Max Extension Distance (km)", y= "Density", fill = "ONI Level", title="Density of Extension Distances by ONI Level\nNo Correction for First Year = End El Niño\n(1+ extensions required)") +
-#   scale_fill_manual(
-#     values = c("High ONI (>=0.5)" = "#D16647FF",   # red
-#                "Low ONI" = "#2B5275FF")           # blue
-#   ) +
-#   theme_minimal(base_size = 16)
-# 
-# # Create category and drop NA
-# oni_test_data <- max_ext_oni %>%
-#   mutate(oni_cat = ifelse(max_oni >= 0.5, "High ONI (>=0.5)", "Low ONI")) %>%
-#   drop_na(max_ext_dist, oni_cat)
-# 
-# # Run t-test
-# t.test(max_ext_dist ~ oni_cat, data = oni_test_data)
-# 
-# #===================================
-# # Max ONI - Max extension distance per event with addition of if first year = end phase, do oni for year prior
-# ext_distance_oni <- ext_distance %>%
-#   mutate(year_adj = if_else(enso_phase=="end",year-1, year, missing = year)) %>%
-#   left_join(oni_ave_by_yr, by = c("year" = "Year")) %>%
-#   rename(oni_year = oni_ave) %>%
-#   left_join(oni_ave_by_yr, by = c("first_year" = "Year")) %>%
-#   rename(oni_first_year = oni_ave) %>%
-#   left_join(oni_ave_by_yr, by = c("year_adj" = "Year")) %>%
-#   rename(oni_adj_yr = oni_ave)
-# 
-# max_ext_oni <- ext_distance_oni %>%
-#   group_by(latin_name, group_id) %>%
-#   mutate(max_oni = max(oni_adj_yr)) %>%
-#   mutate(max_ext_dist = max(distance_km)) %>%
-#   ungroup() %>%
-#   dplyr::select(latin_name, group_id, max_ext_dist, max_oni) %>%
-#   distinct()
-# 
-# # no ONI pre 1950 (drops any extensions pre 1950)
-# ggplot(max_ext_oni, aes(max_oni, max_ext_dist)) +
-#   geom_point(color="black") +
-#   geom_smooth(method = "lm", se = TRUE, color="#A69F55FF", fill="#A69F55FF") +  # se = FALSE to hide confidence interval
-#   labs(x = "Max ONI of Extension Event", y = "Max Extension Event Distance (km)", title = "Maximum Extension Distance vs. Maximum ONI (1+ extensions required)") +
-#   theme_minimal(base_size = 16)
-# 
-# # Fit the linear model
-# model <- lm(max_ext_dist ~ max_oni, data = max_ext_oni)
-# 
-# # View the model summary
-# summary(model)
-# 
-# # Density Plot Low vs High ONI
-# max_ext_oni %>%
-#   mutate(oni_cat = ifelse(max_oni >= 0.5, "High ONI (>=0.5)", "Low ONI")) %>%
-#   drop_na() %>%
-#   ggplot(aes(x = max_ext_dist, fill = oni_cat)) +
-#   geom_density(alpha = 0.4) +
-#   labs(x = "Max Extension Distance (km)", y= "Density", fill = "ONI Category", title="Density of Extension Distances by ONI Level (1+ extensions required)") +
-#   scale_fill_manual(
-#     values = c("High ONI (>=0.5)" = "#D16647FF",   # red
-#                "Low ONI" = "#2B5275FF")           # blue
-#   ) +
-#   theme_minimal(base_size = 16)
-# 
-# 
-# # Create category and drop NA
-# oni_test_data <- max_ext_oni %>%
-#   mutate(oni_cat = ifelse(max_oni >= 0.5, "High ONI (>=0.5)", "Low ONI")) %>%
-#   drop_na(max_ext_dist, oni_cat)
-# 
-# # Run t-test
-# t.test(max_ext_dist ~ oni_cat, data = oni_test_data)
-# 
+  max(na.rm = TRUE) # switch what want to find here
 
 
 #===================================
 # Max ONI (all shifted to year prior) - Max extension distance per event
 ext_distance_oni <- ext_distance %>%
   mutate(year_prior = year-1) %>%
-  left_join(oni_ave_by_yr, by = c("year" = "Year")) %>%
-  rename(oni_year = oni_ave) %>%
-  left_join(oni_ave_by_yr, by = c("first_year" = "Year")) %>%
-  rename(oni_first_year = oni_ave) %>%
   left_join(oni_ave_by_yr, by = c("year_prior" = "Year")) %>%
   rename(oni_prior_yr = oni_ave)
 

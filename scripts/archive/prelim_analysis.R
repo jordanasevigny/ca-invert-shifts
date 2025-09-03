@@ -2,6 +2,8 @@
 # By: Jordana Sevigny, jordana.sevigny@gmail.com
 # Date created: 07/02/2025
 
+rm(list = ls())
+
 # Load libraries
 library("ggplot2")
 theme_set(theme_bw())

@@ -1,75 +1,74 @@
-"latin_name","hist_range_lat"
-"Acanthinucella spirata",47.72
-"Anteaeolidiella oliviae",37.89
-"Anthopleura sola",37.5
-"Aplysia californica",34.5
-"Aplysia vaccaria",36.78
-"Arbacia stellata",22.8
-"Argonauta argo",34.5
-"Berthella strongi",37.53
-"Calanus minor",34.5
-"Candacia curta",34.5
-"Centropages bradyi",34.5
-"Cestum veneris",34.5
-"Chrysaora colorata",34.5
-"Creseis virgula",34.5
-"Crucigera websteri",33.475
-"Doliolum denticulatum",34.5
-"Doriopsilla albopunctata",39.31
-"Doriopsilla fulva",33.74
-"Dosidicus gigas",32.5
-"Emerita analoga",32.67
-"Eucidaris thouarsii",22.8
-"Euphausia eximia",32.5
-"Euphausia mutica",34.5
-"Euphausia recurva",34.5
-"Euphylax dovii",32.5
-"Eurypon reiswigi",32.5
-"Eurypon scruposus",32.5
-"Helicosalpa virgula",32.5
-"Hespererato vitellina",38.312
-"Hippopodius hippopus",34.5
-"Hyalocylis striata",34.5
-"Hydroides elegans",34.5
-"Hydroides gracilis",36.78
-"Janolus barbarensis",37.5
-"Kelletia kelletii",34.39
-"Lissothuria nutriens",36.78
-"Loligo opalescens",32.67
-"Lophogorgia chiliensis",32.5
-"Lovenia cordiformis",34.5
-"Lyropectin subnudosus",22.8
-"Lytechinus pictus",34.5
-"Malacoplax californiensis",35.3
-"Megabalanus californicus",36.78
-"Mexacanthina lugubris",31.8
-"Neolithodes diomedeae",35.41
-"Nyctiphanes simplex",32.5
-"Oceanapia flava",22.8
-"Oceanapia polytuba",22.8
-"Okenia angelensis",37.5
-"Ophiothrix spiculata",37.69
-"Pachythyone rubra",36.78
-"Panulirus gracilis",32.5
-"Panulirus interruptus",34.5
-"Paraconcavus pacificus",36.78
-"Petrolisthes manimaculis",41.05
-"Phidiana hiltoni",37.89
-"Physophora hydrostatica",36.78
-"Pleuroncodes planipes",32.5
-"Portunus xantusii",34.5
-"Pyrosoma atlanticum",40
-"Pyrosoma sp.",40
-"Pyrosoma",40
-"Rhincalanus nasutus",34.5
-"Sagitta pseudoserratodentata",42
-"Scoelcithrix danae",34.5
-"Thylacodes squamigerus",34.5
-"Spirobranchs spinosus",36
-"Tetraclita rubescens",37.5
-"Thalia democratica",35
-"Thetys vagina",42
-"Thetys",42
-"Uca princeps",22.8
-"Velella sp.",34.5
-"Velella",34.5
+"latin_name","hist_range_lat","resource"
+"Acanthinucella spirata",47.72,"Field Guid to Pacific Coast Shells"
+"Anteaeolidiella oliviae",37.89,"Review screening"
+"Anthopleura sola",37.5,"Intertidal Invertebrates from Central CA to OR"
+"Aplysia californica",34.5,"Intertidal Invertebrates from Central CA to OR"
+"Aplysia vaccaria",36.78,"Intertidal Invertebrates from Central CA to OR"
+"Arbacia stellata",22.8,"Intertidal Invertebrates from Central CA to OR"
+"Argonauta argo",34.5,"American seashells"
+"Berthella strongi",37.53,"Review screening"
+"Calanus minor",34.5,"CalCOFI"
+"Candacia curta",34.5,"CalCOFI"
+"Centropages bradyi",34.5,"Review screening"
+"Cestum veneris",34.5,"Intertidal Invertebrates from Central CA to OR"
+"Chrysaora colorata",34.5,"Intertidal Invertebrates from Central CA to OR"
+"Creseis virgula",34.5,"Pacific Coast Pelagic Invertebrates"
+"Crucigera websteri",33.475,"Review screening"
+"Doliolum denticulatum",34.5,"CalCOFI"
+"Doriopsilla albopunctata",39.31,"Review screening"
+"Doriopsilla fulva",33.74,"Review screening"
+"Dosidicus gigas",32.5,"Marine Organisms as Indicators"
+"Emerita analoga",32.67,"Marine Organisms as Indicators"
+"Eucidaris thouarsii",22.8,"Intertidal Invertebrates from Central CA to OR"
+"Euphausia eximia",32.5,"CalCOFI"
+"Euphausia mutica",34.5,"Review screening"
+"Euphausia recurva",34.5,"Review screening"
+"Euphylax dovii",32.5,"Marine Organisms as Indicators"
+"Eurypon reiswigi",32.5,"Review screening"
+"Eurypon scruposus",32.5,"Review screening"
+"Helicosalpa virgula",32.5,"Pacific Coast Pelagic Invertebrates"
+"Hespererato vitellina",38.312,"American seashells"
+"Hippopodius hippopus",34.5,"Review screening"
+"Hyalocylis striata",34.5,"Intertidal Invertebrates from Central CA to OR"
+"Hydroides elegans",34.5,"Intertidal Invertebrates from Central CA to OR"
+"Hydroides gracilis",36.78,"Intertidal Invertebrates from Central CA to OR"
+"Janolus barbarensis",37.5,"Review screening"
+"Kelletia kelletii",34.39,"Field Guid to Pacific Coast Shells"
+"Lissothuria nutriens",36.78,"Intertidal Invertebrates from Central CA to OR"
+"Loligo opalescens",32.67,"Marine Organisms as Indicators"
+"Lophogorgia chiliensis",32.5,"Marine Organisms as Indicators"
+"Lovenia cordiformis",34.5,"Intertidal Invertebrates from Central CA to OR"
+"Lyropectin subnudosus",22.8,"Field Guid to Pacific Coast Shells"
+"Lytechinus pictus",34.5,"Intertidal Invertebrates from Central CA to OR"
+"Malacoplax californiensis",35.3,"Checklist of brachyuran crabs (Crustacea: Decapoda) from the eastern tropical Pacific"
+"Megabalanus californicus",36.78,"Intertidal Invertebrates from Central CA to OR"
+"Mexacanthina lugubris",31.8,"Review screening"
+"Neolithodes diomedeae",35.41,"Checklist of anomuran crabs (Crustacea: Decapoda) from the eastern tropical Pacific"
+"Nyctiphanes simplex",32.5,"Intertidal Invertebrates from Central CA to OR"
+"Oceanapia flava",22.8,"Review screening"
+"Oceanapia polytuba",22.8,"Review screening"
+"Okenia angelensis",37.5,"Intertidal Invertebrates from Central CA to OR"
+"Ophiothrix spiculata",37.69,"Review screening"
+"Pachythyone rubra",36.78,"Intertidal Invertebrates from Central CA to OR"
+"Panulirus gracilis",32.5,"Marine Organisms as Indicators"
+"Panulirus interruptus",34.5,"Review screening"
+"Paraconcavus pacificus",36.78,"Intertidal Invertebrates from Central CA to OR"
+"Petrolisthes manimaculis",41.05,"Review screening"
+"Phidiana hiltoni",37.89,"Review screening"
+"Physophora hydrostatica",36.78,"Review screening"
+"Pleuroncodes planipes",32.5,"Intertidal Invertebrates from Central CA to OR"
+"Portunus xantusii",34.5,"Intertidal Invertebrates from Central CA to OR"
+"Pyrosoma atlanticum",40,"Pacific Coast Pelagic Invertebrates"
+"Pyrosoma",40,"Pacific Coast Pelagic Invertebrates"
+"Rhincalanus nasutus",34.5,"CalCOFI"
+"Sagitta pseudoserratodentata",42,"Review screening"
+"Scoelcithrix danae",34.5,"CalCOFI"
+"Thylacodes squamigerus",34.5,"Intertidal Invertebrates from Central CA to OR"
+"Spirobranchs spinosus",36,"sealifebase"
+"Tetraclita rubescens",37.5,"Intertidal Invertebrates from Central CA to OR"
+"Thalia democratica",35,"Review screening"
+"Thetys vagina",42,"Intertidal Invertebrates from Central CA to OR"
+"Thetys",42,"Intertidal Invertebrates from Central CA to OR"
+"Uca princeps",22.8,"Checklist of brachyuran crabs (Crustacea: Decapoda) from the eastern tropical Pacific"
+"Velella sp.",34.5,"Pacific Coast Pelagic Invertebrates"
+"Velella",34.5,"Pacific Coast Pelagic Invertebrates"

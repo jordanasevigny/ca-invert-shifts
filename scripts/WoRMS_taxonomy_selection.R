@@ -1,4 +1,5 @@
-# script to make the list of classes and phylum to use for review
+# Script to make the list of classes and phylum to use for review
+# By: Jordana Sevigny, jordana.sevigny@gmail.com
 
 rm(list = ls())
 
@@ -14,80 +15,81 @@ library(purrr)
 # SWITCHED TO V2, WHICH INCLUDES SMALL CRITTERS
 data <- read_excel(here("processed_data", "WoRMS_taxlist_20250211_processed_V2.xlsx"))
 
-# screen classes
+# Filter for class and drop anything with a reason for exclusion
 classes <- data %>%
   filter(!is.na(Class)) %>%
   filter(is.na(`JKS Notes for Exclusion`)) %>%
-  select(Class) %>%
+  dplyr::select(Class) %>%
   unique() %>%
   rename(taxa = Class)
+
+# Isolate the alpha ids for the classes
 classes_ID <- data %>%
   filter(!is.na(Class)) %>%
   filter(is.na(`JKS Notes for Exclusion`)) %>%
-  select(AphiaID) %>%
+  dplyr::select(AphiaID) %>%
   unique()
 
+# Filter for phylums & their associated scientific names (sub phylums / super classes)
+# First just look at the phylums with associated classes to drop phylums that majoratively are not applicable
+# Identify unwanted phyla (> 50% classes excluded)
+# This is just a lot of code to systematically remove phylum chordata
 
-
-# screen phylums & their associated scientific names (sub phylums / super classes)
-# first just look at the phylums with associated classes to screen phylums that majoratively are not applicable
-# identify unwanted phyla (> 50% classes excluded)
-# this is just a lot of code to remove phylum chordata
 phylums_class_to_excl <- data %>%
   filter(taxonRank=='Class') %>%
-  select(c('Phylum', 'JKS Notes for Exclusion')) %>%
+  dplyr::select(c('Phylum', 'JKS Notes for Exclusion')) %>%
   group_by(Phylum) %>%
   summarise(
     total_count = n(),
     excl_count = sum(`JKS Notes for Exclusion` != "" & !is.na(`JKS Notes for Exclusion`)),
     frac = excl_count/total_count) %>%
   filter(frac > 0.5 ) %>%
-  select(Phylum) %>%
+  dplyr::select(Phylum) %>%
   rename(taxa = Phylum)
 
-# filter out unwanted phyla
-phylums <- data %>%
-  filter(is.na(`JKS Notes for Exclusion`)) %>%
-  select(Phylum) %>%
-  unique() %>%
-  rename(taxa = Phylum) %>%
-  anti_join(phylums_class_to_excl)
+# # Get a list of the relevant phylums but filter out unwanted phyla - not necessary but here if helpful
+# phylums <- data %>%
+#   filter(is.na(`JKS Notes for Exclusion`)) %>%
+#   dplyr::select(Phylum) %>%
+#   unique() %>%
+#   rename(taxa = Phylum) %>%
+#   anti_join(phylums_class_to_excl)
 
-
+# Get all the class through phylum names and drop unwanted phyla
 inter_taxa = data %>% 
   filter(is.na(`JKS Notes for Exclusion`)) %>%
-  select(ScientificName) %>%
+  dplyr::select(ScientificName) %>%
   rename(taxa = ScientificName) %>%
   anti_join(phylums_class_to_excl)
 
-# join phylums and classes to keep
-class_phylums <- rbind(classes, inter_taxa, phylums) %>%
+# Get just the unique names in case there are overlap between taxa levels
+class_phylums <- inter_taxa %>%
   unique()
 
-
-
 ########################
-# add orders for desired classes
+# Get orders for desired classes
 
-# obtain everything down to the desired orders
+# Obtain everything down to the desired orders from WoRMs database
 ds <- lapply(classes_ID$AphiaID, function(ID) downstream(ID, downto = "order", db = "worms"))
-# adds class name
-ds_df <- mapply(function(lst, name) {
-  if (is.list(lst) && is.data.frame(lst[[1]]) && nrow(lst[[1]]) > 0) { 
-    lst[[1]]$class <- name  # Add 'class' column only if it has rows
-  }
-  return(lst)
-}, ds, classes$taxa, SIMPLIFY = FALSE)
-# adds class id
-ds_df <- mapply(function(lst, name) {
-  if (is.list(lst) && is.data.frame(lst[[1]]) && nrow(lst[[1]]) > 0) { 
-    lst[[1]]$class_id <- name  # Add 'class' column only if it has rows
-  }
-  return(lst)
-}, ds_df, classes_ID$AphiaID, SIMPLIFY = FALSE)
+# 
+# # Adds class name
+# ds_df <- mapply(function(lst, name) {
+#   if (is.list(lst) && is.data.frame(lst[[1]]) && nrow(lst[[1]]) > 0) { 
+#     lst[[1]]$class <- name  # Add 'class' column only if it has rows
+#   }
+#   return(lst)
+# }, ds, classes$taxa, SIMPLIFY = FALSE)
+# 
+# # Adds class id
+# ds_df <- mapply(function(lst, name) {
+#   if (is.list(lst) && is.data.frame(lst[[1]]) && nrow(lst[[1]]) > 0) { 
+#     lst[[1]]$class_id <- name  # Add 'class' column only if it has rows
+#   }
+#   return(lst)
+# }, ds_df, classes_ID$AphiaID, SIMPLIFY = FALSE)
 
-# Extract all data frames from the list and combine them
-combined_df <- bind_rows(lapply(ds_df, function(lst) {
+# Extract all data frames from the list and combine them into a dataframe
+combined_df <- bind_rows(lapply(ds, function(lst) {
   if (is.list(lst) && is.data.frame(lst[[1]])) {
     return(lst[[1]])  # Extract the inner data frame
   } else {
@@ -95,26 +97,26 @@ combined_df <- bind_rows(lapply(ds_df, function(lst) {
   }
 }), .id = "source")  # Add a column to track which list element each row came from
 
-# clean to just orders names
+# Clean to just orders names
 orders <- combined_df %>%
-  select(name) %>%
+  dplyr::select(name) %>%
   mutate(taxa = str_extract(name, "[A-Z][a-z]+")) %>%
-  select(taxa)
+  dplyr::select(taxa)
 
-# join phylums and classes to keep
+# Join phylums and classes to keep
 ocp <- rbind(class_phylums, orders) %>%
   mutate(taxa = str_extract(taxa, "[A-Z][a-z]+")) %>%
   unique()
 # make sure there are no NAs
 
-# transform to be WOS format - includes * before and after word; drops the last letter (e.g. allows decapoda to be decapod)
+# Transform to be WOS format - includes * before and after word; drops the last letter (e.g. allows decapoda to be decapod)
 final_string_ocp <- ocp %>%
   mutate(taxa = str_sub(taxa, 1, -2)) %>%
   mutate(words = str_c('"*', taxa, '*"')) %>% 
   pull(words) %>%
   str_c(collapse = " OR ")
 
-# this prints the string of all order/class/phylum names in the WOS format
+# This prints the string of all order/class/phylum names in the WOS format
 cat(final_string_ocp)
 
 # next move is to copy and paste the printed output into the species name section of the whole WOS search terms in OneNote

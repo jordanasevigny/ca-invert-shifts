@@ -75,7 +75,7 @@ merged_df_histedge <- merged_df %>%
 merged_df_histedge <- merged_df_histedge %>%
   left_join(hist_dist, by="latin_name")
 
-# Drop any dataspoints prior to 1900
+# Drop any dataspoints prior to 1900 - should arleady be excluded, but this is to double check
 merged_df_histedge <- merged_df_histedge %>%
   filter(year >= 1900)
 
@@ -135,6 +135,12 @@ ext_ids <- north_df_filt %>%
 #   group_by(latin_name) %>%
 #   distinct(group_id))
 
+# # Counting up where hist range edge info came from
+# d <- ext_ids %>%
+#   dplyr::select(latin_name, resource) %>%
+#   distinct() %>%
+#   count(resource)
+# sum(d$n)
 
 # Write dataframe
 write.csv(ext_ids, "processed_data/merged_calcofi_lab_review.csv")
