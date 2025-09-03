@@ -1,5 +1,6 @@
 # Figure 2 Panel
-
+# By: Jordana Sevigny, jordana.sevigny@gmail.com
+# Date created: 08/2025
 
 rm(list = ls())
 # Load libraries
@@ -297,16 +298,9 @@ B <- ggplot(ext_summary, aes(x = proportion_peak_or_end)) +
         axis.text.y  = element_blank())
 
 
-
-
 # Panel C
 
-
 # Max ONI (year prior) vs extension count --------------------------------------------------
-
-#===================================
-# Max ONI (all shifted to year prior) - Max extension distance per event
-
 
 # Calculate extension distance
 # Distance function
@@ -324,16 +318,13 @@ ext_distance <- ext_year_phase %>%
   mutate(distance_km = get_distance_km(hist_range_lat, hist_range_lon, latitude, longitude)) %>%
   ungroup()
 
-
+# Make a new column of the year prior to the year of observation and find the ave ONI for those years
 ext_distance_oni <- ext_distance %>%
   mutate(year_prior = year-1) %>%
-  left_join(oni_ave_by_yr, by = c("year" = "Year")) %>%
-  rename(oni_year = oni_ave) %>%
-  left_join(oni_ave_by_yr, by = c("first_year" = "Year")) %>%
-  rename(oni_first_year = oni_ave) %>%
   left_join(oni_ave_by_yr, by = c("year_prior" = "Year")) %>%
   rename(oni_prior_yr = oni_ave)
 
+# Select the Max of the average ONI for each event and the max extension distance for each event
 max_ext_oni_yr_prior <- ext_distance_oni %>%
   group_by(latin_name, group_id) %>%
   mutate(max_oni = max(oni_prior_yr)) %>%
@@ -356,9 +347,9 @@ C <- ggplot(oni_freq, aes(x=max_oni, y=n)) +
 # Plot panel
 BC <- plot_grid(B, C, labels = c('B', 'C'), label_size = 18, rel_widths = c(1, 2))
 
-
 panel <- plot_grid(A, BC, labels = c('A', ''), label_size = 18, ncol = 1)
 
+# Save plot
 ggsave("figures/figure2panel.png", plot = panel, width = 14, height = 8, unit = "in", dpi = 600)
 
 

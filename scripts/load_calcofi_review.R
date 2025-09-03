@@ -1,7 +1,9 @@
 # Load in CalCOFI review data and rename columns
 # By: Jordana Sevigny, jordana.sevigny@gmail.com
 # Date created: 07/02/2025
+
 rm(list = ls())
+
 library(readxl)
 library(tidyr)
 library(stringr)
@@ -31,7 +33,7 @@ ca_blocks <- map_dfr(question_blocks, function(block_num) {
   
   # Extract that block, and rename the questions to drop the prefix (e.g., '1.1 qA' → 'qA')
   ca_block <- ca %>%
-    select(all_of(metadata_cols), all_of(block_cols)) %>%
+    dplyr::select(all_of(metadata_cols), all_of(block_cols)) %>%
     rename_with(
       .fn = ~ str_replace(.x, paste0("^", block_num, "\\.\\s*"), ""),
       .cols = all_of(block_cols)
@@ -43,7 +45,7 @@ ca_blocks <- map_dfr(question_blocks, function(block_num) {
 
 # --- Cleaning data ---
 # Drop repeat column lacking data
-ca_blocks <- select(ca_blocks, -`23Is Day exact or approximate?`)
+ca_blocks <- dplyr::select(ca_blocks, -`23Is Day exact or approximate?`)
 
 # Identify question columns 2–24 (adjust the names as needed)
 question_cols <- as.character(2:26)

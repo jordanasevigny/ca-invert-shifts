@@ -86,11 +86,6 @@ ggplot() +
 
 set.seed(47) # 47 is pretty good
 eps <- 1  # degrees; tune smaller/larger as needed
-palette_18 <- c(
-  "#E41A1C", "#D6EEFF", "#3E442B", "#984EA3", "#AF3800", "#FFFF33",
-  "#A65628", "#F781BF", "#999999", "#00FFE7", "#FE621D", "#8DA0CB",
-  "#E78AC3", "#A6D854", "#FFD92F", "#E5C494", "#C6D8D3", "#1B9E77"
-)
 palette_18_alt <- c(
   "#1F77B4", "#FF7F0E", "#2CA02C", "#D62728", "#9467BD", "#E5C494",
   "#843C39", "#7F7F7F", "#BCBD22", "#17BECF", "#393B79", "#637939",
@@ -108,6 +103,7 @@ furthest_noth_j <- furthest_noth %>%
   ) %>%
   mutate(len = sqrt((x1-x0)^2 + (y1-y0)^2)) %>%
   arrange(desc(len))
+
 # Manually fix the gulf of ca coordinate
 furthest_noth_j$x0[which.max(furthest_noth_j$x0)] <- furthest_noth_j$hist_range_lon[which.max(furthest_noth_j$x0)]
 map <- ggplot() +

@@ -75,10 +75,6 @@ merged_df_histedge <- merged_df %>%
 merged_df_histedge <- merged_df_histedge %>%
   left_join(hist_dist, by="latin_name")
 
-# Drop any dataspoints prior to 1900 - should arleady be excluded, but this is to double check
-merged_df_histedge <- merged_df_histedge %>%
-  filter(year >= 1900)
-
 # Add missing longitudes for historical latitudes ---------------------------
 # Load coastlines
 coast <- ne_download(scale = 10, type = "coastline", category = "physical", returnclass = "sf")
@@ -112,7 +108,7 @@ north_df <- merged_df_histedge_lon %>%
   ungroup() %>%
   filter(!is.na(latin_name))
 
-# Filter to make sure observations are further north that hisrotical range edge
+# Filter to make sure observations are further north than historical range edge
 north_df_filt <- north_df %>%
   filter(latitude > hist_range_lat)
 

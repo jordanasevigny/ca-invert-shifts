@@ -1,4 +1,6 @@
 # Figure 3 Panel
+# By: Jordana Sevigny, jordana.sevigny@gmail.com
+# Date created: 08/2025
 
 rm(list = ls())
 
@@ -22,13 +24,10 @@ library(geosphere)
 library(moments)
 library(mgcv)
 
-# #2B5275FF = la nina ; #D16647FF = el nino ; gray60 = enso outline / oni ; black at alpha=0.6 = extension event tallies ; #A69F55FF = extension stats ; #FFFBDDFF = blob (white fill)
-# theme_minimal(base_size = 16) for all ggplot
-
 # Load review data
 df <- read.csv("processed_data/merged_calcofi_lab_review.csv")
 
-#Lload a world map
+# Load a world map
 world <- ne_countries(scale = "medium", returnclass = "sf")
 
 # Load enso data
@@ -112,7 +111,6 @@ get_distance_km <- function(lat1, lon1, lat2, lon2) {
   return(dist_meters / 1000)  # convert to kilometers
 }
 
-
 # Apply function row-wise
 ext_distance <- ext_year_phase %>%
   rowwise() %>%
@@ -121,15 +119,14 @@ ext_distance <- ext_year_phase %>%
 
 #===================================
 # Max ONI (all shifted to year prior) - Max extension distance per event
+
+# Make a new column of the year prior to the year of observation and find the ave ONI for those years
 ext_distance_oni <- ext_distance %>%
   mutate(year_prior = year-1) %>%
-  left_join(oni_ave_by_yr, by = c("year" = "Year")) %>%
-  rename(oni_year = oni_ave) %>%
-  left_join(oni_ave_by_yr, by = c("first_year" = "Year")) %>%
-  rename(oni_first_year = oni_ave) %>%
   left_join(oni_ave_by_yr, by = c("year_prior" = "Year")) %>%
   rename(oni_prior_yr = oni_ave)
 
+# Select the Max of the average ONI for each event and the max extension distance for each event
 max_ext_oni_yr_prior <- ext_distance_oni %>%
   group_by(latin_name, group_id) %>%
   mutate(max_oni = max(oni_prior_yr)) %>%
@@ -144,9 +141,6 @@ B <- ggplot(max_ext_oni_yr_prior, aes(max_oni, max_ext_dist)) +
   geom_smooth(method = "lm", se = TRUE, color="#E9C46A", fill="#E9C46A") +  # se = FALSE to hide confidence interval
   labs(x = "Extension Event ONI", y = "Extension Event\nDistance (km)", ) +
   theme_minimal(base_size = 16)
-
-
-
 
 # Density Plot Low vs High ONI
 plot3a_data <- max_ext_oni_yr_prior %>%

@@ -3,7 +3,7 @@
 # Date created: 6/19/2025
 # Updated: 07/02/2025
 
-# FIRST SCRIPT TO PROCESS LAB REVIEW DATA
+rm(list = ls())
 
 # Load libraries
 library(dplyr)
@@ -29,7 +29,7 @@ find_lon <- function(given_lat) {
   lon_range <- seq(-180, -114, by = 0.1)
   line <- st_linestring(cbind(lon_range, rep(given_lat, length(lon_range))))
   line_sf <- st_sfc(line, crs = 4326)
-  # Find nearest point on cost
+  # Find nearest point on coast
   nearest <- st_nearest_points(line_sf, st_union(coast_na))
   intersection_point <- st_cast(nearest, "POINT")[2]
   lon <- st_coordinates(intersection_point)[1]

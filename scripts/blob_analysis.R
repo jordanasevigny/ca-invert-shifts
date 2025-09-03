@@ -21,9 +21,6 @@ library(zoo)
 library(gganimate)
 library(forcats)
 
-# #2B5275FF = la nina ; #D16647FF = el nino ; gray60 = enso outline / oni ; black at alpha=0.6 = extension event tallies ; #A69F55FF = extension stats ; #FFFBDDFF = blob (white fill)
-# theme_minimal(base_size = 16) for all ggplot
-
 # Load review data
 df <- read.csv("processed_data/merged_calcofi_lab_review.csv")
 
@@ -74,7 +71,6 @@ ggplot(dataset_c, aes(x = period, y = n_extensions)) +
     title = "Species Range Extension Events by Time Period"
   ) +
   theme_minimal(base_size = 16)
-
 
 
 # Blob vs not blob extension analysis -------------------------------------
@@ -165,6 +161,7 @@ first_ext_periods <- first_ext %>%
     year >= 2014 & year <= 2016 ~ "blob",
     TRUE ~ "non_blob"
   ))
+
 # species in blob years
 species_blob <- unique(first_ext_periods$latin_name[first_ext_periods$period == "blob"])
 

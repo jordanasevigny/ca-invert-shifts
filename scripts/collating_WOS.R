@@ -1,11 +1,12 @@
 # This script pulls all the web of science results into one dataframe (each page of results had to be downloaded separately), deduplicates,  and adds DOIs
+# By: Jordana Sevigny, jordana.sevigny@gmail.com
 
+# Load libraries
 library(readxl)
 library(dplyr)
 library(purrr)
 library(rcrossref)
 library(openxlsx)
-
 
 # Set the directory containing Excel files
 directory <- "data/WOS_search29"
@@ -83,21 +84,22 @@ for (i in seq_len(length(na_indices))) {
 
 na_indices <- which(is.na(data_combined$r_DOI))
 
-# check for duplicates
+# Check for duplicates
 any(duplicated(data_combined$r_DOI))
 data_combined$r_DOI[duplicated(data_combined$r_DOI) | duplicated(data_combined$r_DOI, fromLast = TRUE)]
-#deduplicate
+
+# Deduplicate
 data_combined_clean <- data_combined[!duplicated(data_combined$r_DOI), ]
 
-# move index column and r_DOI to start
+# Move index column and r_DOI to start
 data_combined_clean <- data_combined_clean %>%
   mutate(Index = row_number()) %>%
   select(Index, r_DOI, DOI, 'Article Title', 'Source Title', 'Publication Year', everything()) 
 
-# write to a new Excel file
+# Write to a new Excel file
 write.xlsx(data_combined_clean, "processed_data/combined_search29.xlsx")
 
-# format DOIs to load into zotero
+# Format DOIs to load into zotero
 comma_separated_dois <- paste(data_combined_clean$r_DOI, collapse = ", ")
 print(comma_separated_dois)
 # copy and pasted these dois into zotero folder

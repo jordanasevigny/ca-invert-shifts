@@ -3,6 +3,7 @@
 # Date created: 07/24/2025
 
 rm(list = ls())
+
 # Load libraries
 library("ggplot2")
 theme_set(theme_bw())
@@ -21,12 +22,6 @@ library(gganimate)
 library(forcats)
 library(geosphere)
 library(ggh4x)
-library(paletteer)
-paletteer_d("lisa::Pierre_AugusteRenoir")
-
-# Color palette
-# #2B5275FF = la nina ; #D16647FF = el nino ; gray60 = enso outline / oni ; black at alpha=0.6 = extension event tallies ; #A69F55FF = free variable (green) ; #FFFBDDFF = blob (white fill)
-# theme_minimal(base_size = 16) for all ggplot
 
 # Load review data
 df <- read.csv("processed_data/merged_calcofi_lab_review.csv")
@@ -81,17 +76,10 @@ ggplot() +
               aes(x = Date, ymin = ifelse(ONI < 0, ONI * scale_factor, 0), ymax = 0),
               fill = "#457B9D", color = "gray60", alpha = 0.7) +
   
-  # ONI line
-  # geom_line(data = enso_df,
-  #           aes(x = Date, y = ONI * scale_factor),
-  #           color = "gray60", size = 0.5) +
-
   # Extensions as dots at y = 0, with size by count
   geom_point(data = extension_counts,
              aes(x = Date, y = 0, size = n_extensions),
              shape=21, fill = "white", color="black", stroke = 1.2, alpha = 0.7) +
-
-
   
   # Y axis scaled for ONI only
   scale_y_continuous(
@@ -145,25 +133,7 @@ n_ext_plot <- ggplot() +
   ) +
   scale_fill_manual(values = c("ca_rev" = "#F781BF", "lab_rev" = "#66A61E"), labels = c("ca_rev" = "CalCOFI",
                                                                                    "lab_rev" = "Lit. Review")) +
-  
-  # # Plot rescaled dSST3.4 (to align with n_extensions)
-  # geom_line(
-  #   data = enso_df,
-  #   aes(x = Date, y = ONI * scale_factor),
-  #   linetype = "twodash",
-  #   color = "black"
-  # ) +
-  # 
-  # 
-  # # Add the secondary axis
-  # scale_y_continuous(
-  #   name = "Number of Extensions",
-  #   sec.axis = sec_axis(
-  #     ~ . / scale_factor,
-  #     name = "ONI"
-  #   )
-  # ) +
-  
+
   scale_x_date(,
     date_breaks = "10 years",
     date_labels = "%Y"
