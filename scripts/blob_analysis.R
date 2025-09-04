@@ -139,6 +139,8 @@ blob <- ggplot() +
       )
 blob
 ggsave("figures/figure4.png", plot = blob, width = 14, height = 4, unit = "in", dpi = 600)
+ggsave("figures/figure4.pdf", plot = blob, width = 14, height = 4, unit = "in", dpi = 600)
+
 
 sum(extension_counts$n_extensions[extension_counts$period == "blob"]) # num blob extensions
 sum(extension_counts$n_extensions) # num total extensions
