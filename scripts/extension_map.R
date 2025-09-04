@@ -133,6 +133,7 @@ map <- ggplot() +
        )
 map
 ggsave("figures/ext_map.png", plot = map, width = 6, height = 8, units = "in", dpi = 600)
+ggsave("figures/ext_map.pdf", plot = map, width = 6, height = 8, units = "in", dpi = 600)
 
 
 # Zoom out
@@ -159,4 +160,5 @@ map_supp <- ggplot() +
   )
 map_supp
 ggsave("figures/ext_map_supp.png", plot = map_supp, width = 8, height = 8, units = "in", dpi = 600)
+ggsave("figures/ext_map_supp.pdf", plot = map_supp, width = 8, height = 8, units = "in", dpi = 600)
 

@@ -166,5 +166,6 @@ A <- ggplot(plot3a_data, aes(x = max_ext_dist, fill = oni_cat)) +
 
 
 # Plot panel
-AB <- plot_grid(A, B, labels = c('A', 'B'), label_size = 18, rel_widths = c(1, 2))
+AB <- plot_grid(A, B, labels = c('a', 'b'), label_size = 18, rel_widths = c(1, 2))
 ggsave("figures/figure3panel.png", plot = AB, width = 14, height = 4, unit = "in", dpi = 600)
+ggsave("figures/figure3panel.pdf", plot = AB, width = 14, height = 4, unit = "in", dpi = 600)

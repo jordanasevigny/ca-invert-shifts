@@ -147,6 +147,7 @@ n_ext_plot <- ggplot() +
   )
 
 ggsave("figures/cal_rev_ext.png", plot = n_ext_plot, width = 12, height = 8, units = "in", dpi = 600)
+ggsave("figures/cal_rev_ext.pdf", plot = n_ext_plot, width = 12, height = 8, units = "in", dpi = 600)
 
 # number of lab rev ext
 sum(extension_counts_source %>% filter(source == "lab_rev") %>% pull(n_extensions))

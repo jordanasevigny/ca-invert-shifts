@@ -345,14 +345,16 @@ C <- ggplot(oni_freq, aes(x=max_oni, y=n)) +
   theme_minimal(base_size = 18)
 
 # Plot panel
-BC <- plot_grid(B, C, labels = c('B', 'C'), label_size = 18, rel_widths = c(1, 2))
+BC <- plot_grid(B, C, labels = c('b', 'c'), label_size = 18, rel_widths = c(1, 2))
 
-panel <- plot_grid(A, BC, labels = c('A', ''), label_size = 18, ncol = 1)
+panel <- plot_grid(A, BC, labels = c('a', ''), label_size = 18, ncol = 1)
 
 # Save plot
 ggsave("figures/figure2panel.png", plot = panel, width = 14, height = 8, unit = "in", dpi = 600)
+ggsave("figures/figure2panel.pdf", plot = panel, width = 14, height = 8, unit = "in", dpi = 600)
 
 
 # A_supp plot
 ggsave("figures/figure2a_supp.png", plot = A_supp, width = 14, height = 4, unit = "in", dpi = 600)
+ggsave("figures/figure2a_supp.pdf", plot = A_supp, width = 14, height = 4, unit = "in", dpi = 600)
 
