@@ -9,15 +9,21 @@ We compiled a database of northward range extensions of warm-water marine invert
 
 # What's in this repository?
 The repository is organized as follows:
-*
+* 'scripts/' contains scripts to clean up the raw datafiles; analyze the data; and generate figures.
+* 'data/' containes raw, pre-processed / pre-cleaned data files
+* 'processed_data/'  contains outputs of scripts that filter, clean, summarize, or analyze data.
+* 'figures/' contains the figures included in the paper.
+* 'old/' is retired code / datafiles / scripts that can be ignored.
 
-# How should things in this repository be run?
+# In what order should things be run?
+To reproduce the analysis, run these scripts in order:
+
 
 # Table of Contents
 Data: 
-* calcofi extensions raw data: ‘ca-invert-shits/data/CalCOFI Coding Form (Responses).xlsx’
-* lab review extensions raw data: ‘ca-invert-shits/data/Screening & Review Tracking - Full-text Screening.csv’
-* calcofi extensions cleaned: ‘ca-invert-shits/processed_data/calcofi_review_data_clean.csv’
+* Calcofi extensions raw data: ‘ca-invert-shits/data/CalCOFI Coding Form (Responses).xlsx’
+* Lab review extensions raw data: ‘ca-invert-shits/data/Screening & Review Tracking - Full-text Screening.csv’
+* Calcofi extensions cleaned: ‘ca-invert-shits/processed_data/calcofi_review_data_clean.csv’
 * Lab review extensions cleaned: ‘ca-invert-shits/processed_data/lab_review_with_longitudes.csv’
 * Merged calcofi - lab review extensions cleaned: ‘ca-invert-shits/processed_data/merged_calcofi_lab_review.csv’
 * Historical distributions raw: ‘ca-invert-shits/data/historical-distributions.xlsx’
