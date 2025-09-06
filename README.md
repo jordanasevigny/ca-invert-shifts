@@ -50,7 +50,7 @@ Scripts:
 * ‘ca-invert-shits/scripts/load_historical_distributions.R’
   * Input: ‘ca-invert-shits/data/historical-distributions.xlsx’,
   * Output: ‘ca-invert-shits/processed_data/historical-distributions-clean.csv’,
-  * Method:  Dropped metadata to merge with review.
+  * Method:  Dropped notes to merge with review.
 * ‘ca-invert-shits/scripts/merge_calcofi_lab_reviews.R’
   * Inputs: 'ca-invert-shits/processed_data/calcofi_review_data_clean.csv', 'ca-invert-shits/processed_data/lab_review_with_longitudes.csv', 'ca-invert-shits/processed_data/historical-distributions-clean.csv',
   * Output: "ca-invert-shits/processed_data/merged_calcofi_lab_review.csv",
