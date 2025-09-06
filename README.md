@@ -13,11 +13,19 @@ The repository is organized as follows:
 * 'data/' containes raw, pre-processed / pre-cleaned data files
 * 'processed_data/'  contains outputs of scripts that filter, clean, summarize, or analyze data.
 * 'figures/' contains the figures included in the paper.
-* 'old/' is retired code / datafiles / scripts that can be ignored.
 
 # In what order should things be run?
 To reproduce the analysis, run these scripts in order:
 
+Extension data & analysis:
+* 'load_calcofi_review.R'
+
+* <pre>
+```r
+prep_survey_extent_nc.R
+```
+</pre>
+Systematic literature review:
 
 # Table of Contents
 Data: 
