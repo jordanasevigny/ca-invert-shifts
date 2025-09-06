@@ -18,24 +18,21 @@ The repository is organized as follows:
 To reproduce the analysis, run these scripts in order:
 
 Extension data & analysis:
-* 'load_calcofi_review.R'
+* 'load_calcofi_review.R'; 'load_lab_review.R'; 'load_historical_distributions.R' process the raw, irregular format versions of the calcofi extension data, review data, and third-party historical range edge data respectively. Each generates a cleaned version of the input data with mergable column names and consistent format. This does not need to be rerun unless changes to the raw data are required, in which case these should be rerun in order.
+* 'merge_calcofi_lab_reviews.R' merges the cleaned output from the three load scripts ('calcofi_review_data_clean.csv', 'lab_review_with_longitudes.csv', 'historical-distributions-clean.csv') into one master dataframe ('merged_calcofi_lab_review.csv'). This does not need to be rerun unless changes to the raw data are required, in which case these should be rerun in order. 
+* 
 
-* <pre>
-```r
-prep_survey_extent_nc.R
-```
-</pre>
 Systematic literature review:
 
 # Table of Contents
 Data: 
 * Calcofi extensions raw data: ‘ca-invert-shits/data/CalCOFI Coding Form (Responses).xlsx’
 * Lab review extensions raw data: ‘ca-invert-shits/data/Screening & Review Tracking - Full-text Screening.csv’
+* Historical distributions raw: ‘ca-invert-shits/data/historical-distributions.xlsx’
 * Calcofi extensions cleaned: ‘ca-invert-shits/processed_data/calcofi_review_data_clean.csv’
 * Lab review extensions cleaned: ‘ca-invert-shits/processed_data/lab_review_with_longitudes.csv’
-* Merged calcofi - lab review extensions cleaned: ‘ca-invert-shits/processed_data/merged_calcofi_lab_review.csv’
-* Historical distributions raw: ‘ca-invert-shits/data/historical-distributions.xlsx’
 * Historical distributions clean: ‘ca-invert-shits/processed_data/historical-distributions-clean.csv’
+* **Master Extension Dataframe**: ‘ca-invert-shits/processed_data/merged_calcofi_lab_review.csv’
 * Resulting papers for lab review from WOS: ‘ca-invert-shits/processed_data/combined_search29.xlsx’
 * Taxa list for WOS search keywords: ‘ca-invert-shits/processed_data/WoRMS_taxlist_20250211_processed_V2.xlsx’
 * Filtered dataset of furthest north extensions for the 3+ extension species: ‘ca-invert-shits/processed_data/threeplus_ext_sp_furthest_north.csv’
