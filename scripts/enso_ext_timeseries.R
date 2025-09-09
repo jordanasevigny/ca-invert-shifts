@@ -119,37 +119,4 @@ sum(extension_counts$n_extensions) # total number of extension events
 length(unique(first_ext$latin_name)) # Number of species with extension events
 
 
-# CalCOFI vs Lab Review Extensions ----------------------------------------
-# Tally the number of extensions events for each year
-extension_counts_source <- first_ext %>%
-  count(year, source, name = "n_extensions")
-extension_counts_source$Date <- as.Date(paste0(extension_counts_source$year, "-06-15"))
 
-#scale_factor <- 3 
-n_ext_plot <- ggplot() +
-  geom_col(
-    data = extension_counts_source,
-    aes(x = Date, y = n_extensions, fill = source), color = "gray30"
-  ) +
-  scale_fill_manual(values = c("ca_rev" = "#F781BF", "lab_rev" = "#66A61E"), labels = c("ca_rev" = "CalCOFI",
-                                                                                   "lab_rev" = "Lit. Review")) +
-
-  scale_x_date(,
-    date_breaks = "10 years",
-    date_labels = "%Y"
-  ) +
-  labs(fill=" ", x="", y="Number of Extensions") +
-  theme_minimal(base_size = 22) +
-  theme(
-    legend.text = element_text(size=16),
-    legend.position = c(0.1, 0.95),   # (x, y) inside plot coordinates
-    legend.justification = c("left", "top") # anchor legend box at that point
-  )
-
-ggsave("figures/cal_rev_ext.png", plot = n_ext_plot, width = 12, height = 8, units = "in", dpi = 600)
-ggsave("figures/cal_rev_ext.pdf", plot = n_ext_plot, width = 12, height = 8, units = "in", dpi = 600)
-
-# number of lab rev ext
-sum(extension_counts_source %>% filter(source == "lab_rev") %>% pull(n_extensions))
-# number of calcofi ext
-sum(extension_counts_source %>% filter(source == "ca_rev") %>% pull(n_extensions))
