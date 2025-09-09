@@ -20,17 +20,13 @@ To reproduce the analysis, run these scripts in order:
 Extension data & analysis:
 1. 'load_calcofi_review.R'; 'load_lab_review.R'; 'load_historical_distributions.R' process the raw, irregular format versions of the calcofi extension data, review data, and third-party historical range edge data respectively. Each generates a cleaned version of the input data with mergable column names and consistent format. This does not need to be rerun unless changes to the raw data are required, in which case these should be rerun in order.
 2. 'merge_calcofi_lab_reviews.R' merges the cleaned output from the three load scripts ('calcofi_review_data_clean.csv', 'lab_review_with_longitudes.csv', 'historical-distributions-clean.csv') into one master dataframe ('merged_calcofi_lab_review.csv'). This does not need to be rerun unless changes to the raw data are required, in which case these should be rerun in order. 
-3.
-  - (a) 'oni_vs_extension_distance.R' conducts a linear regression comparing ONI to extension number and to extension distance. This script also generates the preliminary figures related to the analyses. This and the following #3 scripts can be run in any order.
+3. Analysis scripts (can be run in any order)
+  - (a) 'oni_vs_extension_distance.R' conducts a linear regression comparing ONI to extension number and to extension distance. This script also generates the preliminary figures related to the analyses. 
   - (b) ‘ca-invert-shits/scripts/enso_ext_timeseries.R’ generates preliminary figures for figure 2 and the final form of the supplementary barplot showcasing which extensions come from which data source. This script also finds several of the counts included in the paper methods.
-
-3c. ‘ca-invert-shits/scripts/blob_analysis.R’ generates preliminary figure 4 and calculates counts and statistical tests whether the number of extension events during 2014-2016 exceeds expectations by chance using a chi-squared goodness-of-fit test.
-
-3d. ‘ca-invert-shits/scripts/extension_map.R’ generates final version of figure 1 and supplementary figure 1 (extension maps).
-
-3e. 'ca-invert-shits/scripts/Figure2Panel.R' generates final version of figure 2 and supplementary figure 2 (extension number vs ONI).
-
-3f. 'ca-invert-shits/scripts/Figure3Panel.R' generates final version of figure 3 (extension distance vs ONI).
+  - (c) ‘ca-invert-shits/scripts/blob_analysis.R’ generates preliminary figure 4 and calculates counts and statistical tests whether the number of extension events during 2014-2016 exceeds expectations by chance using a chi-squared goodness-of-fit test.
+  - (d) ‘ca-invert-shits/scripts/extension_map.R’ generates final version of figure 1 and supplementary figure 1 (extension maps).
+  - (e) 'ca-invert-shits/scripts/Figure2Panel.R' generates final version of figure 2 and supplementary figure 2 (extension number vs ONI).
+  - (f) 'ca-invert-shits/scripts/Figure3Panel.R' generates final version of figure 3 (extension distance vs ONI).
 
 
 Systematic literature search:
