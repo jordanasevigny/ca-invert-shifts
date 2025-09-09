@@ -28,7 +28,7 @@ Extension data & analysis:
 3f. 'ca-invert-shits/scripts/Figure3Panel.R' generates final version of figure 3 (extension distance vs ONI).
 
 
-Systematic literature review:
+Systematic literature search:
 1. ‘ca-invert-shits/scripts/WoRMS_taxonomy_selection.R’ generates the taxa list to fill into the keyword search for Web of Science. This does not need to be rerun unless an updated version of the list is warranted.
 2. 'ca-invert-shits/scripts/collating_WOS.R' pulls all the web of science results into one dataframe (each page of results had to be downloaded separately); deduplicates; and adds R-generated DOIs.
 
