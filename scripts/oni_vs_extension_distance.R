@@ -282,6 +282,19 @@ ggplot(ext_summary, aes(x = proportion_peak_or_end)) +
   theme(axis.ticks.y = element_blank(),
         axis.text.y  = element_blank())
 
+# change legend label & make color scale black and white gradient
+ggplot(ext_summary, aes(x=1, y = proportion_peak_or_end, fill = factor(total_extensions))) +
+  geom_dotplot(binaxis = "y", stackgroups = TRUE, binwidth = 0.032, stroke=1) +
+  geom_hline(yintercept = en_freq_month, linetype = "dashed", color = "#D62828", size=1.3) +
+  labs(
+    y = "Proportion of Extensions Events in El Niño Peak/End Years",
+    x = "Number of Species"
+  ) +
+  theme_minimal() +
+  theme(axis.ticks.x = element_blank(),
+        axis.text.x  = element_blank())
+
+
 
 # STATS
 ## El Nino wo blob - el nino month resolution
@@ -292,3 +305,54 @@ expected_proportions_month <- c(en_freq_month, (1-en_freq_month))
 # Run chi-squared goodness-of-fit test
 chisq.test(x = observed, p = expected_proportions_month)
 
+
+
+# Follow-up stats to Emma's concern regarding multiple events / species
+# Beta-binomial (handles extra-binomial variation across species)
+library(glmmTMB)
+
+df <- transform(
+  ext_summary,
+  k = peak_or_end_extensions,
+  n = total_extensions
+)
+
+p0 <- en_freq_month                    # expected El Niño frequency (0..1)
+
+# Offset on logit scale: tests whether logit(p) - logit(p0) = 0 on average
+m_bb <- glmmTMB(
+  cbind(k, n - k) ~ 1 + offset(rep(qlogis(p0), nrow(df))),
+  family = betabinomial(), data = df
+)
+
+summary(m_bb)
+confint(m_bb)  # CI for the intercept on the logit-odds scale
+
+eta <- fixef(m_bb)$cond["(Intercept)"] + qlogis(p0)
+plogis(eta)  # estimated pooled proportion across species (over-dispersion accounted)
+
+
+# Binomial GLMM with random intercept for species
+library(lme4)
+
+df <- transform(
+  ext_summary,
+  species = as.factor(latin_name),         # make sure species is a factor
+  k = peak_or_end_extensions,
+  n = total_extensions
+)
+
+p0 <- en_freq_month
+
+m_glmm <- glmer(
+  cbind(k, n - k) ~ 1 + offset(rep(qlogis(p0), nrow(df))) + (1 | species),
+  family = binomial, data = df,
+  control = glmerControl(optimizer = "bobyqa")
+)
+
+summary(m_glmm)
+confint(m_glmm, parm = "(Intercept)", method = "Wald")
+
+# Transform back to a pooled proportion for interpretation
+eta <- fixef(m_glmm)[["(Intercept)"]] + qlogis(p0)
+plogis(eta)
