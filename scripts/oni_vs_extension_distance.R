@@ -282,11 +282,27 @@ ggplot(ext_summary, aes(x = proportion_peak_or_end)) +
   theme(axis.ticks.y = element_blank(),
         axis.text.y  = element_blank())
 
+# Color dots by total number extensions made by that species
 # change legend label & make color scale black and white gradient
+# Horizontal 
+ggplot(ext_summary, aes(y=1, x = proportion_peak_or_end, fill = factor(total_extensions))) +
+  geom_dotplot(binaxis = "x", stackgroups = TRUE, binwidth = 0.032, stroke=1) +
+  geom_vline(xintercept = en_freq_month, linetype = "dashed", color = "#D62828", size=1.3) +
+  labs(
+    fill = "Total number of\nextensions",
+    x = "Proportion of Extensions Events in El Niño Peak/End Years",
+    y = "Number of Species"
+  ) +
+  theme_minimal() +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y  = element_blank())
+
+# Vertical
 ggplot(ext_summary, aes(x=1, y = proportion_peak_or_end, fill = factor(total_extensions))) +
   geom_dotplot(binaxis = "y", stackgroups = TRUE, binwidth = 0.032, stroke=1) +
   geom_hline(yintercept = en_freq_month, linetype = "dashed", color = "#D62828", size=1.3) +
   labs(
+    fill = "Total number of\nextension",
     y = "Proportion of Extensions Events in El Niño Peak/End Years",
     x = "Number of Species"
   ) +
