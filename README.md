@@ -67,7 +67,7 @@ Scripts:
   * Method: Filters calcofi and lab reviews for ‘Include’ extensions and drop the low confidence ‘Opportunistic’ extensions from the lab review. Merge by the shared columns. Convert and formalize data types. Merge the historical ranges for the extension species. Requires a minimum year of 1900 (there was some data from pre 1900 accidentally pulled but should already have been excluded). Add coastal longitudes for historical distribution latitudes. Select the northernmost observation for each species each year. Make sure extensions are only included if observation latitude is > historical range lat. Add extension event ids where consecutive yearly observations are one extension event (i.e. if pelagic red crab was found 2013, 2014, 2018, There would be two event ids assigned: 1: 2013-2014 and 2: 2018).
 * ‘ca-invert-shits/scripts/oni_vs_extension_distance.R’,
   * Input: "ca-invert-shits/processed_data/merged_calcofi_lab_review.csv",
-  * Output: Scatterplot for Max ONI vs extension distance; histogram of extension frequency vs Max ONI; associated statistics for both.
+  * Output: Scatterplot for Max ONI vs extension distance; histogram of extension frequency vs Max ONI; main and supplementary figure of species count per extension el nino frequency; associated statistics for all.
   * Method: Classify ENSO years by start (El Niño began), peak (Max number of months of an El Niño event was in that year), end (El Niño concluded), or some combination. Add filter for # of extensions requirement for each species. Add a column of whether the first year of an extension event was the start/peak/end of El Niño. Calculate extension distance (distHaversine from historical range edge to observation location) for each observation. Add oni values to extensions. Filter for furthest extensions of each species in each extension event and the max ONI for the extension event. Make max extension distance per event vs max ONI during event scatter plot and linear regression. Also has a version 2 where max ONI has a small change where if the first year of an extension event was the end of an El Niño event (i.e. a delayed response observation of the extension), the ONI for the year prior was used in the max ONI query. 
 * ‘ca-invert-shits/scripts/enso_ext_timeseries.R’
   * Input: ‘ca-invert-shits/processed_data/merged_calcofi_lab_review.csv’,
@@ -86,6 +86,9 @@ Scripts:
 * 'ca-invert-shits/scripts/Figure3Panel.R',
   * Input: ‘ca-invert-shits/processed_data/merged_calcofi_lab_review.csv’,
   * Output: 'ca-invert-shits/figures/figure3panel'
+* 'ca-invert-shifts/scripts/summary_extension_table.R',
+  * Input: 'ca-invert-shits/processed_data/merged_calcofi_lab_review.csv’,
+  * Output: 'ca-invert-shits/figures/summary_extension_table.png'
 * ‘ca-invert-shits/scripts/WoRMS_taxonomy_selection.R’
   * Input: ‘ca-invert-shits/processed_data/WoRMS_taxlist_20250211_processed_V2.xlsx’,
   * Output: a formatted printout of all the order/class/phylum names to add to the Web of Science search terms.
