@@ -1,4 +1,4 @@
-# Over 120 Years of Episodic Range Extensions of Nearshore Marine Invertebrates in the Northeastern Pacific
+# A Century of Episodic Range Extensions of Nearshore Marine Invertebrates in the Northeastern Pacific
 Authors here
 
 Corresponding aurthor here
