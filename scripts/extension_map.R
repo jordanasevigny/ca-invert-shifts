@@ -162,3 +162,25 @@ map_supp
 ggsave("figures/ext_map_supp.png", plot = map_supp, width = 8, height = 8, units = "in", dpi = 600)
 ggsave("figures/ext_map_supp.pdf", plot = map_supp, width = 8, height = 8, units = "in", dpi = 600)
 
+
+
+####
+# No species list on map
+ggplot() +
+  geom_sf(data = world, fill = "gray90", color = "gray80") +
+  geom_sf(data = states, fill = NA, color = "gray80", size = 0.3) +
+  geom_curve(
+    data = furthest_noth_j,
+    aes(x = x0, y = y0, xend = x1, yend = y1, color = latin_name),
+    curvature = -0.2,
+    arrow = arrow(length = unit(0.6, "cm")),
+    size=1.2,
+    alpha=0.8
+  ) +
+  scale_color_manual(values = palette_18_alt) +
+  coord_sf(xlim = c(-127, -114), ylim = c(30, 50), expand = FALSE) +
+  scale_x_continuous(breaks = c(-126, -122, -118, -114)) +
+  theme_minimal(base_size = 16) +
+  labs(x = "Longitude", 
+       y = "Latitude", 
+       color = "Species") 

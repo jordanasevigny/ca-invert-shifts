@@ -272,7 +272,7 @@ ggplot(ext_summary, aes(x = proportion_peak_or_end)) +
   theme_minimal()
 
 ggplot(ext_summary, aes(x = proportion_peak_or_end)) +
-  geom_dotplot(binwidth = 0.1, fill = "white", color = "black", stroke=2) +
+  geom_dotplot(binwidth = 0.04, fill = "white", color = "black", stroke=2) +
   geom_vline(xintercept = en_freq_month, linetype = "dashed", color = "#D62828", size=1.3) +
   labs(
     x = "Proportion of Extensions Events in El Niño Peak/End Years",
@@ -285,21 +285,36 @@ ggplot(ext_summary, aes(x = proportion_peak_or_end)) +
 # Color dots by total number extensions made by that species
 # change legend label & make color scale black and white gradient
 # Horizontal 
-ggplot(ext_summary, aes(y=1, x = proportion_peak_or_end, fill = factor(total_extensions))) +
-  geom_dotplot(binaxis = "x", stackgroups = TRUE, binwidth = 0.032, stroke=1) +
+supp3 <- ggplot(ext_summary, aes(x = proportion_peak_or_end, fill = factor(total_extensions))) +
+  geom_dotplot(    binaxis = "x",
+                   method = "histodot",      # use fixed histogram bins (not density)
+                   binpositions = "all",     # all groups share bin boundaries
+                   binwidth = 0.16,          # pick your bin width
+                   stackgroups = TRUE,       # groups stack within the same bin
+                   stackdir = "up",
+                   colour = "black",
+                   stroke = 1) +
   geom_vline(xintercept = en_freq_month, linetype = "dashed", color = "#D62828", size=1.3) +
   labs(
     fill = "Total number of\nextensions",
     x = "Proportion of Extensions Events in El Niño Peak/End Years",
     y = "Number of Species"
   ) +
-  theme_minimal() +
+  theme_minimal(base_size = 18) +
   theme(axis.ticks.y = element_blank(),
-        axis.text.y  = element_blank())
+        axis.text.y  = element_blank(),
+        legend.title = element_text(size=12),
+        legend.text = element_text(size=14),
+        legend.position = c(0.00001, 0.9999),   # (x, y) inside plot coordinates
+        legend.justification = c("left", "top"), # anchor legend box at that point
+        axis.title.y.right = element_blank()
+  )
+
+ggsave("figures/figure3_supp.pdf", plot = supp3, width = 12, height = 6, unit = "in", dpi = 600)
 
 # Vertical
 ggplot(ext_summary, aes(x=1, y = proportion_peak_or_end, fill = factor(total_extensions))) +
-  geom_dotplot(binaxis = "y", stackgroups = TRUE, binwidth = 0.032, stroke=1) +
+  geom_dotplot(binaxis = "y", stackgroups = TRUE, binwidth = 0.1, stroke=1) +
   geom_hline(yintercept = en_freq_month, linetype = "dashed", color = "#D62828", size=1.3) +
   labs(
     fill = "Total number of\nextension",
