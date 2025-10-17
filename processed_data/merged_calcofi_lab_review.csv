@@ -1,4 +1,4 @@
-"","latin_name","taxonomic_rank","common_name","latitude","latitude_location","longitude","longitude_location","year","month","day","source","latin_name_original","hist_range_lat","resource","hist_range_lon","group_id","first_year"
+"","latin_name","taxonomic_rank","common_name","latitude","latitude_reference","longitude","longitude_reference","year","month","day","obs_source","latin_name_original","hist_range_lat","hist_lat_source","hist_range_lon","group_id","first_year"
 "1","Anteaeolidiella oliviae","species","Olive's Nudibranch",39.4513,"Paper",-123.8139,"Paper",2015,"February","16","lab_rev","Anteaeolidiella oliviae",37.89,"Review screening",-122.63508944272,0,2015
 "2","Anthopleura sola","species","Sunburst Sea Anemone",39.60206,"Paper",-123.78892,"Paper",2018,"May","","lab_rev","Anthopleura sola",37.5,"Intertidal Invertebrates from Central CA to OR",-122.15331578474,0,2018
 "3","Aplysia californica","species","sea hare",44.609567,"Google Maps",-124.063123786977,"R generated",1983,"October","14, 19","lab_rev","Aplysia californica",34.5,"Intertidal Invertebrates from Central CA to OR",-120.496897011342,0,1983
@@ -61,10 +61,10 @@
 "60","Emerita analoga","species","",47.604594,"Google Maps",-122.97650711089,"R generated",1941,"","","lab_rev","Emerita analoga",32.67,"Marine Organisms as Indicators",-117.237240155482,1,1941
 "61","Emerita analoga","species","",47.604594,"Google Maps",-122.97650711089,"R generated",1942,"","","lab_rev","Emerita analoga",32.67,"Marine Organisms as Indicators",-117.237240155482,1,1941
 "62","Emerita analoga","species","",49.110317,"Google Maps",-123.069991450524,"R generated",1957,"","","lab_rev","Emerita analoga",32.67,"Marine Organisms as Indicators",-117.237240155482,2,1957
-"63","Emerita analoga","species","",49.0333,"2016 time point from Paper",-125.703826637543,"R generated",1958,"","","lab_rev","Emerita analoga",32.67,"Marine Organisms as Indicators",-117.237240155482,2,1957
-"64","Emerita analoga","species","",49.0333,"2017 time point from Paper",-125.703826637543,"R generated",1959,"","","lab_rev","Emerita analoga",32.67,"Marine Organisms as Indicators",-117.237240155482,2,1957
-"65","Emerita analoga","species","",49.0333,"2018 time point from Paper",-125.703826637543,"R generated",1960,"","","lab_rev","Emerita analoga",32.67,"Marine Organisms as Indicators",-117.237240155482,2,1957
-"66","Emerita analoga","species","",49.0333,"2019 time point from Paper",-125.703826637543,"R generated",1961,"","","lab_rev","Emerita analoga",32.67,"Marine Organisms as Indicators",-117.237240155482,2,1957
+"63","Emerita analoga","species","",49.0333,"same location as 2016 time point from Paper",-125.703826637543,"R generated",1958,"","","lab_rev","Emerita analoga",32.67,"Marine Organisms as Indicators",-117.237240155482,2,1957
+"64","Emerita analoga","species","",49.0333,"same location as 2016 time point from Paper",-125.703826637543,"R generated",1959,"","","lab_rev","Emerita analoga",32.67,"Marine Organisms as Indicators",-117.237240155482,2,1957
+"65","Emerita analoga","species","",49.0333,"same location as 2016 time point from Paper",-125.703826637543,"R generated",1960,"","","lab_rev","Emerita analoga",32.67,"Marine Organisms as Indicators",-117.237240155482,2,1957
+"66","Emerita analoga","species","",49.0333,"same location as 2016 time point from Paper",-125.703826637543,"R generated",1961,"","","lab_rev","Emerita analoga",32.67,"Marine Organisms as Indicators",-117.237240155482,2,1957
 "67","Emerita analoga","species","",50.029345,"Google Maps",-124.972550228271,"R generated",1983,"","","lab_rev","Emerita analoga",32.67,"Marine Organisms as Indicators",-117.237240155482,3,1983
 "68","Emerita analoga","species","",47.577678,"Google Maps",-123.007320808685,"R generated",2006,"","","lab_rev","Emerita analoga",32.67,"Marine Organisms as Indicators",-117.237240155482,4,2006
 "69","Emerita analoga","species","",47.577678,"Google Maps",-123.007320808685,"R generated",2007,"","","lab_rev","Emerita analoga",32.67,"Marine Organisms as Indicators",-117.237240155482,4,2006

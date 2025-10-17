@@ -119,13 +119,15 @@ ext_ids <- north_df_filt %>%
   mutate(
     year_diff = year - lag(year, default = first(year)),
     new_group = if_else(year_diff > 1, 1, 0),
-    group_id = cumsum(new_group)
+    group_id = cumsum(new_group) # group_id is is the extension event if per species
   ) %>%
   ungroup() %>%
   dplyr::select(-c(year_diff, new_group)) %>%
   group_by(latin_name, group_id) %>%
-  mutate(first_year = min(year)) %>%
-  ungroup()
+  mutate(first_year = min(year)) %>% # first year of each extension event
+  ungroup() %>%
+  rename(hist_lat_source = resource) %>%
+  rename(obs_source = source)
 
 # nrow(ext_ids %>%
 #   group_by(latin_name) %>%
