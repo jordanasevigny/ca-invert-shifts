@@ -13,8 +13,8 @@ library(sf)
 
 # Load data
 ca_rev <- read.csv("processed_data/calcofi_review_data_clean.csv")
-lab_rev <- read.csv("processed_data/lab_review_with_longitudes.csv")
-hist_dist <- read.csv("processed_data/historical-distributions-clean.csv")
+lab_rev <- read.csv("processed_data/lab_review_clean.csv")
+hist_dist <- read.csv("processed_data/historical_distributions_clean.csv")
 
 # Filter to included data
 ca_rev_inc <- filter(ca_rev, include_exclude == "Include")
