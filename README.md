@@ -1,6 +1,6 @@
 # A Century of Episodic Range Extensions of Nearshore Marine Invertebrates in the Northeastern Pacific
 
-Authors: Jordana K. Sevigny1, Emma J. Walker1, Bella G. Lipsey1, Theodore T. Tran1, and Alexa L. Fredston1
+Authors: Jordana K. Sevigny1, Emma J. Walker12, Bella G. Lipsey1, Theodore T. Tran1, and Alexa L. Fredston1
 
 Affiliations:
 Department of Ocean Sciences, University of California, Santa Cruz, California, United States of America
