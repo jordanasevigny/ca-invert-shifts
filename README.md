@@ -1,25 +1,30 @@
 # A Century of Episodic Range Extensions of Nearshore Marine Invertebrates in the Northeastern Pacific
-Authors here
 
-Corresponding aurthor here
+Authors: Jordana K. Sevigny1, Emma J. Walker1, Bella G. Lipsey1, Theodore T. Tran1, and Alexa L. Fredston1
+
+Affiliations:
+Department of Ocean Sciences, University of California, Santa Cruz, California, United States of America
+Department , University of Osnabrük, Osnabrük, Germany
+
+Address for correspondence: Jordana K. Sevigny, Department of Ocean Sciences, University of California, Santa Cruz, California, 1156 High Street, Santa Cruz, California 95064. jsevigny@ucsc.edu
 
 # Where do the data come from?
 
-We compiled a database of northward range extensions of warm-water marine invertebrates through a systematic literature review of both historical survey reports and broader peer-reviewed literature. A central source was the California Cooperative Oceanic Fisheries Investigations (CalCOFI) State of the [California Current reports]([url](https://calcofi.org/publications/calcofi-reports/)). These reports provide serendipitous records of unusual species occurrences noted by scientists during routine surveys, rather than targeted searches for range shifts. To expand beyond these historical accounts, we conducted a systematic literature review of peer-reviewed studies, integrating their observations with those from the CalCOFI reports to assemble a more comprehensive record of extension events and assess broader patterns. All records used in this analysis come from onshore or nearshore (i.e., coastal) observations of species with a historical or novel range edge in California. 
+We compiled a database of northward range extensions across California of marine invertebrates through a systematic literature review of both historical survey reports and broader peer-reviewed literature. A central source was the California Cooperative Oceanic Fisheries Investigations (CalCOFI) State of the [California Current reports]([url](https://calcofi.org/publications/calcofi-reports/)). These reports provide serendipitous records of unusual species occurrences noted by scientists during routine surveys, rather than targeted searches for range shifts. To expand beyond these historical accounts, we conducted a systematic literature review of peer-reviewed studies, integrating their observations with those from the CalCOFI reports to assemble a more comprehensive record of extension events and assess broader patterns. All records used in this analysis come from onshore or nearshore (i.e., coastal) observations of species with a historical or novel range edge in California. 
 
 # What's in this repository?
 The repository is organized as follows:
 * 'scripts/' contains scripts to clean up the raw datafiles; analyze the data; and generate figures.
 * 'data/' containes raw, pre-processed / pre-cleaned data files
-* 'processed_data/'  contains outputs of scripts that filter, clean, summarize, or analyze data.
+* 'processed_data/'  contains outputs from scripts that filter, clean, summarize, or analyze data.
 * 'figures/' contains the figures included in the paper.
 
 # In what order should things be run?
 To reproduce the analysis, run these scripts in order:
 
 Extension data & analysis:
-1. 'load_calcofi_review.R'; 'load_lab_review.R'; 'load_historical_distributions.R' process the raw, irregular format versions of the calcofi extension data, review data, and third-party historical range edge data respectively. Each generates a cleaned version of the input data with mergable column names and consistent format. This does not need to be rerun unless changes to the raw data are required, in which case these should be rerun in order.
-2. 'merge_calcofi_lab_reviews.R' merges the cleaned output from the three load scripts ('calcofi_review_data_clean.csv', 'lab_review_with_longitudes.csv', 'historical-distributions-clean.csv') into one master dataframe ('merged_calcofi_lab_review.csv'). This does not need to be rerun unless changes to the raw data are required, in which case these should be rerun in order. 
+1. 'load_lab_review.R' adds R-generated longitudes to observation latitudes as needed for the observations from the literature review. It outputs 'lab_review_with_longitudes.csv.' This does not need to be rerun unless changes to the raw data are required, in which case these should be rerun in order.
+2. 'merge_calcofi_lab_reviews.R' merges 'calcofi_review_data_clean.csv', 'lab_review_with_longitudes.csv', 'historical-distributions-clean.csv' into one master dataframe ('merged_calcofi_lab_review.csv'). This does not need to be rerun unless changes to the raw data are required, in which case these should be rerun in order. 
 3. Analysis scripts (can be run in any order)
   - (a) 'oni_vs_extension_distance.R' conducts a linear regression comparing ONI to extension number and to extension distance. This script also generates the preliminary figures related to the analyses. 
   - (b) ‘ca-invert-shits/scripts/enso_ext_timeseries.R’ generates preliminary figures for figure 2 and the final form of the supplementary barplot showcasing which extensions come from which data source. This script also finds several of the counts related to # extensions occuring during El Niño included in the paper methods.
@@ -27,6 +32,7 @@ Extension data & analysis:
   - (d) ‘ca-invert-shits/scripts/extension_map.R’ generates final version of figure 1 and supplementary figure 1 (extension maps).
   - (e) 'ca-invert-shits/scripts/Figure2Panel.R' generates final version of figure 2 and supplementary figure 2 (extension number vs ONI).
   - (f) 'ca-invert-shits/scripts/Figure3Panel.R' generates final version of figure 3 (extension distance vs ONI).
+  - (g) 'ca-invert-shits/scripts/summary_extension_table.R' generates the supplementary table 1.
 
 
 Systematic literature search:
@@ -36,12 +42,12 @@ Systematic literature search:
 
 # Table of Contents
 Data: 
-* Calcofi extensions raw data: ‘ca-invert-shits/data/CalCOFI Coding Form (Responses).xlsx’
-* Lab review extensions raw data: ‘ca-invert-shits/data/Screening & Review Tracking - Full-text Screening.csv’
-* Historical distributions raw: ‘ca-invert-shits/data/historical-distributions.xlsx’
-* Calcofi extensions cleaned: ‘ca-invert-shits/processed_data/calcofi_review_data_clean.csv’
-* Lab review extensions cleaned: ‘ca-invert-shits/processed_data/lab_review_with_longitudes.csv’
-* Historical distributions clean: ‘ca-invert-shits/processed_data/historical-distributions-clean.csv’
+* Forward search articles: 'ca-invert-shits/data/forward_search_articles.csv' (the paper ID is paired with the paper ID in the master extension dataframe)
+* Backward search articles: 'ca-invert-shits/data/backward_search_articles.csv' (the paper ID is paired with the paper ID in the master extension dataframe)
+* Literature review extensions without R-generated longitudes: ‘ca-invert-shits/data/lab_review_clean_missing_longitudes.csv’
+* Literature review extensions with R-generated longitudes: ‘ca-invert-shits/processed_data/lab_review_with_longitudes.csv’
+* Calcofi extensions: ‘ca-invert-shits/processed_data/calcofi_review_data_clean.csv’
+* Historical distributions: ‘ca-invert-shits/processed_data/historical-distributions-clean.csv’
 * **Master Extension Dataframe**: ‘ca-invert-shits/processed_data/merged_calcofi_lab_review.csv’
 * Resulting papers for lab review from WOS: ‘ca-invert-shits/processed_data/combined_search29.xlsx’
 * Taxa list for WOS search keywords: ‘ca-invert-shits/processed_data/WoRMS_taxlist_20250211_processed_V2.xlsx’
