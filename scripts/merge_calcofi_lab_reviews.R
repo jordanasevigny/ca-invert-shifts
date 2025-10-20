@@ -25,13 +25,13 @@ lab_rev_inc <- filter(lab_rev_inc, extension_confidence_criteria != "Opportunist
 
 # Identify shared columns
 shared_cols <- intersect(names(ca_rev_inc), names(lab_rev_inc))
-
+# NEED TO FIX THESE LINES
 # Select only shared columns and add a source column
 ca_rev_inc_common <- ca_rev_inc[, shared_cols] %>%
   mutate(source = "ca_rev")
 
 lab_rev_inc_common <- lab_rev_inc[, shared_cols] %>%
-  mutate(source = "lab_rev")
+  mutate(source = paper_id)
 
 # Convert data types
 ca_rev_inc_common <- ca_rev_inc_common %>%
