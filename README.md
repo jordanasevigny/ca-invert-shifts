@@ -55,18 +55,10 @@ Data:
 * ENSO / ONI data downloaded from download_enso(climate_idx = "oni", create_csv = TRUE), r library rsoi. ‘ca-invert-shits/data/enso_data.csv’
 
 Scripts:
-* ‘ca-invert-shits/scripts/load_calcofi_review.R’
-  * Input:  ‘ca-invert-shits/data/CalCOFI Coding Form (Responses).xlsx’,
-  * Output: ‘ca-invert-shits/processed_data/calcofi_review_data_clean.csv’,
-  * Method: Stacks the individual extensions per calcofi excerpt vertically and renames columns to match shared lab review columns.
 * ‘ca-invert-shits/scripts/load_lab_review.R’
-  * Input:  ‘ca-invert-shits/data/Screening & Review Tracking - Full-text Screening.csv’,
+  * Input:  ‘ca-invert-shits/data/lab_review_clean_missing_longitudes.csv’,
   * Output: ‘ca-invert-shits/processed_data/lab_review_with_longitudes.csv’,
-  * Method: Adds longitudes of coastline to datapoints with only latitudes available. Updates column names to match shared calcofi review columns.
-* ‘ca-invert-shits/scripts/load_historical_distributions.R’
-  * Input: ‘ca-invert-shits/data/historical-distributions.xlsx’,
-  * Output: ‘ca-invert-shits/processed_data/historical-distributions-clean.csv’,
-  * Method:  Dropped notes to merge with review.
+  * Method: Adds longitudes of coastline to datapoints with only latitudes available.
 * ‘ca-invert-shits/scripts/merge_calcofi_lab_reviews.R’
   * Inputs: 'ca-invert-shits/processed_data/calcofi_review_data_clean.csv', 'ca-invert-shits/processed_data/lab_review_with_longitudes.csv', 'ca-invert-shits/processed_data/historical-distributions-clean.csv',
   * Output: "ca-invert-shits/processed_data/merged_calcofi_lab_review.csv",
