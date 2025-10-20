@@ -24,7 +24,7 @@ To reproduce the analysis, run these scripts in order:
 
 Extension data & analysis:
 1. 'load_lab_review.R' adds R-generated longitudes to observation latitudes as needed for the observations from the literature review. It outputs 'lab_review_with_longitudes.csv.' This does not need to be rerun unless changes to the raw data are required, in which case these should be rerun in order.
-2. 'merge_calcofi_lab_reviews.R' merges 'calcofi_review_data_clean.csv', 'lab_review_with_longitudes.csv', 'historical-distributions-clean.csv' into one master dataframe ('merged_calcofi_lab_review.csv'). This does not need to be rerun unless changes to the raw data are required, in which case these should be rerun in order. 
+2. 'merge_calcofi_lab_reviews.R' merges 'calcofi_review_data_clean.csv', 'lab_review_with_longitudes.csv', 'historical_distributions_clean.csv' into one master dataframe ('merged_calcofi_lab_review.csv'). This does not need to be rerun unless changes to the raw data are required, in which case these should be rerun in order. 
 3. Analysis scripts (can be run in any order)
   - (a) 'oni_vs_extension_distance.R' conducts a linear regression comparing ONI to extension number and to extension distance. This script also generates the preliminary figures related to the analyses. 
   - (b) ‘ca-invert-shits/scripts/enso_ext_timeseries.R’ generates preliminary figures for figure 2 and the final form of the supplementary barplot showcasing which extensions come from which data source. This script also finds several of the counts related to # extensions occuring during El Niño included in the paper methods.
@@ -47,7 +47,7 @@ Data:
 * Literature review extensions without R-generated longitudes: ‘ca-invert-shits/data/lab_review_clean_missing_longitudes.csv’
 * Literature review extensions with R-generated longitudes: ‘ca-invert-shits/processed_data/lab_review_with_longitudes.csv’
 * Calcofi extensions: ‘ca-invert-shits/processed_data/calcofi_review_data_clean.csv’
-* Historical distributions: ‘ca-invert-shits/processed_data/historical-distributions-clean.csv’
+* Historical distributions: ‘ca-invert-shits/processed_data/historical_distributions_clean.csv’
 * **Master Extension Dataframe**: ‘ca-invert-shits/processed_data/merged_calcofi_lab_review.csv’
 * Resulting papers for lab review from WOS: ‘ca-invert-shits/processed_data/combined_search29.xlsx’
 * Taxa list for WOS search keywords: ‘ca-invert-shits/processed_data/WoRMS_taxlist_20250211_processed_V2.xlsx’
