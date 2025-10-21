@@ -25,13 +25,16 @@ lab_rev_inc <- filter(lab_rev_inc, extension_confidence_criteria != "Opportunist
 
 # Identify shared columns
 shared_cols <- intersect(names(ca_rev_inc), names(lab_rev_inc))
-# NEED TO FIX THESE LINES
+
 # Select only shared columns and add a source column
 ca_rev_inc_common <- ca_rev_inc[, shared_cols] %>%
-  mutate(source = "ca_rev")
-
+  mutate(source = "ca_rev") %>%
+  mutate(calcofi_report_yr = ca_rev_inc$report_year) %>%
+  mutate(paper_id = NA)
 lab_rev_inc_common <- lab_rev_inc[, shared_cols] %>%
-  mutate(source = paper_id)
+  mutate(source = "lab_rev") %>%
+  mutate(calcofi_report_yr = NA) %>%
+  mutate(paper_id = lab_rev_inc$paper_id)
 
 # Convert data types
 ca_rev_inc_common <- ca_rev_inc_common %>%
@@ -42,6 +45,14 @@ ca_rev_inc_common <- ca_rev_inc_common %>%
   mutate(across(day, as.character))
 lab_rev_inc_common <- lab_rev_inc_common %>%
   mutate(across(day, as.character))
+ca_rev_inc_common <- ca_rev_inc_common %>%
+  mutate(across(calcofi_report_yr, as.character))
+lab_rev_inc_common <- lab_rev_inc_common %>%
+  mutate(across(calcofi_report_yr, as.character))
+ca_rev_inc_common <- ca_rev_inc_common %>%
+  mutate(across(paper_id, as.character))
+lab_rev_inc_common <- lab_rev_inc_common %>%
+  mutate(across(paper_id, as.character))
 
 # Row-bind the two
 merged_df <- bind_rows(ca_rev_inc_common, lab_rev_inc_common)

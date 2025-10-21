@@ -71,6 +71,7 @@ df_t <- rename(df_t, longitude = longitude2)
 colnames(df_t)
 df_t <- df_t %>% relocate(longitude, .after = latitude_reference) # Move longitude column
 
+df_t <- df_t %>% select(-screener_initials, -inconclusive_note, -screening_notes)
 # Write a new data sheet with the longitudes
 write.csv(df_t, "processed_data/lab_review_with_longitudes.csv", row.names = FALSE)
 
