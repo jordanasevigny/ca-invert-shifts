@@ -48,7 +48,7 @@ Data:
 * Literature review extensions with R-generated longitudes: ‘ca-invert-shits/processed_data/lab_review_with_longitudes.csv’
 * Calcofi extensions: ‘ca-invert-shits/processed_data/calcofi_review_data_clean.csv’
 * Historical distributions: ‘ca-invert-shits/processed_data/historical_distributions_clean.csv’
-* **Master Extension Dataframe**: ‘ca-invert-shits/processed_data/merged_calcofi_lab_review.csv’
+* **Master Extension Dataframe**: ‘ca-invert-shits/processed_data/merged_calcofi_lab_review.csv’ ('paper_id' can be cross-referenced to obtain paper reference with forward_search_articles.csv for 1-375 or backward_search_articles.csv for 376+; 'report_year' can be used for calcofi report lookup, https://calcofi.org/publications/calcofi-reports/)
 * Resulting papers for lab review from WOS: ‘ca-invert-shits/processed_data/combined_search29.xlsx’
 * Taxa list for WOS search keywords: ‘ca-invert-shits/processed_data/WoRMS_taxlist_20250211_processed_V2.xlsx’
 * Filtered dataset of furthest north extensions for the 3+ extension species: ‘ca-invert-shits/processed_data/threeplus_ext_sp_furthest_north.csv’
