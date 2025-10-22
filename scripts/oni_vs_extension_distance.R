@@ -310,7 +310,8 @@ supp3 <- ggplot(ext_summary, aes(x = proportion_peak_or_end, fill = factor(total
         axis.title.y.right = element_blank()
   )
 
-ggsave("figures/figure3_supp.pdf", plot = supp3, width = 12, height = 6, unit = "in", dpi = 600)
+ggsave("figures/figure3_supp.png", plot = supp3, width = 10, height = 7, unit = "in", dpi = 600)
+ggsave("figures/figure3_supp.pdf", plot = supp3, width = 10, height = 7, unit = "in", dpi = 600)
 
 # Vertical
 ggplot(ext_summary, aes(x=1, y = proportion_peak_or_end, fill = factor(total_extensions))) +
