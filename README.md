@@ -33,6 +33,7 @@ Extension data & analysis:
   - (e) 'ca-invert-shits/scripts/Figure2Panel.R' generates final version of figure 2 and supplementary figure 2 (extension number vs ONI).
   - (f) 'ca-invert-shits/scripts/Figure3Panel.R' generates final version of figure 3 (extension distance vs ONI).
   - (g) 'ca-invert-shits/scripts/summary_extension_table.R' generates the supplementary table 1.
+  - (h) 'ca-invert-shits/scripts/hist_lat_supp_table.R' generates the supplementary table 2.
 
 
 Systematic literature search:
@@ -92,5 +93,8 @@ Scripts:
   * Output: a formatted printout of all the order/class/phylum names to add to the Web of Science search terms.
 * ‘ca-invert-shits/scripts/collating_WOS.R’
   * Input: WOS_search29 folder,
-  * Output: "ca-invert-shits/processed_data/combined_search29.xlsx",
-  * Method: This script pulls all the web of science results into one dataframe (each page of results had to be downloaded separately), deduplicates, and adds R-generated DOIs. 
+  * Output: 'ca-invert-shits/processed_data/combined_search29.xlsx',
+  * Method: This script pulls all the web of science results into one dataframe (each page of results had to be downloaded separately), deduplicates, and adds R-generated DOIs.
+* 'ca-invert-shits/scripts/hist_lat_supp_table.R'
+  * Input: 'processed_data/historical_distributions_clean.csv'
+  * Output: 'figures/hist_lat_supp_table.png'
