@@ -2,7 +2,10 @@
 # By: Jordana Sevigny, jordana.sevigny@gmail.com
 # Date created: 07/02/2025
 
-# Must have already run all three "load*.R" scripts
+# Must have already run load_lab_review.R if changes were made to the raw data
+# Run this script to merge calcofi, lab review, and historical lats
+# After this script is run (does not need to be rerun if no changes are made to raw data),
+# you can run analysis scripts
 
 rm(list = ls())
 
@@ -61,27 +64,28 @@ merged_df <- bind_rows(ca_rev_inc_common, lab_rev_inc_common)
 merged_df <- merged_df %>%
   dplyr::select(-include_exclude)
 
-# Make latin names uppercase
+# Make latin names uppercase & taxa names lowercase
 merged_df$latin_name <- gsub("^(\\w)", "\\U\\1", merged_df$latin_name, perl = TRUE)
+merged_df$taxonomic_rank <- tolower(merged_df$taxonomic_rank)
 
-# Make species / genus into one category if likely shared (e.g. pyrosomes, velella)
-unique(merged_df$latin_name)
-merged_df$latin_name_original <- merged_df$latin_name
-merged_df_histedge <- merged_df %>%
-  mutate(latin_name = case_when(
-    str_detect(latin_name, regex("thetys", ignore_case = TRUE)) ~ "Thetys",
-    TRUE ~ latin_name
-  )) %>%
-  mutate(latin_name = case_when(
-    str_detect(latin_name, regex("velella", ignore_case = TRUE)) ~ "Velella",
-    TRUE ~ latin_name
-  )) %>%
-  mutate(latin_name = case_when(
-    str_detect(latin_name, regex("Pyrosoma", ignore_case = TRUE)) ~ "Pyrosoma",
-    TRUE ~ latin_name
-  ))
+# # Make species / genus into one category if likely shared (e.g. pyrosomes, velella)
+# unique(merged_df$latin_name)
+# merged_df$latin_name_original <- merged_df$latin_name
+# merged_df_histedge <- merged_df %>%
+#   mutate(latin_name = case_when(
+#     str_detect(latin_name, regex("thetys", ignore_case = TRUE)) ~ "Thetys",
+#     TRUE ~ latin_name
+#   )) %>%
+#   mutate(latin_name = case_when(
+#     str_detect(latin_name, regex("velella", ignore_case = TRUE)) ~ "Velella",
+#     TRUE ~ latin_name
+#   )) %>%
+#   mutate(latin_name = case_when(
+#     str_detect(latin_name, regex("Pyrosoma", ignore_case = TRUE)) ~ "Pyrosoma",
+#     TRUE ~ latin_name
+#   ))
 #unique(merged_df_histedge$latin_name)
-
+merged_df_histedge <- merged_df
 # Merge historical distributions with extension dataset
 merged_df_histedge <- merged_df_histedge %>%
   left_join(hist_dist, by="latin_name")
