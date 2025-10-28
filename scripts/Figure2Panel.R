@@ -290,7 +290,7 @@ B <- ggplot(ext_summary, aes(x = proportion_peak_or_end)) +
   geom_dotplot(binwidth = 0.1, fill = "gray70", color = "black", stroke=1) +
   geom_vline(xintercept = en_freq_month, linetype = "dashed", color = "#E63946", size=1.3) +
   labs(
-    x = "Proportion of Extensions Events\nin El Niño Peak/End Years",
+    x = "Proportion of Extension Events\nin El Niño Peak/End Years",
     y = "Number of Species"
   ) +
   theme_minimal(base_size = 18) +
