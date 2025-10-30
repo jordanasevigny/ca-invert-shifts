@@ -43,11 +43,41 @@ summary_table <- extensions %>%
     extension_years = paste(sort(unique(first_year)), collapse = ", ")
   ) %>%
   arrange(latin_name) %>%
-  # optional: round the mean
+  # round the mean
   mutate(mean_extension = round(mean_extension, 1))
 
-# Make it look nice for publication
-gt_table <- summary_table %>%
+# 
+# # Make it look nice for publication
+# gt_table <- summary_table %>%
+#   gt() %>%
+#   fmt_number(columns = mean_extension, decimals = 1) %>%
+#   cols_label(
+#     latin_name = "Species",
+#     mean_extension = "Mean Extension Distance (km)",
+#     extension_years = "Years Observed"
+#   ) %>%
+#   tab_header(
+#     title = "Summary of Range Extension Events",
+#     subtitle = "Mean northward extension distance and extension year observed per species"
+#   ) %>%
+#   tab_options(
+#     table.font.names = "Helvetica",
+#     data_row.padding = px(4),
+#     table.font.size = 12,
+#     heading.align = "left"
+#   )
+# gtsave(gt_table, "figures/extension_table.png")
+
+# Find midpoint (or choose your own row cutoff)
+n <- nrow(summary_table)
+half <- ceiling(n / 2)
+
+# Split into two data frames
+summary_table1 <- summary_table[1:half, ]
+summary_table2 <- summary_table[(half + 1):n, ]
+
+# Table 1
+gt_table1 <- summary_table1 %>%
   gt() %>%
   fmt_number(columns = mean_extension, decimals = 1) %>%
   cols_label(
@@ -56,7 +86,7 @@ gt_table <- summary_table %>%
     extension_years = "Years Observed"
   ) %>%
   tab_header(
-    title = "Summary of Range Extension Events",
+    title = "Summary of Range Extension Events (Part 1)",
     subtitle = "Mean northward extension distance and extension year observed per species"
   ) %>%
   tab_options(
@@ -65,5 +95,26 @@ gt_table <- summary_table %>%
     table.font.size = 12,
     heading.align = "left"
   )
+gtsave(gt_table1, "figures/extension_table_part1.png")
 
-gtsave(gt_table, "figures/extension_table.png")
+
+# Table 2
+gt_table2 <- summary_table2 %>%
+  gt() %>%
+  fmt_number(columns = mean_extension, decimals = 1) %>%
+  cols_label(
+    latin_name = "Species",
+    mean_extension = "Mean Extension Distance (km)",
+    extension_years = "Years Observed"
+  ) %>%
+  tab_header(
+    title = "Summary of Range Extension Events (Part 2)",
+    subtitle = "Mean northward extension distance and extension year observed per species"
+  ) %>%
+  tab_options(
+    table.font.names = "Helvetica",
+    data_row.padding = px(4),
+    table.font.size = 12,
+    heading.align = "left"
+  )
+gtsave(gt_table2, "figures/extension_table_part2.png")
