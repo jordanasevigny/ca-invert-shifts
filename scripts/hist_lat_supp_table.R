@@ -46,6 +46,10 @@ data2 <- data[(half + 1):n, ]
 # Table 1
 gt_table1 <- data1 %>%
   gt() %>%
+  fmt_number(
+    columns = hist_range_lat,
+    decimals = 2
+  ) %>%
   cols_label(
     latin_name = "Species",
     hist_range_lat = "Historical Poleward Range Edge Latitude",
@@ -66,6 +70,10 @@ gtsave(gt_table1, "figures/hist_lat_supp_table_part1.png")
 # Table 2
 gt_table2 <- data2 %>%
   gt() %>%
+  fmt_number(
+    columns = hist_range_lat,
+    decimals = 2
+  ) %>%
   cols_label(
     latin_name = "Species",
     hist_range_lat = "Historical Poleward Range Edge Latitude",
