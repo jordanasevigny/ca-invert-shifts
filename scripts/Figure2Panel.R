@@ -94,7 +94,7 @@ A <- ggplot() +
   
   # Y axis scaled for ONI only
   scale_y_continuous(
-    name = "Oceanic Niño Index",
+    name = "Oceanic Niño\nIndex",
     breaks = seq(-2, 2, 1) * scale_factor,
     labels = seq(-2, 2, 1)
   ) +
