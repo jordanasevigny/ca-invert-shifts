@@ -123,7 +123,7 @@ blob <- ggplot() +
     name = "Number of\nExtension Events",
     sec.axis = sec_axis(
       ~ . / scale_factor,
-      name = "ONI"
+      name = "Oceanic Niño Index"
     )
   ) +
   

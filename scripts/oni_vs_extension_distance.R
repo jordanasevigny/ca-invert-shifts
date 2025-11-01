@@ -82,7 +82,14 @@ oni_ave_by_yr <- enso_df %>%
 
 # Prep review data for analysis --------------------------------------------
 
-# Identify the species with X+ events and filter for those species
+# How many species had just 1 extension?
+df %>% group_by(latin_name) %>% filter(!any(group_id > 0)) %>% pull(latin_name) %>% unique()
+
+# What species had the most extensions?
+max_group_id = max(df$group_id)
+df %>% group_by(latin_name) %>% filter(group_id == max_group_id) %>% pull(latin_name) %>% unique()
+
+ # Identify the species with X+ events and filter for those species
 species_with_groupXplus <- df %>%
   group_by(latin_name) %>%
   filter(any(group_id >= 2)) %>% # 2 would be three events (0, 1, 2)
@@ -108,7 +115,7 @@ get_distance_km <- function(lat1, lon1, lat2, lon2) {
 }
 
 
-# Apply function row-wise
+# Apply extension distance function row-wise
 ext_distance <- ext_year_phase %>%
   rowwise() %>%
   mutate(distance_km = get_distance_km(hist_range_lat, hist_range_lon, latitude, longitude)) %>%

@@ -139,7 +139,7 @@ max_ext_oni_yr_prior <- ext_distance_oni %>%
 B <- ggplot(max_ext_oni_yr_prior, aes(max_oni, max_ext_dist)) +
   geom_point(color="black", size=2) +
   geom_smooth(method = "lm", se = TRUE, color="#E9C46A", fill="#E9C46A") +  # se = FALSE to hide confidence interval
-  labs(x = "Extension Event ONI", y = "Extension Event\nDistance (km)", ) +
+  labs(x = "Extension Event Oceanic Niño Index", y = "Extension Event\nDistance (km)", ) +
   theme_minimal(base_size = 16)
 
 # Density Plot Low vs High ONI

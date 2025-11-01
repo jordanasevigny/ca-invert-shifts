@@ -94,7 +94,7 @@ A <- ggplot() +
   
   # Y axis scaled for ONI only
   scale_y_continuous(
-    name = "ONI",
+    name = "Oceanic Niño Index",
     breaks = seq(-2, 2, 1) * scale_factor,
     labels = seq(-2, 2, 1)
   ) +
@@ -153,7 +153,7 @@ A_supp <- ggplot() +
   
   # Y axis scaled for ONI only
   scale_y_continuous(
-    name = "ONI",
+    name = "Oceanic Niño Index",
     breaks = seq(-2, 2, 1) * scale_factor,
     labels = seq(-2, 2, 1)
   ) +
@@ -341,7 +341,7 @@ oni_freq <- max_ext_oni_yr_prior %>%
 C <- ggplot(oni_freq, aes(x=max_oni, y=n)) +
   geom_point(size=2) +
   geom_smooth(method = "lm", se = TRUE, color="#E9C46A", fill="#E9C46A") + 
-  labs(x = "Extension Event ONI", y = "Number of\nExtension Events") +
+  labs(x = "Extension Event Oceanic Niño Index", y = "Number of\nExtension Events") +
   theme_minimal(base_size = 18)
 
 # Plot panel

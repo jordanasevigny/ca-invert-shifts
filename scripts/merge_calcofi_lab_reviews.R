@@ -19,9 +19,22 @@ ca_rev <- read.csv("processed_data/calcofi_review_data_clean.csv")
 lab_rev <- read.csv("processed_data/lab_review_with_longitudes.csv")
 hist_dist <- read.csv("processed_data/historical_distributions_clean.csv")
 
+# Tally exclusion criterias for lab_rev
+lab_rev_exclude <- lab_rev %>%
+  filter(include_exclude == "Exclude") %>%
+  select(paper_id, exclude_t0_calcofi_report, exclude_t1_not_marine_species, exclude_t2_outdated_pre1900, exclude_t3_not_poleward, exclude_t3_not_in_california) %>%
+  unique() # drop duplicate rows
+colSums(lab_rev_exclude[, c("exclude_t0_calcofi_report", "exclude_t1_not_marine_species", "exclude_t2_outdated_pre1900", "exclude_t3_not_poleward", "exclude_t3_not_in_california")], na.rm = TRUE)
+sum(lab_rev_exclude$exclude_t3_not_poleward & lab_rev_exclude$exclude_t3_not_in_california, na.rm = TRUE)
+165-56 + 129-56 + 56 # number of articles (238) that were excluded  because they were not poleward AND / OR not in California
+
 # Filter to included data
 ca_rev_inc <- filter(ca_rev, include_exclude == "Include")
 lab_rev_inc  <- filter(lab_rev, include_exclude == "Include")
+
+# Count # included articles
+length(unique(lab_rev_inc$paper_id)) # 34
+409-359-34 # total papers - excluded papers - included papers = inconclusive papers = 16
 
 # Filter out the low confidence extensions from the lab review
 lab_rev_inc <- filter(lab_rev_inc, extension_confidence_criteria != "Opportunistic")
@@ -68,22 +81,6 @@ merged_df <- merged_df %>%
 merged_df$latin_name <- gsub("^(\\w)", "\\U\\1", merged_df$latin_name, perl = TRUE)
 merged_df$taxonomic_rank <- tolower(merged_df$taxonomic_rank)
 
-# # Make species / genus into one category if likely shared (e.g. pyrosomes, velella)
-# unique(merged_df$latin_name)
-# merged_df$latin_name_original <- merged_df$latin_name
-# merged_df_histedge <- merged_df %>%
-#   mutate(latin_name = case_when(
-#     str_detect(latin_name, regex("thetys", ignore_case = TRUE)) ~ "Thetys",
-#     TRUE ~ latin_name
-#   )) %>%
-#   mutate(latin_name = case_when(
-#     str_detect(latin_name, regex("velella", ignore_case = TRUE)) ~ "Velella",
-#     TRUE ~ latin_name
-#   )) %>%
-#   mutate(latin_name = case_when(
-#     str_detect(latin_name, regex("Pyrosoma", ignore_case = TRUE)) ~ "Pyrosoma",
-#     TRUE ~ latin_name
-#   ))
 #unique(merged_df_histedge$latin_name)
 merged_df_histedge <- merged_df
 # Merge historical distributions with extension dataset
