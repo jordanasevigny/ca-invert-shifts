@@ -83,11 +83,11 @@ gt_table1 <- summary_table1 %>%
   cols_label(
     latin_name = "Species",
     mean_extension = "Mean Extension Distance (km)",
-    extension_years = "Years Observed"
+    extension_years = "Extension Years"
   ) %>%
   tab_header(
     title = "Summary of Range Extension Events (Part 1)",
-    subtitle = "Mean northward extension distance and extension year observed per species"
+    subtitle = "Mean northward extension distance and extension year per species"
   ) %>%
   tab_options(
     table.font.names = "Helvetica",
@@ -105,11 +105,11 @@ gt_table2 <- summary_table2 %>%
   cols_label(
     latin_name = "Species",
     mean_extension = "Mean Extension Distance (km)",
-    extension_years = "Years Observed"
+    extension_years = "Extension Years"
   ) %>%
   tab_header(
     title = "Summary of Range Extension Events (Part 2)",
-    subtitle = "Mean northward extension distance and extension year observed per species"
+    subtitle = "Mean northward extension distance and extension year per species"
   ) %>%
   tab_options(
     table.font.names = "Helvetica",
