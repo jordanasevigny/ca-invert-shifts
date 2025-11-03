@@ -117,7 +117,7 @@ A <- ggplot() +
   ) +
   
   theme_minimal(base_size = 21) +
-  labs(x = " ", ) +
+  labs(x = "Year", ) +
   theme(
     legend.title = element_text(size=12),
     legend.text = element_text(size=14),
@@ -176,7 +176,7 @@ A_supp <- ggplot() +
   ) +
   
   theme_minimal(base_size = 22) +
-  labs(x = " ", ) +
+  labs(x = "Year", ) +
   theme(
     legend.title = element_text(size=12),
     legend.text = element_text(size=14),
