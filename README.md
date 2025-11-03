@@ -1,4 +1,4 @@
-# A Century of Episodic Range Extensions of Nearshore Marine Invertebrates in the Northeastern Pacific
+# A century of invertebrate range extensions in the eastern North Pacific
 
 Authors: Jordana K. Sevigny<sup>1</sup>, Emma J. Walker<sup>1</sup>, Bella G. Lipsey<sup>1</sup>, Theodore T. Tran<sup>1</sup>, and Alexa L. Fredston<sup>1</sup>
 
