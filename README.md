@@ -3,8 +3,7 @@
 Authors: Jordana K. Sevigny<sup>1</sup>, Emma J. Walker<sup>1</sup>, Bella G. Lipsey<sup>1</sup>, Theodore T. Tran<sup>1</sup>, and Alexa L. Fredston<sup>1</sup>
 
 Affiliations:
-Department of Ocean Sciences, University of California, Santa Cruz, California, United States of America
-Department , University of Osnabrük, Osnabrük, Germany
+1. Department of Ocean Sciences, University of California, Santa Cruz, California, United States of America
 
 Address for correspondence: Jordana K. Sevigny, Department of Ocean Sciences, University of California, Santa Cruz, California, 1156 High Street, Santa Cruz, California 95064. jsevigny@ucsc.edu
 
