@@ -3,5 +3,6 @@
 .RData
 .Ruserdata
 old/
+side_analyses/
 preliminary_data_cleaning/
 .DS_Store
