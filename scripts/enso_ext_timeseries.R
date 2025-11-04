@@ -119,4 +119,57 @@ sum(extension_counts$n_extensions) # total number of extension events
 length(unique(first_ext$latin_name)) # Number of species with extension events
 
 
+# CalCOFI vs Lab Review Extensions ----------------------------------------
+# Tally the number of extensions events for each year
+extension_counts_source <- first_ext %>%
+  count(year, obs_source, name = "n_extensions")
+extension_counts_source$Date <- as.Date(paste0(extension_counts_source$year, "-06-15"))
 
+#scale_factor <- 3 
+calrev <- ggplot() +
+  geom_col(
+    data = extension_counts_source,
+    aes(x = Date, y = n_extensions, fill = obs_source), color = "gray30"
+  ) +
+  scale_fill_manual(values = c("ca_rev" = "hotpink", "lab_rev" = "#66A61E"), labels = c("ca_rev" = "CalCOFI",
+                                                                                        "lab_rev" = "Lit. Review")) +
+  
+  # # Plot rescaled dSST3.4 (to align with n_extensions)
+  # geom_line(
+  #   data = enso_df,
+  #   aes(x = Date, y = ONI * scale_factor),
+  #   linetype = "twodash",
+  #   color = "black"
+  # ) +
+  # 
+  # 
+  # # Add the secondary axis
+# scale_y_continuous(
+#   name = "Number of Extensions",
+#   sec.axis = sec_axis(
+#     ~ . / scale_factor,
+#     name = "ONI"
+#   )
+# ) +
+
+scale_x_date(,
+             date_breaks = "10 years",
+             date_labels = "%Y"
+) +
+  labs(fill=" ", title = "", y="Number of Extension Events", x="Year") +
+  theme_minimal(base_size = 16)
+ggsave("figures/cal_rev_ext.pdf", plot = calrev, width = 14, height = 4, unit = "in", dpi = 600)
+
+
+# Regression on extensions over time
+
+# Fit the linear model
+lin_model <- lm(n_extensions ~ year, data = extension_counts)
+# View the model summary
+summary(lin_model)
+
+ggplot(extension_counts, aes(x=year, y=n_extensions)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = TRUE, color="#E9C46A", fill="#E9C46A") + 
+  labs(x = "Year", y = "Number of Extension Events") +
+  theme_minimal(base_size = 16)
