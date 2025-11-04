@@ -69,7 +69,7 @@ Scripts:
   * Method: Classify ENSO years by start (El Niño began), peak (Max number of months of an El Niño event was in that year), end (El Niño concluded), or some combination. Add filter for # of extensions requirement for each species. Add a column of whether the first year of an extension event was the start/peak/end of El Niño. Calculate extension distance (distHaversine from historical range edge to observation location) for each observation. Add oni values to extensions. Filter for furthest extensions of each species in each extension event and the max ONI for the extension event. Make max extension distance per event vs max ONI during event scatter plot and linear regression. Also has a version 2 where max ONI has a small change where if the first year of an extension event was the end of an El Niño event (i.e. a delayed response observation of the extension), the ONI for the year prior was used in the max ONI query. 
 * ‘ca-invert-shits/scripts/enso_ext_timeseries.R’
   * Input: ‘ca-invert-shits/processed_data/merged_calcofi_lab_review.csv’,
-  * Output: ENSO time-wave and extension event bubble figure and supplementary extension barplot colored by calcofi and review; calcofi vs lab rev extension figure.
+  * Output: Preliminary ENSO time-wave and extension event bubble figure (final in Figure2Panel.R), supplementary extension barplot colored by calcofi and review, and extension frequency over time linear regression and related supplementary plot.
   * Method: plots ENSO and tallies the number of extension events that begin each year.
 * ‘ca-invert-shits/scripts/blob_analysis.R’
   * Input: ‘ca-invert-shits/processed_data/merged_calcofi_lab_review.csv’,
