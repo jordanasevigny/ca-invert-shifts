@@ -159,6 +159,12 @@ lin_model <- lm(max_ext_dist ~ max_oni, data = max_ext_oni_yr_prior)
 # View the model summary
 summary(lin_model)
 
+################################################################################
+# same but controlling for any species effects
+m1 <- lm(max_ext_dist ~ max_oni + latin_name, data = max_ext_oni_yr_prior)
+summary(m1)
+################################################################################
+
 # Quadratic (2nd degree polynomial)
 poly_model <- lm(max_ext_dist ~ poly(max_oni, 2, raw = TRUE), 
                  data = max_ext_oni_yr_prior)
@@ -166,6 +172,12 @@ summary(poly_model)
 # Compare to linear
 anova(lin_model, poly_model)
 
+################################################################################
+# same but controlling for any species effects
+m2 <- lm(max_ext_dist ~ poly(max_oni, 2, raw=T) + latin_name, data = max_ext_oni_yr_prior)
+summary(m2)
+anova(m1,m2)
+################################################################################
 
 # Fit GAM with smooth term for ONI
 gam_model <- gam(max_ext_dist ~ s(max_oni), data = max_ext_oni_yr_prior)
@@ -173,9 +185,20 @@ summary(gam_model)
 # Plot smooth
 plot(gam_model, shade = TRUE, main = "GAM fit: max_ext_dist ~ s(max_oni)")
 
+################################################################################
+# same but controlling for *linear* effect of species
+m3 <- gam(max_ext_dist ~ s(max_oni) + latin_name, data = max_ext_oni_yr_prior)
+summary(m3)
+plot(m3, shade = T, main = "GAM fit: max_ext_dist ~ s(max_oni) + species")
+################################################################################
+
 # AIC
 AIC(lin_model, poly_model, gam_model)
 
+################################################################################
+AIC(m1, m2, m3)
+# you can run analyses just like these for the other regressions you do
+################################################################################
 
 
 # Density Plot Low vs High ONI

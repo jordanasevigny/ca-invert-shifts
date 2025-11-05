@@ -45,8 +45,22 @@ first_ext <- ext_Xplus %>%
 extension_counts <- first_ext %>%
   count(year, name = "n_extensions")
 
+################################################################################
+# Tally the number of extensions by each species within each year
+extension_counts_sp <- first_ext |>
+  group_by(latin_name) |>
+  count(year, name = "n_extensions")
+extension_counts_sp
+################################################################################
+
 # Add Date (middle of the year) column to align with ONI
 extension_counts$Date <- as.Date(paste0(extension_counts$year, "-06-15"))
+
+################################################################################
+# Add Date (middle of the year) column to align with ONI
+extension_counts_sp$Date <- as.Date(paste0(extension_counts_sp$year, "-06-15"))
+extension_counts_sp
+################################################################################
 
 
 # Bar graph of 2011-13; 2014-16; 2017-18 extensions -----------------------
@@ -80,6 +94,15 @@ extension_counts <- extension_counts %>%
     year >= 2014 & year <= 2016 ~ "blob",
     TRUE ~ "non_blob"
   ))
+
+################################################################################
+extension_counts_sp <- extension_counts_sp %>%
+  mutate(period = case_when(
+    year >= 2014 & year <= 2016 ~ "blob",
+    TRUE ~ "non_blob"
+  ))
+extension_counts_sp
+################################################################################
 
 ggplot(extension_counts, aes(x = year, y = n_extensions, fill = period)) +
   geom_col(color = "black") +  # Adds black outline to all bars
@@ -156,6 +179,61 @@ observed <- c(sum(extension_counts$n_extensions[extension_counts$period == "blob
 expected_proportions <- c(blob_prop, (1-blob_prop))
 # Run chi-squared goodness-of-fit test
 chisq.test(x = observed, p = expected_proportions)
+
+##############################################################################
+# extension events non-independent because some species more likely to have them than others
+# need to account for effect of species
+# use a statistical test that accounts for extension events grouped (stratified) by species
+
+extension_counts_sp
+
+yrs_dif <- as.numeric(max(extension_counts_sp$Date) - min(extension_counts_sp$Date)) / 365
+blob_prop <- (2017-2014)/yrs_dif
+observed <- c(sum(extension_counts_sp$n_extensions[extension_counts_sp$period == "blob"]), sum(extension_counts_sp$n_extensions)-sum(extension_counts_sp$n_extensions[extension_counts_sp$period == "blob"]))  # 35 El Niño, 65 Not El Niño
+
+
+# Tally the number of extensions by each species within blob vs. non blob years
+extension_counts_sp <- extension_counts_sp |>
+  group_by(latin_name) |>
+  count(period, name = "n_extensions")
+extension_counts_sp
+
+# could run chi-squared tests by species.... not good option since need to correct for multiple testing
+# could use a bonferroni correction but imposes a very harsh penalty on significance
+
+# Another option: Mantel-Haenszel Chi-Squared Test (control for species as strata)
+# need at least one observation in both blob and non-blob years
+# 5 or more observations recommended though so this is not great either...!!!!!
+mtest_data <- extension_counts_sp |>
+  pivot_wider(names_from = period, values_from = n_extensions) |>
+  drop_na() |> 
+  pivot_longer(cols = c(blob, non_blob), names_to = "period", values_to = "n_extensions")
+mtest_data
+
+tbl <- xtabs(~ period + n_extensions + latin_name, data=mtest_data)
+tbl
+
+mantelhaen.test(tbl)
+
+# no significant difference between number of extensions these species experienced and whether it was a blob or non blob year...
+# though I might describe it as a nearly significant result given how limited our data are... may be acceptable to test for significant at p=0.1 given this limitation
+# e.g. social sciences may often do this
+# could conduct a power analysis
+
+
+# Best option: logistic regression (better at handling sparse data)
+# e.g.
+m1 <- glm(n_extensions ~ period + latin_name,
+          data = as.data.frame(ftable(tbl)),
+          family = binomial())
+m1
+summary(m1)
+
+# blob vs. non-blob is the only significant effect, change in log-odds ratio extremely small for all species effects and in the same direction for all, therefore can robustly say only significant effect is blob vs. nonblob
+# but instead of n_extensions we should use the proportions as calculated in your earlier analyses but for each species.
+
+
+##############################################################################
 
 # What species had blob extensions?
 first_ext_periods <- first_ext %>%
