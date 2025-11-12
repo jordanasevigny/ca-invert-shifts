@@ -50,7 +50,16 @@ extension_counts <- first_ext %>%
 extension_counts_sp <- first_ext |>
   group_by(latin_name) |>
   count(year, name = "n_extensions")
-extension_counts_sp
+extension_counts_sp_0 <- first_ext |>
+  group_by(latin_name) |>
+  count(year, name = "n_extensions") %>%
+  complete(year=1900:2025, fill = list(n_extensions = 0)) %>% # adds in the 0 extension for each year in the study timeframe
+  ungroup()
+extension_counts_sp_0
+
+# Add 0 extension years
+
+
 ################################################################################
 
 # Add Date (middle of the year) column to align with ONI
@@ -96,12 +105,19 @@ extension_counts <- extension_counts %>%
   ))
 
 ################################################################################
+# Add ONI dates
 extension_counts_sp <- extension_counts_sp %>%
   mutate(period = case_when(
     year >= 2014 & year <= 2016 ~ "blob",
     TRUE ~ "non_blob"
   ))
 extension_counts_sp
+extension_counts_sp_0 <- extension_counts_sp_0 %>%
+  mutate(period = case_when(
+    year >= 2014 & year <= 2016 ~ "blob",
+    TRUE ~ "non_blob"
+  ))
+extension_counts_sp_0
 ################################################################################
 
 ggplot(extension_counts, aes(x = year, y = n_extensions, fill = period)) +
@@ -174,7 +190,7 @@ sum(extension_counts$n_extensions[extension_counts$period == "blob"]) / sum(exte
 # Observed counts
 yrs_dif <- as.numeric(max(extension_counts$Date) - min(extension_counts$Date)) / 365
 blob_prop <- (2017-2014)/yrs_dif
-observed <- c(sum(extension_counts$n_extensions[extension_counts$period == "blob"]), sum(extension_counts$n_extensions)-sum(extension_counts$n_extensions[extension_counts$period == "blob"]))  # 35 El Niño, 65 Not El Niño
+observed <- c(sum(extension_counts$n_extensions[extension_counts$period == "blob"]), sum(extension_counts$n_extensions)-sum(extension_counts$n_extensions[extension_counts$period == "blob"]))  # blob, not blob
 # Expected proportions
 expected_proportions <- c(blob_prop, (1-blob_prop))
 # Run chi-squared goodness-of-fit test
@@ -189,7 +205,7 @@ extension_counts_sp
 
 yrs_dif <- as.numeric(max(extension_counts_sp$Date) - min(extension_counts_sp$Date)) / 365
 blob_prop <- (2017-2014)/yrs_dif
-observed <- c(sum(extension_counts_sp$n_extensions[extension_counts_sp$period == "blob"]), sum(extension_counts_sp$n_extensions)-sum(extension_counts_sp$n_extensions[extension_counts_sp$period == "blob"]))  # 35 El Niño, 65 Not El Niño
+observed <- c(sum(extension_counts_sp$n_extensions[extension_counts_sp$period == "blob"]), sum(extension_counts_sp$n_extensions)-sum(extension_counts_sp$n_extensions[extension_counts_sp$period == "blob"]))
 
 
 # Tally the number of extensions by each species within blob vs. non blob years
@@ -223,6 +239,8 @@ mantelhaen.test(tbl)
 
 # Best option: logistic regression (better at handling sparse data)
 # e.g.
+# JKS: This currently doesn't include absence data, so I think it's a bit misleading?
+# This is also fixed effects, but we have too many species and too few datapoints per species
 m1 <- glm(n_extensions ~ period + latin_name,
           data = as.data.frame(ftable(tbl)),
           family = binomial())
@@ -232,6 +250,26 @@ summary(m1)
 # blob vs. non-blob is the only significant effect, change in log-odds ratio extremely small for all species effects and in the same direction for all, therefore can robustly say only significant effect is blob vs. nonblob
 # but instead of n_extensions we should use the proportions as calculated in your earlier analyses but for each species.
 
+
+
+# JKS logistic regression -------------------------------------------------
+# Species as a random effect with 0 extension years added to the dataset
+extension_counts_sp_0
+
+# I don't think the following tests are appropriate. For testing if there are more extensions in the blob, we should not treat the three years as separate blob events
+# We also have to control for the fact that we are comparing a 3 year period to 114 years of data
+
+
+
+# # Did the probability per species increase during the Blob, controlling for species identity?
+# library(lme4)
+# 
+# m_sp <- glmer(n_extensions ~ period + (1 | latin_name), data = extension_counts_sp_0, family = binomial)
+# # I think the warning about a large eigenvalue suggests there is not enough species specific data for random effects
+# summary(m_sp)
+# 
+# m_sp_fe <- glm(n_extensions ~ period + latin_name, data = extension_counts_sp_0, family = binomial)
+# summary(m_sp_fe)
 
 ##############################################################################
 

@@ -23,7 +23,7 @@ library(forcats)
 library(geosphere)
 library(moments)
 library(mgcv)
-
+library(lme4)
 
 # Load review data
 df <- read.csv("processed_data/merged_calcofi_lab_review.csv")
@@ -160,9 +160,9 @@ lin_model <- lm(max_ext_dist ~ max_oni, data = max_ext_oni_yr_prior)
 summary(lin_model)
 
 ################################################################################
-# same but controlling for any species effects
-m1 <- lm(max_ext_dist ~ max_oni + latin_name, data = max_ext_oni_yr_prior)
-summary(m1)
+# # same but controlling for any species effects
+# m1 <- lm(max_ext_dist ~ max_oni + latin_name, data = max_ext_oni_yr_prior)
+# summary(m1)
 ################################################################################
 
 # Quadratic (2nd degree polynomial)
@@ -173,10 +173,10 @@ summary(poly_model)
 anova(lin_model, poly_model)
 
 ################################################################################
-# same but controlling for any species effects
-m2 <- lm(max_ext_dist ~ poly(max_oni, 2, raw=T) + latin_name, data = max_ext_oni_yr_prior)
-summary(m2)
-anova(m1,m2)
+# # same but controlling for any species effects
+# m2 <- lm(max_ext_dist ~ poly(max_oni, 2, raw=T) + latin_name, data = max_ext_oni_yr_prior)
+# summary(m2)
+# anova(m1,m2)
 ################################################################################
 
 # Fit GAM with smooth term for ONI
@@ -186,17 +186,33 @@ summary(gam_model)
 plot(gam_model, shade = TRUE, main = "GAM fit: max_ext_dist ~ s(max_oni)")
 
 ################################################################################
-# same but controlling for *linear* effect of species
-m3 <- gam(max_ext_dist ~ s(max_oni) + latin_name, data = max_ext_oni_yr_prior)
-summary(m3)
-plot(m3, shade = T, main = "GAM fit: max_ext_dist ~ s(max_oni) + species")
+# # same but controlling for *linear* effect of species
+# m3 <- gam(max_ext_dist ~ s(max_oni) + latin_name, data = max_ext_oni_yr_prior)
+# summary(m3)
+# plot(m3, shade = T, main = "GAM fit: max_ext_dist ~ s(max_oni) + species")
 ################################################################################
+
+# Mixed effects model
+
+m_mixed <- lmer(max_ext_dist ~ max_oni + (1 | latin_name), 
+                data = max_ext_oni_yr_prior)
+
+summary(m_mixed)
+# Both the intercept and max_oni t value is >4.0, implying that ONI effect is statistically robust.
 
 # AIC
-AIC(lin_model, poly_model, gam_model)
+AIC(lin_model, poly_model, gam_model, m_mixed)
+
+# Each species gets its own intercept
+# Mixed effects model - slopes
+m_mixed_slopes <- lmer(max_ext_dist ~ max_oni + (max_oni | latin_name), data = max_ext_oni_yr_prior)
+summary(m_mixed_slopes)
+AIC(lin_model, poly_model, gam_model, m_mixed, m_mixed_slopes)
+
+# The correlation vetween intercept and slope (0.38) means that species with higher baseline extension distances also tend to have higher ONI sensitivity.
 
 ################################################################################
-AIC(m1, m2, m3)
+# AIC(m1, m2, m3)
 # you can run analyses just like these for the other regressions you do
 ################################################################################
 
@@ -226,6 +242,7 @@ oni_test_data <- max_ext_oni_yr_prior %>%
   mutate(oni_cat = ifelse(max_oni >= 0.5, "High ONI (>=0.5)", "Low ONI")) %>%
   drop_na(max_ext_dist, oni_cat)
 
+
 # Run t-test
 t.test(max_ext_dist ~ oni_cat, data = oni_test_data)
 
@@ -238,6 +255,12 @@ t.test(max_ext_dist ~ oni_cat, data = oni_test_data)
 oni_freq <- max_ext_oni_yr_prior %>%
   count(max_oni) %>%
   drop_na()
+# Make oni_freq by species 
+oni_freq_sp <- max_ext_oni_yr_prior %>%
+  group_by(latin_name) %>%
+  count(max_oni) %>%
+  drop_na()
+
 ggplot(oni_freq, aes(x=max_oni, y=n)) +
   geom_point() +
   geom_smooth(method = "lm", se = TRUE, color="#E9C46A", fill="#E9C46A") + 
@@ -250,21 +273,27 @@ lin_model <- lm(n ~ max_oni, data = oni_freq)
 summary(lin_model)
 
 # Quadratic (2nd degree polynomial)
-poly_model <- lm(max_ext_dist ~ poly(max_oni, 2, raw = TRUE), 
-                 data = max_ext_oni_yr_prior)
+poly_model <- lm(n ~ poly(max_oni, 2, raw = TRUE), 
+                 data = oni_freq)
 summary(poly_model)
 # Compare to linear
 anova(lin_model, poly_model)
 
 
 # Fit GAM with smooth term for ONI
-gam_model <- gam(max_ext_dist ~ s(max_oni), data = max_ext_oni_yr_prior)
+gam_model <- gam(n ~ s(max_oni), data = oni_freq)
 summary(gam_model)
-# Plot smooth
-plot(gam_model, shade = TRUE, main = "GAM fit: max_ext_dist ~ s(max_oni)")
+
+# Mixed effects model
+
+m_mixed <- lmer(n ~ max_oni + (1 | latin_name), 
+                data = oni_freq_sp)
+
+summary(m_mixed) # Does not work because all sp have same # of oni observations
 
 # AIC
 AIC(lin_model, poly_model, gam_model)
+
 
 
 # Do more extensions occur during el nino than expected by chance? --------------------------------------------------
