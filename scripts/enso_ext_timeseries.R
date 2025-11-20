@@ -162,16 +162,16 @@ ggsave("figures/cal_rev_ext.pdf", plot = calrev, width = 14, height = 4, unit = 
 
 
 # Regression on extensions over time
-
+hist(extension_counts$n_extensions)
 # Fit the linear model
-lin_model <- lm(n_extensions ~ year, data = extension_counts)
+lin_model <- lm(log(n_extensions) ~ year, data = extension_counts) 
 # View the model summary
 summary(lin_model)
 
-calrev_lm <- ggplot(extension_counts, aes(x=year, y=n_extensions)) +
+calrev_lm <- ggplot(extension_counts, aes(x=year, y=log(n_extensions))) +
   geom_point() +
   geom_smooth(method = "lm", se = TRUE, color="#E9C46A", fill="#E9C46A") + 
-  labs(x = "Year", y = "Number of Extension Events") +
+  labs(x = "Year", y = "Log Number of Extension Events") +
   theme_minimal(base_size = 16)
 
 ggsave("figures/cal_rev_ext_lm.pdf", plot = calrev, width = 14, height = 4, unit = "in", dpi = 600)

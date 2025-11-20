@@ -154,7 +154,7 @@ max_ext_oni_yr_prior <- ext_distance_oni %>%
   distinct()
 
 # no ONI pre 1950 (drops any extensions pre 1950)
-B <- ggplot(max_ext_oni_yr_prior, aes(max_oni, max_ext_dist)) +
+B <- ggplot(max_ext_oni_yr_prior, aes(max_oni, log(max_ext_dist))) +
   geom_point(color="black", size=2) +
   geom_smooth(method = "lm", se = TRUE, color="#E9C46A", fill="#E9C46A") +  # se = FALSE to hide confidence interval
   labs(x = "Oceanic Niño Index", y = "Extension Event\nDistance (km)", ) +
@@ -165,7 +165,7 @@ plot3a_data <- max_ext_oni_yr_prior %>%
   mutate(oni_cat = ifelse(max_oni >= 0.5, "High ONI (>=0.5)", "Low ONI")) %>%
   drop_na() 
  
-A <- ggplot(plot3a_data, aes(x = max_ext_dist, fill = oni_cat)) +
+A <- ggplot(plot3a_data, aes(x = log(max_ext_dist), fill = oni_cat)) +
   geom_density(alpha = 0.6) +
   labs(x = "Extension Event\nDistance (km)", y= "Density", fill = "ONI Level") +
   scale_fill_manual(

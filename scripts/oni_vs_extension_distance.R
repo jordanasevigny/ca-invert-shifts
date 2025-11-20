@@ -164,15 +164,24 @@ max_ext_oni_yr_prior <- ext_distance_oni %>%
   dplyr::select(latin_name, group_id, max_ext_dist, max_oni) %>%
   distinct()
 
+# Distribution curve for distance data
+hist(max_ext_oni_yr_prior$max_ext_dist, breaks = 20, freq = FALSE)
+
+curve(dlnorm(x,
+             meanlog = mean(log(max_ext_oni_yr_prior$max_ext_dist)),
+             sdlog   = sd(log(max_ext_oni_yr_prior$max_ext_dist))),
+      add = TRUE, col = "blue", lwd = 2)
+
 # no ONI pre 1950 (drops any extensions pre 1950)
-ggplot(max_ext_oni_yr_prior, aes(max_oni, max_ext_dist)) +
+ggplot(max_ext_oni_yr_prior, aes(max_oni, log(max_ext_dist))) +
   geom_point(color="black") +
   geom_smooth(method = "lm", se = TRUE, color="#E9C46A", fill="#E9C46A") +  # se = FALSE to hide confidence interval
-  labs(x = "Extension Event ONI", y = "Extension Event Distance (km)", ) +
+  labs(x = "ONI", y = "Log Extension Distance (km)", ) +
   theme_minimal(base_size = 16)
 
+# Wondering if I need to log the distance data
 # Fit the linear model
-lin_model <- lm(max_ext_dist ~ max_oni, data = max_ext_oni_yr_prior)
+lin_model <- lm(log(max_ext_dist) ~ max_oni, data = max_ext_oni_yr_prior)
 # View the model summary
 summary(lin_model)
 
@@ -183,7 +192,7 @@ summary(lin_model)
 ################################################################################
 
 # Quadratic (2nd degree polynomial)
-poly_model <- lm(max_ext_dist ~ poly(max_oni, 2, raw = TRUE), 
+poly_model <- lm(log(max_ext_dist) ~ poly(max_oni, 2, raw = TRUE), 
                  data = max_ext_oni_yr_prior)
 summary(poly_model)
 # Compare to linear
@@ -197,13 +206,13 @@ anova(lin_model, poly_model)
 ################################################################################
 
 # Fit GAM with smooth term for ONI
-gam_model <- gam(max_ext_dist ~ s(max_oni), data = max_ext_oni_yr_prior)
+gam_model <- gam(log(max_ext_dist) ~ s(max_oni), data = max_ext_oni_yr_prior)
 summary(gam_model)
 # Plot smooth
 plot(gam_model, shade = TRUE, main = "GAM fit: max_ext_dist ~ s(max_oni)")
 
 # Mixed effects model
-m_mixed <- lmer(max_ext_dist ~ max_oni + (1 | latin_name), 
+m_mixed <- lmer(log(max_ext_dist) ~ max_oni + (1 | latin_name), 
                 data = max_ext_oni_yr_prior)
 
 summary(m_mixed)
@@ -215,15 +224,12 @@ ranef(m_mixed)$latin_name
 
 # Each species gets its own intercept
 # Mixed effects model - slopes
-m_mixed_slopes <- lmer(max_ext_dist ~ max_oni + (max_oni | latin_name), data = max_ext_oni_yr_prior)
+m_mixed_slopes <- lmer(log(max_ext_dist) ~ max_oni + (max_oni | latin_name), data = max_ext_oni_yr_prior)
 summary(m_mixed_slopes)
 ranef(m_mixed_slopes)$latin_name
 
 # AIC
 AIC(lin_model, poly_model, gam_model, m_mixed, m_mixed_slopes)
-
-# Compare to linear
-anova(m_mixed, m_mixed_slopes)
 
 # The correlation vetween intercept and slope (0.38) means that species with higher baseline extension distances also tend to have higher ONI sensitivity.
 
@@ -237,9 +243,9 @@ anova(m_mixed, m_mixed_slopes)
 max_ext_oni_yr_prior %>%
   mutate(oni_cat = ifelse(max_oni >= 0.5, "High ONI (>=0.5)", "Low ONI")) %>%
   drop_na() %>%
-  ggplot(aes(x = max_ext_dist, fill = oni_cat)) +
+  ggplot(aes(x = log(max_ext_dist), fill = oni_cat)) +
   geom_density(alpha = 0.6) +
-  labs(x = "Extension Event Distance (km)", y= "Density", fill = "ONI Level") +
+  labs(x = "Log Extension Event Distance (km)", y= "Density", fill = "ONI Level") +
   scale_fill_manual(
     values = c("High ONI (>=0.5)" = "#D62828",   # red
                "Low ONI" = "#003049")           # blue
@@ -260,36 +266,40 @@ oni_test_data <- max_ext_oni_yr_prior %>%
 
 
 # Run t-test
-t.test(max_ext_dist ~ oni_cat, data = oni_test_data)
+t.test(log(max_ext_dist) ~ oni_cat, data = oni_test_data)
 
 
 
 # Max ONI (year prior) vs extension count --------------------------------------------------
 
 
-# Linear regression
+# extension counts
 oni_freq <- max_ext_oni_yr_prior %>%
   count(max_oni) %>%
   drop_na()
-# Make oni_freq by species 
-oni_freq_sp <- max_ext_oni_yr_prior %>%
-  group_by(latin_name) %>%
-  count(max_oni) %>%
-  drop_na()
 
-ggplot(oni_freq, aes(x=max_oni, y=n)) +
+# extension counts distribuion curve
+hist(oni_freq$n, breaks = 5, freq = FALSE)
+
+curve(dlnorm(x,
+             meanlog = mean(log(oni_freq$n)),
+             sdlog   = sd(log(oni_freq$n))),
+      add = TRUE, col = "blue", lwd = 2)
+
+# Linear regression
+ggplot(oni_freq, aes(x=max_oni, y=log(n))) +
   geom_point() +
   geom_smooth(method = "lm", se = TRUE, color="#E9C46A", fill="#E9C46A") + 
-  labs(x = "Extension Event ONI", y = "Number of Extension Events") +
+  labs(x = "ONI", y = "Log Number of Extension Events") +
   theme_minimal(base_size = 16)
 
 # Fit the linear model
-lin_model <- lm(n ~ max_oni, data = oni_freq)
+lin_model <- lm(log(n) ~ max_oni, data = oni_freq)
 # View the model summary
 summary(lin_model)
 
 # Quadratic (2nd degree polynomial)
-poly_model <- lm(n ~ poly(max_oni, 2, raw = TRUE), 
+poly_model <- lm(log(n) ~ poly(max_oni, 2, raw = TRUE), 
                  data = oni_freq)
 summary(poly_model)
 # Compare to linear
@@ -297,11 +307,17 @@ anova(lin_model, poly_model)
 
 
 # Fit GAM with smooth term for ONI
-gam_model <- gam(n ~ s(max_oni), data = oni_freq)
+gam_model <- gam(log(n) ~ s(max_oni), data = oni_freq)
 summary(gam_model)
+
 # # Mixed effects model
+# # Make oni_freq by species
+# oni_freq_sp <- max_ext_oni_yr_prior %>%
+#   group_by(latin_name) %>%
+#   count(max_oni) %>%
+#   drop_na()
 # 
-# m_mixed <- lmer(n ~ max_oni + (1 | latin_name), 
+# m_mixed <- lmer(n ~ max_oni + (1 | latin_name),
 #                 data = oni_freq_sp)
 # 
 # summary(m_mixed) # Does not work because all sp have same # of oni observations
