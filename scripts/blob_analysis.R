@@ -45,31 +45,9 @@ first_ext <- ext_Xplus %>%
 extension_counts <- first_ext %>%
   count(year, name = "n_extensions")
 
-################################################################################
-# Tally the number of extensions by each species within each year
-extension_counts_sp <- first_ext |>
-  group_by(latin_name) |>
-  count(year, name = "n_extensions")
-extension_counts_sp_0 <- first_ext |>
-  group_by(latin_name) |>
-  count(year, name = "n_extensions") %>%
-  complete(year=1900:2025, fill = list(n_extensions = 0)) %>% # adds in the 0 extension for each year in the study timeframe
-  ungroup()
-extension_counts_sp_0
-
-# Add 0 extension years
-
-
-################################################################################
 
 # Add Date (middle of the year) column to align with ONI
 extension_counts$Date <- as.Date(paste0(extension_counts$year, "-06-15"))
-
-################################################################################
-# Add Date (middle of the year) column to align with ONI
-extension_counts_sp$Date <- as.Date(paste0(extension_counts_sp$year, "-06-15"))
-extension_counts_sp
-################################################################################
 
 
 # Bar graph of 2011-13; 2014-16; 2017-18 extensions -----------------------
@@ -103,22 +81,6 @@ extension_counts <- extension_counts %>%
     year >= 2014 & year <= 2016 ~ "blob",
     TRUE ~ "non_blob"
   ))
-
-################################################################################
-# Add ONI dates
-extension_counts_sp <- extension_counts_sp %>%
-  mutate(period = case_when(
-    year >= 2014 & year <= 2016 ~ "blob",
-    TRUE ~ "non_blob"
-  ))
-extension_counts_sp
-extension_counts_sp_0 <- extension_counts_sp_0 %>%
-  mutate(period = case_when(
-    year >= 2014 & year <= 2016 ~ "blob",
-    TRUE ~ "non_blob"
-  ))
-extension_counts_sp_0
-################################################################################
 
 ggplot(extension_counts, aes(x = year, y = n_extensions, fill = period)) +
   geom_col(color = "black") +  # Adds black outline to all bars
@@ -196,82 +158,6 @@ expected_proportions <- c(blob_prop, (1-blob_prop))
 # Run chi-squared goodness-of-fit test
 chisq.test(x = observed, p = expected_proportions)
 
-##############################################################################
-# extension events non-independent because some species more likely to have them than others
-# need to account for effect of species
-# use a statistical test that accounts for extension events grouped (stratified) by species
-
-extension_counts_sp
-
-yrs_dif <- as.numeric(max(extension_counts_sp$Date) - min(extension_counts_sp$Date)) / 365
-blob_prop <- (2017-2014)/yrs_dif
-observed <- c(sum(extension_counts_sp$n_extensions[extension_counts_sp$period == "blob"]), sum(extension_counts_sp$n_extensions)-sum(extension_counts_sp$n_extensions[extension_counts_sp$period == "blob"]))
-
-
-# Tally the number of extensions by each species within blob vs. non blob years
-extension_counts_sp <- extension_counts_sp |>
-  group_by(latin_name) |>
-  count(period, name = "n_extensions")
-extension_counts_sp
-
-# could run chi-squared tests by species.... not good option since need to correct for multiple testing
-# could use a bonferroni correction but imposes a very harsh penalty on significance
-
-# Another option: Mantel-Haenszel Chi-Squared Test (control for species as strata)
-# need at least one observation in both blob and non-blob years
-# 5 or more observations recommended though so this is not great either...!!!!!
-mtest_data <- extension_counts_sp |>
-  pivot_wider(names_from = period, values_from = n_extensions) |>
-  drop_na() |> 
-  pivot_longer(cols = c(blob, non_blob), names_to = "period", values_to = "n_extensions")
-mtest_data
-
-tbl <- xtabs(~ period + n_extensions + latin_name, data=mtest_data)
-tbl
-
-mantelhaen.test(tbl)
-
-# no significant difference between number of extensions these species experienced and whether it was a blob or non blob year...
-# though I might describe it as a nearly significant result given how limited our data are... may be acceptable to test for significant at p=0.1 given this limitation
-# e.g. social sciences may often do this
-# could conduct a power analysis
-
-
-# Best option: logistic regression (better at handling sparse data)
-# e.g.
-# JKS: This currently doesn't include absence data, so I think it's a bit misleading?
-# This is also fixed effects, but we have too many species and too few datapoints per species
-m1 <- glm(n_extensions ~ period + latin_name,
-          data = as.data.frame(ftable(tbl)),
-          family = binomial())
-m1
-summary(m1)
-
-# blob vs. non-blob is the only significant effect, change in log-odds ratio extremely small for all species effects and in the same direction for all, therefore can robustly say only significant effect is blob vs. nonblob
-# but instead of n_extensions we should use the proportions as calculated in your earlier analyses but for each species.
-
-
-
-# JKS logistic regression -------------------------------------------------
-# Species as a random effect with 0 extension years added to the dataset
-extension_counts_sp_0
-
-# I don't think the following tests are appropriate. For testing if there are more extensions in the blob, we should not treat the three years as separate blob events
-# We also have to control for the fact that we are comparing a 3 year period to 114 years of data
-
-
-
-# # Did the probability per species increase during the Blob, controlling for species identity?
-# library(lme4)
-# 
-# m_sp <- glmer(n_extensions ~ period + (1 | latin_name), data = extension_counts_sp_0, family = binomial)
-# # I think the warning about a large eigenvalue suggests there is not enough species specific data for random effects
-# summary(m_sp)
-# 
-# m_sp_fe <- glm(n_extensions ~ period + latin_name, data = extension_counts_sp_0, family = binomial)
-# summary(m_sp_fe)
-
-##############################################################################
 
 # What species had blob extensions?
 first_ext_periods <- first_ext %>%

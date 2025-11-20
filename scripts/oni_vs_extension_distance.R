@@ -132,16 +132,33 @@ ext_distance %>%
 #===================================
 # Max ONI (all shifted to year prior) - Max extension distance per event
 
+# # Make a new column of the year prior to the year of observation and find the ave ONI for those years
+# ext_distance_oni <- ext_distance %>%
+#   mutate(year_prior = year-1) %>%
+#   left_join(oni_ave_by_yr, by = c("year_prior" = "Year")) %>%
+#   rename(oni_prior_yr = oni_ave)
+# 
+# # Select the Max of the average ONI for each event and the max extension distance for each event
+# max_ext_oni_yr_prior <- ext_distance_oni %>%
+#   group_by(latin_name, group_id) %>%
+#   mutate(max_oni = max(oni_prior_yr)) %>%
+#   mutate(max_ext_dist = max(distance_km)) %>%
+#   ungroup() %>%
+#   dplyr::select(latin_name, group_id, max_ext_dist, max_oni) %>%
+#   distinct()
 # Make a new column of the year prior to the year of observation and find the ave ONI for those years
 ext_distance_oni <- ext_distance %>%
-  mutate(year_prior = year-1) %>%
+  mutate(year_prior = first_year-1) %>%
   left_join(oni_ave_by_yr, by = c("year_prior" = "Year")) %>%
-  rename(oni_prior_yr = oni_ave)
+  rename(oni_prior_yr = oni_ave) %>%
+  left_join(oni_ave_by_yr, by = c("first_year" = "Year")) %>%
+  rename(oni_first_yr = oni_ave)
 
 # Select the Max of the average ONI for each event and the max extension distance for each event
 max_ext_oni_yr_prior <- ext_distance_oni %>%
   group_by(latin_name, group_id) %>%
-  mutate(max_oni = max(oni_prior_yr)) %>%
+  mutate(
+    max_oni = max(oni_prior_yr, oni_first_yr)) %>%
   mutate(max_ext_dist = max(distance_km)) %>%
   ungroup() %>%
   dplyr::select(latin_name, group_id, max_ext_dist, max_oni) %>%
@@ -185,29 +202,28 @@ summary(gam_model)
 # Plot smooth
 plot(gam_model, shade = TRUE, main = "GAM fit: max_ext_dist ~ s(max_oni)")
 
-################################################################################
-# # same but controlling for *linear* effect of species
-# m3 <- gam(max_ext_dist ~ s(max_oni) + latin_name, data = max_ext_oni_yr_prior)
-# summary(m3)
-# plot(m3, shade = T, main = "GAM fit: max_ext_dist ~ s(max_oni) + species")
-################################################################################
-
 # Mixed effects model
-
 m_mixed <- lmer(max_ext_dist ~ max_oni + (1 | latin_name), 
                 data = max_ext_oni_yr_prior)
 
 summary(m_mixed)
-# Both the intercept and max_oni t value is >4.0, implying that ONI effect is statistically robust.
+ranef(m_mixed)$latin_name
 
-# AIC
-AIC(lin_model, poly_model, gam_model, m_mixed)
+# Both the intercept and max_oni t value is >4.0, implying that ONI effect is statistically robust.
+# Can report the intercept values by species (supp table?)
+# Where we had sufficient data with species as a random effect, we did - then report
 
 # Each species gets its own intercept
 # Mixed effects model - slopes
 m_mixed_slopes <- lmer(max_ext_dist ~ max_oni + (max_oni | latin_name), data = max_ext_oni_yr_prior)
 summary(m_mixed_slopes)
+ranef(m_mixed_slopes)$latin_name
+
+# AIC
 AIC(lin_model, poly_model, gam_model, m_mixed, m_mixed_slopes)
+
+# Compare to linear
+anova(m_mixed, m_mixed_slopes)
 
 # The correlation vetween intercept and slope (0.38) means that species with higher baseline extension distances also tend to have higher ONI sensitivity.
 
@@ -283,13 +299,12 @@ anova(lin_model, poly_model)
 # Fit GAM with smooth term for ONI
 gam_model <- gam(n ~ s(max_oni), data = oni_freq)
 summary(gam_model)
-
-# Mixed effects model
-
-m_mixed <- lmer(n ~ max_oni + (1 | latin_name), 
-                data = oni_freq_sp)
-
-summary(m_mixed) # Does not work because all sp have same # of oni observations
+# # Mixed effects model
+# 
+# m_mixed <- lmer(n ~ max_oni + (1 | latin_name), 
+#                 data = oni_freq_sp)
+# 
+# summary(m_mixed) # Does not work because all sp have same # of oni observations
 
 # AIC
 AIC(lin_model, poly_model, gam_model)
@@ -297,7 +312,7 @@ AIC(lin_model, poly_model, gam_model)
 
 
 # Do more extensions occur during el nino than expected by chance? --------------------------------------------------
-# MAKE SURE THIS IS 3+ EXTENSIONS
+# 3+ EXTENSIONS
 
 # El Nino frequency
 ## Monthly res

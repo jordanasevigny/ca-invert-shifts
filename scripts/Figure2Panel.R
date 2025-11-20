@@ -290,7 +290,7 @@ B <- ggplot(ext_summary, aes(x = proportion_peak_or_end)) +
   geom_dotplot(binwidth = 0.1, fill = "gray70", color = "black", stroke=1) +
   geom_vline(xintercept = en_freq_month, linetype = "dashed", color = "#E63946", size=1.3) +
   labs(
-    x = "Proportion of Extension Events\nin El Niño Peak/End Years",
+    x = "Proportion of Extension Events\nin El Niño",
     y = "Number of Species"
   ) +
   theme_minimal(base_size = 18) +
@@ -318,16 +318,34 @@ ext_distance <- ext_year_phase %>%
   mutate(distance_km = get_distance_km(hist_range_lat, hist_range_lon, latitude, longitude)) %>%
   ungroup()
 
+# # Make a new column of the year prior to the year of observation and find the ave ONI for those years
+# ext_distance_oni <- ext_distance %>%
+#   mutate(year_prior = year-1) %>%
+#   left_join(oni_ave_by_yr, by = c("year_prior" = "Year")) %>%
+#   rename(oni_prior_yr = oni_ave)
+# 
+# # Select the Max of the average ONI for each event and the max extension distance for each event
+# max_ext_oni_yr_prior <- ext_distance_oni %>%
+#   group_by(latin_name, group_id) %>%
+#   mutate(max_oni = max(oni_prior_yr)) %>%
+#   mutate(max_ext_dist = max(distance_km)) %>%
+#   ungroup() %>%
+#   dplyr::select(latin_name, group_id, max_ext_dist, max_oni) %>%
+#   distinct()
+
 # Make a new column of the year prior to the year of observation and find the ave ONI for those years
 ext_distance_oni <- ext_distance %>%
-  mutate(year_prior = year-1) %>%
+  mutate(year_prior = first_year-1) %>%
   left_join(oni_ave_by_yr, by = c("year_prior" = "Year")) %>%
-  rename(oni_prior_yr = oni_ave)
+  rename(oni_prior_yr = oni_ave) %>%
+  left_join(oni_ave_by_yr, by = c("first_year" = "Year")) %>%
+  rename(oni_first_yr = oni_ave)
 
 # Select the Max of the average ONI for each event and the max extension distance for each event
 max_ext_oni_yr_prior <- ext_distance_oni %>%
   group_by(latin_name, group_id) %>%
-  mutate(max_oni = max(oni_prior_yr)) %>%
+  mutate(
+    max_oni = max(oni_prior_yr, oni_first_yr)) %>%
   mutate(max_ext_dist = max(distance_km)) %>%
   ungroup() %>%
   dplyr::select(latin_name, group_id, max_ext_dist, max_oni) %>%
@@ -341,7 +359,7 @@ oni_freq <- max_ext_oni_yr_prior %>%
 C <- ggplot(oni_freq, aes(x=max_oni, y=n)) +
   geom_point(size=2) +
   geom_smooth(method = "lm", se = TRUE, color="#E9C46A", fill="#E9C46A") + 
-  labs(x = "Extension Event Oceanic Niño Index", y = "Number of\nExtension Events") +
+  labs(x = "Oceanic Niño Index", y = "Number of\nExtension Events") +
   theme_minimal(base_size = 18)
 
 # Plot panel
