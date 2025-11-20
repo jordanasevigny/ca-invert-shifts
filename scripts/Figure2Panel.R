@@ -359,7 +359,7 @@ oni_freq <- max_ext_oni_yr_prior %>%
 C <- ggplot(oni_freq, aes(x=max_oni, y=log(n))) +
   geom_point(size=2) +
   geom_smooth(method = "lm", se = TRUE, color="#E9C46A", fill="#E9C46A") + 
-  labs(x = "Oceanic Niño Index", y = "Number of\nExtension Events") +
+  labs(x = "Oceanic Niño Index", y = "Log Number of\nExtension Events") +
   theme_minimal(base_size = 18)
 
 # Plot panel
