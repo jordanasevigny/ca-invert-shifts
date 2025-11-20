@@ -176,8 +176,8 @@ A <- ggplot(plot3a_data, aes(x = log(max_ext_dist), fill = oni_cat)) +
   theme(
     legend.title = element_text(size=10),
     legend.text = element_text(size=10),
-    legend.position = c(0.999, 0.999),   # (x, y) inside plot coordinates
-    legend.justification = c("right", "top"), # anchor legend box at that point
+    legend.position = c(0.01, 0.999),   # (x, y) inside plot coordinates
+    legend.justification = c("left", "top"), # anchor legend box at that point
     axis.title.y.right = element_blank()
   )
 
