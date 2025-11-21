@@ -174,5 +174,5 @@ calrev_lm <- ggplot(extension_counts, aes(x=year, y=log(n_extensions))) +
   labs(x = "Year", y = "Log Number of Extension Events") +
   theme_minimal(base_size = 16)
 
-ggsave("figures/cal_rev_ext_lm.png", plot = calrev_lm, width = 14, height = 4, unit = "in", dpi = 600)
+ggsave("figures/cal_rev_ext_lm_log.png", plot = calrev_lm, width = 14, height = 4, unit = "in", dpi = 600)
 

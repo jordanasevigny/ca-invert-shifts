@@ -24,6 +24,7 @@ library(geosphere)
 library(moments)
 library(mgcv)
 library(lme4)
+library(gt)
 
 # Load review data
 df <- read.csv("processed_data/merged_calcofi_lab_review.csv")
@@ -231,8 +232,42 @@ ranef(m_mixed_slopes)$latin_name
 # AIC
 AIC(lin_model, poly_model, gam_model, m_mixed, m_mixed_slopes)
 
-# The correlation vetween intercept and slope (0.38) means that species with higher baseline extension distances also tend to have higher ONI sensitivity.
 
+# Make a table of the intercepts for supplementary ------------------------
+# Extract random effects
+ran <- ranef(m_mixed)$latin_name %>%
+  tibble::rownames_to_column("latin_name") %>%
+  rename(random_intercept = `(Intercept)`)
+
+# Extract fixed intercept (needed if back-transforming)
+fix_int <- fixef(m_mixed)[["(Intercept)"]]
+# Revert from log back to km
+ran <- ran %>%
+  mutate(
+    intercept_log = fix_int + random_intercept,
+    intercept_km = exp(intercept_log)  # assumes natural log
+  )
+species_intercept_table <- ran %>%
+  select(latin_name, intercept_log, intercept_km) %>%
+  arrange(desc(intercept_km)) %>%  # optional: sort largest to smallest
+  gt() %>%
+  fmt_number(columns = c(intercept_log), decimals = 3) %>%
+  fmt_number(columns = c(intercept_km), decimals = 1) %>%
+  cols_label(
+    latin_name = "Species",
+    intercept_log = "Log-scale Intercept",
+    intercept_km = "Estimated Intercept (km)"
+  ) %>%
+  tab_header(
+    title = "Species-Specific Random Intercepts for Mixed-Effects Model"
+  ) %>%
+  tab_options(
+    table.font.names = "Helvetica",
+    data_row.padding = px(4),
+    table.font.size = 12,
+    heading.align = "left"
+  )
+gtsave(species_intercept_table, "figures/species-intercept-table.png")
 ################################################################################
 # AIC(m1, m2, m3)
 # you can run analyses just like these for the other regressions you do
@@ -266,8 +301,7 @@ oni_test_data <- max_ext_oni_yr_prior %>%
 
 
 # Run t-test
-t.test(log(max_ext_dist) ~ oni_cat, data = oni_test_data)
-
+t.test(log(max_ext_dist) ~ oni_cat, data = oni_test_data) # two-tailed
 
 
 # Max ONI (year prior) vs extension count --------------------------------------------------
