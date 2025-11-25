@@ -172,6 +172,22 @@ curve(dlnorm(x,
              meanlog = mean(log(max_ext_oni_yr_prior$max_ext_dist)),
              sdlog   = sd(log(max_ext_oni_yr_prior$max_ext_dist))),
       add = TRUE, col = "blue", lwd = 2)
+# Empirical CDF
+fx = (1:length(max_ext_oni_yr_prior$max_ext_dist))/(length(max_ext_oni_yr_prior$max_ext_dist)+1)
+plot(sort(max_ext_oni_yr_prior$max_ext_dist), fx, type="l")
+# Add log normal distribution
+x1 = seq(0,3500,0.1) 
+y = log(max_ext_oni_yr_prior$max_ext_dist)
+Fx2 = plnorm(x1,mean(y),sd(y))
+lines(x1,Fx2,col="gold")
+# Add normal distribution
+x2 = seq(0,3500,0.1) 
+y = max_ext_oni_yr_prior$max_ext_dist
+Fx3 = pnorm(x2,mean(y),sd(y))
+lines(x2,Fx3,col="green")
+# Log normal is much better fit
+boxplot(max_ext_oni_yr_prior$max_ext_dist) # boxplot
+
 
 # no ONI pre 1950 (drops any extensions pre 1950)
 ggplot(max_ext_oni_yr_prior, aes(max_oni, log(max_ext_dist))) +
@@ -186,12 +202,6 @@ lin_model <- lm(log(max_ext_dist) ~ max_oni, data = max_ext_oni_yr_prior)
 # View the model summary
 summary(lin_model)
 
-################################################################################
-# # same but controlling for any species effects
-# m1 <- lm(max_ext_dist ~ max_oni + latin_name, data = max_ext_oni_yr_prior)
-# summary(m1)
-################################################################################
-
 # Quadratic (2nd degree polynomial)
 poly_model <- lm(log(max_ext_dist) ~ poly(max_oni, 2, raw = TRUE), 
                  data = max_ext_oni_yr_prior)
@@ -199,32 +209,20 @@ summary(poly_model)
 # Compare to linear
 anova(lin_model, poly_model)
 
-################################################################################
-# # same but controlling for any species effects
-# m2 <- lm(max_ext_dist ~ poly(max_oni, 2, raw=T) + latin_name, data = max_ext_oni_yr_prior)
-# summary(m2)
-# anova(m1,m2)
-################################################################################
-
 # Fit GAM with smooth term for ONI
 gam_model <- gam(log(max_ext_dist) ~ s(max_oni), data = max_ext_oni_yr_prior)
 summary(gam_model)
 # Plot smooth
 plot(gam_model, shade = TRUE, main = "GAM fit: max_ext_dist ~ s(max_oni)")
 
-# Mixed effects model
+# Mixed effects model with random intercept
 m_mixed <- lmer(log(max_ext_dist) ~ max_oni + (1 | latin_name), 
                 data = max_ext_oni_yr_prior)
 
 summary(m_mixed)
 ranef(m_mixed)$latin_name
 
-# Both the intercept and max_oni t value is >4.0, implying that ONI effect is statistically robust.
-# Can report the intercept values by species (supp table?)
-# Where we had sufficient data with species as a random effect, we did - then report
-
-# Each species gets its own intercept
-# Mixed effects model - slopes
+# Mixed effects model with random intercept and random slope
 m_mixed_slopes <- lmer(log(max_ext_dist) ~ max_oni + (max_oni | latin_name), data = max_ext_oni_yr_prior)
 summary(m_mixed_slopes)
 ranef(m_mixed_slopes)$latin_name
@@ -268,10 +266,6 @@ species_intercept_table <- ran %>%
     heading.align = "left"
   )
 gtsave(species_intercept_table, "figures/species-intercept-table.png")
-################################################################################
-# AIC(m1, m2, m3)
-# you can run analyses just like these for the other regressions you do
-################################################################################
 
 
 # Density Plot Low vs High ONI
@@ -309,16 +303,38 @@ t.test(log(max_ext_dist) ~ oni_cat, data = oni_test_data) # two-tailed
 
 # extension counts
 oni_freq <- max_ext_oni_yr_prior %>%
-  count(max_oni) %>%
-  drop_na()
+  count(max_oni)
 
-# extension counts distribuion curve
+# Leave one species out correlation checks
+for (sp in unique(max_ext_oni_yr_prior$latin_name)) {
+  loso_freq <- max_ext_oni_yr_prior %>%
+    filter(latin_name != sp) %>%
+    count(max_oni)
+  print(cor(loso_freq$max_oni, log(loso_freq$n)))
+}
+
+# Extension counts distribution curve
 hist(oni_freq$n, breaks = 5, freq = FALSE)
 
 curve(dlnorm(x,
              meanlog = mean(log(oni_freq$n)),
              sdlog   = sd(log(oni_freq$n))),
       add = TRUE, col = "blue", lwd = 2)
+# Empirical CDF
+fx = (1:length(oni_freq$n))/(length(oni_freq$n)+1)
+plot(sort(oni_freq$n), fx, type="l")
+# Add log normal distribution
+x1 = seq(0,3500,0.1) 
+y = log(oni_freq$n)
+Fx2 = plnorm(x1,mean(y),sd(y))
+lines(x1,Fx2,col="gold")
+# Add normal distribution
+x2 = seq(0,3500,0.1) 
+y = oni_freq$n
+Fx3 = pnorm(x2,mean(y),sd(y))
+lines(x2,Fx3,col="green")
+# Log normal is better fit
+boxplot(oni_freq$n) # boxplot
 
 # Linear regression
 ggplot(oni_freq, aes(x=max_oni, y=log(n))) +
@@ -452,8 +468,8 @@ ggplot(ext_summary, aes(x=1, y = proportion_peak_or_end, fill = factor(total_ext
 
 
 
-# STATS
-## El Nino wo blob - el nino month resolution
+# STATS - chisq for el nino extensions
+
 # Observed counts
 observed <- c(sum(ext_summary$peak_or_end_extensions), sum(ext_summary$total_extensions)-sum(ext_summary$peak_or_end_extensions))  # 35 El Niño, 65 Not El Niño
 # Expected proportions
