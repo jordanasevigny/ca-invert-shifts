@@ -133,20 +133,6 @@ ext_distance %>%
 #===================================
 # Max ONI (all shifted to year prior) - Max extension distance per event
 
-# # Make a new column of the year prior to the year of observation and find the ave ONI for those years
-# ext_distance_oni <- ext_distance %>%
-#   mutate(year_prior = year-1) %>%
-#   left_join(oni_ave_by_yr, by = c("year_prior" = "Year")) %>%
-#   rename(oni_prior_yr = oni_ave)
-# 
-# # Select the Max of the average ONI for each event and the max extension distance for each event
-# max_ext_oni_yr_prior <- ext_distance_oni %>%
-#   group_by(latin_name, group_id) %>%
-#   mutate(max_oni = max(oni_prior_yr)) %>%
-#   mutate(max_ext_dist = max(distance_km)) %>%
-#   ungroup() %>%
-#   dplyr::select(latin_name, group_id, max_ext_dist, max_oni) %>%
-#   distinct()
 # Make a new column of the year prior to the year of observation and find the ave ONI for those years
 ext_distance_oni <- ext_distance %>%
   mutate(year_prior = first_year-1) %>%
