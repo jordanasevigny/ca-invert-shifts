@@ -175,6 +175,7 @@ lines(x2,Fx3,col="green")
 boxplot(max_ext_oni_yr_prior$max_ext_dist) # boxplot
 
 
+
 # no ONI pre 1950 (drops any extensions pre 1950)
 ggplot(max_ext_oni_yr_prior, aes(max_oni, log(max_ext_dist))) +
   geom_point(color="black") +
