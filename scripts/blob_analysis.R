@@ -133,7 +133,7 @@ blob <- ggplot() +
     date_breaks = "3 years",
     date_labels = "%Y"
   ) +
-  labs(x = "") +
+  labs(x = "Year") +
   theme_minimal(base_size = 22) +
   theme(legend.position = "none"
       #  axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)
