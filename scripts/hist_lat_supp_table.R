@@ -13,7 +13,7 @@ library(gt)
 
 # Load historical data
 data = read.csv("processed_data/historical_distributions_clean.csv")
- 
+unique(data$resource)
  
 # # Make it look nice for publication
 # gt_table <- data %>%

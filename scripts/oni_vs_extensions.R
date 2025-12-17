@@ -233,14 +233,12 @@ ran <- ran %>%
     intercept_km = exp(intercept_log)  # assumes natural log
   )
 species_intercept_table <- ran %>%
-  select(latin_name, intercept_log, intercept_km) %>%
+  select(latin_name, intercept_km) %>%
   arrange(desc(intercept_km)) %>%  # optional: sort largest to smallest
   gt() %>%
-  fmt_number(columns = c(intercept_log), decimals = 3) %>%
   fmt_number(columns = c(intercept_km), decimals = 1) %>%
   cols_label(
     latin_name = "Species",
-    intercept_log = "Log-scale Intercept",
     intercept_km = "Estimated Intercept (km)"
   ) %>%
   tab_header(
