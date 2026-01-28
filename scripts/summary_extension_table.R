@@ -1,5 +1,4 @@
 # Extension supplementary table
-# By: Jordana Sevigny, jordana.sevigny@gmail.com
 # Date created: 10/08/2025
 
 rm(list = ls())

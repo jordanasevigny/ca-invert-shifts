@@ -1,5 +1,5 @@
 # Script to make the list of classes and phylum to use for review
-# By: Jordana Sevigny, jordana.sevigny@gmail.com
+
 
 rm(list = ls())
 

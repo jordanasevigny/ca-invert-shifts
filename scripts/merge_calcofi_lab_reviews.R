@@ -1,5 +1,4 @@
-# Merge CalCOFI and lab reviews & add in historical latitudes 
-# By: Jordana Sevigny, jordana.sevigny@gmail.com
+# Merge CalCOFI and lab reviews & add in historical latitudes
 # Date created: 07/02/2025
 
 # Must have already run load_lab_review.R if changes were made to the raw data

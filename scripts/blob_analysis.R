@@ -1,5 +1,4 @@
 # The Blob Analysis
-# By: Jordana Sevigny, jordana.sevigny@gmail.com
 # Date created: 07/30/2025
   
 rm(list = ls())

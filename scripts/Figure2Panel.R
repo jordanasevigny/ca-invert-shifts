@@ -1,5 +1,4 @@
 # Figure 2 Panel
-# By: Jordana Sevigny, jordana.sevigny@gmail.com
 # Date created: 08/2025
 
 rm(list = ls())

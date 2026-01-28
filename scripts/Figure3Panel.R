@@ -1,5 +1,4 @@
 # Figure 3 Panel
-# By: Jordana Sevigny, jordana.sevigny@gmail.com
 # Date created: 08/2025
 
 rm(list = ls())
@@ -31,7 +30,8 @@ df <- read.csv("processed_data/merged_calcofi_lab_review.csv")
 world <- ne_countries(scale = "medium", returnclass = "sf")
 
 # Load enso data
-enso_df <- download_enso(climate_idx = "oni", create_csv = FALSE)
+# enso_df <- download_enso(climate_idx = "oni", create_csv = TRUE) # at time of analysis, we had up to April 2025
+enso_df <- read.csv("data/enso_data.csv", header=TRUE)
 
 # Classify enso by start, peak, end --------------------------------------------
 # For each event, get the years and count months per year

@@ -1,5 +1,5 @@
 # This script pulls all the web of science results into one dataframe (each page of results had to be downloaded separately), deduplicates,  and adds DOIs
-# By: Jordana Sevigny, jordana.sevigny@gmail.com
+
 
 # Load libraries
 library(readxl)

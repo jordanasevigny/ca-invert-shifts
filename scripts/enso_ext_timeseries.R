@@ -1,5 +1,4 @@
 # Extension bubble vs ENSO Time Series
-# By: Jordana Sevigny, jordana.sevigny@gmail.com
 # Date created: 07/24/2025
 
 rm(list = ls())

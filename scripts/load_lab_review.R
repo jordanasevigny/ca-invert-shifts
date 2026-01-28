@@ -1,5 +1,4 @@
 # Load in lab review data and add missing longitudes
-# By: Jordana Sevigny, jordana.sevigny@gmail.com
 # Date created: 6/19/2025
 # Updated: 07/02/2025
 # RUN THIS, THEN merge_calcofi_lab_reviews.R

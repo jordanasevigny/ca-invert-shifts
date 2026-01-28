@@ -1,5 +1,4 @@
 # Save the furthest north point for 3+ ext species
-# By: Jordana Sevigny, jordana.sevigny@gmail.com
 # Date created: 07/02/2025
 
 rm(list = ls())

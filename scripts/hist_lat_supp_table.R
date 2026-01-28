@@ -1,5 +1,4 @@
 # Historical Latitude Supp. Table 
-# By: Jordana Sevigny, jordana.sevigny@gmail.com
 # Date created: 10/28/2025
 
 rm(list = ls())
