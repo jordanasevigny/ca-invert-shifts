@@ -1,12 +1,5 @@
 # A century of invertebrate range extensions in the eastern North Pacific
 
-Authors: Jordana K. Sevigny<sup>1</sup>, Emma J. Walker<sup>1</sup>, Bella G. Lipsey<sup>1</sup>, Theodore T. Tran<sup>1</sup>, and Alexa L. Fredston<sup>1</sup>
-
-Affiliations:
-1. Department of Ocean Sciences, University of California, Santa Cruz, California, United States of America
-
-Address for correspondence: Jordana K. Sevigny, Department of Ocean Sciences, University of California, Santa Cruz, California, 1156 High Street, Santa Cruz, California 95064. jsevigny@ucsc.edu
-
 # Where do the data come from?
 
 We compiled a database of northward range extensions across California of marine invertebrates through a systematic literature review of both historical survey reports and broader peer-reviewed literature. A central source was the California Cooperative Oceanic Fisheries Investigations (CalCOFI) State of the [California Current reports]([url](https://calcofi.org/publications/calcofi-reports/)). These reports provide serendipitous records of unusual species occurrences noted by scientists during routine surveys, rather than targeted searches for range shifts. To expand beyond these historical accounts, we conducted a systematic literature review of peer-reviewed studies, integrating their observations with those from the CalCOFI reports to assemble a more comprehensive record of extension events and assess broader patterns. All records used in this analysis come from onshore or nearshore (i.e., coastal) observations of species with a historical or novel range edge in California. 
