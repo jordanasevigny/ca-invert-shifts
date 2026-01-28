@@ -5,11 +5,11 @@
 rm(list = ls())
 
 # Load libraries
-library(ggplot2)
+library("ggplot2")
 theme_set(theme_bw())
-library(sf)
-library(rnaturalearth)
-library(rnaturalearthdata)
+library("sf")
+library("rnaturalearth")
+library("rnaturalearthdata")
 library(dplyr)
 library(readxl)
 library(tidyr)
