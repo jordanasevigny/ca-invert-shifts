@@ -251,7 +251,15 @@ single_ext_pc <- df %>%
   group_by(latin_name, first_year) %>%
   filter(latitude == max(latitude, na.rm = TRUE)) %>%
   ungroup()
-# 70
+
+# s_pc <- df %>%
+#   filter(hist_range_lat <=34.5) %>%
+#   select(latin_name, first_year, latitude, longitude) %>%
+#   distinct() %>%
+#   group_by(latin_name, first_year) %>%
+#   filter(latitude == max(latitude, na.rm = TRUE)) %>%
+#   ungroup()
+# 70 extensions went around pc of 90 with hist lat < 34.5
 
 ext_counts_pc <- single_ext_pc %>%
   group_by(latitude, longitude) %>%
