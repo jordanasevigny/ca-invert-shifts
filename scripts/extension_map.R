@@ -183,3 +183,96 @@ ggplot() +
   labs(x = "Longitude", 
        y = "Latitude", 
        color = "Species") 
+
+# Blank map
+ggplot() +
+  geom_sf(data = world, fill = "gray90", color = "gray80") +
+  geom_sf(data = states, fill = NA, color = "gray80", size = 0.3) +
+  # geom_curve(
+  #   data = furthest_noth_j,
+  #   aes(x = x0, y = y0, xend = x1, yend = y1, color = latin_name),
+  #   curvature = -0.2,
+  #   arrow = arrow(length = unit(0.6, "cm")),
+  #   size=1.2,
+  #   alpha=0.8
+  # ) +
+  scale_color_manual(values = palette_18_alt) +
+  coord_sf(xlim = c(-130, -114), ylim = c(30, 50), expand = FALSE) +
+  scale_x_continuous(breaks = c(-130, -122, -118, -114)) +
+  theme_minimal(base_size = 16) +
+  theme(
+    panel.background = element_rect(fill = "lightblue", color = NA)
+  ) +
+  labs(x = "Longitude", 
+       y = "Latitude", 
+       color = "Species") 
+
+
+
+# Map with extension destination clusters
+single_ext <- df %>%
+  select(latin_name, first_year, latitude, longitude) %>%
+  distinct() %>%
+  group_by(latin_name, first_year) %>%
+  filter(latitude == max(latitude, na.rm = TRUE)) %>%
+  ungroup()
+
+
+ext_counts <- single_ext %>%
+  group_by(latitude, longitude) %>%
+  summarise(n_extensions = n(), .groups = "drop")
+
+ggplot() +
+  geom_sf(data = world, fill = "gray90", color = "gray80") +
+  geom_sf(data = states, fill = NA, color = "gray80", size = 0.3) +
+  geom_point(
+    data = ext_counts,
+    aes(x = longitude, y = latitude, size = n_extensions),
+    alpha = 0.7
+  ) +
+  coord_sf(xlim = c(-160, -114), ylim = c(30, 60), expand = FALSE) +
+  scale_x_continuous(breaks = c(-158, -152, -146, -138, -130, -122, -114)) +
+  scale_size_continuous(name = "Number of extensions") +
+  theme_minimal(base_size = 16) +
+  theme(
+    panel.background = element_rect(fill = "lightblue", color = NA)
+  ) +
+  labs(
+    x = "Longitude",
+    y = "Latitude"
+  )
+
+
+# Extensions frm south of PC to north of PC
+single_ext_pc <- df %>%
+  filter(hist_range_lat <=34.5 & latitude > 34.5) %>%
+  select(latin_name, first_year, latitude, longitude) %>%
+  distinct() %>%
+  group_by(latin_name, first_year) %>%
+  filter(latitude == max(latitude, na.rm = TRUE)) %>%
+  ungroup()
+# 70
+
+ext_counts_pc <- single_ext_pc %>%
+  group_by(latitude, longitude) %>%
+  summarise(n_extensions = n(), .groups = "drop")
+
+ggplot() +
+  geom_sf(data = world, fill = "gray90", color = "gray80") +
+  geom_sf(data = states, fill = NA, color = "gray80", size = 0.3) +
+  geom_point(
+    data = ext_counts_pc,
+    aes(x = longitude, y = latitude, size = n_extensions),
+    alpha = 0.7
+  ) +
+  coord_sf(xlim = c(-160, -114), ylim = c(30, 60), expand = FALSE) +
+  scale_x_continuous(breaks = c(-158, -152, -146, -138, -130, -122, -114)) +
+  scale_size_continuous(name = "Number of extensions\ncrossing PC") +
+  theme_minimal(base_size = 16) +
+  theme(
+    panel.background = element_rect(fill = "lightblue", color = NA)
+  ) +
+  labs(
+    x = "Longitude",
+    y = "Latitude"
+  )
