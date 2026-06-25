@@ -90,7 +90,7 @@ df %>% group_by(latin_name) %>% filter(!any(group_id > 0)) %>% pull(latin_name) 
 max_group_id = max(df$group_id)
 df %>% group_by(latin_name) %>% filter(group_id == max_group_id) %>% pull(latin_name) %>% unique()
 
- # Identify the species with X+ events and filter for those species
+# Identify the species with X+ events and filter for those species
 species_with_groupXplus <- df %>%
   group_by(latin_name) %>%
   filter(any(group_id >= 2)) %>% # 2 would be three events (0, 1, 2)

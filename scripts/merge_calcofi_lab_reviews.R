@@ -21,19 +21,35 @@ hist_dist <- read.csv("processed_data/historical_distributions_clean.csv")
 # Tally exclusion criterias for lab_rev
 lab_rev_exclude <- lab_rev %>%
   filter(include_exclude == "Exclude") %>%
-  select(paper_id, exclude_t0_calcofi_report, exclude_t1_not_marine_species, exclude_t2_outdated_pre1900, exclude_t3_not_poleward, exclude_t3_not_in_california) %>%
+  select(paper_id, exclude_t0_calcofi_report, exclude_t1_not_marine_species, exclude_t2_outdated_pre1900, exclude_t3_not_poleward, exclude_t3_not_in_BC_CA_OR_WA, exclude_t4_not_in_temperate_enpacific) %>%
   unique() # drop duplicate rows
-colSums(lab_rev_exclude[, c("exclude_t0_calcofi_report", "exclude_t1_not_marine_species", "exclude_t2_outdated_pre1900", "exclude_t3_not_poleward", "exclude_t3_not_in_california")], na.rm = TRUE)
-sum(lab_rev_exclude$exclude_t3_not_poleward & lab_rev_exclude$exclude_t3_not_in_california, na.rm = TRUE)
-165-56 + 129-56 + 56 # number of articles (238) that were excluded  because they were not poleward AND / OR not in California
+cols <- c(
+  "exclude_t0_calcofi_report",
+  "exclude_t1_not_marine_species",
+  "exclude_t2_outdated_pre1900",
+  "exclude_t3_not_poleward",
+  "exclude_t3_not_in_BC_CA_OR_WA",
+  "exclude_t4_not_in_temperate_enpacific"
+)
+colSums(
+  sapply(lab_rev_exclude[, cols], function(x) as.logical(x)),
+  na.rm = TRUE
+)
+sum(
+  as.logical(lab_rev_exclude$exclude_t3_not_poleward) &
+    as.logical(lab_rev_exclude$exclude_t3_not_in_BC_CA_OR_WA),
+  na.rm = TRUE
+)
+# OLD numbers 165-56 + 129-56 + 56 # number of articles (238) that were excluded  because they were not poleward AND / OR not in the area of study
+
 
 # Filter to included data
 ca_rev_inc <- filter(ca_rev, include_exclude == "Include")
 lab_rev_inc  <- filter(lab_rev, include_exclude == "Include")
 
 # Count # included articles
-length(unique(lab_rev_inc$paper_id)) # 34
-409-359-34 # total papers - excluded papers - included papers = inconclusive papers = 16
+length(unique(lab_rev_inc$paper_id)) # 38
+409-348-38 # total papers - excluded papers - included papers = inconclusive papers = 23
 
 # Filter out the low confidence extensions from the lab review
 lab_rev_inc <- filter(lab_rev_inc, extension_confidence_criteria != "Opportunistic")
@@ -93,23 +109,36 @@ coast <- ne_download(scale = 10, type = "coastline", category = "physical", retu
 coast_na <- st_crop(coast, xmin = -170, xmax = -50, ymin = 5, ymax = 80)
 
 
-# Define function to find longitude given latitude
+# Define function to find Pacific coastline longitude given latitude
 find_lon <- function(given_lat) {
-  # Create a line at given latitude
-  lon_range <- seq(-180, -114, by = 0.1)
-  line <- st_linestring(cbind(lon_range, rep(given_lat, length(lon_range))))
+  # Create a line of constant latitude
+  lon_range <- seq(-130, -100, by = 0.05)
+  line <- st_linestring(
+    cbind(lon_range, rep(given_lat, length(lon_range)))
+  )
   line_sf <- st_sfc(line, crs = 4326)
-  # Find nearest point on cost
-  nearest <- st_nearest_points(line_sf, st_union(coast_na))
-  intersection_point <- st_cast(nearest, "POINT")[2]
-  lon <- st_coordinates(intersection_point)[1]
-  return(lon)
+  
+  # Find all intersections with coastline
+  pts <- st_intersection(st_union(coast_na), line_sf)
+  # Return NA if no intersections
+  if (length(pts) == 0)
+    return(NA_real_)
+  pts <- st_cast(pts, "POINT")
+  lons <- st_coordinates(pts)[, "X"]
+  
+  # South of Baja: use Pacific (westernmost) coast
+  if (given_lat < 32) {
+    return(min(lons))
+  }
+  # Else: use mainland / outer coast
+  return(max(lons))
 }
 
 merged_df_histedge_lon <- merged_df_histedge %>%
   rowwise() %>%
   mutate(
-    hist_range_lon = find_lon(hist_range_lat)) %>%
+    hist_range_lon = find_lon(hist_range_lat)
+  ) %>%
   ungroup()
 
 # Choose the northernmost observation for each species/year combo
