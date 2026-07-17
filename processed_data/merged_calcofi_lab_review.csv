@@ -40,23 +40,23 @@
 "39","Doriopsilla fulva","species","White-spotted Dorid",42.2227,"Paper",-124.383,"Paper",2015,"June","","lab_rev",NA,"376",33.74,"Sanford et al., 2019; Jaeckle, 1984",-118.109720891422,0,2015
 "40","Doriopsilla fulva","species","White-spotted Dorid",45.42947,"Paper",-123.94776,"Paper",2016,"June","","lab_rev",NA,"376",33.74,"Sanford et al., 2019; Jaeckle, 1984",-118.109720891422,0,2015
 "41","Doriopsilla fulva","species","White-spotted Dorid",45.42947,"Paper",-123.94776,"Paper",2017,"June","","lab_rev",NA,"376",33.74,"Sanford et al., 2019; Jaeckle, 1984",-118.109720891422,0,2015
-"42","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1909,"","","lab_rev",NA,"402",32.5,"Mearns, A. J., 1988",-117.123866640067,0,1909
-"43","Dosidicus gigas","species","Jumbo squid",36.611029,"Google Maps",-121.94983042397,"R generated",1910,"","","lab_rev",NA,"388",32.5,"Mearns, A. J., 1988",-117.123866640067,0,1909
-"44","Dosidicus gigas","species","Jumbo squid",33.700615,"Google Maps",-118.054704482789,"R generated",1934,"August","6","lab_rev",NA,"388",32.5,"Mearns, A. J., 1988",-117.123866640067,1,1934
-"45","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1935,"","","lab_rev",NA,"402",32.5,"Mearns, A. J., 1988",-117.123866640067,1,1934
-"46","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1936,"","","lab_rev",NA,"402",32.5,"Mearns, A. J., 1988",-117.123866640067,1,1934
-"47","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1937,"","","lab_rev",NA,"402",32.5,"Mearns, A. J., 1988",-117.123866640067,1,1934
-"48","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1975,"","","lab_rev",NA,"402",32.5,"Mearns, A. J., 1988",-117.123866640067,2,1975
-"49","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1976,"","","lab_rev",NA,"402",32.5,"Mearns, A. J., 1988",-117.123866640067,2,1975
-"50","Dosidicus gigas","species","Humboldt squid or jumbo flying squid",59.485662,"Google Maps",-139.858311,"Google Maps",1997,"","","lab_rev",NA,"393",32.5,"Mearns, A. J., 1988",-117.123866640067,3,1997
-"51","Dosidicus gigas","species","humboldt squid",36.793978,"Google Maps",-121.793693163778,"R generated",1998,"","","lab_rev",NA,"95",32.5,"Mearns, A. J., 1988",-117.123866640067,3,1997
-"52","Dosidicus gigas","species","humboldt squid",36.793978,"Google Maps",-121.793693163778,"R generated",1999,"","","lab_rev",NA,"95",32.5,"Mearns, A. J., 1988",-117.123866640067,3,1997
-"53","Dosidicus gigas","species","humboldt squid",36.793978,"Google Maps",-121.793693163778,"R generated",2000,"","","lab_rev",NA,"95",32.5,"Mearns, A. J., 1988",-117.123866640067,3,1997
-"54","Dosidicus gigas","species","humboldt squid",36.793978,"Google Maps",-121.793693163778,"R generated",2002,"","","lab_rev",NA,"95",32.5,"Mearns, A. J., 1988",-117.123866640067,4,2002
-"55","Dosidicus gigas","species","humboldt squid",54.67,"Text",-132.041327,"Text",2003,NA,NA,"ca_rev","2010",NA,32.5,"Mearns, A. J., 1988",-117.123866640067,4,2002
-"56","Dosidicus gigas","species","Humboldt squid or jumbo flying squid",48.5,"By hand",-124.85,"By hand",2004,"October","2","lab_rev",NA,"393",32.5,"Mearns, A. J., 1988",-117.123866640067,4,2002
-"57","Dosidicus gigas","species","humboldt squid or jumbo flying squid",46.1667,"Figure",-124.286333,"Figure",2006,"August","28","ca_rev","2011",NA,32.5,"Mearns, A. J., 1988",-117.123866640067,5,2006
-"58","Dosidicus gigas","species","Humboldt squid",49.11374,"Paper",-123.065823380089,"R generated",2009,"August","days 2, 4, 6","lab_rev",NA,"403",32.5,"Mearns, A. J., 1988",-117.123866640067,6,2009
+"42","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1909,"","","lab_rev",NA,"402",24,"Mearns, A. J., 1988",-110.917252966558,0,1909
+"43","Dosidicus gigas","species","Jumbo squid",36.611029,"Google Maps",-121.94983042397,"R generated",1910,"","","lab_rev",NA,"388",24,"Mearns, A. J., 1988",-110.917252966558,0,1909
+"44","Dosidicus gigas","species","Jumbo squid",33.700615,"Google Maps",-118.054704482789,"R generated",1934,"August","6","lab_rev",NA,"388",24,"Mearns, A. J., 1988",-110.917252966558,1,1934
+"45","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1935,"","","lab_rev",NA,"402",24,"Mearns, A. J., 1988",-110.917252966558,1,1934
+"46","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1936,"","","lab_rev",NA,"402",24,"Mearns, A. J., 1988",-110.917252966558,1,1934
+"47","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1937,"","","lab_rev",NA,"402",24,"Mearns, A. J., 1988",-110.917252966558,1,1934
+"48","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1975,"","","lab_rev",NA,"402",24,"Mearns, A. J., 1988",-110.917252966558,2,1975
+"49","Dosidicus gigas","species","Jumbo squid",32.663501,"Google Maps",-117.149846084033,"R generated",1976,"","","lab_rev",NA,"402",24,"Mearns, A. J., 1988",-110.917252966558,2,1975
+"50","Dosidicus gigas","species","Humboldt squid or jumbo flying squid",59.485662,"Google Maps",-139.858311,"Google Maps",1997,"","","lab_rev",NA,"393",24,"Mearns, A. J., 1988",-110.917252966558,3,1997
+"51","Dosidicus gigas","species","humboldt squid",36.793978,"Google Maps",-121.793693163778,"R generated",1998,"","","lab_rev",NA,"95",24,"Mearns, A. J., 1988",-110.917252966558,3,1997
+"52","Dosidicus gigas","species","humboldt squid",36.793978,"Google Maps",-121.793693163778,"R generated",1999,"","","lab_rev",NA,"95",24,"Mearns, A. J., 1988",-110.917252966558,3,1997
+"53","Dosidicus gigas","species","humboldt squid",36.793978,"Google Maps",-121.793693163778,"R generated",2000,"","","lab_rev",NA,"95",24,"Mearns, A. J., 1988",-110.917252966558,3,1997
+"54","Dosidicus gigas","species","humboldt squid",36.793978,"Google Maps",-121.793693163778,"R generated",2002,"","","lab_rev",NA,"95",24,"Mearns, A. J., 1988",-110.917252966558,4,2002
+"55","Dosidicus gigas","species","humboldt squid",54.67,"Text",-132.041327,"Text",2003,NA,NA,"ca_rev","2010",NA,24,"Mearns, A. J., 1988",-110.917252966558,4,2002
+"56","Dosidicus gigas","species","Humboldt squid or jumbo flying squid",48.5,"By hand",-124.85,"By hand",2004,"October","2","lab_rev",NA,"393",24,"Mearns, A. J., 1988",-110.917252966558,4,2002
+"57","Dosidicus gigas","species","humboldt squid or jumbo flying squid",46.1667,"Figure",-124.286333,"Figure",2006,"August","28","ca_rev","2011",NA,24,"Mearns, A. J., 1988",-110.917252966558,5,2006
+"58","Dosidicus gigas","species","Humboldt squid",49.11374,"Paper",-123.065823380089,"R generated",2009,"August","days 2, 4, 6","lab_rev",NA,"403",24,"Mearns, A. J., 1988",-110.917252966558,6,2009
 "59","Emerita analoga","species","",57.58193,"Google Maps",-154.460353,"Google Maps",1903,"","","lab_rev",NA,"366",32.67,"Mearns, A. J., 1988",-117.119046169842,0,1903
 "60","Emerita analoga","species","",47.604594,"Google Maps",-122.97650711089,"R generated",1941,"","","lab_rev",NA,"366",32.67,"Mearns, A. J., 1988",-117.119046169842,1,1941
 "61","Emerita analoga","species","",47.604594,"Google Maps",-122.97650711089,"R generated",1942,"","","lab_rev",NA,"366",32.67,"Mearns, A. J., 1988",-117.119046169842,1,1941
@@ -82,9 +82,9 @@
 "81","Euphausia recurva","species",NA,41.0518,"Online search",-124.1514,"Online search",2015,NA,NA,"ca_rev","2015",NA,34.5,"Keister et al., 2005; Brinton, 1962; Brinton & Townsend, 2003",-120.496896624464,1,2014
 "82","Euphausia recurva","species",NA,41.0518,"Online search",-124.1514,"Online search",2018,"December",NA,"ca_rev","2019-2020",NA,34.5,"Keister et al., 2005; Brinton, 1962; Brinton & Townsend, 2003",-120.496896624464,2,2018
 "83","Euphausia recurva","species",NA,41.0518,"Online search",-124.1514,"Online search",2019,"December",NA,"ca_rev","2019-2020",NA,34.5,"Keister et al., 2005; Brinton, 1962; Brinton & Townsend, 2003",-120.496896624464,2,2018
-"84","Euphylax dovii","species","Swimming crab",32.663501,"Google Maps",-117.149846084033,"R generated",1943,"","","lab_rev",NA,"402",32.5,"Mearns, A. J., 1988",-117.123866640067,0,1943
-"85","Euphylax dovii","species","Swimming crab",32.663501,"Google Maps",-117.149846084033,"R generated",1959,"","","lab_rev",NA,"402",32.5,"Mearns, A. J., 1988",-117.123866640067,1,1959
-"86","Euphylax dovii","species","Swimming crab",32.663501,"Google Maps",-117.149846084033,"R generated",1974,"","","lab_rev",NA,"402",32.5,"Mearns, A. J., 1988",-117.123866640067,2,1974
+"84","Euphylax dovii","species","Swimming crab",32.663501,"Google Maps",-117.149846084033,"R generated",1943,"","","lab_rev",NA,"402",24,"Mearns, A. J., 1988",-110.917252966558,0,1943
+"85","Euphylax dovii","species","Swimming crab",32.663501,"Google Maps",-117.149846084033,"R generated",1959,"","","lab_rev",NA,"402",24,"Mearns, A. J., 1988",-110.917252966558,1,1959
+"86","Euphylax dovii","species","Swimming crab",32.663501,"Google Maps",-117.149846084033,"R generated",1974,"","","lab_rev",NA,"402",24,"Mearns, A. J., 1988",-110.917252966558,2,1974
 "87","Helicosalpa virgula","species","",43.36,"Google Maps",-125.11,"By hand",1963,"March","","lab_rev",NA,"407",32.5,"Wrobel, 1998",-117.123866640067,0,1963
 "88","Hespererato vitellina","species","Appleseed Erato Snail",38.41743,"Paper",-123.10728,"Paper",2016,"February","6","lab_rev",NA,"376",38.312,"Abbott, R. T., 1954",-123.028468661903,0,2016
 "89","Hippacanthomysis platypoda","species","shrimp",49.258538,"Paper",-124.111380844324,"R generated",2010,"May","","lab_rev",NA,"162",39.3,"Carlton, 2007",-123.800401006994,0,2010
@@ -100,7 +100,7 @@
 "99","Lissothuria nutriens","species","Scarlet Sea Cucumber",38.50203,"Paper",-123.230115,"Paper",2017,"June","25","lab_rev",NA,"376",36.78,"Carlton, 2007",-121.798132607713,1,2017
 "100","Loligo opalescens","species","Market squid",41.999703,"Google Maps",-124.214582683163,"R generated",1941,"","","lab_rev",NA,"402",32.67,"Mearns, A. J., 1988",-117.119046169842,0,1941
 "101","Loligo opalescens","species","Market squid",41.999703,"Google Maps",-124.214582683163,"R generated",1959,"","","lab_rev",NA,"402",32.67,"Mearns, A. J., 1988",-117.119046169842,1,1959
-"102","Lophogorgia chiliensis","species","White gorgonian",32.663501,"Google Maps",-117.149846084033,"R generated",1960,"","","lab_rev",NA,"402",32.5,"Mearns, A. J., 1988",-117.123866640067,0,1960
+"102","Lophogorgia chiliensis","species","White gorgonian",32.663501,"Google Maps",-117.149846084033,"R generated",1960,"","","lab_rev",NA,"402",24,"Mearns, A. J., 1988",-110.917252966558,0,1960
 "103","Lovenia cordiformis","species","Heart urchin or sea porcupine",36.626393,"Paper",-121.905207,"Paper",2016,"June","29","lab_rev",NA,"379",34.5,"Carlton, 2007",-120.496896624464,0,2016
 "104","Lyropectin subnudosus","species","Blunt-knobbed scallop",32.663501,"Google Maps",-117.149846084033,"R generated",1959,"","","lab_rev",NA,"402",22.8,"Morris, P. A., 1974",-105.974166912132,0,1959
 "105","Malacoplax californiensis","species","California burrowing crab",36.823946,"Paper",-121.739847,"Paper",2016,"October","28","lab_rev",NA,"379",35.3,"Hendrickx, M. E., 1995",-120.880983258455,0,2016
@@ -148,7 +148,7 @@
 "147","Pachythyone rubra","species","Red Sea Cucumber",38.305185,"Paper",-123.077205,"Paper",1976,"July","","lab_rev",NA,"376",36.78,"Carlton, 2007",-121.798132607713,1,1976
 "148","Pachythyone rubra","species","Red Sea Cucumber",37.18138,"Paper",-122.39418,"Paper",1997,"","","lab_rev",NA,"376",36.78,"Carlton, 2007",-121.798132607713,2,1997
 "149","Pachythyone rubra","species","Red Sea Cucumber",38.31874,"Paper",-123.07411,"Paper",2017,"December","30","lab_rev",NA,"376",36.78,"Carlton, 2007",-121.798132607713,3,2017
-"150","Panulirus gracilis","species","Pinto lobser",32.663501,"Google Maps",-117.149846084033,"R generated",1961,"","","lab_rev",NA,"402",32.5,"Mearns, A. J., 1988",-117.123866640067,0,1961
+"150","Panulirus gracilis","species","Pinto lobser",32.663501,"Google Maps",-117.149846084033,"R generated",1961,"","","lab_rev",NA,"402",24,"Mearns, A. J., 1988",-110.917252966558,0,1961
 "151","Panulirus interruptus","species","Spiny Lobster",37.84328,"Paper",-122.39656,"Paper",1940,"March","","lab_rev",NA,"376",34.5,"Sanford et al., 2019; Ricketts and Calvin, 1968",-120.496896624464,0,1940
 "152","Panulirus interruptus","species","Spiny Lobster",38.322295,"Paper",-123.04954,"Paper",2001,"","","lab_rev",NA,"376",34.5,"Sanford et al., 2019; Ricketts and Calvin, 1968",-120.496896624464,1,2001
 "153","Panulirus interruptus","species","Spiny Lobster",40.021645,"Paper",-124.069105,"Paper",2005,"","","lab_rev",NA,"376",34.5,"Sanford et al., 2019; Ricketts and Calvin, 1968",-120.496896624464,2,2005
@@ -191,34 +191,39 @@
 "190","Pleuroncodes planipes","species","red crab",37.76687,"Online search",-123.08237,"Online search",2015,"September",NA,"ca_rev","2016",NA,32.5,"Carlton, 2007",-117.123866640067,8,2014
 "191","Pleuroncodes planipes","species","Pelagic Red Crab",36.80405,"Paper",-121.945835,"Paper",2016,"May","","lab_rev",NA,"376",32.5,"Carlton, 2007",-117.123866640067,8,2014
 "192","Pleuroncodes planipes","species","Pelagic Red Crab",44.65821,"Paper",-124.06085,"Paper",2017,"March","1","lab_rev",NA,"376",32.5,"Carlton, 2007",-117.123866640067,8,2014
-"193","Portunus xantusii","species","Xantus' Swimming Crab",38.213,"Paper",-122.955465,"Paper",1999,"","","lab_rev",NA,"376",34.5,"Carlton, 2007",-120.496896624464,0,1999
-"194","Portunus xantusii","species","Xantus Swimming Crab",38.22836,"Paper",-122.97186,"Paper",2016,"11","22","lab_rev",NA,"13",34.5,"Carlton, 2007",-120.496896624464,1,2016
-"195","Pyrosoma atlanticum","species","",46.288831,"Google Maps",-123.671945416237,"R generated",2014,"","","lab_rev",NA,"223",34,"Lavaniegos and Ohman, 2003",-118.484001682625,0,2014
-"196","Pyrosoma atlanticum","species","",46.288831,"Google Maps",-123.671945416237,"R generated",2015,"","","lab_rev",NA,"223",34,"Lavaniegos and Ohman, 2003",-118.484001682625,0,2014
-"197","Pyrosoma atlanticum","species","",46.288831,"Google Maps",-123.671945416237,"R generated",2016,"","","lab_rev",NA,"223",34,"Lavaniegos and Ohman, 2003",-118.484001682625,0,2014
-"198","Pyrosoma atlanticum","species","",59,"Paper",-144,"Paper",2017,"","","lab_rev",NA,"383",34,"Lavaniegos and Ohman, 2003",-118.484001682625,0,2014
-"199","Pyrosoma atlanticum","species","pyrosome",41.8,"Text",-124.27,"Online search",2020,"September",NA,"ca_rev","2019-2020",NA,34,"Lavaniegos and Ohman, 2003",-118.484001682625,1,2020
-"200","Rhincalanus nasutus","species",NA,40.2,"Figure",-124.3,"Figure",1958,"March","30","ca_rev","1987",NA,34.5,"Roesler & Chelton, 1987",-120.496896624464,0,1958
-"201","Sagitta pseudoserratodentata","species","chaetognath",44.6667,"Paper",-124.41,"https://globec.whoi.edu/nep/reports/ccs_cruises/jul01cr.pdf",1998,"","","lab_rev",NA,"348",42,"Keister et al., 2005; Bieri, 1959; Alvariño, 1965",-124.214691037688,0,1998
-"202","Spirobranchs spinosus","species","Christmas tree worm",36.55,"Google Maps",-121.931713870236,"R generated",1941,"","","lab_rev",NA,"379",36,"Bertsch & Aguilar Rosas, 2016",-121.504087141144,0,1941
-"203","Spirobranchs spinosus","species","Christmas tree worm",36.07,"Google Maps",-121.603979041694,"R generated",2010,"September","9","lab_rev",NA,"379",36,"Bertsch & Aguilar Rosas, 2016",-121.504087141144,1,2010
-"204","Spirobranchs spinosus","species","Christmas tree worm",36.498474,"Google Maps",-121.945696,"Google Maps",2011,"October","19","lab_rev",NA,"379",36,"Bertsch & Aguilar Rosas, 2016",-121.504087141144,1,2010
-"205","Spirobranchs spinosus","species","Christmas tree worm",36.465218,"Google Maps",-121.931978,"Google Maps",2013,"October","18","lab_rev",NA,"379",36,"Bertsch & Aguilar Rosas, 2016",-121.504087141144,2,2013
-"206","Spirobranchs spinosus","species","Christmas tree worm",36.524485,"Google Maps",-121.932952,"Google Maps",2014,"October","2","lab_rev",NA,"379",36,"Bertsch & Aguilar Rosas, 2016",-121.504087141144,2,2013
-"207","Spirobranchs spinosus","species","Christmas tree worm",36.625496,"Paper",-121.913745,"Paper",2018,"March","8","lab_rev",NA,"379",36,"Bertsch & Aguilar Rosas, 2016",-121.504087141144,3,2018
-"208","Tetraclita rubescens","species","volcano barnacle",38.2333,"Paper",-122.965419307808,"R generated",1948,"June","","lab_rev",NA,"70",37.5,"Carlton, 2007",-122.060491312471,0,1948
-"209","Tetraclita rubescens","species","volcano barnacle",38.4167,"Paper",-123.107802139271,"R generated",1957,"","","lab_rev",NA,"70",37.5,"Carlton, 2007",-122.060491312471,1,1957
-"210","Tetraclita rubescens","species","volcano barnacle",38.4167,"Paper",-123.107802139271,"R generated",1970,"","","lab_rev",NA,"70",37.5,"Carlton, 2007",-122.060491312471,2,1970
-"211","Tetraclita rubescens","species","volcano barnacle",38.8667,"Paper",-123.659362687166,"R generated",1984,"","","lab_rev",NA,"70",37.5,"Carlton, 2007",-122.060491312471,3,1984
-"212","Tetraclita rubescens","species","volcano barnacle",40.4,"Paper",-124.38494674543,"R generated",1995,"","","lab_rev",NA,"70",37.5,"Carlton, 2007",-122.060491312471,4,1995
-"213","Tetraclita rubescens","species","volcano barnacle",40.4,"Paper",-124.38494674543,"R generated",1996,"","","lab_rev",NA,"70",37.5,"Carlton, 2007",-122.060491312471,4,1995
-"214","Tetraclita rubescens","species","volcano barnacle",40.4,"Paper",-124.38494674543,"R generated",2005,"spring","","lab_rev",NA,"70",37.5,"Carlton, 2007",-122.060491312471,5,2005
-"215","Tetraclita rubescens","species","volcano barnacle",42.3833,"Paper",-124.426756003522,"R generated",2007,"","","lab_rev",NA,"70",37.5,"Carlton, 2007",-122.060491312471,6,2007
-"216","Thalia democratica","species","",42.15,"Google Maps",-124.366135266842,"R generated",1963,"September; November; December","","lab_rev",NA,"407",35,"Hubbard and Pearcy, 1971",-120.642676399236,0,1963
-"217","Thetys vagina","species","",44.8,"Figure",-124.202,"By hand",1963,"May and June","","lab_rev",NA,"407",42,"Carlton, 2007",-124.214691037688,0,1963
-"218","Thylacodes squamigerus","species","Scaled Tube Snail",38.31874,"Paper",-123.07411,"Paper",2001,"","","lab_rev",NA,"376",34.5,"Carlton, 2007",-120.496896624464,0,2001
-"219","Thylacodes squamigerus","species","Scaled Tube Snail",38.565245,"Paper",-123.33385,"Paper",2017,"February","25","lab_rev",NA,"376",34.5,"Carlton, 2007",-120.496896624464,1,2017
-"220","Uca princeps","species","Princely fiddler crab",33.70351,"Google Maps",-118.046551,"Google Maps",2018,"June","","lab_rev",NA,"379",22.8,"Hendrickx, M. E., 1995",-105.974166912132,0,2018
-"221","Velella velella","species",NA,48.59,"Text",-124.990973,"Text",1926,NA,NA,"ca_rev","2003",NA,34.5,"Wrobel, 1998",-120.496896624464,0,1926
-"222","Velella velella","species","by-the-wind sailors",54.7,"Online search",-132.041327,"Online search",1957,NA,NA,"ca_rev","1960",NA,34.5,"Wrobel, 1998",-120.496896624464,1,1957
-"223","Velella velella","species",NA,42,"Text",-124.3,"Online search",2015,NA,NA,"ca_rev","2015",NA,34.5,"Wrobel, 1998",-120.496896624464,2,2015
+"193","Plicopurpura columellaris","species","",27.6,"Paper",-114.780522401525,"R generated",2017,"","","lab_rev",NA,"234",22.8,"Keen, A. M., 1958",-105.974166912132,0,2017
+"194","Portunus xantusii","species","Xantus' Swimming Crab",38.213,"Paper",-122.955465,"Paper",1999,"","","lab_rev",NA,"376",34.5,"Carlton, 2007",-120.496896624464,0,1999
+"195","Portunus xantusii","species","Xantus Swimming Crab",38.22836,"Paper",-122.97186,"Paper",2016,"11","22","lab_rev",NA,"13",34.5,"Carlton, 2007",-120.496896624464,1,2016
+"196","Pyrosoma atlanticum","species","",46.288831,"Google Maps",-123.671945416237,"R generated",2014,"","","lab_rev",NA,"223",34,"Lavaniegos and Ohman, 2003",-118.484001682625,0,2014
+"197","Pyrosoma atlanticum","species","",46.288831,"Google Maps",-123.671945416237,"R generated",2015,"","","lab_rev",NA,"223",34,"Lavaniegos and Ohman, 2003",-118.484001682625,0,2014
+"198","Pyrosoma atlanticum","species","",46.288831,"Google Maps",-123.671945416237,"R generated",2016,"","","lab_rev",NA,"223",34,"Lavaniegos and Ohman, 2003",-118.484001682625,0,2014
+"199","Pyrosoma atlanticum","species","",59,"Paper",-144,"Paper",2017,"","","lab_rev",NA,"383",34,"Lavaniegos and Ohman, 2003",-118.484001682625,0,2014
+"200","Pyrosoma atlanticum","species","pyrosome",41.8,"Text",-124.27,"Online search",2020,"September",NA,"ca_rev","2019-2020",NA,34,"Lavaniegos and Ohman, 2003",-118.484001682625,1,2020
+"201","Rhincalanus nasutus","species",NA,40.2,"Figure",-124.3,"Figure",1958,"March","30","ca_rev","1987",NA,34.5,"Roesler & Chelton, 1987",-120.496896624464,0,1958
+"202","Sagitta pseudoserratodentata","species","chaetognath",44.6667,"Paper",-124.41,"https://globec.whoi.edu/nep/reports/ccs_cruises/jul01cr.pdf",1998,"","","lab_rev",NA,"348",42,"Keister et al., 2005; Bieri, 1959; Alvariño, 1965",-124.214691037688,0,1998
+"203","Spirobranchs spinosus","species","Christmas tree worm",36.55,"Google Maps",-121.931713870236,"R generated",1941,"","","lab_rev",NA,"379",36,"Bertsch & Aguilar Rosas, 2016",-121.504087141144,0,1941
+"204","Spirobranchs spinosus","species","Christmas tree worm",36.07,"Google Maps",-121.603979041694,"R generated",2010,"September","9","lab_rev",NA,"379",36,"Bertsch & Aguilar Rosas, 2016",-121.504087141144,1,2010
+"205","Spirobranchs spinosus","species","Christmas tree worm",36.498474,"Google Maps",-121.945696,"Google Maps",2011,"October","19","lab_rev",NA,"379",36,"Bertsch & Aguilar Rosas, 2016",-121.504087141144,1,2010
+"206","Spirobranchs spinosus","species","Christmas tree worm",36.465218,"Google Maps",-121.931978,"Google Maps",2013,"October","18","lab_rev",NA,"379",36,"Bertsch & Aguilar Rosas, 2016",-121.504087141144,2,2013
+"207","Spirobranchs spinosus","species","Christmas tree worm",36.524485,"Google Maps",-121.932952,"Google Maps",2014,"October","2","lab_rev",NA,"379",36,"Bertsch & Aguilar Rosas, 2016",-121.504087141144,2,2013
+"208","Spirobranchs spinosus","species","Christmas tree worm",36.625496,"Paper",-121.913745,"Paper",2018,"March","8","lab_rev",NA,"379",36,"Bertsch & Aguilar Rosas, 2016",-121.504087141144,3,2018
+"209","Stramonita biserialis","species","",32.3,"Paper",-117.037064437931,"R generated",1947,"","","lab_rev",NA,"234",28.17,"Keen, A. M., 1958",-115.291899330666,0,1947
+"210","Stramonita biserialis","species","",30.5,"Paper",-114.633342062008,"R generated",1971,"","","lab_rev",NA,"234",28.17,"Keen, A. M., 1958",-115.291899330666,1,1971
+"211","Stramonita biserialis","species","",32.9,"Paper",-117.256404133878,"R generated",2017,"","","lab_rev",NA,"234",28.17,"Keen, A. M., 1958",-115.291899330666,2,2017
+"212","Stramonita biserialis","species","",33.5,"Paper",-117.749328266462,"R generated",2018,"","","lab_rev",NA,"234",28.17,"Keen, A. M., 1958",-115.291899330666,2,2017
+"213","Tetraclita rubescens","species","volcano barnacle",38.2333,"Paper",-122.965419307808,"R generated",1948,"June","","lab_rev",NA,"70",37.5,"Carlton, 2007",-122.060491312471,0,1948
+"214","Tetraclita rubescens","species","volcano barnacle",38.4167,"Paper",-123.107802139271,"R generated",1957,"","","lab_rev",NA,"70",37.5,"Carlton, 2007",-122.060491312471,1,1957
+"215","Tetraclita rubescens","species","volcano barnacle",38.4167,"Paper",-123.107802139271,"R generated",1970,"","","lab_rev",NA,"70",37.5,"Carlton, 2007",-122.060491312471,2,1970
+"216","Tetraclita rubescens","species","volcano barnacle",38.8667,"Paper",-123.659362687166,"R generated",1984,"","","lab_rev",NA,"70",37.5,"Carlton, 2007",-122.060491312471,3,1984
+"217","Tetraclita rubescens","species","volcano barnacle",40.4,"Paper",-124.38494674543,"R generated",1995,"","","lab_rev",NA,"70",37.5,"Carlton, 2007",-122.060491312471,4,1995
+"218","Tetraclita rubescens","species","volcano barnacle",40.4,"Paper",-124.38494674543,"R generated",1996,"","","lab_rev",NA,"70",37.5,"Carlton, 2007",-122.060491312471,4,1995
+"219","Tetraclita rubescens","species","volcano barnacle",40.4,"Paper",-124.38494674543,"R generated",2005,"spring","","lab_rev",NA,"70",37.5,"Carlton, 2007",-122.060491312471,5,2005
+"220","Tetraclita rubescens","species","volcano barnacle",42.3833,"Paper",-124.426756003522,"R generated",2007,"","","lab_rev",NA,"70",37.5,"Carlton, 2007",-122.060491312471,6,2007
+"221","Thalia democratica","species","",42.15,"Google Maps",-124.366135266842,"R generated",1963,"September; November; December","","lab_rev",NA,"407",35,"Hubbard and Pearcy, 1971",-120.642676399236,0,1963
+"222","Thetys vagina","species","",44.8,"Figure",-124.202,"By hand",1963,"May and June","","lab_rev",NA,"407",42,"Carlton, 2007",-124.214691037688,0,1963
+"223","Thylacodes squamigerus","species","Scaled Tube Snail",38.31874,"Paper",-123.07411,"Paper",2001,"","","lab_rev",NA,"376",34.5,"Carlton, 2007",-120.496896624464,0,2001
+"224","Thylacodes squamigerus","species","Scaled Tube Snail",38.565245,"Paper",-123.33385,"Paper",2017,"February","25","lab_rev",NA,"376",34.5,"Carlton, 2007",-120.496896624464,1,2017
+"225","Uca princeps","species","Princely fiddler crab",33.70351,"Google Maps",-118.046551,"Google Maps",2018,"June","","lab_rev",NA,"379",22.8,"Hendrickx, M. E., 1995",-105.974166912132,0,2018
+"226","Velella velella","species",NA,48.59,"Text",-124.990973,"Text",1926,NA,NA,"ca_rev","2003",NA,34.5,"Wrobel, 1998",-120.496896624464,0,1926
+"227","Velella velella","species","by-the-wind sailors",54.7,"Online search",-132.041327,"Online search",1957,NA,NA,"ca_rev","1960",NA,34.5,"Wrobel, 1998",-120.496896624464,1,1957
+"228","Velella velella","species",NA,42,"Text",-124.3,"Online search",2015,NA,NA,"ca_rev","2015",NA,34.5,"Wrobel, 1998",-120.496896624464,2,2015

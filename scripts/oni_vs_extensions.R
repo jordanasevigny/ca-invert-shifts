@@ -24,6 +24,9 @@ library(moments)
 library(mgcv)
 library(lme4)
 library(gt)
+library(pscl)
+library(topmodels)
+library(tibble)
 
 # Load review data
 df <- read.csv("processed_data/merged_calcofi_lab_review.csv")
@@ -34,6 +37,7 @@ world <- ne_countries(scale = "medium", returnclass = "sf")
 # Load enso data
 # enso_df <- download_enso(climate_idx = "oni", create_csv = TRUE) # at time of analysis, we had up to April 2025
 enso_df <- read.csv("data/enso_data.csv", header=TRUE)
+hist(enso_df$ONI)
 
 # Classify enso by start, peak, end --------------------------------------------
 # For each event, get the years and count months per year
@@ -308,17 +312,87 @@ curve(dlnorm(x,
 fx = (1:length(oni_freq$n))/(length(oni_freq$n)+1)
 plot(sort(oni_freq$n), fx, type="l")
 # Add log normal distribution
-x1 = seq(0,3500,0.1) 
+x1 = seq(0,3500,0.1)
 y = log(oni_freq$n)
 Fx2 = plnorm(x1,mean(y),sd(y))
 lines(x1,Fx2,col="gold")
 # Add normal distribution
-x2 = seq(0,3500,0.1) 
+x2 = seq(0,3500,0.1)
 y = oni_freq$n
 Fx3 = pnorm(x2,mean(y),sd(y))
 lines(x2,Fx3,col="green")
 # Log normal is better fit
 boxplot(oni_freq$n) # boxplot
+
+# Linear regression
+ggplot(oni_freq, aes(x=max_oni, y=log(n))) +
+  geom_point() +
+  geom_smooth(method = "lm", se = TRUE, color="#E9C46A", fill="#E9C46A") +
+  labs(x = "ONI", y = "Log Number of Extension Events") +
+  theme_minimal(base_size = 16)
+
+# Fit the linear model
+lin_model <- lm(log(n) ~ max_oni, data = oni_freq)
+# View the model summary
+summary(lin_model)
+
+# Quadratic (2nd degree polynomial)
+poly_model <- lm(log(n) ~ poly(max_oni, 2, raw = TRUE),
+                 data = oni_freq)
+summary(poly_model)
+# Compare to linear
+anova(lin_model, poly_model)
+
+
+# Fit GAM with smooth term for ONI
+gam_model <- gam(log(n) ~ s(max_oni), data = oni_freq)
+summary(gam_model)
+
+# # Mixed effects model
+# # Make oni_freq by species
+# oni_freq_sp <- max_ext_oni_yr_prior %>%
+#   group_by(latin_name) %>%
+#   count(max_oni) %>%
+#   drop_na()
+#
+# m_mixed <- lmer(n ~ max_oni + (1 | latin_name),
+#                 data = oni_freq_sp)
+#
+# summary(m_mixed) # Does not work because all sp have same # of oni observations
+
+# AIC
+AIC(lin_model, poly_model, gam_model)
+
+# # Leave one species out correlation checks
+# for (sp in unique(max_ext_oni_yr_prior$latin_name)) {
+#   loso_freq <- max_ext_oni_yr_prior %>%
+#     filter(latin_name != sp) %>%
+#     count(max_oni)
+#   print(cor(loso_freq$max_oni, log(loso_freq$n)))
+# }
+
+# Extension counts distribution curve
+hist(extension_counts_by_year$n_extensions, breaks = 5, freq = FALSE)
+
+curve(dlnorm(x,
+             meanlog = mean(log(extension_counts_by_year$n_extensions)),
+             sdlog   = sd(log(extension_counts_by_year$n_extensions))),
+      add = TRUE, col = "blue", lwd = 2)
+# Empirical CDF
+fx = (1:length(extension_counts_by_year$n_extensions))/(length(extension_counts_by_year$n_extensions)+1)
+plot(sort(extension_counts_by_year$n_extensions), fx, type="l")
+# Add log normal distribution
+x1 = seq(0,3500,0.1) 
+y = log(extension_counts_by_year$n_extensions)
+Fx2 = plnorm(x1,mean(y),sd(y))
+lines(x1,Fx2,col="gold")
+# Add normal distribution
+x2 = seq(0,3500,0.1) 
+y = extension_counts_by_year$n_extensions
+Fx3 = pnorm(x2,mean(y),sd(y))
+lines(x2,Fx3,col="green")
+# Log normal is better fit
+boxplot(extension_counts_by_year$n_extensions) # boxplot
 
 # Linear regression
 ggplot(oni_freq, aes(x=max_oni, y=log(n))) +
@@ -359,6 +433,119 @@ summary(gam_model)
 # AIC
 AIC(lin_model, poly_model, gam_model)
 
+
+# Max ONI (year prior) vs extension count, add 0s --------------------------------------------------
+
+# get all other unique oni and fill with 0, keeping the oni with extension events
+oni_nevent_0 <- oni_ave_by_yr %>%
+  select(oni_ave) %>%
+  left_join(oni_freq, by = join_by(oni_ave == max_oni)) %>%
+  replace_na(list(n = 0))
+
+hist(oni_nevent_0$n)
+hist(log(oni_nevent_0$n))
+
+ggplot(oni_nevent_0, aes(x = oni_ave, y = n)) +
+  geom_point() +
+  labs(
+    x = "ONI calendar year average",
+    y = "Number of extension events"
+  )
+
+
+oni_nevent_0 <- oni_nevent_0 %>%
+  mutate(event_group = if_else(n == 0, "No events", "At least 1 event"))
+t.test(oni_ave ~ event_group, data = oni_nevent_0)
+
+mod.hurdle <- hurdle(n ~oni_ave, data=oni_nevent_0)
+summary(mod.hurdle)
+sum(predict(mod.hurdle, type = "prob")[,1])
+
+rootogram(mod.hurdle, xlim = c(0,15), confint = FALSE, plot = "base")
+
+mod.hurdle.nb <- hurdle(n ~oni_ave, data=oni_nevent_0, dist="negbin")
+rootogram(mod.hurdle.nb, xlim = c(0,15), confint = FALSE, plot = "base")
+# Not meaningfully different from poisson visually
+
+AIC(mod.hurdle)
+AIC(mod.hurdle.nb)
+# Poisson is better
+
+
+
+# Max ONI (year prior) vs extension count, add 0s, leave one out --------------------------------------------------
+
+
+loso_hurdle_results <- list()
+
+for (sp in unique(max_ext_oni_yr_prior$latin_name)) {
+  
+  # Remove one species and recount events
+  loso_freq <- max_ext_oni_yr_prior %>%
+    filter(latin_name != sp) %>%
+    count(max_oni, name = "n")
+  
+  # Add ONI values for years with zero extension events
+  oni_nevent_0 <- oni_ave_by_yr %>%
+    select(oni_ave) %>%
+    left_join(
+      loso_freq,
+      by = join_by(oni_ave == max_oni)
+    ) %>%
+    replace_na(list(n = 0))
+  
+  # Fit hurdle model
+  mod_hurdle <- hurdle(
+    n ~ oni_ave,
+    data = oni_nevent_0
+  )
+  
+  mod_summary <- summary(mod_hurdle)
+  
+  # Extract count-model coefficients
+  count_results <- as.data.frame(
+    mod_summary$coefficients$count
+  ) %>%
+    rownames_to_column("term") %>%
+    transmute(
+      species_removed = sp,
+      component = "count",
+      term,
+      estimate = Estimate,
+      p_value = `Pr(>|z|)`
+    )
+  
+  # Extract zero/hurdle-model coefficients
+  zero_results <- as.data.frame(
+    mod_summary$coefficients$zero
+  ) %>%
+    rownames_to_column("term") %>%
+    transmute(
+      species_removed = sp,
+      component = "zero",
+      term,
+      estimate = Estimate,
+      p_value = `Pr(>|z|)`
+    )
+  
+  loso_hurdle_results[[sp]] <- bind_rows(
+    count_results,
+    zero_results
+  )
+}
+
+loso_hurdle_results <- bind_rows(loso_hurdle_results)
+
+loso_oni_results <- loso_hurdle_results %>%
+  filter(term == "oni_ave") %>%
+  select(
+    species_removed,
+    component,
+    estimate,
+    p_value
+  )
+
+# Every leave one out analysis is significant for both hurdle components with positive trends
 
 
 # Do more extensions occur during el nino than expected by chance? --------------------------------------------------

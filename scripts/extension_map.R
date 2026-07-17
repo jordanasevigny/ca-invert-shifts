@@ -88,7 +88,7 @@ eps <- 1  # degrees; tune smaller/larger as needed
 palette_18_alt <- c(
   "#1F77B4", "#FF7F0E", "#2CA02C", "#D62728", "#9467BD", "#E5C494",
   "#843C39", "#7F7F7F", "#BCBD22", "#17BECF", "#393B79", "#637939",
-  "#8C6D31", "#E377C2", "#7B4173", "#FFD92F", "#E6550D", "#A6D854", "#1F97B8"
+  "#8C6D31", "#E377C2", "#7B4173", "#FFD92F", "#E6550D", "#A6D854", "#1F97B8", "#49DB79"
 )
 
 # need to change yellow, orange, turquoise and pink duplicates
@@ -117,8 +117,8 @@ map <- ggplot() +
     alpha=0.8
   ) +
   scale_color_manual(values = palette_18_alt) +
-  coord_sf(xlim = c(-127, -114), ylim = c(30, 50), expand = FALSE) +
-  scale_x_continuous(breaks = c(-126, -122, -118, -114)) +
+  coord_sf(xlim = c(-127, -110), ylim = c(20, 50), expand = FALSE) +
+  scale_x_continuous(breaks = c(-127, -122, -117, -112)) +
   theme_minimal(base_size = 16) +
   labs(x = "Longitude", 
        y = "Latitude", 
@@ -145,7 +145,7 @@ map_supp <- ggplot() +
              arrow = arrow(length = unit(0.4, "cm"))
   ) +
   scale_color_manual(values = palette_18_alt) +
-  coord_sf(xlim = c(-170, -114), ylim = c(30, 60), expand = FALSE) +
+  coord_sf(xlim = c(-170, -110), ylim = c(20, 60), expand = FALSE) +
   scale_x_continuous(breaks = c(-158, -152, -146, -138, -130, -122, -114)) +
   theme_minimal(base_size = 16) +
   labs(
