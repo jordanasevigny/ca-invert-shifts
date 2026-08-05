@@ -19,13 +19,14 @@ Extension data & analysis:
 2. 'merge_calcofi_lab_reviews.R' merges 'calcofi_review_data_clean.csv', 'lab_review_with_longitudes.csv', 'historical_distributions_clean.csv' into one master dataframe ('merged_calcofi_lab_review.csv'). This does not need to be rerun unless changes to the raw data are required, in which case these should be rerun in order. 
 3. Analysis scripts (can be run in any order)
   - (a) 'oni_vs_extension.R' tests different models comparing ONI to extension number and to extension distance; has the chi-squared goodness-of-fit test to compare proportion extensions in and out of el nino to expected frequency of El Niño; has the t-test to compare low and high ONI extension distances; generates supplementary table related to best fit models. This script also generates the preliminary figures related to the analyses. 
-  - (b) ‘ca-invert-shifts/scripts/enso_ext_timeseries.R’ generates preliminary figures for figure 2 and the final form of the supplementary barplot showcasing which extensions come from which data source. This script also finds several of the counts related to # extensions occuring during El Niño included in the paper methods. This script also generates the supplementary regression figure of counts over time.
-  - (c) ‘ca-invert-shifts/scripts/blob_analysis.R’ generates preliminary figure 4 and calculates # extensions to occur during the 2014-2016 marine heatwave and statistically tests whether the number of extension events during 2014-2016 exceeds expectations by chance using a chi-squared goodness-of-fit test.
+  - (b) ‘ca-invert-shifts/scripts/enso_ext_timeseries.R’ generates preliminary figures for figure 2 and the final form of the supplementary barplot showcasing which extensions come from which data source. This script also finds several of the counts related to # extensions occuring during El Niño included in the paper methods. This script also generates the supplementary figure of counts over time and the hurdle model.
+  - (c) ‘ca-invert-shifts/scripts/blob_analysis.R’ generates supp figure 4 and calculates # extensions to occur during the 2014-2016 marine heatwave and statistically tests whether the number of extension events during 2014-2016 exceeds expectations by chance using a chi-squared goodness-of-fit test.
   - (d) ‘ca-invert-shifts/scripts/extension_map.R’ generates final version of figure 1 and supplementary figure 1 (extension maps).
   - (e) 'ca-invert-shifts/scripts/Figure2Panel.R' generates final version of figure 2 and supplementary figure 2 (extension number vs ONI).
   - (f) 'ca-invert-shifts/scripts/Figure3Panel.R' generates final version of figure 3 (extension distance vs ONI).
   - (g) 'ca-invert-shifts/scripts/summary_extension_table.R' generates the supplementary table 1.
   - (h) 'ca-invert-shifts/scripts/hist_lat_supp_table.R' generates the supplementary table 2.
+  - (i) 'ca-invert-shifts/scripts/supp_distribution_and_bb_crossings.R' generates the supplementary table 4.
 
 
 Systematic literature search:
@@ -90,3 +91,6 @@ Scripts:
 * 'ca-invert-shifts/scripts/hist_lat_supp_table.R'
   * Input: 'processed_data/historical_distributions_clean.csv'
   * Output: 'figures/hist_lat_supp_table.png'
+* 'ca-invert-shifts/scripts/supp_distribution_and_bb_crossings.R'
+  * Input: 'processed_data/merged_calcofi_lab_review.csv'
+  * Output: 'figures/biogeographic_boundary_extensions_table.png'
