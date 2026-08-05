@@ -21,6 +21,8 @@ library(gganimate)
 library(forcats)
 library(geosphere)
 library(ggh4x)
+library(pscl)
+library(topmodels)
 
 # Load review data
 df <- read.csv("processed_data/merged_calcofi_lab_review.csv")
@@ -44,7 +46,8 @@ first_ext <- ext_Xplus %>%
 
 # Tally the number of extensions events for each year
 extension_counts <- first_ext %>%
-  count(year, name = "n_extensions")
+  count(year, name = "n_extensions") %>%
+  complete(year = 1903:2020, fill = list(n_extensions = 0))
 
 # Add Date (middle of the year) column to align with ONI
 extension_counts$Date <- as.Date(paste0(extension_counts$year, "-06-15"))
@@ -163,15 +166,40 @@ ggsave("figures/cal_rev_ext.png", plot = calrev, width = 14, height = 4, unit = 
 # Regression on extensions over time
 hist(extension_counts$n_extensions)
 # Fit the linear model
-lin_model <- lm(log(n_extensions) ~ year, data = extension_counts) 
-# View the model summary
-summary(lin_model)
+# lin_model <- lm(log(n_extensions) ~ year, data = extension_counts) 
+# # View the model summary
+# summary(lin_model)
 
-calrev_lm <- ggplot(extension_counts, aes(x=year, y=log(n_extensions))) +
-  geom_point() +
-  geom_smooth(method = "lm", se = TRUE, color="#E9C46A", fill="#E9C46A") + 
-  labs(x = "Year", y = "Log Number of Extension Events") +
-  theme_minimal(base_size = 16)
+table(extension_counts$n_extensions)
+plot(extension_counts$year,
+     extension_counts$n_extensions > 0)
 
-ggsave("figures/cal_rev_ext_lm_log.png", plot = calrev_lm, width = 14, height = 4, unit = "in", dpi = 600)
+extension_counts <- extension_counts %>%
+  mutate(
+    year_c = year - 1903
+  )
+
+mod.hurdle <- hurdle(n_extensions ~year_c, data=extension_counts)
+summary(mod.hurdle)
+coef(summary(mod.hurdle))
+sum(predict(mod.hurdle, type = "prob")[,1])
+
+rootogram(mod.hurdle, xlim = c(0,15), confint = FALSE, plot = "base")
+
+mod.hurdle.nb <- hurdle(n_extensions ~year_c, data=extension_counts, dist="negbin")
+summary(mod.hurdle.nb)
+rootogram(mod.hurdle.nb, xlim = c(0,15), confint = FALSE, plot = "base")
+# Not meaningfully different from poisson visually
+
+AIC(mod.hurdle)
+AIC(mod.hurdle.nb)
+# Negative binomial is better
+
+calrev_lm <- ggplot(extension_counts, aes(x=year, y=n_extensions)) +
+  geom_point(size=3) +
+  # geom_smooth(method = "lm", se = TRUE, color="#E9C46A", fill="#E9C46A") + 
+  labs(x = "Year", y = "Number of Extension Events") +
+  theme_minimal(base_size = 20)
+
+ggsave("figures/cal_rev_ext_lm_log.png", plot = calrev_lm, width = 16, height = 5, unit = "in", dpi = 600)
 

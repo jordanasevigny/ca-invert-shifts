@@ -89,6 +89,14 @@ oni_ave_by_yr <- enso_df %>%
 
 # How many species had just 1 extension?
 df %>% group_by(latin_name) %>% filter(!any(group_id > 0)) %>% pull(latin_name) %>% unique()
+# How many species had 3+ extension?
+df  %>% filter(group_id >= 2) %>% group_by(latin_name) %>% pull(latin_name) %>% unique()
+# 20
+# Median # events per year 
+events_per_year <- df %>%
+  count(first_year, name = "n") %>%
+  complete(first_year = 1903:2020, fill = list(n = 0))
+mean(events_per_year$n)
 
 # What species had the most extensions?
 max_group_id = max(df$group_id)
@@ -131,7 +139,7 @@ ext_distance %>%
   group_by(latin_name, group_id) %>%
   summarise(max_dist = max(distance_km, na.rm = TRUE)) %>%
   pull(max_dist) %>%
-  max(na.rm = TRUE) # switch what want to find here
+  sd(na.rm = TRUE) # switch what want to find here
 
 
 #===================================
@@ -211,6 +219,13 @@ m_mixed <- lmer(log(max_ext_dist) ~ max_oni + (1 | latin_name),
 
 summary(m_mixed)
 ranef(m_mixed)$latin_name
+# exp(0.3545)
+# 1.425 = 42.5 percent increase
+ci <- confint(m_mixed, parm = "max_oni", method = "profile")
+(exp(ci) - 1) * 100
+# 95% CI: 2.34 - 98.78'
+# ICC = intraclass correlation = latin_name variance / (latin_name variance + residual variance)
+# ICC = 0.9862 / (0.9862+0.5551) = 0.64
 
 # Mixed effects model with random intercept and random slope
 m_mixed_slopes <- lmer(log(max_ext_dist) ~ max_oni + (max_oni | latin_name), data = max_ext_oni_yr_prior)
@@ -372,27 +387,27 @@ AIC(lin_model, poly_model, gam_model)
 # }
 
 # Extension counts distribution curve
-hist(extension_counts_by_year$n_extensions, breaks = 5, freq = FALSE)
+hist(oni_freq$n, breaks = 5, freq = FALSE)
 
 curve(dlnorm(x,
-             meanlog = mean(log(extension_counts_by_year$n_extensions)),
-             sdlog   = sd(log(extension_counts_by_year$n_extensions))),
+             meanlog = mean(log(oni_freq$n)),
+             sdlog   = sd(log(oni_freq$n))),
       add = TRUE, col = "blue", lwd = 2)
 # Empirical CDF
-fx = (1:length(extension_counts_by_year$n_extensions))/(length(extension_counts_by_year$n_extensions)+1)
-plot(sort(extension_counts_by_year$n_extensions), fx, type="l")
+fx = (1:length(oni_freq$n))/(length(oni_freq$n)+1)
+plot(sort(oni_freq$n), fx, type="l")
 # Add log normal distribution
 x1 = seq(0,3500,0.1) 
-y = log(extension_counts_by_year$n_extensions)
+y = log(oni_freq$n)
 Fx2 = plnorm(x1,mean(y),sd(y))
 lines(x1,Fx2,col="gold")
 # Add normal distribution
 x2 = seq(0,3500,0.1) 
-y = extension_counts_by_year$n_extensions
+y = oni_freq$n
 Fx3 = pnorm(x2,mean(y),sd(y))
 lines(x2,Fx3,col="green")
 # Log normal is better fit
-boxplot(extension_counts_by_year$n_extensions) # boxplot
+boxplot(oni_freq$n) # boxplot
 
 # Linear regression
 ggplot(oni_freq, aes(x=max_oni, y=log(n))) +

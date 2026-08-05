@@ -117,22 +117,22 @@ map <- ggplot() +
     alpha=0.8
   ) +
   scale_color_manual(values = palette_18_alt) +
-  coord_sf(xlim = c(-127, -110), ylim = c(20, 50), expand = FALSE) +
+  coord_sf(xlim = c(-127, -110), ylim = c(22, 50), expand = FALSE) +
   scale_x_continuous(breaks = c(-127, -122, -117, -112)) +
-  theme_minimal(base_size = 16) +
+  theme_minimal(base_size = 20) +
   labs(x = "Longitude", 
        y = "Latitude", 
        color = "Species") + 
   theme(
-         legend.text = element_text(size=10, face = "italic"),
+         legend.text = element_text(size=15, face = "italic"),
          legend.position = c(0.999, 0.999),   # (x, y) inside plot coordinates
          legend.justification = c("right", "top"), # anchor legend box at that point
          legend.box.margin = margin(0,0,0,0),
          legend.margin = margin(0,0,0,0)
        )
 map
-ggsave("figures/ext_map.png", plot = map, width = 6, height = 8, units = "in", dpi = 600)
-ggsave("figures/ext_map.pdf", plot = map, width = 6, height = 8, units = "in", dpi = 600)
+ggsave("figures/ext_map.png", plot = map, width = 6, height = 11, units = "in", dpi = 600)
+ggsave("figures/ext_map.pdf", plot = map, width = 6, height = 11, units = "in", dpi = 600)
 
 
 # Zoom out
@@ -145,21 +145,21 @@ map_supp <- ggplot() +
              arrow = arrow(length = unit(0.4, "cm"))
   ) +
   scale_color_manual(values = palette_18_alt) +
-  coord_sf(xlim = c(-170, -110), ylim = c(20, 60), expand = FALSE) +
-  scale_x_continuous(breaks = c(-158, -152, -146, -138, -130, -122, -114)) +
-  theme_minimal(base_size = 16) +
+  coord_sf(xlim = c(-170, -110), ylim = c(22, 60), expand = FALSE) +
+  scale_x_continuous(breaks = c(-162, -154, -146, -138, -130, -122, -114)) +
+  theme_minimal(base_size = 20) +
   labs(
        x = "Longitude", 
        y = "Latitude", 
        color = "Species") + 
   theme(
-    legend.text = element_text(size=10, face = "italic"),
+    legend.text = element_text(size=15, face = "italic"),
     legend.position = c(0.001, 0.001),   # (x, y) inside plot coordinates
     legend.justification = c("left", "bottom") # anchor legend box at that point
   )
 map_supp
-ggsave("figures/ext_map_supp.png", plot = map_supp, width = 8, height = 8, units = "in", dpi = 600)
-ggsave("figures/ext_map_supp.pdf", plot = map_supp, width = 8, height = 8, units = "in", dpi = 600)
+ggsave("figures/ext_map_supp.png", plot = map_supp, width = 8, height = 7, units = "in", dpi = 600)
+ggsave("figures/ext_map_supp.pdf", plot = map_supp, width = 8, height = 7, units = "in", dpi = 600)
 
 
 

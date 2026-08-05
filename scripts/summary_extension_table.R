@@ -38,12 +38,21 @@ extensions <- ext_distance %>%
 summary_table <- extensions %>%
   group_by(latin_name) %>%
   summarise(
-    mean_extension = mean(max_dist, na.rm = TRUE),
+    median_extension = median(max_dist, na.rm = TRUE),
     extension_years = paste(sort(unique(first_year)), collapse = ", ")
   ) %>%
   arrange(latin_name) %>%
   # round the mean
-  mutate(mean_extension = round(mean_extension, 1))
+  mutate(median_extension = round(median_extension, 1))
+
+summary_table %>%
+  write.table(
+    pipe("pbcopy"),
+    sep = "\t",
+    row.names = FALSE,
+    col.names = FALSE,
+    quote = FALSE
+  )
 
 # 
 # # Make it look nice for publication
@@ -78,15 +87,15 @@ summary_table2 <- summary_table[(half + 1):n, ]
 # Table 1
 gt_table1 <- summary_table1 %>%
   gt() %>%
-  fmt_number(columns = mean_extension, decimals = 1) %>%
+  fmt_number(columns = median_extension, decimals = 1) %>%
   cols_label(
     latin_name = "Species",
-    mean_extension = "Extension Distance (km)",
+    median_extension = "Median Extension Distance (km)",
     extension_years = "Extension Years"
   ) %>%
   tab_header(
     title = "Summary of Range Extension Events (Part 1)",
-    subtitle = "Poleward extension distance and extension year per species"
+    subtitle = "Median poleward extension distance and extension year per species"
   ) %>%
   tab_options(
     table.font.names = "Helvetica",
@@ -100,15 +109,15 @@ gtsave(gt_table1, "figures/extension_table_part1.png")
 # Table 2
 gt_table2 <- summary_table2 %>%
   gt() %>%
-  fmt_number(columns = mean_extension, decimals = 1) %>%
+  fmt_number(columns = median_extension, decimals = 1) %>%
   cols_label(
     latin_name = "Species",
-    mean_extension = "Extension Distance (km)",
+    median_extension = "Median Extension Distance (km)",
     extension_years = "Extension Years"
   ) %>%
   tab_header(
     title = "Summary of Range Extension Events (Part 2)",
-    subtitle = "Poleward extension distance and extension year per species"
+    subtitle = "Median poleward extension distance and extension year per species"
   ) %>%
   tab_options(
     table.font.names = "Helvetica",

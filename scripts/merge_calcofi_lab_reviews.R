@@ -151,7 +151,10 @@ north_df <- merged_df_histedge_lon %>%
 # Filter to make sure observations are further north than historical range edge
 north_df_filt <- north_df %>%
   filter(latitude > hist_range_lat)
-
+north_df_filt %>%
+  filter(source == "lab_rev")
+north_df_filt %>%
+  filter(source == "ca_rev")
 # Make extension event ids
 ext_ids <- north_df_filt %>%
   arrange(latin_name, year) %>%

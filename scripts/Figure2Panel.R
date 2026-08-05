@@ -42,6 +42,7 @@ species_with_groupXplus <- df %>%
 ext_Xplus <- df %>%
   filter(latin_name %in% species_with_groupXplus)
 
+
 # Filter to just keep the first extension of each event (double check that there aren't duplicates)
 first_ext <- ext_Xplus %>%
   filter(year == first_year)
@@ -60,7 +61,9 @@ sum(extension_counts$n)/(2020-1903)
 # ENSO Data ---------------------------------------------------------------
 
 # Load enso data
-enso_df <- download_enso(climate_idx = "oni", create_csv = FALSE)
+# enso_df <- download_enso(climate_idx = "oni", create_csv = FALSE)
+enso_df <- read.csv("data/enso_data.csv", header = TRUE) %>%
+  mutate(Date = as.Date(Date))
 
 # Plot Data ---------------------------------------------------------------
 
@@ -115,12 +118,12 @@ A <- ggplot() +
     date_labels = "%Y"
   ) +
   
-  theme_minimal(base_size = 21) +
+  theme_minimal(base_size = 20) +
   labs(x = "Year", ) +
   theme(
-    legend.title = element_text(size=12),
-    legend.text = element_text(size=14),
-    legend.position = c(0.00001, 0.9999),   # (x, y) inside plot coordinates
+    legend.title = element_text(size=15),
+    legend.text = element_text(size=15),
+    legend.position = c(0.000005, 0.9999),   # (x, y) inside plot coordinates
     legend.justification = c("left", "top"), # anchor legend box at that point
     axis.title.y.right = element_blank()
   )
@@ -174,12 +177,12 @@ A_supp <- ggplot() +
     date_labels = "%Y"
   ) +
   
-  theme_minimal(base_size = 22) +
+  theme_minimal(base_size = 20) +
   labs(x = "Year", ) +
   theme(
     legend.title = element_text(size=12),
     legend.text = element_text(size=14),
-    legend.position = c(0.00001, 0.9999),   # (x, y) inside plot coordinates
+    legend.position = c(0.000005, 0.9999),   # (x, y) inside plot coordinates
     legend.justification = c("left", "top"), # anchor legend box at that point
     axis.title.y.right = element_blank()
   )
@@ -191,9 +194,6 @@ df <- read.csv("processed_data/merged_calcofi_lab_review.csv")
 
 #Lload a world map
 world <- ne_countries(scale = "medium", returnclass = "sf")
-
-# Load enso data
-enso_df <- download_enso(climate_idx = "oni", create_csv = FALSE)
 
 # Classify enso by start, peak, end --------------------------------------------
 # For each event, get the years and count months per year
@@ -292,7 +292,7 @@ B <- ggplot(ext_summary, aes(x = proportion_peak_or_end)) +
     x = "Proportion of Extension Events\nin El Niño",
     y = "Number of Species"
   ) +
-  theme_minimal(base_size = 18) +
+  theme_minimal(base_size = 20) +
   theme(axis.ticks.y = element_blank(),
         axis.text.y  = element_blank())
 
@@ -339,12 +339,22 @@ max_ext_oni_yr_prior <- ext_distance_oni %>%
 oni_freq <- max_ext_oni_yr_prior %>%
   count(max_oni) %>%
   drop_na()
+# 
+# C <- ggplot(oni_freq, aes(x=max_oni, y=n)) +
+#   geom_point(size=4) +
+#   geom_smooth(method = "lm", se = TRUE, color="#E9C46A", fill="#E9C46A") + 
+#   labs(x = "Oceanic Niño Index", y = "Number of\nExtension Events") +
+#   theme_minimal(base_size = 20)
 
-C <- ggplot(oni_freq, aes(x=max_oni, y=log(n))) +
-  geom_point(size=2) +
-  geom_smooth(method = "lm", se = TRUE, color="#E9C46A", fill="#E9C46A") + 
-  labs(x = "Oceanic Niño Index", y = "Log Number of\nExtension Events") +
-  theme_minimal(base_size = 18)
+oni_nevent_0 <- oni_ave_by_yr %>%
+  select(oni_ave) %>%
+  left_join(oni_freq, by = join_by(oni_ave == max_oni)) %>%
+  replace_na(list(n = 0))
+
+C <- ggplot(oni_nevent_0, aes(x=oni_ave, y=n)) +
+  geom_point(size=3) +
+  labs(x = "Oceanic Niño Index", y = "Number of\nExtension Events") +
+  theme_minimal(base_size = 20)
 
 # Plot panel
 BC <- plot_grid(B, C, labels = c('b', 'c'), label_size = 18, rel_widths = c(1, 2))

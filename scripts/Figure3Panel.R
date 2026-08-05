@@ -154,11 +154,14 @@ max_ext_oni_yr_prior <- ext_distance_oni %>%
   distinct()
 
 # no ONI pre 1950 (drops any extensions pre 1950)
-B <- ggplot(max_ext_oni_yr_prior, aes(max_oni, log(max_ext_dist))) +
-  geom_point(color="black", size=2) +
-  geom_smooth(method = "lm", se = TRUE, color="#E9C46A", fill="#E9C46A") +  # se = FALSE to hide confidence interval
-  labs(x = "Oceanic Niño Index", y = "Log Extension Event\nDistance (km)", ) +
-  theme_minimal(base_size = 16)
+B <- ggplot(max_ext_oni_yr_prior, aes(max_oni, max_ext_dist)) +
+  geom_point(color="black", size=3) +
+  scale_y_log10() +
+  geom_smooth(method = "lm",
+              aes(y = max_ext_dist),
+              formula = y ~ x, se = TRUE, color="#E9C46A", fill="#E9C46A") +  # se = FALSE to hide confidence interval
+  labs(x = "Oceanic Niño Index", y = "Extension Event\nDistance (km)", ) +
+  theme_minimal(base_size = 20)
 
 # Density Plot Low vs High ONI
 plot3a_data <- max_ext_oni_yr_prior %>%
@@ -172,7 +175,7 @@ A <- ggplot(plot3a_data, aes(x = log(max_ext_dist), fill = oni_cat)) +
     values = c("High ONI (>=0.5)" = "#D62828",   # red
                "Low ONI" = "#003049")           # blue
   ) +
-  theme_minimal(base_size = 16) +
+  theme_minimal(base_size = 20) +
   theme(
     legend.title = element_text(size=10),
     legend.text = element_text(size=10),
