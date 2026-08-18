@@ -131,8 +131,8 @@ map <- ggplot() +
          legend.margin = margin(0,0,0,0)
        )
 map
-ggsave("figures/ext_map.png", plot = map, width = 6, height = 11, units = "in", dpi = 600)
-ggsave("figures/ext_map.pdf", plot = map, width = 6, height = 11, units = "in", dpi = 600)
+ggsave("figures/ext_map_zoom.png", plot = map, width = 6, height = 11, units = "in", dpi = 600)
+ggsave("figures/ext_map_zoom.pdf", plot = map, width = 6, height = 11, units = "in", dpi = 600)
 
 
 # Zoom out
@@ -158,8 +158,8 @@ map_supp <- ggplot() +
     legend.justification = c("left", "bottom") # anchor legend box at that point
   )
 map_supp
-ggsave("figures/ext_map_supp.png", plot = map_supp, width = 8, height = 7, units = "in", dpi = 600)
-ggsave("figures/ext_map_supp.pdf", plot = map_supp, width = 8, height = 7, units = "in", dpi = 600)
+ggsave("figures/ext_map.png", plot = map_supp, width = 10, height = 7, units = "in", dpi = 600)
+ggsave("figures/ext_map.pdf", plot = map_supp, width = 10, height = 7, units = "in", dpi = 600)
 
 
 
