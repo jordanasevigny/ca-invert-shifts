@@ -20,13 +20,14 @@ Extension data & analysis:
 3. Analysis scripts (can be run in any order)
   - (a) 'oni_vs_extension.R' tests different models comparing ONI to extension number and to extension distance; has the chi-squared goodness-of-fit test to compare proportion extensions in and out of el nino to expected frequency of El Niño; has the t-test to compare low and high ONI extension distances; generates supplementary table related to best fit models. This script also generates the preliminary figures related to the analyses. 
   - (b) ‘ca-invert-shifts/scripts/enso_ext_timeseries.R’ generates preliminary figures for figure 2 and the final form of the supplementary barplot showcasing which extensions come from which data source. This script also finds several of the counts related to # extensions occuring during El Niño included in the paper methods. This script also generates the supplementary figure of counts over time and the hurdle model.
-  - (c) ‘ca-invert-shifts/scripts/blob_analysis.R’ generates supp figure 4 and calculates # extensions to occur during the 2014-2016 marine heatwave and statistically tests whether the number of extension events during 2014-2016 exceeds expectations by chance using a chi-squared goodness-of-fit test.
+  - (c) ‘ca-invert-shifts/scripts/blob_analysis.R’ generates supp figure 5 and calculates # extensions to occur during the 2014-2016 marine heatwave and statistically tests whether the number of extension events during 2014-2016 exceeds expectations by chance using a chi-squared goodness-of-fit test.
   - (d) ‘ca-invert-shifts/scripts/extension_map.R’ generates final version of figure 1 and supplementary figure 1 (extension maps).
   - (e) 'ca-invert-shifts/scripts/Figure2Panel.R' generates final version of figure 2 and supplementary figure 2 (extension number vs ONI).
   - (f) 'ca-invert-shifts/scripts/Figure3Panel.R' generates final version of figure 3 (extension distance vs ONI).
   - (g) 'ca-invert-shifts/scripts/summary_extension_table.R' generates the supplementary table 1.
   - (h) 'ca-invert-shifts/scripts/hist_lat_supp_table.R' generates the supplementary table 2.
   - (i) 'ca-invert-shifts/scripts/supp_distribution_and_bb_crossings.R' generates the supplementary table 4.
+  - (j) 'ca-invert-shifts/scripts/life_hist_vs_dist.R' generates supplementary figure 4 and associated analysis.
 
 
 Systematic literature search:
@@ -47,6 +48,7 @@ Data:
 * Taxa list for WOS search keywords: ‘ca-invert-shifts/processed_data/WoRMS_taxlist_20250211_processed_V2.xlsx’
 * Filtered dataset of furthest north extensions for the 3+ extension species: ‘ca-invert-shifts/processed_data/threeplus_ext_sp_furthest_north.csv’
 * ENSO / ONI data downloaded from download_enso(climate_idx = "oni", create_csv = TRUE), r library rsoi. ‘ca-invert-shifts/data/enso_data.csv’
+* Life History Traits and Habitat: 'processed_data/pelagic-life-history-all-species.xlsx'
 
 Scripts:
 * ‘ca-invert-shifts/scripts/load_lab_review.R’
@@ -94,3 +96,6 @@ Scripts:
 * 'ca-invert-shifts/scripts/supp_distribution_and_bb_crossings.R'
   * Input: 'processed_data/merged_calcofi_lab_review.csv'
   * Output: 'figures/biogeographic_boundary_extensions_table.png'
+* 'ca-invert-shifts/scripts/life_hist_vs_dist.R'
+  * Input: 'processed_data/merged_calcofi_lab_review.csv' and 'processed_data/pelagic-life-history-all-species.xlsx'
+  * Output: 'figures/life_hist_dist_boxplot.png'
