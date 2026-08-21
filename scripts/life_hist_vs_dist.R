@@ -102,10 +102,6 @@ summary(m)
 exp(c(0.5138, 1.6865))
 # conditional on the model assumptions, fully pelagic species have estimated extension distances about 5.4 times greater and pelagic larval dispersing benthic species extension distances about 1.7 times greater than than limited-dispersal benthic species.
 
-emm <- emmeans(m, ~ habitat_life_history)
-
-pairs(emm, adjust = "tukey")
-
 # pairwise.t.test(
 #   log(ext_dist_life_events$max_ext_dist),
 #   ext_dist_life_events$habitat_life_history,
