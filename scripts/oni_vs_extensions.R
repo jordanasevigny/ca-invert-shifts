@@ -31,6 +31,13 @@ library(tibble)
 # Load review data
 df <- read.csv("processed_data/merged_calcofi_lab_review.csv")
 
+# Lines to toggle for sensitivity tests - remove calcofi data, try adding life history to see more extenstions happen in el nino than expected by chance for particular life histories
+# df <- df %>% filter(obs_source != "ca_rev") # Try removing calcofi
+# life_history = read_xlsx("processed_data/pelagic-life-history-all-species.xlsx")
+# df <- df %>%
+#   left_join(life_history, by="latin_name") %>%
+#   filter(habitat_life_history == "Pelagic") # Pelagic, Benthic (for unknown larval duration... not relevant for 3+ extenders), Benthic / PL, Benthic / LD
+
 # Load a world map
 world <- ne_countries(scale = "medium", returnclass = "sf")
 
@@ -221,6 +228,7 @@ summary(m_mixed)
 ranef(m_mixed)$latin_name
 # exp(0.3545)
 # 1.425 = 42.5 percent increase
+# Sensitivity analysis without calfofi: 35.77% increase
 ci <- confint(m_mixed, parm = "max_oni", method = "profile")
 (exp(ci) - 1) * 100
 # 95% CI: 2.34 - 98.78'
@@ -468,12 +476,15 @@ ggplot(oni_nevent_0, aes(x = oni_ave, y = n)) +
   )
 
 
+# Check these statistics with and without calcofi data
 oni_nevent_0 <- oni_nevent_0 %>%
   mutate(event_group = if_else(n == 0, "No events", "At least 1 event"))
 t.test(oni_ave ~ event_group, data = oni_nevent_0)
+# Sensitivity result (removing calcofi): t = 2.97, p-val < 0.005
 
 mod.hurdle <- hurdle(n ~oni_ave, data=oni_nevent_0)
 summary(mod.hurdle)
+# Sensitivity result (removing calcofi): zero model -  beta = 1.16, p-val < 0.01, count model -  beta = 0.72, p-val < 0.01
 sum(predict(mod.hurdle, type = "prob")[,1])
 
 rootogram(mod.hurdle, xlim = c(0,15), confint = FALSE, plot = "base")
@@ -662,4 +673,8 @@ observed <- c(sum(ext_summary$peak_or_end_extensions), sum(ext_summary$total_ext
 expected_proportions_month <- c(en_freq_month, (1-en_freq_month))
 # Run chi-squared goodness-of-fit test
 chisq.test(x = observed, p = expected_proportions_month)
-
+binom.test(x=observed[1], n=observed[1]+observed[2], p=expected_proportions_month[1])
+# Sensitivity result (removing calcofi): chi-sq = 40.35, p-val < 0.001
+# Sensitivity result (pelagic only): chi-sq = 59.13, p-val < 0.001
+# Sensitivity result (benthic PL): chi-sq = 25.90, p-val < 0.001
+# Sensitivity result (benthic LD): not much data (only 6 obs) chi-sq = 0.0048, p-val < 0.945 (same with the binom test)

@@ -197,8 +197,8 @@ ggplot() +
   #   alpha=0.8
   # ) +
   scale_color_manual(values = palette_18_alt) +
-  coord_sf(xlim = c(-130, -114), ylim = c(30, 50), expand = FALSE) +
-  scale_x_continuous(breaks = c(-130, -122, -118, -114)) +
+  coord_sf(xlim = c(-140, -113), ylim = c(25, 60), expand = FALSE) +
+  scale_x_continuous(breaks = c(-135, -130, -125, -120, -115)) +
   theme_minimal(base_size = 16) +
   theme(
     panel.background = element_rect(fill = "lightblue", color = NA)
